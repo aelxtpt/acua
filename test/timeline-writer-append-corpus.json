@@ -1,0 +1,3812 @@
+{
+  "scenario": "timeline-writer-append-expanded",
+  "input": {
+    "name": "timeline-writer-append-expanded"
+  },
+  "payload": {
+    "rows": [
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-within-slot-and-finish",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            {
+              "kind": "append",
+              "record": {
+                "diagnostic": {
+                  "message": "owned \ud83d\ude42 /path\nsecond line"
+                },
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "append-within-slot-and-finish",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n{\"diagnostic\":{\"message\":\"owned \ud83d\ude42 /path\\nsecond line\"},\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "diagnostic": {
+                  "message": "owned \ud83d\ude42 /path\nsecond line"
+                },
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            "state": {
+              "eventCount": 2,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815415729.35631,
+            "beforeReferenceTime": 815415729.356074,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n{\"diagnostic\":{\"message\":\"owned \ud83d\ude42 /path\\nsecond line\"},\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:22:09Z\",\n  \"eventCount\" : 2,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 2,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415729.356083,
+              "eventCount": 2,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-boundary-and-past",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760599
+              }
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760600
+              }
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 3,
+                "kind": "debug.error",
+                "timestamp": 725759999
+              }
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "append-boundary-and-past",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:09:59Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760599
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:09:59Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 1,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "{\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:10:00Z\"}\n",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760600
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760600,
+              "eventCount": 1,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000,
+              "suppressedEventCount": 0
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:09:59Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 1,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "{\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:10:00Z\"}\n{\"id\":3,\"kind\":\"debug.error\",\"timestamp\":\"2023-12-31T23:59:59Z\"}\n",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 3,
+                "kind": "debug.error",
+                "timestamp": 725759999
+              }
+            },
+            "state": {
+              "eventCount": 2,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815415729.358469,
+            "beforeReferenceTime": 815415729.358282,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:09:59Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 1,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "{\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:10:00Z\"}\n{\"id\":3,\"kind\":\"debug.error\",\"timestamp\":\"2023-12-31T23:59:59Z\"}\n",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:22:09Z\",\n  \"eventCount\" : 2,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\",\n  \"suppressedEventCount\" : 0\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 2,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415729.358292,
+              "eventCount": 2,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "startedAt": 725760600,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "append-restored-counts",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 9,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "append-restored-counts",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n{\"id\":9,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 9,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            "state": {
+              "eventCount": 8,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815415729.359661,
+            "beforeReferenceTime": 815415729.359466,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n{\"id\":9,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:22:09Z\",\n  \"eventCount\" : 8,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 2\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 8,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415729.359475,
+              "eventCount": 8,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000,
+              "suppressedEventCount": 2
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":null,\"suppressedEventCount\":null}"
+          },
+          "name": "append-unknown-counts",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 4,
+                "kind": "debug.error",
+                "timestamp": 725760125
+              }
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "append-unknown-counts",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n{\"id\":4,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:05Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 4,
+                "kind": "debug.error",
+                "timestamp": 725760125
+              }
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815415729.360712,
+            "beforeReferenceTime": 815415729.360518,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n{\"id\":4,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:05Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:22:09Z\",\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415729.360527,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-10-00Z": "owned blocker"
+          },
+          "name": "append-rotation-error",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760600
+              }
+            }
+          ]
+        },
+        "name": "append-rotation-error",
+        "steps": [
+          {
+            "error": {
+              "code": 516,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z": "owned blocker"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760600
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-closed-handle",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "close-handle"
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            }
+          ]
+        },
+        "name": "append-closed-handle",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "close-handle"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "error": {
+              "code": 512,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-after-clear",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "append-after-clear",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815415729.366048,
+            "beforeReferenceTime": 815415729.365772,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:22:09Z\",\n  \"eventCount\" : 1,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415729.365781,
+              "eventCount": 1,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-after-no-overlap-clear",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "append-after-no-overlap-clear",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760124
+              }
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815415729.367717,
+            "beforeReferenceTime": 815415729.367513,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:04Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:22:09Z\",\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415729.367521,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-negative-date",
+          "now": -1,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": -978307201
+              }
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": -978307200
+              }
+            }
+          ]
+        },
+        "name": "append-negative-date",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/1969-12-31T23-50-00Z"
+              ],
+              "files": {
+                "segments/1969-12-31T23-50-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"1969-12-31T23:59:59Z\"}\n",
+                "segments/1969-12-31T23-50-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl\",\n  \"id\" : \"1969-12-31T23-50-00Z\",\n  \"startedAt\" : \"1969-12-31T23:50:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": -978307201
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl",
+              "id": "1969-12-31T23-50-00Z",
+              "metadataPath": "$ROOT/segments/1969-12-31T23-50-00Z/metadata.json",
+              "startedAt": -600,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/1969-12-31T23-50-00Z",
+                "segments/1970-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/1969-12-31T23-50-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"1969-12-31T23:59:59Z\"}\n",
+                "segments/1969-12-31T23-50-00Z/metadata.json": "{\n  \"endedAt\" : \"1970-01-01T00:00:00Z\",\n  \"eventCount\" : 1,\n  \"eventsPath\" : \"$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl\",\n  \"id\" : \"1969-12-31T23-50-00Z\",\n  \"startedAt\" : \"1969-12-31T23:50:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/1970-01-01T00-00-00Z/events.jsonl": "{\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"1970-01-01T00:00:00Z\"}\n",
+                "segments/1970-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/1970-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"1970-01-01T00-00-00Z\",\n  \"startedAt\" : \"1970-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": -978307200
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/1970-01-01T00-00-00Z/events.jsonl",
+              "id": "1970-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/1970-01-01T00-00-00Z/metadata.json",
+              "startedAt": 0,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": -978307200,
+              "eventCount": 1,
+              "eventsPath": "$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl",
+              "id": "1969-12-31T23-50-00Z",
+              "startedAt": -978307800,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 30,
+          "files": {},
+          "name": "append-custom-duration",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760149
+              }
+            },
+            {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760150
+              }
+            }
+          ]
+        },
+        "name": "append-custom-duration",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-02-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-02-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:29Z\"}\n",
+                "segments/2024-01-01T00-02-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-02-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-02-00Z\",\n  \"startedAt\" : \"2024-01-01T00:02:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "debug.error",
+                "timestamp": 725760149
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-02-00Z/events.jsonl",
+              "id": "2024-01-01T00-02-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-02-00Z/metadata.json",
+              "startedAt": 1704067320,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-02-00Z",
+                "segments/2024-01-01T00-02-30Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-02-00Z/events.jsonl": "{\"id\":1,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:29Z\"}\n",
+                "segments/2024-01-01T00-02-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:02:30Z\",\n  \"eventCount\" : 1,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-02-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-02-00Z\",\n  \"startedAt\" : \"2024-01-01T00:02:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-02-30Z/events.jsonl": "{\"id\":2,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:30Z\"}\n",
+                "segments/2024-01-01T00-02-30Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-02-30Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-02-30Z\",\n  \"startedAt\" : \"2024-01-01T00:02:30Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "debug.error",
+                "timestamp": 725760150
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-02-30Z/events.jsonl",
+              "id": "2024-01-01T00-02-30Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-02-30Z/metadata.json",
+              "startedAt": 1704067350,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760150,
+              "eventCount": 1,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-02-00Z/events.jsonl",
+              "id": "2024-01-01T00-02-00Z",
+              "startedAt": 725760120,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-rich-record",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "bundleIdentifier": "owned.fixture",
+                  "name": "Owned \ud83d\ude42",
+                  "processIdentifier": 123,
+                  "secureInput": false
+                },
+                "ax": {
+                  "mode": "fullTree",
+                  "text": "owned tree"
+                },
+                "id": 42,
+                "keyboard": {
+                  "modifiers": [
+                    "shift"
+                  ],
+                  "target": {
+                    "identifier": "owned",
+                    "role": "AXTextField"
+                  },
+                  "text": "Ol\u00e1 \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb\nnext"
+                },
+                "kind": "keyboard.text_input",
+                "selection": {
+                  "selectedItems": [],
+                  "selectedRange": {
+                    "length": 1,
+                    "location": 1
+                  },
+                  "selectedText": "\u00e1"
+                },
+                "timestamp": 725760123.125,
+                "window": {
+                  "title": "Owned",
+                  "url": "https://owned.invalid/a/b",
+                  "windowID": 123
+                }
+              }
+            }
+          ]
+        },
+        "name": "append-rich-record",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"app\":{\"bundleIdentifier\":\"owned.fixture\",\"name\":\"Owned \ud83d\ude42\",\"processIdentifier\":123},\"ax\":{\"mode\":\"fullTree\",\"text\":\"owned tree\"},\"id\":42,\"keyboard\":{\"modifiers\":[\"shift\"],\"target\":{\"identifier\":\"owned\",\"role\":\"AXTextField\"},\"text\":\"Ol\u00e1 \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb\\nnext\"},\"kind\":\"keyboard.text_input\",\"selection\":{\"selectedRange\":{\"length\":1,\"location\":1},\"selectedText\":\"\u00e1\"},\"timestamp\":\"2024-01-01T00:02:03Z\",\"window\":{\"title\":\"Owned\",\"url\":\"https://owned.invalid/a/b\",\"windowID\":123}}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "bundleIdentifier": "owned.fixture",
+                  "name": "Owned \ud83d\ude42",
+                  "processIdentifier": 123,
+                  "secureInput": false
+                },
+                "ax": {
+                  "mode": "fullTree",
+                  "text": "owned tree"
+                },
+                "id": 42,
+                "keyboard": {
+                  "modifiers": [
+                    "shift"
+                  ],
+                  "target": {
+                    "identifier": "owned",
+                    "role": "AXTextField"
+                  },
+                  "text": "Ol\u00e1 \ud83d\udc69\ud83c\udffd\u200d\ud83d\udcbb\nnext"
+                },
+                "kind": "keyboard.text_input",
+                "selection": {
+                  "selectedItems": [],
+                  "selectedRange": {
+                    "length": 1,
+                    "location": 1
+                  },
+                  "selectedText": "\u00e1"
+                },
+                "timestamp": 725760123.125,
+                "window": {
+                  "title": "Owned",
+                  "url": "https://owned.invalid/a/b",
+                  "windowID": 123
+                }
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-session.started",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 0,
+                "kind": "session.started",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-session.started",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":0,\"kind\":\"session.started\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 0,
+                "kind": "session.started",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-session.ended",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "session.ended",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-session.ended",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":1,\"kind\":\"session.ended\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 1,
+                "kind": "session.ended",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-window.changed",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "window.changed",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-window.changed",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":2,\"kind\":\"window.changed\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 2,
+                "kind": "window.changed",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-mouse.click",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 3,
+                "kind": "mouse.click",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-mouse.click",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":3,\"kind\":\"mouse.click\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 3,
+                "kind": "mouse.click",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-mouse.context_menu",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 4,
+                "kind": "mouse.context_menu",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-mouse.context_menu",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":4,\"kind\":\"mouse.context_menu\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 4,
+                "kind": "mouse.context_menu",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-mouse.drag",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 5,
+                "kind": "mouse.drag",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-mouse.drag",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":5,\"kind\":\"mouse.drag\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 5,
+                "kind": "mouse.drag",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-keyboard.text_input",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 6,
+                "kind": "keyboard.text_input",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-keyboard.text_input",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":6,\"kind\":\"keyboard.text_input\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 6,
+                "kind": "keyboard.text_input",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-keyboard.submit",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 7,
+                "kind": "keyboard.submit",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-keyboard.submit",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":7,\"kind\":\"keyboard.submit\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 7,
+                "kind": "keyboard.submit",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-keyboard.shortcut",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 8,
+                "kind": "keyboard.shortcut",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-keyboard.shortcut",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":8,\"kind\":\"keyboard.shortcut\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 8,
+                "kind": "keyboard.shortcut",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-terminal.value_changed",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 9,
+                "kind": "terminal.value_changed",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-terminal.value_changed",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":9,\"kind\":\"terminal.value_changed\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 9,
+                "kind": "terminal.value_changed",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-selection.changed",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 10,
+                "kind": "selection.changed",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-selection.changed",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":10,\"kind\":\"selection.changed\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 10,
+                "kind": "selection.changed",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "append-kind-debug.error",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 11,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "append-kind-debug.error",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":11,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 11,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-0",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {},
+                "id": 100,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-0",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"app\":{},\"id\":100,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {},
+                "id": 100,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-1",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": null
+                },
+                "id": 101,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-1",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"app\":{},\"id\":101,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": null
+                },
+                "id": 101,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-2",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": false
+                },
+                "id": 102,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-2",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"app\":{},\"id\":102,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": false
+                },
+                "id": 102,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-3",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": true
+                },
+                "id": 103,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-3",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"app\":{\"secureInput\":true},\"id\":103,\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": true
+                },
+                "id": 103,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-4",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": 0
+                },
+                "id": 104,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-4",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": 0
+                },
+                "id": 104,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-5",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": "false"
+                },
+                "id": 105,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-5",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "secureInput": "false"
+                },
+                "id": 105,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-app-6",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "processIdentifier": 2147483648
+                },
+                "id": 106,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-app-6",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "app": {
+                  "processIdentifier": 2147483648
+                },
+                "id": 106,
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-selection-0",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 100,
+                "kind": "debug.error",
+                "selection": {},
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-selection-0",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":100,\"kind\":\"debug.error\",\"selection\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 100,
+                "kind": "debug.error",
+                "selection": {},
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-selection-1",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 101,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": null
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-selection-1",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":101,\"kind\":\"debug.error\",\"selection\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 101,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": null
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-selection-2",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 102,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": []
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-selection-2",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":102,\"kind\":\"debug.error\",\"selection\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 102,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": []
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-selection-3",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 103,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": [
+                    {
+                      "title": "owned"
+                    }
+                  ]
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-selection-3",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":103,\"kind\":\"debug.error\",\"selection\":{\"selectedItems\":[{\"title\":\"owned\"}]},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 103,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": [
+                    {
+                      "title": "owned"
+                    }
+                  ]
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-selection-4",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 104,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": {}
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-selection-4",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 104,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": {}
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-selection-5",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 105,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": [
+                    1
+                  ]
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-selection-5",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 105,
+                "kind": "debug.error",
+                "selection": {
+                  "selectedItems": [
+                    1
+                  ]
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-0",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 100,
+                "kind": "debug.error",
+                "mouse": {},
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-0",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":100,\"kind\":\"debug.error\",\"mouse\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 100,
+                "kind": "debug.error",
+                "mouse": {},
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-1",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 101,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": null
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-1",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":101,\"kind\":\"debug.error\",\"mouse\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 101,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": null
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-2",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 102,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": []
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-2",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":102,\"kind\":\"debug.error\",\"mouse\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 102,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": []
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-3",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 103,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": [
+                    "shift"
+                  ]
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-3",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":103,\"kind\":\"debug.error\",\"mouse\":{\"modifiers\":[\"shift\"]},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 103,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": [
+                    "shift"
+                  ]
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-4",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 104,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": "shift"
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-4",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 104,
+                "kind": "debug.error",
+                "mouse": {
+                  "modifiers": "shift"
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-5",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 105,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": null
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-5",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":105,\"kind\":\"debug.error\",\"mouse\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 105,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": null
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-6",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 106,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": 0
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-6",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":106,\"kind\":\"debug.error\",\"mouse\":{\"clickCount\":0},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 106,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": 0
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-7",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 107,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": 1
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-7",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":107,\"kind\":\"debug.error\",\"mouse\":{},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 107,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": 1
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-8",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 108,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": 2
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-8",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":108,\"kind\":\"debug.error\",\"mouse\":{\"clickCount\":2},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 108,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": 2
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-9",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 109,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": -1
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-9",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":109,\"kind\":\"debug.error\",\"mouse\":{\"clickCount\":-1},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 109,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": -1
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-10",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 110,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": "1"
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-10",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 110,
+                "kind": "debug.error",
+                "mouse": {
+                  "clickCount": "1"
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-mouse-11",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 111,
+                "kind": "debug.error",
+                "mouse": {
+                  "destination": {
+                    "element": {}
+                  },
+                  "origin": {
+                    "app": {}
+                  }
+                },
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-mouse-11",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":111,\"kind\":\"debug.error\",\"mouse\":{\"destination\":{\"element\":{}},\"origin\":{\"app\":{}}},\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 111,
+                "kind": "debug.error",
+                "mouse": {
+                  "destination": {
+                    "element": {}
+                  },
+                  "origin": {
+                    "app": {}
+                  }
+                },
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-keyboard-0",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 100,
+                "keyboard": {},
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-keyboard-0",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":100,\"keyboard\":{},\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 100,
+                "keyboard": {},
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-keyboard-1",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 101,
+                "keyboard": {
+                  "modifiers": null
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-keyboard-1",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":101,\"keyboard\":{},\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 101,
+                "keyboard": {
+                  "modifiers": null
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-keyboard-2",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 102,
+                "keyboard": {
+                  "modifiers": []
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-keyboard-2",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":102,\"keyboard\":{},\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 102,
+                "keyboard": {
+                  "modifiers": []
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-keyboard-3",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 103,
+                "keyboard": {
+                  "modifiers": [
+                    "command"
+                  ]
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-keyboard-3",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":103,\"keyboard\":{\"modifiers\":[\"command\"]},\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 103,
+                "keyboard": {
+                  "modifiers": [
+                    "command"
+                  ]
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-keyboard-4",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 104,
+                "keyboard": {
+                  "modifiers": 1
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-keyboard-4",
+        "steps": [
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 104,
+                "keyboard": {
+                  "modifiers": 1
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "compact-keyboard-5",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "append",
+              "record": {
+                "id": 105,
+                "keyboard": {
+                  "keyEquivalent": "",
+                  "text": "owned\n\ud83d\ude42"
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            }
+          ]
+        },
+        "name": "compact-keyboard-5",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "{\"id\":105,\"keyboard\":{\"keyEquivalent\":\"\",\"text\":\"owned\\n\ud83d\ude42\"},\"kind\":\"debug.error\",\"timestamp\":\"2024-01-01T00:02:03Z\"}\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "append",
+              "record": {
+                "id": 105,
+                "keyboard": {
+                  "keyEquivalent": "",
+                  "text": "owned\n\ud83d\ude42"
+                },
+                "kind": "debug.error",
+                "timestamp": 725760123
+              }
+            },
+            "state": {
+              "eventCount": 1,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "anchor": null,
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_ScreenCapture",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": {
+      "runs": [
+        {
+          "color": "primary",
+          "text": "Screenshots"
+        }
+      ],
+      "text": "Screenshots"
+    }
+  },
+  {
+    "anchor": "Privacy_Accessibility",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": {
+      "runs": [
+        {
+          "color": "primary",
+          "text": "Accessibility"
+        }
+      ],
+      "text": "Accessibility"
+    }
+  },
+  {
+    "anchor": "Privacy_AllFiles",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": {
+      "runs": [
+        {
+          "color": "primary",
+          "text": "Full Disk Access"
+        }
+      ],
+      "text": "Full Disk Access"
+    }
+  },
+  {
+    "anchor": "",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": null
+  },
+  {
+    "anchor": "privacy_allfiles",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Calendars",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": null
+  },
+  {
+    "anchor": "Unknown",
+    "kind": "label",
+    "pane": "com.apple.settings.PrivacySecurity.extension",
+    "result": null
+  },
+  {
+    "anchor": null,
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_ScreenCapture",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Accessibility",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_AllFiles",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "privacy_allfiles",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Calendars",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": "Unknown",
+    "kind": "label",
+    "pane": "",
+    "result": null
+  },
+  {
+    "anchor": null,
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_ScreenCapture",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Accessibility",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_AllFiles",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "privacy_allfiles",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Calendars",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": "Unknown",
+    "kind": "label",
+    "pane": "wrong.pane",
+    "result": null
+  },
+  {
+    "anchor": null,
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_ScreenCapture",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Accessibility",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_AllFiles",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "privacy_allfiles",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "Privacy_Calendars",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "anchor": "Unknown",
+    "kind": "label",
+    "pane": "configuração🙂",
+    "result": null
+  },
+  {
+    "arrow": false,
+    "kind": "instruction",
+    "name": "",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag  to the list above to allow "
+        }
+      ],
+      "text": "Drag  to the list above to allow "
+    }
+  },
+  {
+    "arrow": false,
+    "kind": "instruction",
+    "name": "Agent",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "Agent"
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag Agent to the list above to allow "
+    }
+  },
+  {
+    "arrow": false,
+    "kind": "instruction",
+    "name": "My App",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "My App"
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag My App to the list above to allow "
+    }
+  },
+  {
+    "arrow": false,
+    "kind": "instruction",
+    "name": "Aplicativo 🙂 漢字",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "Aplicativo 🙂 漢字"
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag Aplicativo 🙂 漢字 to the list above to allow "
+    }
+  },
+  {
+    "arrow": false,
+    "kind": "instruction",
+    "name": "first\nsecond <b>&\"quoted\"",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "first\nsecond <b>&\"quoted\""
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag first\nsecond <b>&\"quoted\" to the list above to allow "
+    }
+  },
+  {
+    "arrow": true,
+    "kind": "instruction",
+    "name": "",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag  to the list above to allow "
+        }
+      ],
+      "text": "Drag  to the list above to allow "
+    }
+  },
+  {
+    "arrow": true,
+    "kind": "instruction",
+    "name": "Agent",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "Agent"
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag Agent to the list above to allow "
+    }
+  },
+  {
+    "arrow": true,
+    "kind": "instruction",
+    "name": "My App",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "My App"
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag My App to the list above to allow "
+    }
+  },
+  {
+    "arrow": true,
+    "kind": "instruction",
+    "name": "Aplicativo 🙂 漢字",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "Aplicativo 🙂 漢字"
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag Aplicativo 🙂 漢字 to the list above to allow "
+    }
+  },
+  {
+    "arrow": true,
+    "kind": "instruction",
+    "name": "first\nsecond <b>&\"quoted\"",
+    "result": {
+      "runs": [
+        {
+          "color": "secondary",
+          "text": "Drag "
+        },
+        {
+          "color": "primary",
+          "text": "first\nsecond <b>&\"quoted\""
+        },
+        {
+          "color": "secondary",
+          "text": " to the list above to allow "
+        }
+      ],
+      "text": "Drag first\nsecond <b>&\"quoted\" to the list above to allow "
+    }
+  }
+]

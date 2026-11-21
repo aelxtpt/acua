@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.aex.computeruse</string>
+    <key>CFBundleName</key>
+    <string>Aex Computer Use</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>Aex Computer Use needs access to read and manage Calendar events you request.</string>
+    <key>NSContactsUsageDescription</key>
+    <string>Aex Computer Use needs access to resolve participant names in Messages requests.</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>Aex Computer Use needs permission to automate Messages for requests you make.</string>
+</dict>
+</plist>

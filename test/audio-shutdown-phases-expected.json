@@ -1,0 +1,241 @@
+{
+  "cases": [
+    {
+      "afterPhase": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "auto-success",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 1
+    },
+    {
+      "afterPhase": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "auto-error",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 1
+    },
+    {
+      "afterPhase": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "name": "turn-match",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 1
+    },
+    {
+      "afterPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "turn-wrong-thread",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 0
+    },
+    {
+      "afterPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "turn-wrong-turn",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 0
+    },
+    {
+      "afterPhase": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "name": "turn-thread-only",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 1
+    },
+    {
+      "afterPhase": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "name": "turn-owner-no-turn",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 1
+    },
+    {
+      "afterPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "turn-owner-no-session",
+      "nativeStopCalls": 1,
+      "stopCallsBeforeClaim": 0
+    },
+    {
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "duringPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "name": "auto-pending-success",
+      "newStopCalls": 1,
+      "oldStopCalls": 1,
+      "other": {
+        "exists": true,
+        "url": "<own output URL>"
+      }
+    },
+    {
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "duringPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "name": "auto-pending-error",
+      "newStopCalls": 1,
+      "oldStopCalls": 1,
+      "other": {
+        "exists": true,
+        "url": "<own output URL>"
+      }
+    },
+    {
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "duringPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "name": "turn-pending-success",
+      "newStopCalls": 1,
+      "oldStopCalls": 1,
+      "other": {
+        "code": 1,
+        "error": "noActiveRecording"
+      }
+    },
+    {
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "duringPhase": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "name": "turn-pending-error",
+      "newStopCalls": 1,
+      "oldStopCalls": 1,
+      "other": {
+        "code": 1,
+        "error": "noActiveRecording"
+      }
+    }
+  ],
+  "scope": "Recorder shutdown phases with owned fake native callbacks; no system audio or authenticated transport."
+}

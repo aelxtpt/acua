@@ -1,0 +1,11 @@
+[package]
+name = "cua-client"
+version = "0.4.6"
+edition = "2021"
+description = "Embeddable Unix socket client for the ACUA macOS computer-use service"
+publish = false
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+libc = "0.2"

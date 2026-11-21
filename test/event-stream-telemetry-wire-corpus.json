@@ -1,0 +1,240 @@
+{
+  "scope": {
+    "rows": [
+      {
+        "name": "initial",
+        "value": null
+      },
+      {
+        "name": "outer",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "nil",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "empty",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "array",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "malformed",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "partial-child",
+        "value": {
+          "session_id": "child"
+        }
+      },
+      {
+        "name": "unknown-camel",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "false-only",
+        "value": {
+          "user_input_requested_during_turn": false
+        }
+      },
+      {
+        "name": "empty-session",
+        "value": {
+          "session_id": ""
+        }
+      },
+      {
+        "name": "bad-field",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "outer-restored",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "error": "expected",
+        "name": "operation-error"
+      },
+      {
+        "name": "outer-after-error",
+        "value": {
+          "model": "outer",
+          "session_id": "parent-session",
+          "turn_id": "parent-turn"
+        }
+      },
+      {
+        "name": "return-value",
+        "value": "scope-return 🙂"
+      },
+      {
+        "name": "after-outer",
+        "value": null
+      }
+    ]
+  },
+  "wire": {
+    "rpcMetadataRows": [
+      {
+        "name": "absent",
+        "value": {}
+      },
+      {
+        "name": "all-fields",
+        "value": {
+          "model": "owned-model",
+          "reasoning_effort": "owned-effort",
+          "session_id": "owned-session",
+          "turn_id": "owned-turn",
+          "turn_started_at_unix_ms": 1704067200123,
+          "user_input_requested_during_turn": true
+        }
+      },
+      {
+        "name": "empty-session",
+        "value": {
+          "session_id": ""
+        }
+      },
+      {
+        "name": "only-zero-timestamp",
+        "value": {
+          "turn_started_at_unix_ms": 0
+        }
+      },
+      {
+        "name": "only-false-input",
+        "value": {
+          "user_input_requested_during_turn": false
+        }
+      }
+    ],
+    "statusOffsets": [
+      0,
+      8,
+      24,
+      40,
+      56,
+      72,
+      88,
+      104,
+      113,
+      120
+    ],
+    "statusSize": 128,
+    "statusStride": 128,
+    "statusWireRows": [
+      {
+        "name": "absent",
+        "value": {
+          "isRecording": false,
+          "maxDurationSeconds": 1800
+        }
+      },
+      {
+        "name": "reference-epoch",
+        "value": {
+          "endedAt": 12.25,
+          "isRecording": false,
+          "maxDurationSeconds": 1800,
+          "startedAt": 0
+        }
+      },
+      {
+        "name": "unix-epoch",
+        "value": {
+          "isRecording": false,
+          "maxDurationSeconds": 1800,
+          "startedAt": -978307200
+        }
+      },
+      {
+        "name": "fractional",
+        "value": {
+          "endedAt": 725760001.875,
+          "isRecording": false,
+          "maxDurationSeconds": 1800,
+          "startedAt": 725760000.125
+        }
+      },
+      {
+        "codingPath": [
+          "startedAt"
+        ],
+        "error": "invalidValue",
+        "name": "nan"
+      }
+    ],
+    "telemetryRows": [
+      {
+        "name": "absent",
+        "value": null
+      },
+      {
+        "name": "all-fields",
+        "value": {
+          "model": "owned-model",
+          "reasoning_effort": "owned-effort",
+          "session_id": "owned-session",
+          "turn_id": "owned-turn",
+          "turn_started_at_unix_ms": 1704067200123,
+          "user_input_requested_during_turn": true
+        }
+      },
+      {
+        "name": "empty-session",
+        "value": {
+          "session_id": ""
+        }
+      },
+      {
+        "name": "only-zero-timestamp",
+        "value": {
+          "turn_started_at_unix_ms": 0
+        }
+      },
+      {
+        "name": "only-false-input",
+        "value": {
+          "user_input_requested_during_turn": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "cases": [
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": false,
+      "senderPID": 0
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": false,
+      "senderPID": 0
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": false,
+      "senderPID": 0
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": false,
+      "senderPID": 0
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": false,
+      "senderPID": 0
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": false,
+      "senderPID": -1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": false,
+      "senderPID": -1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": false,
+      "senderPID": -1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": false,
+      "senderPID": -1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": false,
+      "senderPID": -1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": false,
+      "senderPID": 1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": false,
+      "senderPID": 1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": false,
+      "senderPID": 1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": false,
+      "senderPID": 1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": false,
+      "senderPID": 1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": false,
+      "senderPID": 123
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": false,
+      "senderPID": 123
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": false,
+      "senderPID": 123
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": false,
+      "senderPID": 123
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": false,
+      "senderPID": 123
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": false,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": false,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": false,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": false,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": false,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "pid",
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": true,
+      "senderPID": 0
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": true,
+      "senderPID": 0
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": true,
+      "senderPID": 0
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": true,
+      "senderPID": 0
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": true,
+      "senderPID": 0
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": true,
+      "senderPID": -1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "pid",
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": true,
+      "senderPID": -1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": true,
+      "senderPID": -1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": true,
+      "senderPID": -1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": true,
+      "senderPID": -1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": true,
+      "senderPID": 1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": true,
+      "senderPID": 1
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "pid",
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": true,
+      "senderPID": 1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": true,
+      "senderPID": 1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": true,
+      "senderPID": 1
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": true,
+      "senderPID": 123
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": true,
+      "senderPID": 123
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": true,
+      "senderPID": 123
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "pid",
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": true,
+      "senderPID": 123
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": true,
+      "senderPID": 123
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 0,
+      "foregroundOnly": true,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": -1,
+      "foregroundOnly": true,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 1,
+      "foregroundOnly": true,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": false,
+      "calls": [
+        "pid"
+      ],
+      "candidatePID": 123,
+      "foregroundOnly": true,
+      "senderPID": 2147483647
+    },
+    {
+      "accepted": true,
+      "calls": [
+        "pid",
+        "interface",
+        "object",
+        "handler",
+        "activate"
+      ],
+      "candidatePID": 2147483647,
+      "foregroundOnly": true,
+      "senderPID": 2147483647
+    }
+  ],
+  "error": {
+    "index": 0,
+    "message": "Sender process is not authenticated"
+  },
+  "nativeConnectionActivation": false,
+  "ownedReceiverAndCandidate": true,
+  "SDKUninitialized": true
+}

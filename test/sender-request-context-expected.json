@@ -1,0 +1,1015 @@
+{
+  "actualUnlock": false,
+  "cases": [
+    {
+      "allows": false,
+      "name": "missing-responsible",
+      "responsiblePresent": false
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse",
+      "name": "team-0-com.aex.computeruse-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse.client-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse.client-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse.client-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.client",
+      "name": "team-0-com.aex.computeruse.client-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse.helper-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse.helper-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-0-com.aex.computeruse.helper-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.helper",
+      "name": "team-0-com.aex.computeruse.helper-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-0-com.example.agent-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-0-com.example.agent-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-0-com.example.agent-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent",
+      "name": "team-0-com.example.agent-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-0-com.example.agent.beta-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-0-com.example.agent.beta-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-0-com.example.agent.beta-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent.beta",
+      "name": "team-0-com.example.agent.beta-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": null
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse",
+      "name": "team-1-com.aex.computeruse-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse.client-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse.client-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse.client-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.client",
+      "name": "team-1-com.aex.computeruse.client-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse.helper-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse.helper-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-1-com.aex.computeruse.helper-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.helper",
+      "name": "team-1-com.aex.computeruse.helper-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-1-com.example.agent-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-1-com.example.agent-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-1-com.example.agent-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent",
+      "name": "team-1-com.example.agent-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-1-com.example.agent.beta-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-1-com.example.agent.beta-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-1-com.example.agent.beta-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent.beta",
+      "name": "team-1-com.example.agent.beta-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": ""
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse",
+      "name": "team-2-com.aex.computeruse-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse.client-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse.client-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse.client-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.client",
+      "name": "team-2-com.aex.computeruse.client-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse.helper-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse.helper-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-2-com.aex.computeruse.helper-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.helper",
+      "name": "team-2-com.aex.computeruse.helper-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-2-com.example.agent-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-2-com.example.agent-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-2-com.example.agent-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent",
+      "name": "team-2-com.example.agent-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-2-com.example.agent.beta-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-2-com.example.agent.beta-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-2-com.example.agent.beta-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent.beta",
+      "name": "team-2-com.example.agent.beta-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "testteam01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse",
+      "name": "team-3-com.aex.computeruse-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse.client-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse.client-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse.client-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.client",
+      "name": "team-3-com.aex.computeruse.client-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse.helper-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse.helper-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-3-com.aex.computeruse.helper-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.helper",
+      "name": "team-3-com.aex.computeruse.helper-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-3-com.example.agent-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-3-com.example.agent-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-3-com.example.agent-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent",
+      "name": "team-3-com.example.agent-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-3-com.example.agent.beta-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-3-com.example.agent.beta-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-3-com.example.agent.beta-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent.beta",
+      "name": "team-3-com.example.agent.beta-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "OTHERTEAM1"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse",
+      "name": "team-4-com.aex.computeruse-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse.client-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse.client-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse.client-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.client",
+      "name": "team-4-com.aex.computeruse.client-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse.helper-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse.helper-signer",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse.helper",
+      "executable": "Agent",
+      "name": "team-4-com.aex.computeruse.helper-both",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.helper",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.aex.computeruse.helper",
+      "name": "team-4-com.aex.computeruse.helper-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-4-com.example.agent-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-4-com.example.agent-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": "Agent",
+      "name": "team-4-com.example.agent-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent",
+      "name": "team-4-com.example.agent-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-4-com.example.agent.beta-bundle",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "Agent",
+      "name": "team-4-com.example.agent.beta-signer",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent.beta",
+      "executable": "Agent",
+      "name": "team-4-com.example.agent.beta-both",
+      "responsiblePresent": true,
+      "signingID": "com.example.agent.beta",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "unrelated-bundle",
+      "executable": "com.example.agent.beta",
+      "name": "team-4-com.example.agent.beta-executable-only",
+      "responsiblePresent": true,
+      "signingID": "unrelated-signer",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": null,
+      "executable": null,
+      "name": "missing-identifiers",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": null,
+      "executable": "Agent",
+      "name": "name-only",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "COM.AEX.COMPUTERUSE.CLIENT",
+      "executable": null,
+      "name": "uppercase-bundle",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": null,
+      "executable": null,
+      "name": "uppercase-signer",
+      "responsiblePresent": true,
+      "signingID": "COM.AEX.COMPUTERUSE.CLIENT",
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse.extra",
+      "executable": null,
+      "name": "child-bundle",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.aex.computeruseextra",
+      "executable": null,
+      "name": "lookalike-bundle",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "prefix.com.aex.computeruse",
+      "executable": null,
+      "name": "prefix",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "com.example.agent",
+      "executable": null,
+      "name": "foreign-host",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": "",
+      "executable": null,
+      "name": "empty-bundle",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": true,
+      "bundleID": "com.aex.computeruse.client",
+      "executable": null,
+      "name": "own-host-missing-signer",
+      "responsiblePresent": true,
+      "signingID": null,
+      "team": "TESTTEAM01"
+    },
+    {
+      "allows": false,
+      "bundleID": null,
+      "executable": null,
+      "name": "signer-only-missing-bundle",
+      "responsiblePresent": true,
+      "signingID": "com.aex.computeruse.client",
+      "team": "TESTTEAM01"
+    }
+  ],
+  "hostBundleChildPrefix": "com.aex.computeruse.",
+  "hostBundleIdentifier": "com.aex.computeruse",
+  "nativeIdentityResolution": false,
+  "ownTeam": "TESTTEAM01",
+  "ownedIdentityMemoryOnly": true,
+  "rule": "allows = team == ownTeam (exact) and bundleID is hostBundleIdentifier or starts with hostBundleChildPrefix; signingID and executable never grant"
+}

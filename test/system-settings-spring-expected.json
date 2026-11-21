@@ -1,0 +1,6635 @@
+{
+  "cases": [
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-0.72-0",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "8.726646259971648",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-0.72-0.5",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-0.72-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "34.90658503988659",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-0.72-2",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "-17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-0.72--1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-0.72-nan",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-0.72-inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-0.01-0",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "169.7056274847714",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-0.01-0.5",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-0.01-1",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "678.8225099390856",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-0.01-2",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "-339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-0.01--1",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-0.01-nan",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-0.01-inf",
+      "operations": [],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-0-0",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "169.7056274847714",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-0-0.5",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-0-1",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "678.8225099390856",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-0-2",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "-339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-0--1",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-0-nan",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.0",
+        "28800.0",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-0-inf",
+      "operations": [],
+      "period": "0",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config--0.72-0",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "169.7056274847714",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config--0.72-0.5",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config--0.72-1",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "678.8225099390856",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config--0.72-2",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "-339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config--0.72--1",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config--0.72-nan",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-0.72",
+        "28800.0",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config--0.72-inf",
+      "operations": [],
+      "period": "-0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-inf-0",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-inf-0.5",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-inf-1",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-inf-2",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "-0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-inf--1",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-inf-nan",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "inf",
+        "0.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-inf-inf",
+      "operations": [],
+      "period": "inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config--inf-0",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "169.7056274847714",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config--inf-0.5",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config--inf-1",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "678.8225099390856",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config--inf-2",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "-339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config--inf--1",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config--inf-nan",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-inf",
+        "28800.0",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config--inf-inf",
+      "operations": [],
+      "period": "-inf",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-nan-0",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "169.7056274847714",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-nan-0.5",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-nan-1",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "678.8225099390856",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-nan-2",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "-339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-nan--1",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-nan-nan",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "nan",
+        "28800.0",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-nan-inf",
+      "operations": [],
+      "period": "nan",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-1e-300-0",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "169.7056274847714",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-1e-300-0.5",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-1e-300-1",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "678.8225099390856",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-1e-300-2",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "-339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-1e-300--1",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-1e-300-nan",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e-300",
+        "28800.0",
+        "inf",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-1e-300-inf",
+      "operations": [],
+      "period": "1e-300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "config-1e300-0",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "config-1e300-0.5",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "config-1e300-1",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "config-1e300-2",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "-0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "-1",
+      "name": "config-1e300--1",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "nan",
+      "name": "config-1e300-nan",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "1e+300",
+        "0.0",
+        "nan",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "inf",
+      "name": "config-1e300-inf",
+      "operations": [],
+      "period": "1e300",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity-0.06",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.06"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0.06"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity-0.060000000000000005",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.060000000000000005"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0.060000000000000005"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity--0.06",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "-0.06"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "-0.06"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity--0.060000000000000005",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "-0.060000000000000005"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "-0.060000000000000005"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity-nan",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "nan"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "nan"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity-inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "inf"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "inf"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-velocity--inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "-inf"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "-inf"
+    },
+    {
+      "acceleration": "0.06",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration-0.06",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.06",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0.060000000000000005",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration-0.060000000000000005",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.060000000000000005",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "-0.06",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration--0.06",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "-0.06",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "-0.060000000000000005",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration--0.060000000000000005",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "-0.060000000000000005",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "nan",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration-nan",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "nan",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "inf",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration-inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "inf",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "-inf",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-acceleration--inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "-inf",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-0-target-0",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "0",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-1-target-0",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "0",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-100-target-0",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "100.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "0",
+      "time": "0",
+      "value": "100",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-1-target-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-0.99-target-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.99",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0.99",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-0.9899999999999999-target-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9899999999999999",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0.9899999999999999",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-1.01-target-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1.01",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "1.01",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value--1-target--1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "-1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "-1",
+      "time": "0",
+      "value": "-1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value--0.99-target--1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "-0.99",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "-1",
+      "time": "0",
+      "value": "-0.99",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value--1.01-target--1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "-1.01",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "-1",
+      "time": "0",
+      "value": "-1.01",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-100.99-target-100",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "100.99",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "100",
+      "time": "0",
+      "value": "100.99",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-98.99-target-100",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "98.99",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "100",
+      "time": "0",
+      "value": "98.99",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-nan-target-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "nan",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "nan",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-1-target-nan",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "nan",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-inf-target-1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "inf",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "inf",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-1-target-inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "inf",
+      "time": "0",
+      "value": "1",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "convergence-value-inf-target-inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "inf",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "inf",
+      "time": "0",
+      "value": "inf",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0.04",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.0"
+      ],
+      "damping": "1",
+      "name": "custom-tolerance-0",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.04",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.999",
+          "velocity": "0.05"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "tolerance": "0",
+      "value": "0.999",
+      "velocity": "0.05"
+    },
+    {
+      "acceleration": "0.04",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "-0.06"
+      ],
+      "damping": "1",
+      "name": "custom-tolerance--0.06",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.04",
+          "complete": true,
+          "time": "0.0",
+          "value": "0.999",
+          "velocity": "0.05"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "tolerance": "-0.06",
+      "value": "0.999",
+      "velocity": "0.05"
+    },
+    {
+      "acceleration": "0.04",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.1"
+      ],
+      "damping": "1",
+      "name": "custom-tolerance-0.1",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.04",
+          "complete": true,
+          "time": "0.0",
+          "value": "0.999",
+          "velocity": "0.05"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "tolerance": "0.1",
+      "value": "0.999",
+      "velocity": "0.05"
+    },
+    {
+      "acceleration": "0.04",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "nan"
+      ],
+      "damping": "1",
+      "name": "custom-tolerance-nan",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.04",
+          "complete": true,
+          "time": "0.0",
+          "value": "0.999",
+          "velocity": "0.05"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "tolerance": "nan",
+      "value": "0.999",
+      "velocity": "0.05"
+    },
+    {
+      "acceleration": "0.04",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "inf"
+      ],
+      "damping": "1",
+      "name": "custom-tolerance-inf",
+      "operations": [],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.04",
+          "complete": true,
+          "time": "0.0",
+          "value": "0.999",
+          "velocity": "0.05"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "tolerance": "inf",
+      "value": "0.999",
+      "velocity": "0.05"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "steps-critical",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "70.51556845657626",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0013221242178242563",
+          "velocity": "0.4642172465623554"
+        },
+        {
+          "acceleration": "65.19361575097375",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.003868477054686295",
+          "velocity": "0.746944713661418"
+        },
+        {
+          "acceleration": "60.17249230942346",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.007546663498336072",
+          "velocity": "1.0081241054539123"
+        },
+        {
+          "acceleration": "55.43695975939454",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.01226951126680223",
+          "velocity": "1.2489771305972832"
+        },
+        {
+          "acceleration": "50.972510307444196",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.017954806253313433",
+          "velocity": "1.470663526569864"
+        },
+        {
+          "acceleration": "46.76533279111222",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.02452504065488443",
+          "velocity": "1.6742840330251898"
+        },
+        {
+          "acceleration": "42.802280278558655",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.031907173195190014",
+          "velocity": "1.8608832269203375"
+        },
+        {
+          "acceleration": "39.07083914622689",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.040032400879220574",
+          "velocity": "2.0314522257219743"
+        },
+        {
+          "acceleration": "35.559099567930595",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.04883594174287313",
+          "velocity": "2.1869312647098025"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "timed-critical",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "60.17249230942346",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "0.007546663498336072",
+          "velocity": "1.0081241054539123"
+        },
+        {
+          "acceleration": "2.7008297625327344",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.22838412332245178",
+          "velocity": "3.217689984266933"
+        },
+        {
+          "acceleration": "-3.1309831345089822",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "0.9306918268738117",
+          "velocity": "0.4752831927023383"
+        },
+        {
+          "acceleration": "-0.10341096325080418",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "0.9980229470368879",
+          "velocity": "0.014336093166035171"
+        },
+        {
+          "acceleration": "-7.132404619066174e-05",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.999998669556931",
+          "velocity": "9.743128077928146e-06"
+        },
+        {
+          "acceleration": "-7.132404619066174e-05",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.999998669556931",
+          "velocity": "9.743128077928146e-06"
+        },
+        {
+          "acceleration": "-6.71035975022635e-05",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "0.9999987483103299",
+          "velocity": "9.166480254822257e-06"
+        },
+        {
+          "acceleration": "-5.76126995446895e-05",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "0.9999989254005625",
+          "velocity": "7.869762654190874e-06"
+        },
+        {
+          "acceleration": "-5.76126995446895e-05",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "0.9999989254005625",
+          "velocity": "7.869762654190874e-06"
+        },
+        {
+          "acceleration": "-6.017720071818431",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "0.6774986936747027",
+          "velocity": "-4.805554240048853"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "0.6774986936747027",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-4.7238832657092615",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "0.4243358546709051",
+          "velocity": "-3.772358863993386"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "8.726646259971648",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "steps-underdamped",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "73.28461894314282",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0013221242178242563",
+          "velocity": "0.4699861017427024"
+        },
+        {
+          "acceleration": "70.42233811578618",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.003916550847855853",
+          "velocity": "0.7693755956154711"
+        },
+        {
+          "acceleration": "67.57102567755184",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.007733587514619849",
+          "velocity": "1.0568617701849252"
+        },
+        {
+          "acceleration": "64.73405259578404",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.012723732266063563",
+          "velocity": "1.3324973499210415"
+        },
+        {
+          "acceleration": "61.914648307584976",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.018837732097295196",
+          "velocity": "1.5963488101363936"
+        },
+        {
+          "acceleration": "59.11590159628271",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.026026639017200176",
+          "velocity": "1.8484957891027847"
+        },
+        {
+          "acceleration": "56.340761621991476",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.03424186367315173",
+          "velocity": "2.089030504140856"
+        },
+        {
+          "acceleration": "53.5920390992989",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.04343522655170731",
+          "velocity": "2.318057172310211"
+        },
+        {
+          "acceleration": "50.8724076151737",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.05355900677573683",
+          "velocity": "2.5356914362986958"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "8.726646259971648",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0.5",
+      "name": "timed-underdamped",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "67.57102567755184",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "0.007733587514619849",
+          "velocity": "1.0568617701849252"
+        },
+        {
+          "acceleration": "14.98726917584301",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.28649637067303524",
+          "velocity": "4.540302715387395"
+        },
+        {
+          "acceleration": "-3.4480301625150167",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "1.1230176962587817",
+          "velocity": "-0.685600163247096"
+        },
+        {
+          "acceleration": "-0.3041333265942445",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "0.990690530976871",
+          "velocity": "0.11545794398218756"
+        },
+        {
+          "acceleration": "-0.012262649149874658",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "1.00008387167054",
+          "velocity": "0.0006477304981104157"
+        },
+        {
+          "acceleration": "-0.012262649149874658",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "1.00008387167054",
+          "velocity": "0.0006477304981104157"
+        },
+        {
+          "acceleration": "-0.011758883799825735",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "1.000088847951763",
+          "velocity": "0.0005476265064887735"
+        },
+        {
+          "acceleration": "-0.010399663408753543",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "1.0000977972431517",
+          "velocity": "0.00031660573173592686"
+        },
+        {
+          "acceleration": "-0.010399663408753543",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "1.0000977972431517",
+          "velocity": "0.00031660573173592686"
+        },
+        {
+          "acceleration": "-25.559892387438794",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "0.5985262686191248",
+          "velocity": "-6.710752012115251"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "0.5985262686191248",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-18.716192879027496",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "0.30444140452975266",
+          "velocity": "-4.914349921661718"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "34.90658503988659",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "steps-overdamped",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "64.97746748344315",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0013221242178242563",
+          "velocity": "0.4526795362016614"
+        },
+        {
+          "acceleration": "55.34028412315564",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0037723294683471784",
+          "velocity": "0.7033415187154088"
+        },
+        {
+          "acceleration": "47.031605535136194",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.007183303540452664",
+          "velocity": "0.9166162888368501"
+        },
+        {
+          "acceleration": "39.869193637859695",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.011410798541987597",
+          "velocity": "1.0976596204472582"
+        },
+        {
+          "acceleration": "33.69580029739187",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.016330467044179814",
+          "velocity": "1.2509200244790322"
+        },
+        {
+          "acceleration": "28.37574058841068",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.021835132079312862",
+          "velocity": "1.3802357346577874"
+        },
+        {
+          "acceleration": "23.791935944968962",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.027832431499661373",
+          "velocity": "1.4889183941023283"
+        },
+        {
+          "acceleration": "19.843362767627674",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.03424278536349893",
+          "velocity": "1.5798252664202381"
+        },
+        {
+          "acceleration": "16.442850888979386",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.040997642053163356",
+          "velocity": "1.6554215448715028"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "34.90658503988659",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "2",
+      "name": "timed-overdamped",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "47.031605535136194",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "0.007183303540452664",
+          "velocity": "0.9166162888368501"
+        },
+        {
+          "acceleration": "-2.18727697768378",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.15764332080167268",
+          "velocity": "1.8958412337089197"
+        },
+        {
+          "acceleration": "-1.8008505661541818",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "0.6669318136184436",
+          "velocity": "0.7744808572249059"
+        },
+        {
+          "acceleration": "-0.5630606371009668",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "0.8958617589860655",
+          "velocity": "0.2421518539300255"
+        },
+        {
+          "acceleration": "-0.055043917465347425",
+          "complete": false,
+          "time": "2.004166666666661",
+          "value": "0.9898196102414996",
+          "velocity": "0.023672382304030504"
+        },
+        {
+          "acceleration": "-0.055043917465347425",
+          "complete": false,
+          "time": "2.004166666666661",
+          "value": "0.9898196102414996",
+          "velocity": "0.023672382304030504"
+        },
+        {
+          "acceleration": "-0.05398759149189636",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "0.9900149780608145",
+          "velocity": "0.023218095010671555"
+        },
+        {
+          "acceleration": "-0.05143461557062046",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "0.9904871517562821",
+          "velocity": "0.022120153134361414"
+        },
+        {
+          "acceleration": "-0.05143461557062046",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "0.9904871517562821",
+          "velocity": "0.022120153134361414"
+        },
+        {
+          "acceleration": "2.7400880451199328",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "0.7678732941621147",
+          "velocity": "-2.838859658633584"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "0.7678732941621147",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "2.3505115623451474",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "0.5780409708375471",
+          "velocity": "-2.4143608485852415"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "steps-undamped",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "76.05366942970937",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0013221242178242563",
+          "velocity": "0.47575495692304937"
+        },
+        {
+          "acceleration": "75.85243151453416",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0039646246410254115",
+          "velocity": "0.7922260005568901"
+        },
+        {
+          "acceleration": "75.55090726267274",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.00792400755579834",
+          "velocity": "1.1076496230094044"
+        },
+        {
+          "acceleration": "75.14949532664075",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.013195038166103781",
+          "velocity": "1.421608795070474"
+        },
+        {
+          "acceleration": "74.64872642288012",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.019770747514718957",
+          "velocity": "1.7336884237153092"
+        },
+        {
+          "acceleration": "74.04926263008608",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.027642441697064687",
+          "velocity": "2.0434759009089887"
+        },
+        {
+          "acceleration": "73.35189651385676",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.03679971335562719",
+          "velocity": "2.350561649125536"
+        },
+        {
+          "acceleration": "72.55755007882313",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.04723045543977748",
+          "velocity": "2.6545396628602855"
+        },
+        {
+          "acceleration": "71.66727354964429",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.058920877212796235",
+          "velocity": "2.955008045419593"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "0.0",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "0",
+      "name": "timed-undamped",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        },
+        {
+          "acceleration": "75.55090726267274",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "0.00792400755579834",
+          "velocity": "1.1076496230094044"
+        },
+        {
+          "acceleration": "47.88744480877865",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.3711791683836182",
+          "velocity": "6.78613919950266"
+        },
+        {
+          "acceleration": "-24.727761829714463",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "1.3247058142246586",
+          "velocity": "-8.253954253788113"
+        },
+        {
+          "acceleration": "-59.25074247165584",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "1.7780348545154492",
+          "velocity": "5.483652919914652"
+        },
+        {
+          "acceleration": "14.65966247549233",
+          "complete": false,
+          "time": "2.004166666666661",
+          "value": "0.8075006677456996",
+          "velocity": "-8.56348716700866"
+        },
+        {
+          "acceleration": "14.65966247549233",
+          "complete": false,
+          "time": "2.004166666666661",
+          "value": "0.8075006677456996",
+          "velocity": "-8.56348716700866"
+        },
+        {
+          "acceleration": "20.051875929656145",
+          "complete": false,
+          "time": "2.012499999999995",
+          "value": "0.7366942974739087",
+          "velocity": "-8.418807920191655"
+        },
+        {
+          "acceleration": "33.007675154258344",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "0.5665687776179035",
+          "velocity": "-7.864637735963624"
+        },
+        {
+          "acceleration": "33.007675154258344",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "0.5665687776179035",
+          "velocity": "-7.864637735963624"
+        },
+        {
+          "acceleration": "-1.2120295025850278",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-0.4840845674100492",
+          "velocity": "-12.031158905757565"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-0.4840845674100492",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-0.7959164088297812",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "-0.4895486422360602",
+          "velocity": "-0.10475837054114685"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "steps-clamped",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "28800.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "60.0"
+        },
+        {
+          "acceleration": "-26329.35059634514",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.5",
+          "velocity": "65.1471862576143"
+        },
+        {
+          "acceleration": "9670.649403654865",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.5428932188134524",
+          "velocity": "30.44155877284289"
+        },
+        {
+          "acceleration": "-10076.363543603988",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.7536796564403574",
+          "velocity": "29.596320981282215"
+        },
+        {
+          "acceleration": "3141.2988073097217",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.7895292269908042",
+          "velocity": "15.148269447335828"
+        },
+        {
+          "acceleration": "-3904.2856049618463",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.879915235168156",
+          "velocity": "13.558713618893902"
+        },
+        {
+          "acceleration": "966.2338159264336",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9025185071482534",
+          "velocity": "7.437772391736792"
+        },
+        {
+          "acceleration": "-1534.3182919702606",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9418966717659626",
+          "velocity": "6.2542630666454855"
+        },
+        {
+          "acceleration": "268.60345052631146",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9546373660369658",
+          "velocity": "3.6173571469705914"
+        },
+        {
+          "acceleration": "-612.4929123762585",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9720413146573842",
+          "velocity": "2.9009207681165354"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.01",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "timed-clamped",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.01",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "28800.0",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "0.0",
+          "velocity": "60.0"
+        },
+        {
+          "acceleration": "-10076.363543603988",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "0.7536796564403574",
+          "velocity": "29.596320981282215"
+        },
+        {
+          "acceleration": "-0.6943028362429495",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.999891486467311",
+          "velocity": "0.009806823684386779"
+        },
+        {
+          "acceleration": "3.390877479351252e-21",
+          "complete": true,
+          "time": "0.5041666666666661",
+          "value": "0.9999999999999999",
+          "velocity": "9.42055474917651e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "1.0041666666666644",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "-4.0389678347315804e-28",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "-4.0389678347315804e-28",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "2.375918274570701",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-0.4997668966514254",
+          "velocity": "-0.02182976162853178"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "5.10416666666666",
+          "value": "-0.4997668966514254",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0003692230037549791",
+          "complete": true,
+          "time": "5.204166666666654",
+          "value": "-0.49999996377521927",
+          "velocity": "-3.3923936882262725e-06"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-1.0",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "steps-short-negative",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "-1",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "28800.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "60.0"
+        },
+        {
+          "acceleration": "-26329.35059634514",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.5",
+          "velocity": "65.1471862576143"
+        },
+        {
+          "acceleration": "9670.649403654865",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.5428932188134524",
+          "velocity": "30.44155877284289"
+        },
+        {
+          "acceleration": "-10076.363543603988",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.7536796564403574",
+          "velocity": "29.596320981282215"
+        },
+        {
+          "acceleration": "3141.2988073097217",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.7895292269908042",
+          "velocity": "15.148269447335828"
+        },
+        {
+          "acceleration": "-3904.2856049618463",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.879915235168156",
+          "velocity": "13.558713618893902"
+        },
+        {
+          "acceleration": "966.2338159264336",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9025185071482534",
+          "velocity": "7.437772391736792"
+        },
+        {
+          "acceleration": "-1534.3182919702606",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9418966717659626",
+          "velocity": "6.2542630666454855"
+        },
+        {
+          "acceleration": "268.60345052631146",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9546373660369658",
+          "velocity": "3.6173571469705914"
+        },
+        {
+          "acceleration": "-612.4929123762585",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.9720413146573842",
+          "velocity": "2.9009207681165354"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "-1.0",
+        "28800.0",
+        "339.4112549695428",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "timed-short-negative",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "-1",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "28800.0",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "0.0",
+          "velocity": "60.0"
+        },
+        {
+          "acceleration": "-10076.363543603988",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "0.7536796564403574",
+          "velocity": "29.596320981282215"
+        },
+        {
+          "acceleration": "-0.6943028362429495",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.999891486467311",
+          "velocity": "0.009806823684386779"
+        },
+        {
+          "acceleration": "3.390877479351252e-21",
+          "complete": true,
+          "time": "0.5041666666666661",
+          "value": "0.9999999999999999",
+          "velocity": "9.42055474917651e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "1.0041666666666644",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "8.077935669463161e-28",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "-4.0389678347315804e-28",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "-4.0389678347315804e-28",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "0.9999999999999999",
+          "velocity": "9.420554752102649e-15"
+        },
+        {
+          "acceleration": "2.375918274570701",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-0.4997668966514254",
+          "velocity": "-0.02182976162853178"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "5.10416666666666",
+          "value": "-0.4997668966514254",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0003692230037549791",
+          "complete": true,
+          "time": "5.204166666666654",
+          "value": "-0.49999996377521927",
+          "velocity": "-3.3923936882262725e-06"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "-1.25",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "steps-moving",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "-1.25",
+          "complete": false,
+          "time": "0.0",
+          "value": "-3.125",
+          "velocity": "2.5"
+        },
+        {
+          "acceleration": "1164.5701565581871",
+          "complete": false,
+          "time": "0.0",
+          "value": "-3.1145941840277778",
+          "velocity": "4.923583659496224"
+        },
+        {
+          "acceleration": "1077.5480702710954",
+          "complete": false,
+          "time": "0.0",
+          "value": "-3.0839701361708647",
+          "velocity": "9.594663298723896"
+        },
+        {
+          "acceleration": "995.4297562830297",
+          "complete": false,
+          "time": "0.0",
+          "value": "-3.034638656538412",
+          "velocity": "13.91336710404499"
+        },
+        {
+          "acceleration": "917.9671728206989",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.968025410303823",
+          "velocity": "17.899610706344426"
+        },
+        {
+          "acceleration": "844.9241607635082",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.885475233985541",
+          "velocity": "21.572300984644855"
+        },
+        {
+          "acceleration": "776.0758917443634",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.788256235431782",
+          "velocity": "24.949384427369587"
+        },
+        {
+          "acceleration": "711.2083414050528",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.6775636970907946",
+          "velocity": "28.04789324643087"
+        },
+        {
+          "acceleration": "650.1177866733354",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.554523791711525",
+          "velocity": "30.883989346594177"
+        },
+        {
+          "acceleration": "592.6103259794952",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.42019711920251",
+          "velocity": "33.47300624795424"
+        },
+        {
+          "acceleration": "538.5014213784814",
+          "complete": false,
+          "time": "0.0",
+          "value": "-2.275582072978573",
+          "velocity": "35.829489054950024"
+        }
+      ],
+      "target": "12.75",
+      "time": "0",
+      "value": "-3.125",
+      "velocity": "2.5"
+    },
+    {
+      "acceleration": "-1.25",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "timed-moving",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "-1.25",
+          "complete": false,
+          "time": "0.0",
+          "value": "-3.125",
+          "velocity": "2.5"
+        },
+        {
+          "acceleration": "-1.25",
+          "complete": false,
+          "time": "0.0",
+          "value": "-3.125",
+          "velocity": "2.5"
+        },
+        {
+          "acceleration": "1164.5701565581871",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "-3.1145941840277778",
+          "velocity": "4.923583659496224"
+        },
+        {
+          "acceleration": "917.9671728206989",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "-2.968025410303823",
+          "velocity": "17.899610706344426"
+        },
+        {
+          "acceleration": "33.27992522506179",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.6063029792629642",
+          "velocity": "51.14940801376706"
+        },
+        {
+          "acceleration": "-49.082984782852975",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "11.665105215202766",
+          "velocity": "7.443738163771472"
+        },
+        {
+          "acceleration": "-1.6177255045950951",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "12.719077355057127",
+          "velocity": "0.22424407427563992"
+        },
+        {
+          "acceleration": "-0.0011154074885519247",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "12.74997919385824",
+          "velocity": "0.00015236829551989794"
+        },
+        {
+          "acceleration": "-0.0011154074885519247",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "12.74997919385824",
+          "velocity": "0.00015236829551989794"
+        },
+        {
+          "acceleration": "-0.0010494053262847809",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "12.749980425446276",
+          "velocity": "0.00014335033812001166"
+        },
+        {
+          "acceleration": "-0.0009009805037410643",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "12.749983194877755",
+          "velocity": "0.0001230715161651723"
+        },
+        {
+          "acceleration": "-0.0009009805037410643",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "12.749983194877755",
+          "velocity": "0.0001230715161651723"
+        },
+        {
+          "acceleration": "-53.15671585243342",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "9.901234944648126",
+          "velocity": "-42.4490367013053"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "9.901234944648126",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-41.72762140771215",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "7.664963956087625",
+          "velocity": "-33.322492033915445"
+        }
+      ],
+      "target": "12.75",
+      "time": "0",
+      "value": "-3.125",
+      "velocity": "2.5"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "steps-large",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1000000000000.25",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-152308709893411.44",
+          "complete": false,
+          "time": "0.0",
+          "value": "1000000000000.25",
+          "velocity": "-317309812277.9405"
+        },
+        {
+          "acceleration": "-141031136913205.4",
+          "complete": false,
+          "time": "0.0",
+          "value": "997355751564.6005",
+          "velocity": "-928434493125.0588"
+        },
+        {
+          "acceleration": "-130387231501996.4",
+          "complete": false,
+          "time": "0.0",
+          "value": "992263045890.8745",
+          "velocity": "-1493889427323.396"
+        },
+        {
+          "acceleration": "-120344984618892.08",
+          "complete": false,
+          "time": "0.0",
+          "value": "984906673003.5721",
+          "velocity": "-2016248210908.5803"
+        },
+        {
+          "acceleration": "-110873919518830.66",
+          "complete": false,
+          "time": "0.0",
+          "value": "975460977466.6362",
+          "velocity": "-2497954261195.5024"
+        },
+        {
+          "acceleration": "-101945020614926.66",
+          "complete": false,
+          "time": "0.0",
+          "value": "964090387493.6096",
+          "velocity": "-2941327053140.83"
+        },
+        {
+          "acceleration": "-93530665582259.53",
+          "complete": false,
+          "time": "0.0",
+          "value": "950949918690.4626",
+          "velocity": "-3348568066051.635"
+        },
+        {
+          "acceleration": "-85604560557149.4",
+          "complete": false,
+          "time": "0.0",
+          "value": "936185653609.846",
+          "velocity": "-3721766453842.07"
+        },
+        {
+          "acceleration": "-78141678292483.1",
+          "complete": false,
+          "time": "0.0",
+          "value": "919935198241.7787",
+          "velocity": "-4062904451445.4707"
+        },
+        {
+          "acceleration": "-71118199135887.84",
+          "complete": false,
+          "time": "0.0",
+          "value": "902328116514.4669",
+          "velocity": "-4373862529421.2437"
+        }
+      ],
+      "target": "-1000000000000.5",
+      "time": "0",
+      "value": "1000000000000.25",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "timed-large",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1000000000000.25",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "1000000000000.25",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-152308709893411.44",
+          "complete": false,
+          "time": "0.004166666666666667",
+          "value": "1000000000000.25",
+          "velocity": "-317309812277.9405"
+        },
+        {
+          "acceleration": "-120344984618892.08",
+          "complete": false,
+          "time": "0.016666666666666666",
+          "value": "984906673003.5721",
+          "velocity": "-2016248210908.5803"
+        },
+        {
+          "acceleration": "-5401659525067.4375",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "543231753355.17474",
+          "velocity": "-6435379968536.28"
+        },
+        {
+          "acceleration": "6261966269020.316",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "-861383653748.0715",
+          "velocity": "-950566385405.0327"
+        },
+        {
+          "acceleration": "206821926501.70868",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "-996045894074.2739",
+          "velocity": "-28672186332.08384"
+        },
+        {
+          "acceleration": "142648092.3879857",
+          "complete": false,
+          "time": "2.004166666666661",
+          "value": "-999997339114.362",
+          "velocity": "-19486256.155545387"
+        },
+        {
+          "acceleration": "142648092.3879857",
+          "complete": false,
+          "time": "2.004166666666661",
+          "value": "-999997339114.362",
+          "velocity": "-19486256.155545387"
+        },
+        {
+          "acceleration": "134207195.00302559",
+          "complete": false,
+          "time": "2.012499999999995",
+          "value": "-999997496621.1598",
+          "velocity": "-18332960.5093064"
+        },
+        {
+          "acceleration": "115225399.0737783",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "-999997850801.6248",
+          "velocity": "-15739525.30819336"
+        },
+        {
+          "acceleration": "115225399.0737783",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "-999997850801.6248",
+          "velocity": "-15739525.30819336"
+        },
+        {
+          "acceleration": "4011850323817.875",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-784998440198.1838",
+          "velocity": "3203697781032.3447"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-784998440198.1838",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "3149252746671.9688",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "-616223362313.5535",
+          "velocity": "2514903702236.1284"
+        }
+      ],
+      "target": "-1000000000000.5",
+      "time": "0",
+      "value": "1000000000000.25",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "steps-tiny",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "step"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1e-200",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-2.2846306484003147e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "1e-200",
+          "velocity": "-4.759647184167322e-201"
+        },
+        {
+          "acceleration": "-2.115467053697288e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.960336273465272e-201",
+          "velocity": "-1.392651739687066e-200"
+        },
+        {
+          "acceleration": "-1.9558084725292125e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.883945688359412e-201",
+          "velocity": "-2.2408341409842534e-200"
+        },
+        {
+          "acceleration": "-1.8051747692827037e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.773600095049918e-201",
+          "velocity": "-3.024372316361736e-200"
+        },
+        {
+          "acceleration": "-1.6631087927818363e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.631914661995934e-201",
+          "velocity": "-3.7469313917918486e-200"
+        },
+        {
+          "acceleration": "-1.5291753092233266e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.461355812400599e-201",
+          "velocity": "-4.411990579709591e-200"
+        },
+        {
+          "acceleration": "-1.4029599837333671e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.264248780353468e-201",
+          "velocity": "-5.022852099075569e-200"
+        },
+        {
+          "acceleration": "-1.2840684083567594e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "9.042784804144301e-201",
+          "velocity": "-5.582649680761011e-200"
+        },
+        {
+          "acceleration": "-1.1721251743868073e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "8.799027973623384e-201",
+          "velocity": "-6.09435667716592e-200"
+        },
+        {
+          "acceleration": "-1.0667729870379182e-198",
+          "complete": true,
+          "time": "0.0",
+          "value": "8.534921747713808e-201",
+          "velocity": "-6.560793794129404e-200"
+        }
+      ],
+      "target": "-2e-200",
+      "time": "0",
+      "value": "1e-200",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "timed-tiny",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.001"
+        },
+        {
+          "kind": "advance",
+          "time": "0.016666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0001"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        },
+        {
+          "kind": "advance",
+          "time": "2.01"
+        },
+        {
+          "kind": "advance",
+          "time": "5.0"
+        },
+        {
+          "kind": "retarget",
+          "target": "-0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "5.1"
+        },
+        {
+          "kind": "reset"
+        },
+        {
+          "kind": "advance",
+          "time": "5.2"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1e-200",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "1e-200",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-2.2846306484003147e-198",
+          "complete": true,
+          "time": "0.004166666666666667",
+          "value": "1e-200",
+          "velocity": "-4.759647184167322e-201"
+        },
+        {
+          "acceleration": "-1.8051747692827037e-198",
+          "complete": true,
+          "time": "0.016666666666666666",
+          "value": "9.773600095049918e-201",
+          "velocity": "-3.024372316361736e-200"
+        },
+        {
+          "acceleration": "-8.102489287598209e-200",
+          "complete": true,
+          "time": "0.10416666666666666",
+          "value": "3.1484763003264485e-201",
+          "velocity": "-9.653069952800799e-200"
+        },
+        {
+          "acceleration": "9.392949403526918e-200",
+          "complete": true,
+          "time": "0.5041666666666661",
+          "value": "-1.7920754806214348e-200",
+          "velocity": "-1.4258495781070144e-200"
+        },
+        {
+          "acceleration": "3.1023288975243924e-201",
+          "complete": true,
+          "time": "1.0041666666666644",
+          "value": "-1.994068841110663e-200",
+          "velocity": "-4.300827949810949e-202"
+        },
+        {
+          "acceleration": "2.1397213859414614e-204",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "-1.999996008670794e-200",
+          "velocity": "-2.922938423013441e-205"
+        },
+        {
+          "acceleration": "2.1397213859414614e-204",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "-1.999996008670794e-200",
+          "velocity": "-2.922938423013441e-205"
+        },
+        {
+          "acceleration": "2.0131079251403905e-204",
+          "complete": true,
+          "time": "2.012499999999995",
+          "value": "-1.9999962449309905e-200",
+          "velocity": "-2.74994407606492e-205"
+        },
+        {
+          "acceleration": "1.7283809864652986e-204",
+          "complete": true,
+          "time": "5.0041666666666655",
+          "value": "-1.9999967762016884e-200",
+          "velocity": "-2.36092879584597e-205"
+        },
+        {
+          "acceleration": "1.7283809864652986e-204",
+          "complete": false,
+          "time": "5.0041666666666655",
+          "value": "-1.9999967762016884e-200",
+          "velocity": "-2.36092879584597e-205"
+        },
+        {
+          "acceleration": "-2.005897454954763",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-0.10750026321206967",
+          "velocity": "-1.601852674766339"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "5.10416666666666",
+          "value": "-0.10750026321206967",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-1.5746284461866331",
+          "complete": false,
+          "time": "5.204166666666654",
+          "value": "-0.19188791324281082",
+          "velocity": "-1.257453506437661"
+        }
+      ],
+      "target": "-2e-200",
+      "time": "0",
+      "value": "1e-200",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "time-boundary-0-1",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "1"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-0.10341096325080418",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "0.9980229470368879",
+          "velocity": "0.014336093166035171"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "time-boundary-0-1.0000000000000002",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "1.0000000000000002"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "60.17249230942346",
+          "complete": false,
+          "time": "1.0000000000000002",
+          "value": "0.007546663498336072",
+          "velocity": "1.0081241054539123"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "time-boundary-0-1.00000000000001",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "1.00000000000001"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "60.17249230942346",
+          "complete": false,
+          "time": "1.00000000000001",
+          "value": "0.007546663498336072",
+          "velocity": "1.0081241054539123"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "time-boundary-10-10.000000000000002",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "10.000000000000002"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "10.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "76.15435494667716",
+          "complete": false,
+          "time": "10.004166666666666",
+          "value": "0.0",
+          "velocity": "0.15865490613891076"
+        }
+      ],
+      "target": "1",
+      "time": "10",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "time-boundary-10-11.0001",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "11.0001"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "10.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "55.43695975939454",
+          "complete": false,
+          "time": "11.004266666666664",
+          "value": "0.01226951126680223",
+          "velocity": "1.2489771305972832"
+        }
+      ],
+      "target": "1",
+      "time": "10",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "nonfinite-value-step-nan",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "reset"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "nan",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "nan",
+          "complete": true,
+          "time": "0.0",
+          "value": "nan",
+          "velocity": "nan"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": true,
+          "time": "0.0",
+          "value": "nan",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "nan",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "nonfinite-time-nan",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "nan"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "nonfinite-value-step-inf",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "reset"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "inf",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "-inf",
+          "complete": false,
+          "time": "0.0",
+          "value": "inf",
+          "velocity": "-inf"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "inf",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "inf",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "nonfinite-time-inf",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "inf"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "inf",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "nonfinite-value-step--inf",
+      "operations": [
+        {
+          "kind": "step"
+        },
+        {
+          "kind": "reset"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "-inf",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "inf",
+          "complete": false,
+          "time": "0.0",
+          "value": "-inf",
+          "velocity": "inf"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "-inf",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "-inf",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "nonfinite-time--inf",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "-inf"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    },
+    {
+      "acceleration": "0",
+      "configuration": [
+        "0.72",
+        "76.15435494667716",
+        "17.453292519943297",
+        "0.004166666666666667",
+        "0.06"
+      ],
+      "damping": "1",
+      "name": "full-critical",
+      "operations": [
+        {
+          "kind": "advance",
+          "time": "0.0"
+        },
+        {
+          "kind": "advance",
+          "time": "0.03333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.06666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "0.1"
+        },
+        {
+          "kind": "advance",
+          "time": "0.13333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.16666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.2"
+        },
+        {
+          "kind": "advance",
+          "time": "0.23333333333333334"
+        },
+        {
+          "kind": "advance",
+          "time": "0.26666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.3"
+        },
+        {
+          "kind": "advance",
+          "time": "0.3333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.36666666666666664"
+        },
+        {
+          "kind": "advance",
+          "time": "0.4"
+        },
+        {
+          "kind": "advance",
+          "time": "0.43333333333333335"
+        },
+        {
+          "kind": "advance",
+          "time": "0.4666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.5666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "0.6"
+        },
+        {
+          "kind": "advance",
+          "time": "0.6333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.6666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "0.7"
+        },
+        {
+          "kind": "advance",
+          "time": "0.7333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.7666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "0.8"
+        },
+        {
+          "kind": "advance",
+          "time": "0.8333333333333334"
+        },
+        {
+          "kind": "advance",
+          "time": "0.8666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "0.9"
+        },
+        {
+          "kind": "advance",
+          "time": "0.9333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "0.9666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0333333333333334"
+        },
+        {
+          "kind": "advance",
+          "time": "1.0666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.1"
+        },
+        {
+          "kind": "advance",
+          "time": "1.1333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "1.1666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.2"
+        },
+        {
+          "kind": "advance",
+          "time": "1.2333333333333334"
+        },
+        {
+          "kind": "advance",
+          "time": "1.2666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "1.3"
+        },
+        {
+          "kind": "advance",
+          "time": "1.3333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "1.3666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.4"
+        },
+        {
+          "kind": "advance",
+          "time": "1.4333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "1.4666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "1.5"
+        },
+        {
+          "kind": "advance",
+          "time": "1.5333333333333334"
+        },
+        {
+          "kind": "advance",
+          "time": "1.5666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.6"
+        },
+        {
+          "kind": "advance",
+          "time": "1.6333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "1.6666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.7"
+        },
+        {
+          "kind": "advance",
+          "time": "1.7333333333333334"
+        },
+        {
+          "kind": "advance",
+          "time": "1.7666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "1.8"
+        },
+        {
+          "kind": "advance",
+          "time": "1.8333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "1.8666666666666667"
+        },
+        {
+          "kind": "advance",
+          "time": "1.9"
+        },
+        {
+          "kind": "advance",
+          "time": "1.9333333333333333"
+        },
+        {
+          "kind": "advance",
+          "time": "1.9666666666666666"
+        },
+        {
+          "kind": "advance",
+          "time": "2.0"
+        }
+      ],
+      "period": "0.72",
+      "snapshots": [
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "0.0",
+          "complete": false,
+          "time": "0.0",
+          "value": "0.0",
+          "velocity": "0.0"
+        },
+        {
+          "acceleration": "42.802280278558655",
+          "complete": false,
+          "time": "0.03333333333333333",
+          "value": "0.031907173195190014",
+          "velocity": "1.8608832269203375"
+        },
+        {
+          "acceleration": "18.504689252801874",
+          "complete": false,
+          "time": "0.06666666666666667",
+          "value": "0.1127305617369849",
+          "velocity": "2.8497541030592406"
+        },
+        {
+          "acceleration": "2.7008297625327344",
+          "complete": false,
+          "time": "0.10416666666666666",
+          "value": "0.22838412332245178",
+          "velocity": "3.217689984266933"
+        },
+        {
+          "acceleration": "-4.172858785390282",
+          "complete": false,
+          "time": "0.13333333333333333",
+          "value": "0.32229768227162603",
+          "velocity": "3.18742793929327"
+        },
+        {
+          "acceleration": "-8.37348820475362",
+          "complete": false,
+          "time": "0.16666666666666677",
+          "value": "0.4253178524125616",
+          "velocity": "2.9698446737999196"
+        },
+        {
+          "acceleration": "-10.121378985624084",
+          "complete": false,
+          "time": "0.2000000000000002",
+          "value": "0.5192552795670328",
+          "velocity": "2.656470650792347"
+        },
+        {
+          "acceleration": "-10.414135383277863",
+          "complete": false,
+          "time": "0.23333333333333364",
+          "value": "0.6020777385882107",
+          "velocity": "2.3112532965121746"
+        },
+        {
+          "acceleration": "-9.892330117466322",
+          "complete": false,
+          "time": "0.26666666666666694",
+          "value": "0.6734021042141783",
+          "velocity": "1.9712318970898948"
+        },
+        {
+          "acceleration": "-8.959438769498131",
+          "complete": false,
+          "time": "0.30000000000000016",
+          "value": "0.7337717533776836",
+          "velocity": "1.6563123972043956"
+        },
+        {
+          "acceleration": "-7.862920522904922",
+          "complete": false,
+          "time": "0.33333333333333337",
+          "value": "0.7842009248420136",
+          "velocity": "1.3757321722529228"
+        },
+        {
+          "acceleration": "-6.612795493517742",
+          "complete": false,
+          "time": "0.37083333333333324",
+          "value": "0.8305541339054933",
+          "velocity": "1.104455682094177"
+        },
+        {
+          "acceleration": "-5.573295638577896",
+          "complete": false,
+          "time": "0.40416666666666645",
+          "value": "0.8638892617355545",
+          "velocity": "0.9016104179975135"
+        },
+        {
+          "acceleration": "-4.640199885985901",
+          "complete": false,
+          "time": "0.43749999999999967",
+          "value": "0.8910220351944245",
+          "velocity": "0.7317028609632227"
+        },
+        {
+          "acceleration": "-3.826357152209871",
+          "complete": false,
+          "time": "0.4708333333333329",
+          "value": "0.9129881004498565",
+          "velocity": "0.5909235722220296"
+        },
+        {
+          "acceleration": "-3.1309831345089822",
+          "complete": false,
+          "time": "0.5041666666666661",
+          "value": "0.9306918268738117",
+          "velocity": "0.4752831927023383"
+        },
+        {
+          "acceleration": "-2.5458927934302844",
+          "complete": false,
+          "time": "0.5374999999999993",
+          "value": "0.9449066158581159",
+          "velocity": "0.3809552061721576"
+        },
+        {
+          "acceleration": "-2.05939164248645",
+          "complete": false,
+          "time": "0.5708333333333325",
+          "value": "0.9562836442929205",
+          "velocity": "0.304452636239196"
+        },
+        {
+          "acceleration": "-1.658632544137367",
+          "complete": false,
+          "time": "0.6041666666666657",
+          "value": "0.9653646460871224",
+          "velocity": "0.24270240091846854"
+        },
+        {
+          "acceleration": "-1.3309794294659572",
+          "complete": false,
+          "time": "0.637499999999999",
+          "value": "0.9725960641065694",
+          "velocity": "0.19305885745219664"
+        },
+        {
+          "acceleration": "-1.0647389052294856",
+          "complete": false,
+          "time": "0.6708333333333322",
+          "value": "0.9783430246503154",
+          "velocity": "0.1532832209692794"
+        },
+        {
+          "acceleration": "-0.8494984408889268",
+          "complete": false,
+          "time": "0.7041666666666654",
+          "value": "0.9829022999934286",
+          "velocity": "0.12150567685559231"
+        },
+        {
+          "acceleration": "-0.6762273657615359",
+          "complete": false,
+          "time": "0.7374999999999986",
+          "value": "0.9865138691167583",
+          "velocity": "0.09618051385424684"
+        },
+        {
+          "acceleration": "-0.5372416028136556",
+          "complete": false,
+          "time": "0.7708333333333318",
+          "value": "0.9893709552895166",
+          "velocity": "0.07604037971577686"
+        },
+        {
+          "acceleration": "-0.4260962281491034",
+          "complete": false,
+          "time": "0.804166666666665",
+          "value": "0.9916285739047328",
+          "velocity": "0.060053052176522695"
+        },
+        {
+          "acceleration": "-0.3374456134263417",
+          "complete": false,
+          "time": "0.8374999999999982",
+          "value": "0.9934107063605105",
+          "velocity": "0.0473824151173471"
+        },
+        {
+          "acceleration": "-0.26689500539574185",
+          "complete": false,
+          "time": "0.8708333333333315",
+          "value": "0.994816253235839",
+          "velocity": "0.03735428827710908"
+        },
+        {
+          "acceleration": "-0.21085714217767504",
+          "complete": false,
+          "time": "0.9041666666666647",
+          "value": "0.9959239304500922",
+          "velocity": "0.02942714716064418"
+        },
+        {
+          "acceleration": "-0.1664210102393373",
+          "complete": false,
+          "time": "0.9374999999999979",
+          "value": "0.9967962670852136",
+          "velocity": "0.023167433000403147"
+        },
+        {
+          "acceleration": "-0.13123583031109526",
+          "complete": false,
+          "time": "0.9708333333333311",
+          "value": "0.9974828504220193",
+          "velocity": "0.018228988193143086"
+        },
+        {
+          "acceleration": "-0.10341096325080418",
+          "complete": false,
+          "time": "1.0041666666666644",
+          "value": "0.9980229470368879",
+          "velocity": "0.014336093166035171"
+        },
+        {
+          "acceleration": "-0.08143107126637304",
+          "complete": false,
+          "time": "1.0374999999999976",
+          "value": "0.9984476112380924",
+          "velocity": "0.011269582431215208"
+        },
+        {
+          "acceleration": "-0.06408517243144624",
+          "complete": false,
+          "time": "1.0708333333333309",
+          "value": "0.998781375233055",
+          "velocity": "0.008855552766175901"
+        },
+        {
+          "acceleration": "-0.050407934357628734",
+          "complete": true,
+          "time": "1.104166666666664",
+          "value": "0.9990436000066902",
+          "velocity": "0.006956227575079679"
+        },
+        {
+          "acceleration": "-0.03963150153487844",
+          "complete": true,
+          "time": "1.1374999999999973",
+          "value": "0.999249552296142",
+          "velocity": "0.005462597969605543"
+        },
+        {
+          "acceleration": "-0.031146234443654087",
+          "complete": true,
+          "time": "1.1708333333333305",
+          "value": "0.9994112613352201",
+          "velocity": "0.004288516826473339"
+        },
+        {
+          "acceleration": "-0.02446889042275651",
+          "complete": true,
+          "time": "1.2041666666666637",
+          "value": "0.9995381991258505",
+          "velocity": "0.0033659737311687496"
+        },
+        {
+          "acceleration": "-0.01921695554056007",
+          "complete": true,
+          "time": "1.237499999999997",
+          "value": "0.9996378197087854",
+          "velocity": "0.002641324765403458"
+        },
+        {
+          "acceleration": "-0.015088019212848736",
+          "complete": true,
+          "time": "1.2708333333333302",
+          "value": "0.9997159860546783",
+          "velocity": "0.0020722910656092944"
+        },
+        {
+          "acceleration": "-0.01184325562394365",
+          "complete": true,
+          "time": "1.3041666666666634",
+          "value": "0.9997773075778429",
+          "velocity": "0.00162557411020069"
+        },
+        {
+          "acceleration": "-0.009294231474117436",
+          "complete": true,
+          "time": "1.3374999999999966",
+          "value": "0.9998254066977178",
+          "velocity": "0.0012749642492353678"
+        },
+        {
+          "acceleration": "-0.007292395655355617",
+          "complete": true,
+          "time": "1.3708333333333298",
+          "value": "0.9998631291647391",
+          "velocity": "0.00099984268395724"
+        },
+        {
+          "acceleration": "-0.005720723029448503",
+          "complete": true,
+          "time": "1.404166666666663",
+          "value": "0.9998927098767838",
+          "velocity": "0.000783996588620938"
+        },
+        {
+          "acceleration": "-0.004487082759710936",
+          "complete": true,
+          "time": "1.4374999999999962",
+          "value": "0.999915903509948",
+          "velocity": "0.0006146829755692756"
+        },
+        {
+          "acceleration": "-0.0035189834907763578",
+          "complete": true,
+          "time": "1.4708333333333294",
+          "value": "0.9999340873638081",
+          "velocity": "0.00048188981664652026"
+        },
+        {
+          "acceleration": "-0.0027594151717570932",
+          "complete": true,
+          "time": "1.5041666666666627",
+          "value": "0.9999483422853378",
+          "velocity": "0.00037775336288601094"
+        },
+        {
+          "acceleration": "-0.0021635625602616265",
+          "complete": true,
+          "time": "1.5374999999999959",
+          "value": "0.9999595163121293",
+          "velocity": "0.00029609899308825097"
+        },
+        {
+          "acceleration": "-0.001696210370266908",
+          "complete": true,
+          "time": "1.570833333333329",
+          "value": "0.9999682747029569",
+          "velocity": "0.00023207964617170016"
+        },
+        {
+          "acceleration": "-0.0013296963698074564",
+          "complete": true,
+          "time": "1.6041666666666623",
+          "value": "0.9999751392519131",
+          "velocity": "0.000181891266409903"
+        },
+        {
+          "acceleration": "-0.0010422980086928746",
+          "complete": true,
+          "time": "1.6374999999999955",
+          "value": "0.9999805191708547",
+          "velocity": "0.00014254897510906738"
+        },
+        {
+          "acceleration": "-0.0008169616492163599",
+          "complete": true,
+          "time": "1.6708333333333287",
+          "value": "0.9999847353410647",
+          "velocity": "0.00011171109049206033"
+        },
+        {
+          "acceleration": "-0.0006403022669757158",
+          "complete": true,
+          "time": "1.704166666666662",
+          "value": "0.9999880393526481",
+          "velocity": "8.754082369419413e-05"
+        },
+        {
+          "acceleration": "-0.0005018164851727031",
+          "complete": true,
+          "time": "1.7374999999999952",
+          "value": "0.9999906284483022",
+          "velocity": "6.859762396648488e-05"
+        },
+        {
+          "acceleration": "-0.00039326374357252303",
+          "complete": true,
+          "time": "1.7708333333333284",
+          "value": "0.9999926572499753",
+          "velocity": "5.375184429681194e-05"
+        },
+        {
+          "acceleration": "-0.00030817988763133427",
+          "complete": true,
+          "time": "1.8041666666666616",
+          "value": "0.999994246959249",
+          "velocity": "4.2117741236163035e-05"
+        },
+        {
+          "acceleration": "-0.00024149498633840638",
+          "complete": true,
+          "time": "1.8374999999999948",
+          "value": "0.9999954925744645",
+          "velocity": "3.300088303154874e-05"
+        },
+        {
+          "acceleration": "-0.00018923314472870002",
+          "complete": true,
+          "time": "1.870833333333328",
+          "value": "0.9999964685512599",
+          "velocity": "2.585687678880302e-05"
+        },
+        {
+          "acceleration": "-0.0001482767894190537",
+          "complete": true,
+          "time": "1.9041666666666612",
+          "value": "0.9999972332416514",
+          "velocity": "2.0258984953247192e-05"
+        },
+        {
+          "acceleration": "-0.00011618162860729659",
+          "complete": true,
+          "time": "1.9374999999999944",
+          "value": "0.9999978323748202",
+          "velocity": "1.58727210006916e-05"
+        },
+        {
+          "acceleration": "-9.103142605662503e-05",
+          "complete": true,
+          "time": "1.9708333333333277",
+          "value": "0.9999983017861894",
+          "velocity": "1.2435923311159503e-05"
+        },
+        {
+          "acceleration": "-7.132404619066174e-05",
+          "complete": true,
+          "time": "2.004166666666661",
+          "value": "0.999998669556931",
+          "velocity": "9.743128077928146e-06"
+        }
+      ],
+      "target": "1",
+      "time": "0",
+      "value": "0",
+      "velocity": "0"
+    }
+  ],
+  "configurationOffsets": [
+    0,
+    8,
+    16,
+    24,
+    32
+  ],
+  "configurationSize": 40,
+  "nativeWindowAnimationCaptureOrUIExecuted": false,
+  "SDKUninitialized": true,
+  "simulationOffsets": [
+    0,
+    40,
+    48,
+    64
+  ],
+  "simulationSize": 80
+}

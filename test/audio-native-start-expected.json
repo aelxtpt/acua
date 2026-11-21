@@ -1,0 +1,1114 @@
+{
+  "cases": [
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "none": true
+      },
+      "name": "success",
+      "oldFileExists": true,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 0,
+      "wave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "code": 45,
+        "domain": "OwnedNativeStart",
+        "error": "Error Domain=OwnedNativeStart Code=45 \"(null)\""
+      },
+      "intervention": {
+        "none": true
+      },
+      "name": "start-error",
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 0,
+      "stopCallsBeforeStartReply": 0,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "fileExistsAfterCleanup": false,
+      "name": "add-error",
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "result": {
+        "code": 44,
+        "domain": "OwnedNativeAdd",
+        "error": "Error Domain=OwnedNativeAdd Code=44 \"(null)\""
+      },
+      "startCalls": 0,
+      "stopCalls": 0,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "name": "writer-error",
+      "result": {
+        "code": -54,
+        "domain": "com.apple.coreaudio.avfaudio",
+        "error": "Error Domain=com.apple.coreaudio.avfaudio Code=-54 \"(null)\" UserInfo={failed call=ExtAudioFileCreateWithURL((__bridge CFURLRef)fileURL, fileType, &fileASBD, NULL, kAudioFileFlags_EraseFile, &_extAudioFile)}"
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "stop-during-start-success",
+      "oldFileExists": true,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "code": 45,
+        "domain": "OwnedNativeStart",
+        "error": "Error Domain=OwnedNativeStart Code=45 \"(null)\""
+      },
+      "intervention": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "stop-during-start-error",
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "code": 4,
+        "error": "recordingNotOwned"
+      },
+      "name": "wrong-owner-during-start",
+      "oldFileExists": true,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 0,
+      "wave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "code": 3,
+        "error": "recordingAlreadyActive"
+      },
+      "name": "start-during-start",
+      "oldFileExists": true,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 0,
+      "wave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "ok": true
+      },
+      "name": "turn-during-start-success",
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "code": 45,
+        "domain": "OwnedNativeStart",
+        "error": "Error Domain=OwnedNativeStart Code=45 \"(null)\""
+      },
+      "intervention": {
+        "ok": true
+      },
+      "name": "turn-during-start-error",
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "code": 46,
+        "domain": "OwnedNativeStop",
+        "error": "Error Domain=OwnedNativeStop Code=46 \"(null)\""
+      },
+      "name": "stop-error-during-start",
+      "oldFileExists": true,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterReplacement": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "restart-after-stop-old-success",
+      "newFileExists": true,
+      "newOutputAliveAfterCleanup": false,
+      "newStartCalls": 1,
+      "newStopCalls": 1,
+      "newWave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      },
+      "oldFileExists": true,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "second": {
+        "ok": true
+      },
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterReplacement": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "code": 45,
+        "domain": "OwnedNativeStart",
+        "error": "Error Domain=OwnedNativeStart Code=45 \"(null)\""
+      },
+      "intervention": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "restart-after-stop-old-error",
+      "newFileExists": true,
+      "newOutputAliveAfterCleanup": false,
+      "newStartCalls": 1,
+      "newStopCalls": 0,
+      "newWave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      },
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "second": {
+        "ok": true
+      },
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterReplacement": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "ok": true
+      },
+      "intervention": {
+        "ok": true
+      },
+      "name": "restart-after-turn-old-success",
+      "newFileExists": true,
+      "newOutputAliveAfterCleanup": false,
+      "newStartCalls": 1,
+      "newStopCalls": 1,
+      "newWave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      },
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "second": {
+        "ok": true
+      },
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "missing": true
+      }
+    },
+    {
+      "addCalls": 1,
+      "after": {
+        "autoStopped": false,
+        "hasAutomaticTask": true,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterReplacement": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "configuration": {
+        "capturesAudio": true,
+        "channelCount": 2,
+        "excludesCurrentProcessAudio": false,
+        "sampleRate": 24000
+      },
+      "duringStart": {
+        "autoStopped": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": true,
+        "hasURL": true
+      },
+      "fileExistsDuringStart": true,
+      "first": {
+        "code": 45,
+        "domain": "OwnedNativeStart",
+        "error": "Error Domain=OwnedNativeStart Code=45 \"(null)\""
+      },
+      "intervention": {
+        "ok": true
+      },
+      "name": "restart-after-turn-old-error",
+      "newFileExists": true,
+      "newOutputAliveAfterCleanup": false,
+      "newStartCalls": 1,
+      "newStopCalls": 0,
+      "newWave": {
+        "bitsPerSample": 16,
+        "blockAlign": 4,
+        "byteRate": 96000,
+        "channels": 2,
+        "container": "RIFF/WAVE",
+        "dataBytes": 0,
+        "formatTag": 1,
+        "sampleRate": 24000
+      },
+      "oldFileExists": false,
+      "outputAliveAfterCleanup": false,
+      "outputTypes": [
+        1
+      ],
+      "queuePresent": [
+        true
+      ],
+      "second": {
+        "ok": true
+      },
+      "startCalls": 1,
+      "stopCalls": 1,
+      "stopCallsBeforeStartReply": 1,
+      "wave": {
+        "missing": true
+      }
+    }
+  ],
+  "queryFlags": [
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ],
+    [
+      false,
+      true
+    ]
+  ]
+}

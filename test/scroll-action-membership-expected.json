@@ -1,0 +1,164 @@
+[
+  {
+    "actions": [],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-0"
+  },
+  {
+    "actions": [
+      "AXScrollLeftByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-1"
+  },
+  {
+    "actions": [
+      "AXScrollRightByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-2"
+  },
+  {
+    "actions": [
+      "AXScrollUpByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-3"
+  },
+  {
+    "actions": [
+      "AXScrollDownByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-4"
+  },
+  {
+    "actions": [
+      "AXScrollToVisible"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-5"
+  },
+  {
+    "actions": [
+      "AXScrollUp"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-6"
+  },
+  {
+    "actions": [
+      "AXScrollDown"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-7"
+  },
+  {
+    "actions": [
+      "AXScrollLeft"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-8"
+  },
+  {
+    "actions": [
+      "AXScrollRight"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-9"
+  },
+  {
+    "actions": [
+      "AXScroll"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-10"
+  },
+  {
+    "actions": [
+      "AXScrollUpByPageExtra"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-11"
+  },
+  {
+    "actions": [
+      "axscrollupbypage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-12"
+  },
+  {
+    "actions": [
+      "AXPress"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-13"
+  },
+  {
+    "actions": [
+      "AXPress",
+      "AXScrollUpByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-14"
+  },
+  {
+    "actions": [
+      "AXScrollToVisible",
+      "AXScrollDownByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-15"
+  },
+  {
+    "actions": [
+      "AXScrollUpByPage",
+      "AXScrollUpByPage"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": true,
+    "name": "actions-16"
+  },
+  {
+    "actions": [
+      "AXScrollToVisible",
+      "AXPress"
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-17"
+  },
+  {
+    "actions": [
+      ""
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-18"
+  },
+  {
+    "actions": [
+      "AXScrollUpByPage "
+    ],
+    "getterReads": 1,
+    "hasScrollAction": false,
+    "name": "actions-19"
+  }
+]

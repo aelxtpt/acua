@@ -1,0 +1,80 @@
+[
+  {
+    "case": "audio-tag-0",
+    "code": -10005,
+    "message": "Computer Use server error -10005: invalidDuration",
+    "native_message": "invalidDuration"
+  },
+  {
+    "case": "audio-tag-1",
+    "code": -10005,
+    "message": "Computer Use server error -10005: noActiveRecording",
+    "native_message": "noActiveRecording"
+  },
+  {
+    "case": "audio-tag-2",
+    "code": -10005,
+    "message": "Computer Use server error -10005: noDisplay",
+    "native_message": "noDisplay"
+  },
+  {
+    "case": "audio-tag-3",
+    "code": -10005,
+    "message": "Computer Use server error -10005: recordingAlreadyActive",
+    "native_message": "recordingAlreadyActive"
+  },
+  {
+    "case": "audio-tag-4",
+    "code": -10005,
+    "message": "Computer Use server error -10005: recordingNotOwned",
+    "native_message": "recordingNotOwned"
+  },
+  {
+    "case": "owned-nserror",
+    "code": -10005,
+    "message": "Computer Use server error -10005: Error Domain=OwnedErrorDomain Code=42 \"owned explicit message\" UserInfo={NSLocalizedDescription=owned explicit message}",
+    "native_message": "Error Domain=OwnedErrorDomain Code=42 \"owned explicit message\" UserInfo={NSLocalizedDescription=owned explicit message}"
+  },
+  {
+    "case": "cocoa-file-missing",
+    "code": -10005,
+    "message": "Computer Use server error -10005: Error Domain=NSCocoaErrorDomain Code=260 \"The file couldn\u2019t be opened because it doesn\u2019t exist.\"",
+    "native_message": "Error Domain=NSCocoaErrorDomain Code=260 \"The file couldn\u2019t be opened because it doesn\u2019t exist.\""
+  },
+  {
+    "case": "cancellation",
+    "code": -10005,
+    "message": "Computer Use server error -10005: CancellationError()",
+    "native_message": "CancellationError()"
+  },
+  {
+    "case": "decoding",
+    "code": -10005,
+    "message": "Computer Use server error -10005: DecodingError.dataCorrupted: Data was corrupted. Debug description: owned corrupt body",
+    "native_message": "DecodingError.dataCorrupted: Data was corrupted. Debug description: owned corrupt body"
+  },
+  {
+    "case": "pointer-target-error-0",
+    "code": -10005,
+    "message": "Computer Use server error -10005: noWindowsAvailable",
+    "native_message": "noWindowsAvailable"
+  },
+  {
+    "case": "pointer-outside-positive",
+    "code": -10005,
+    "message": "Computer Use server error -10005: windowNotFoundAtPosition((860.0, 130.0))",
+    "native_message": "windowNotFoundAtPosition((860.0, 130.0))"
+  },
+  {
+    "case": "pointer-outside-fractional-negative",
+    "code": -10005,
+    "message": "Computer Use server error -10005: windowNotFoundAtPosition((-10.25, 0.5))",
+    "native_message": "windowNotFoundAtPosition((-10.25, 0.5))"
+  },
+  {
+    "case": "pointer-initial-null-origin",
+    "code": -10005,
+    "message": "Computer Use server error -10005: windowNotFoundAtPosition((inf, inf))",
+    "native_message": "windowNotFoundAtPosition((inf, inf))"
+  }
+]

@@ -1,0 +1,1744 @@
+{
+  "cases": [
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": null,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 31,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 32,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": true,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": null,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": true,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 31,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": true,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 32,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": null,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 31,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 32,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": null,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 31,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 32,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": null,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 31,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 32,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": null,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 31,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 32,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": null,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 31,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 32,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": true,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": null,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": true,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 31,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": true,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 32,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": null,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 31,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 32,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": true,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": null,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 31,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 32,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": null,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 31,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 32,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": null,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 31,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 32,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": null,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 31,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 32,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": null,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 31,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 32,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": null,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 31,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 32,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "TESTTEAM01"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": null,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 31,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 32,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": null,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 31,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 32,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": null,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 31,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse.client",
+      "label": "host-own",
+      "observedAuditBytes": 32,
+      "pid": 8082,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": null,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 31,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 32,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": null,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 31,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 32,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": null,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 31,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.example.agent",
+      "label": "host-foreign",
+      "observedAuditBytes": 32,
+      "pid": 8083,
+      "pidTeam": "OTHERTEAM1",
+      "signature": true,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": null,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 31,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 32,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": null,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 31,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 32,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": null,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 31,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": "com.aex.computeruse",
+      "label": "service",
+      "observedAuditBytes": 32,
+      "pid": 8241,
+      "pidTeam": "TESTTEAM01",
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": null,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 31,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 32,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": null,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 31,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 32,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": null,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 31,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "owned-copy",
+      "observedAuditBytes": 32,
+      "pid": 27446,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": null,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 31,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 32,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseIPC-5"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": null,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 31,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 32,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "AcuaComputerUseNativeBridge-1"
+    },
+    {
+      "audit": "absent",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": null,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "short",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 31,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    },
+    {
+      "audit": "invalid",
+      "bridge": false,
+      "bundle": null,
+      "label": "missing",
+      "observedAuditBytes": 32,
+      "pid": 2147483647,
+      "pidTeam": null,
+      "signature": false,
+      "teams": [
+        "OTHERTEAM1"
+      ],
+      "version": "invalid"
+    }
+  ],
+  "metadataCases": [
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": true,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": null,
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": true,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "invalid",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "",
+      "value": "",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "other",
+      "value": "other",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": true,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    }
+  ],
+  "missingPIDError": {
+    "index": 17,
+    "message": "Could not get sender PID from Apple event"
+  },
+  "nativeProcessMetadataReadOnly": true,
+  "nativeRequests": false,
+  "ownTeam": "TESTTEAM01",
+  "ownTeamFailure": {
+    "index": 5,
+    "message": "teamNotFound"
+  },
+  "receivedAuditAttributesVerified": true,
+  "trustedTeams": [
+    "TESTTEAM01"
+  ]
+}

@@ -1,0 +1,309 @@
+[
+  {
+    "name": "lookup-'Increment'",
+    "requested": "Increment",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": "AXIncrement",
+    "missingDescription": null
+  },
+  {
+    "name": "lookup-'Decrement'",
+    "requested": "Decrement",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": "AXDecrement",
+    "missingDescription": null
+  },
+  {
+    "name": "lookup-'Show Menu'",
+    "requested": "Show Menu",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": "AXShowMenu",
+    "missingDescription": null
+  },
+  {
+    "name": "lookup-'AXIncrement'",
+    "requested": "AXIncrement",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": null,
+    "missingDescription": "AXIncrement is not a valid secondary action for 1"
+  },
+  {
+    "name": "lookup-'increment'",
+    "requested": "increment",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": null,
+    "missingDescription": "increment is not a valid secondary action for 1"
+  },
+  {
+    "name": "lookup-'Increment '",
+    "requested": "Increment ",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": null,
+    "missingDescription": "Increment  is not a valid secondary action for 1"
+  },
+  {
+    "name": "lookup-''",
+    "requested": "",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": null,
+    "missingDescription": " is not a valid secondary action for 1"
+  },
+  {
+    "name": "lookup-'Missing'",
+    "requested": "Missing",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "AXDecrement",
+        "description": "Decrement"
+      },
+      {
+        "raw": "AXShowMenu",
+        "description": "Show Menu"
+      }
+    ],
+    "selected": null,
+    "missingDescription": "Missing is not a valid secondary action for 1"
+  },
+  {
+    "name": "first duplicate description",
+    "requested": "Same",
+    "actions": [
+      {
+        "raw": "First",
+        "description": "Same"
+      },
+      {
+        "raw": "Second",
+        "description": "Same"
+      }
+    ],
+    "selected": "First",
+    "missingDescription": null
+  },
+  {
+    "name": "empty description matches",
+    "requested": "",
+    "actions": [
+      {
+        "raw": "Custom",
+        "description": ""
+      }
+    ],
+    "selected": "Custom",
+    "missingDescription": null
+  },
+  {
+    "name": "custom name fallback",
+    "requested": "Custom",
+    "actions": [
+      {
+        "raw": "Custom",
+        "description": "Custom"
+      }
+    ],
+    "selected": "Custom",
+    "missingDescription": null
+  },
+  {
+    "name": "canonical accent equivalence",
+    "requested": "Café",
+    "actions": [
+      {
+        "raw": "Accent",
+        "description": "Café"
+      }
+    ],
+    "selected": "Accent",
+    "missingDescription": null
+  },
+  {
+    "name": "emoji description",
+    "requested": "Open 👩🏽‍💻",
+    "actions": [
+      {
+        "raw": "Unicode",
+        "description": "Open 👩🏽‍💻"
+      }
+    ],
+    "selected": "Unicode",
+    "missingDescription": null
+  },
+  {
+    "name": "description chooses other raw name",
+    "requested": "AXIncrement",
+    "actions": [
+      {
+        "raw": "AXIncrement",
+        "description": "Increment"
+      },
+      {
+        "raw": "Other",
+        "description": "AXIncrement"
+      }
+    ],
+    "selected": "Other",
+    "missingDescription": null
+  },
+  {
+    "name": "no actions",
+    "requested": "Increment",
+    "actions": [],
+    "selected": null,
+    "missingDescription": "Increment is not a valid secondary action for 1"
+  },
+  {
+    "name": "pick description",
+    "requested": "Pick",
+    "actions": [
+      {
+        "raw": "AXPick",
+        "description": "Pick"
+      }
+    ],
+    "selected": "AXPick",
+    "missingDescription": null
+  },
+  {
+    "name": "cancel description",
+    "requested": "Cancel",
+    "actions": [
+      {
+        "raw": "AXCancel",
+        "description": "Cancel"
+      }
+    ],
+    "selected": "AXCancel",
+    "missingDescription": null
+  },
+  {
+    "name": "expand description",
+    "requested": "Expand",
+    "actions": [
+      {
+        "raw": "SAIExpand",
+        "description": "Expand"
+      }
+    ],
+    "selected": "SAIExpand",
+    "missingDescription": null
+  },
+  {
+    "name": "long description",
+    "requested": "A long custom action label outside small strings",
+    "actions": [
+      {
+        "raw": "A long custom AX name outside small strings",
+        "description": "A long custom action label outside small strings"
+      }
+    ],
+    "selected": "A long custom AX name outside small strings",
+    "missingDescription": null
+  },
+  {
+    "name": "embedded nul",
+    "requested": "A\u0000B",
+    "actions": [
+      {
+        "raw": "Nul",
+        "description": "A\u0000B"
+      }
+    ],
+    "selected": "Nul",
+    "missingDescription": null
+  }
+]

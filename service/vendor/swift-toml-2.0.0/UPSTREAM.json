@@ -1,0 +1,24 @@
+{
+  "repository": "https://github.com/mattt/swift-toml",
+  "tag": "2.0.0",
+  "commit": "827506c90475e82d5a7f191f950fb3025cbdc0d6",
+  "url": "https://codeload.github.com/mattt/swift-toml/tar.gz/827506c90475e82d5a7f191f950fb3025cbdc0d6",
+  "archive_sha256": "0f781bbdd6e0b376ef7b8d306138abb4328522b44b9f34cda230365798d1dee2",
+  "files": {
+    "README.md": "f1920d0977d63b1d8393bad36a1f1e743f91757114a021f56d03bdefe0f1f2d3",
+    "Package.swift": "b6172aa101a7acaaa6c583de22e8038b24f391b5be4a4ef4ba5d8c3dcdb40f63",
+    "Sources/TOML/Decoder.swift": "f5167e4b5486956402c5dce50d16c1741958f3364381b0ef6ab7d671413df33f",
+    "Sources/TOML/Shared.swift": "48610eb67dcd7a1cc5f76b2f86169cbaafac1187486836cb0287a0230534dcd1",
+    "Sources/TOML/Encoder.swift": "3d8d55ef9b745769fa9924a7e4d2e9fea6c9589ec4f5a2507f38a371b21d2a95",
+    "Sources/TOML/LocalDateTime.swift": "82fe0296fc6ef8b5e5be6eb76851eceed4fece9681c7c76c19d7ee7e1dd88645",
+    "Sources/TOML/Value.swift": "3cd38c37d340cb52006e0a7da60ba458709bbbb5b2ed3d6a64a468924c711ec9",
+    "Sources/CTomlPlusPlus/ctoml.cpp": "107c091cb378ffa8c9c647408c6fac44fca6608e21cb363c4d09c3aafb5d9a15",
+    "Sources/CTomlPlusPlus/toml.hpp": "01d450ea609bcd47f78b75eb7e5fbbf3a1e78ef79955ef283c9301af5a7933a2",
+    "Sources/CTomlPlusPlus/include/ctoml.h": "62ebbb92937a1fdcb61c15ed660fa34ac99cf0b712735d5730a720cc6d24e8e3",
+    "LICENSE.md": "2f9b695627d569a3ce452b2c03fdd34310df78c8ea94edfafd9ce38381e5b502"
+  },
+  "original_version_identity_proven": false,
+  "license_files": [
+    "LICENSE.md"
+  ]
+}

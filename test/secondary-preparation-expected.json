@@ -1,0 +1,15 @@
+{
+  "geometryErrorDescription": "elementHasNoFrame",
+  "holdDurationAttoseconds": 50000000000000000,
+  "holdDurationSeconds": 0,
+  "nativeInput": false,
+  "pressDurationAttoseconds": 50000000000000000,
+  "pressDurationSeconds": 0,
+  "realAXQueries": false,
+  "SDKUninitialized": true,
+  "systemSecurityBundles": [
+    "com.apple.UserNotificationCenter",
+    "com.apple.LocalAuthenticationRemoteService",
+    "com.apple.SecurityAgent"
+  ]
+}

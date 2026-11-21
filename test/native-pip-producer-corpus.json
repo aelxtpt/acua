@@ -1,0 +1,1675 @@
+{
+  "scope": "Public Objective-C producer commands with one unpublished window stream and no host connection; no capture, graphics or host rendering exercised.",
+  "normalizations": [
+    "Only private error type runtime-context hex address is replaced by $<context>; all other command results/error fields and float bits are compared"
+  ],
+  "cases": [
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "18442240474082181119"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-0",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "13832806255468478464"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-1",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9223372036854775808"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-2",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "0"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-3",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636701403295105679"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-4",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636702106982547456"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-5",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636771772039283343"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-6",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636807660098813952",
+        "streamDisplayBits": "4636807660098813952",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636772475726725120"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636737291354636288",
+        "streamDisplayBits": "4636737291354636288",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-7",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4641223298795962368"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4636807660098813952",
+        "streamDisplayBits": "4636807660098813952",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-8",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4641258131324330312"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-9",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641276075354095616",
+        "streamDisplayBits": "4641276075354095616",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4641258483168051200"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-10",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645726898423332864",
+        "streamDisplayBits": "4645726898423332864",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4645735518594494628"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641276075354095616",
+        "streamDisplayBits": "4641276075354095616",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-11",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645744490609377280",
+        "streamDisplayBits": "4645744490609377280",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4645735694516355072"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645726898423332864",
+        "streamDisplayBits": "4645726898423332864",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-12",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645744490609377280",
+        "streamDisplayBits": "4645744490609377280",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4645753286702399488"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645744490609377280",
+        "streamDisplayBits": "4645744490609377280",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-13",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645744490609377280",
+        "streamDisplayBits": "4645744490609377280",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9218868437227405311"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645744490609377280",
+        "streamDisplayBits": "4645744490609377280",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-14",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9218868437227405312"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4645744490609377280",
+        "streamDisplayBits": "4645744490609377280",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-15",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "18442240474082181120"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-16",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9221120237041090560"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "display-17",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "18442240474082181119",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-0",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "13832806255468478464",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-1",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9223372036854775808",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-2",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "0",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-3",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 100,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636701403295105679",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-4",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 100,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636702106982547456",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 100,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-5",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 101,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636771772039283343",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 100,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-6",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 101,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636772475726725120",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 101,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-7",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 200,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4641223298795962368",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 101,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-8",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 201,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4641258131324330312",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 200,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-9",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 201,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4641258483168051200",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 201,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-10",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 400,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4645735518594494628",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 201,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-11",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 400,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4645735694516355072",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 400,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-12",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 401,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4645753286702399488",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 400,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-13",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9218868437227405311",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 401,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-14",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9218868437227405312",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "video-15",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "18442240474082181120",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "video-16",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "9221120237041090560",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "video-17",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4607632778762754458",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-ceil-0",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 3,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4611708536425524756",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 2,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-ceil-1",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4649536486311251149",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 3,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-ceil-2",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4649545282404273357",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-ceil-3",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4906019910204099648",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "video-ceil-4",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "bits": "4636737291354636288",
+        "presentation": "missing"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "video-missing",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": true
+      },
+      "arguments": {
+        "kind": "dom-video-start",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "action-0",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": true
+      },
+      "arguments": {
+        "kind": "dom-video-start",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": true
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "action-1",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "kind": "dom-video-stop",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": true
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "action-2",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "kind": "focus-presentation",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "action-3",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "kind": "owned-custom",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "action-4",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "kind": "",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "action-5",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "kind": "\u914d\u7f6e-\u00e7",
+        "presentation": "owned"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "action-6",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "kind": "dom-video-start",
+        "presentation": "missing"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPContentPublisher.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "immediateReplies": 0,
+      "name": "action-missing",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "presentation": "missing"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "end-missing",
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "available": true,
+        "xBits": "13843220829606772736",
+        "yBits": "4626181979727986688"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "pet-0",
+      "petState": {
+        "absent": 0,
+        "xBits": "13843220829606772736",
+        "yBits": "4626181979727986688"
+      },
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "available": true,
+        "xBits": "9218868437227405312",
+        "yBits": "9221120237041090560"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "pet-1",
+      "petState": {
+        "absent": 0,
+        "xBits": "9218868437227405312",
+        "yBits": "9221120237041090560"
+      },
+      "replies": 1
+    },
+    {
+      "after": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "arguments": {
+        "available": false,
+        "xBits": "13837309855095848960",
+        "yBits": "4611686018427387904"
+      },
+      "before": {
+        "activeCount": 1,
+        "endingCount": 0,
+        "invalidated": false,
+        "published": false,
+        "publisherDisplayBits": "4641240890982006784",
+        "streamDisplayBits": "4641240890982006784",
+        "videoDimension": 720,
+        "videoEnabled": false
+      },
+      "error": null,
+      "immediateReplies": 0,
+      "name": "pet-2",
+      "petState": {
+        "absent": 1,
+        "xBits": "0",
+        "yBits": "0"
+      },
+      "replies": 1
+    }
+  ],
+  "queue": {
+    "before": [
+      "first-start"
+    ],
+    "after": [
+      "first-start",
+      "cancelled",
+      "first-end",
+      "buffered"
+    ],
+    "queueReleased": true
+  }
+}

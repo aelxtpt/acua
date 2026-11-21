@@ -1,0 +1,7 @@
+{
+  "name": "acua-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node.js tests and a test socket client for ACUA. Not a published package.",
+  "type": "module"
+}

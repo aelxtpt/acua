@@ -1,0 +1,1297 @@
+[
+  {
+    "name": "close",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "id": 7,
+      "kind": 0,
+      "name": "close",
+      "outcome": "decoded",
+      "response": {
+        "id": 7,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "ping",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyJ9",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "ping",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "ping-empty-params",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiB7fX0=",
+    "expected": {
+      "id": 7,
+      "kind": 1,
+      "name": "ping-empty-params",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCJ9",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-empty-params",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7fX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-empty-params",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "unknown",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAidW5rbm93biJ9",
+    "expected": {
+      "id": 7,
+      "kind": 3,
+      "name": "unknown",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "unknown-empty-params",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAidW5rbm93biIsICJwYXJhbXMiOiB7fX0=",
+    "expected": {
+      "id": 7,
+      "kind": 3,
+      "name": "unknown-empty-params",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "version",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAidmVyc2lvbiJ9",
+    "expected": {
+      "id": 7,
+      "kind": 3,
+      "name": "version",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "version-empty-params",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAidmVyc2lvbiIsICJwYXJhbXMiOiB7fX0=",
+    "expected": {
+      "id": 7,
+      "kind": 3,
+      "name": "version-empty-params",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "id-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IG51bGwsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "id": null,
+      "kind": 0,
+      "name": "id-null",
+      "outcome": "decoded",
+      "response": {
+        "id": null,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "id-\"string-id\"",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJzdHJpbmctaWQiLCAibWV0aG9kIjogImNsb3NlIn0=",
+    "expected": {
+      "id": "string-id",
+      "kind": 0,
+      "name": "id-\"string-id\"",
+      "outcome": "decoded",
+      "response": {
+        "id": "string-id",
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "id-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IHRydWUsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "id-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "id-1.25",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDEuMjUsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "id": 1.25,
+      "kind": 0,
+      "name": "id-1.25",
+      "outcome": "decoded",
+      "response": {
+        "id": 1.25,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "id--7",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IC03LCAibWV0aG9kIjogImNsb3NlIn0=",
+    "expected": {
+      "id": -7,
+      "kind": 0,
+      "name": "id--7",
+      "outcome": "decoded",
+      "response": {
+        "id": -7,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "id-9223372036854775807",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDkyMjMzNzIwMzY4NTQ3NzU4MDcsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "id": 9223372036854775807,
+      "kind": 0,
+      "name": "id-9223372036854775807",
+      "outcome": "decoded",
+      "response": {
+        "id": 9223372036854775807,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "id-9223372036854775808",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDkyMjMzNzIwMzY4NTQ3NzU4MDgsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "id": 9.223372036854776e+18,
+      "kind": 0,
+      "name": "id-9223372036854775808",
+      "outcome": "decoded",
+      "response": {
+        "id": 9.223372036854776e+18,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "id-{\"x\": 1}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IHsieCI6IDF9LCAibWV0aG9kIjogImNsb3NlIn0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "id-{\"x\": 1}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "id-[1]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IFsxXSwgIm1ldGhvZCI6ICJjbG9zZSJ9",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "id-[1]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "missing-id",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "missing-id",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "missing-jsonrpc",
+    "data": "eyJpZCI6IDcsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "missing-jsonrpc",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "missing-method",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDd9",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "missing-method",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "jsonrpc-null",
+    "data": "eyJqc29ucnBjIjogbnVsbCwgImlkIjogNywgIm1ldGhvZCI6ICJjbG9zZSJ9",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "jsonrpc-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "jsonrpc-true",
+    "data": "eyJqc29ucnBjIjogdHJ1ZSwgImlkIjogNywgIm1ldGhvZCI6ICJjbG9zZSJ9",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "jsonrpc-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "jsonrpc-2.0",
+    "data": "eyJqc29ucnBjIjogMi4wLCAiaWQiOiA3LCAibWV0aG9kIjogImNsb3NlIn0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "jsonrpc-2.0",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "jsonrpc-\"1.0\"",
+    "data": "eyJqc29ucnBjIjogIjEuMCIsICJpZCI6IDcsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "jsonrpc-\"1.0\"",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "jsonrpc-\"\"",
+    "data": "eyJqc29ucnBjIjogIiIsICJpZCI6IDcsICJtZXRob2QiOiAiY2xvc2UifQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "jsonrpc-\"\"",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "method-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiBudWxsfQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "method-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "method-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiB0cnVlfQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "method-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "method-7",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiA3fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "method-7",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "method-{}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiB7fX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "method-{}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "method-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiBbXX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 7
+      },
+      "name": "method-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "root-[]",
+    "data": "W10=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "root-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "root-null",
+    "data": "bnVsbA==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "root-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "root-1",
+    "data": "MQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "root-1",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "root-\"text\"",
+    "data": "InRleHQi",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "root-\"text\"",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "root-true",
+    "data": "dHJ1ZQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "root-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "root-{}",
+    "data": "e30=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "root-{}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "json-",
+    "data": "",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "id": null
+      },
+      "name": "json-",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "json-{broken",
+    "data": "e2Jyb2tlbg==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "id": null
+      },
+      "name": "json-{broken",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "json-{",
+    "data": "ew==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "id": null
+      },
+      "name": "json-{",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "json-{} {}",
+    "data": "e30ge30=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "id": null
+      },
+      "name": "json-{} {}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "json-{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"close\",}",
+    "data": "eyJqc29ucnBjIjoiMi4wIiwiaWQiOjcsIm1ldGhvZCI6ImNsb3NlIix9",
+    "expected": {
+      "id": 7,
+      "kind": 0,
+      "name": "json-{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"close\",}",
+      "outcome": "decoded",
+      "response": {
+        "id": 7,
+        "jsonrpc": "2.0",
+        "result": null
+      }
+    }
+  },
+  {
+    "name": "invalid-utf8",
+    "data": "/w==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "id": null
+      },
+      "name": "invalid-utf8",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "utf32le-bom",
+    "data": "//4AAHsAAAAiAAAAagAAAHMAAABvAAAAbgAAAHIAAABwAAAAYwAAACIAAAA6AAAAIAAAACIAAAAyAAAALgAAADAAAAAiAAAALAAAACAAAAAiAAAAaQAAAGQAAAAiAAAAOgAAACAAAAA3AAAALAAAACAAAAAiAAAAbQAAAGUAAAB0AAAAaAAAAG8AAABkAAAAIgAAADoAAAAgAAAAIgAAAGMAAABsAAAAbwAAAHMAAABlAAAAIgAAAH0AAAA=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32700,
+          "message": "Parse error"
+        },
+        "id": null
+      },
+      "name": "utf32le-bom",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "ping-params-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiBudWxsfQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "ping-params-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "ping-params-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiB0cnVlfQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "ping-params-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "ping-params-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiBbXX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "ping-params-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "ping-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\"}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "id": 7,
+      "kind": 1,
+      "name": "ping-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\"}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "ping-params-{\"clientApiVersion\": 4}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiA0fX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "ping-params-{\"clientApiVersion\": 4}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "ping-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\", \"request\": {}}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01IiwgInJlcXVlc3RUeXBlIjogIk5vcGUiLCAicmVxdWVzdCI6IHt9fX0=",
+    "expected": {
+      "id": 7,
+      "kind": 1,
+      "name": "ping-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\", \"request\": {}}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "ping-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\"}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicGluZyIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01IiwgInJlcXVlc3RUeXBlIjogIk5vcGUifX0=",
+    "expected": {
+      "id": 7,
+      "kind": 1,
+      "name": "ping-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\"}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-params-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiBudWxsfQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-params-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-params-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB0cnVlfQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-params-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-params-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiBbXX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-params-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\"}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\"}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-params-{\"clientApiVersion\": 4}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiA0fX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-params-{\"clientApiVersion\": 4}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\", \"request\": {}}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01IiwgInJlcXVlc3RUeXBlIjogIk5vcGUiLCAicmVxdWVzdCI6IHt9fX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\", \"request\": {}}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\"}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01IiwgInJlcXVlc3RUeXBlIjogIk5vcGUifX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-params-{\"clientApiVersion\": \"AcuaComputerUseIPC-5\", \"requestType\": \"Nope\"}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "error-id-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IG51bGwsICJtZXRob2QiOiBudWxsLCAicGFyYW1zIjogeyJyZXF1ZXN0VHlwZSI6ICJOb3BlIiwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "error-id-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "error-id-\"text\"",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6ICJ0ZXh0IiwgIm1ldGhvZCI6IG51bGwsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUifX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": "text"
+      },
+      "name": "error-id-\"text\"",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "error-id-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IHRydWUsICJtZXRob2QiOiBudWxsLCAicGFyYW1zIjogeyJyZXF1ZXN0VHlwZSI6ICJOb3BlIiwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": null
+      },
+      "name": "error-id-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "error-id-1.25",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDEuMjUsICJtZXRob2QiOiBudWxsLCAicGFyYW1zIjogeyJyZXF1ZXN0VHlwZSI6ICJOb3BlIiwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 1.25
+      },
+      "name": "error-id-1.25",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "error-id-9223372036854775807",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDkyMjMzNzIwMzY4NTQ3NzU4MDcsICJtZXRob2QiOiBudWxsLCAicGFyYW1zIjogeyJyZXF1ZXN0VHlwZSI6ICJOb3BlIiwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 9223372036854775807
+      },
+      "name": "error-id-9223372036854775807",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "error-id-9223372036854775808",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDkyMjMzNzIwMzY4NTQ3NzU4MDgsICJtZXRob2QiOiBudWxsLCAicGFyYW1zIjogeyJyZXF1ZXN0VHlwZSI6ICJOb3BlIiwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32600,
+          "message": "Invalid Request"
+        },
+        "id": 9.223372036854776e+18
+      },
+      "name": "error-id-9223372036854775808",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-clientApiVersion-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6IG51bGx9fQ==",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-clientApiVersion-null",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-clientApiVersion-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6IHRydWV9fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-clientApiVersion-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-clientApiVersion-3",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6IDN9fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-clientApiVersion-3",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-clientApiVersion-{}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6IHt9fX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-clientApiVersion-{}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-clientApiVersion-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6IFtdfX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-clientApiVersion-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-missing-clientApiVersion",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUifX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-missing-clientApiVersion",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-requestType-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogbnVsbCwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-requestType-null",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-requestType-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogdHJ1ZSwgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-requestType-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-requestType-3",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogMywgImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-requestType-3",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-requestType-{}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjoge30sICJjbGllbnRBcGlWZXJzaW9uIjogIkNvZGV4Q29tcHV0ZXJVc2VJUEMtNSJ9fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-requestType-{}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-requestType-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogW10sICJjbGllbnRBcGlWZXJzaW9uIjogIkNvZGV4Q29tcHV0ZXJVc2VJUEMtNSJ9fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-requestType-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-missing-requestType",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7ImNsaWVudEFwaVZlcnNpb24iOiAiQ29kZXhDb21wdXRlclVzZUlQQy01In19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-missing-requestType",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogbnVsbH19",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-deadlineUnixMilliseconds-null",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogdHJ1ZX19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-true",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-1",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogMX19",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-deadlineUnixMilliseconds-1",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-1.25",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogMS4yNX19",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-1.25",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-\"bad\"",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogImJhZCJ9fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-\"bad\"",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-{}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjoge319fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-{}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogW119fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-[]",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-{\"model\": 5}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogeyJtb2RlbCI6IDV9fX0=",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-{\"model\": 5}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-deadlineUnixMilliseconds-{\"model\": \"x\"}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiZGVhZGxpbmVVbml4TWlsbGlzZWNvbmRzIjogeyJtb2RlbCI6ICJ4In19fQ==",
+    "expected": {
+      "error": {
+        "error": {
+          "code": -32602,
+          "message": "Invalid params"
+        },
+        "id": 7
+      },
+      "name": "request-deadlineUnixMilliseconds-{\"model\": \"x\"}",
+      "outcome": "error"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-null",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiBudWxsfX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-null",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-true",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiB0cnVlfX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-true",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-1",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiAxfX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-1",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-1.25",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiAxLjI1fX0=",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-1.25",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-\"bad\"",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiAiYmFkIn19",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-\"bad\"",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-{}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiB7fX19",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-{}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-[]",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiBbXX19",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-[]",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-{\"model\": 5}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiB7Im1vZGVsIjogNX19fQ==",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-{\"model\": 5}",
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "request-agentTurnMetadata-{\"model\": \"x\"}",
+    "data": "eyJqc29ucnBjIjogIjIuMCIsICJpZCI6IDcsICJtZXRob2QiOiAicmVxdWVzdCIsICJwYXJhbXMiOiB7InJlcXVlc3RUeXBlIjogIk5vcGUiLCAiY2xpZW50QXBpVmVyc2lvbiI6ICJDb2RleENvbXB1dGVyVXNlSVBDLTUiLCAiY29kZXhUdXJuTWV0YWRhdGEiOiB7Im1vZGVsIjogIngifX19",
+    "expected": {
+      "id": 7,
+      "kind": 2,
+      "name": "request-agentTurnMetadata-{\"model\": \"x\"}",
+      "outcome": "decoded"
+    }
+  }
+]

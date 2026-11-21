@@ -1,0 +1,5844 @@
+{
+  "scenario": "timeline-owner-stopped-lifecycle",
+  "input": {
+    "name": "timeline-owner-stopped-lifecycle"
+  },
+  "coordinator_refresh_and_typed_telemetry_calls": [
+    0,
+    0
+  ],
+  "payload": {
+    "rows": [
+      {
+        "input": {
+          "name": "absent-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "absent-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "name": "absent-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "absent-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": -123.125,
+          "name": "past-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "past-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": -123.125
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": -123.125,
+          "name": "past-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "past-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": -123.125
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": -123.125
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": 4102444800.5,
+          "name": "future-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "future-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 4102444800.5
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": 4102444800.5,
+          "name": "future-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "future-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 4102444800.5
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 4102444800.5
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": 0,
+          "name": "zero-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "zero-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 0
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": 0,
+          "name": "zero-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "zero-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 0
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 0
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": 978307200,
+          "name": "reference-epoch-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "reference-epoch-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 978307200
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialDate": 978307200,
+          "name": "reference-epoch-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "reference-epoch-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 978307200
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 978307200
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": "2030-01-01T00:00:00Z",
+          "name": "string-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "string-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": "2030-01-01T00:00:00Z",
+          "name": "string-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "string-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": "2030-01-01T00:00:00Z"
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": 123.25,
+          "name": "number-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "number-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": 123.25,
+          "name": "number-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "number-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": 123.25
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": true,
+          "name": "bool-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "bool-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": true,
+          "name": "bool-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "bool-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": true
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": [
+            1
+          ],
+          "name": "array-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "array-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": [
+            1
+          ],
+          "name": "array-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "array-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": [
+                1
+              ]
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": {
+            "date": 123
+          },
+          "name": "object-stop0",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 0
+            }
+          ]
+        },
+        "name": "object-stop0",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 0
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "initialRaw": {
+            "date": 123
+          },
+          "name": "object-stop1",
+          "operations": [
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "status"
+            },
+            {
+              "kind": "pause"
+            },
+            {
+              "kind": "resume"
+            },
+            {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            {
+              "kind": "start"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "kind": "stop",
+              "reason": 1
+            }
+          ]
+        },
+        "name": "object-stop1",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "status"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "pause"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "resume"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 0,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 1,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 2,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $10154711c).TimelineError error 2.)",
+              "domain": "ComputerUse.(unknown context at $10154711c).TimelineError",
+              "reflected": "Computer History is stopped. Enable Computer History first.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "duration": 2,
+              "kind": "pauseFor"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "error": {
+              "code": 0,
+              "description": "The operation couldn\u2019t be completed. (ComputerUse.EventStreamStorageError error 0.)",
+              "domain": "ComputerUse.EventStreamStorageError",
+              "reflected": "The protected Computer Use app-group container is unavailable.",
+              "userInfo": {}
+            },
+            "notifications": [],
+            "operation": {
+              "kind": "start"
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "stop",
+              "reason": 1
+            },
+            "preferenceCalls": [],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "date": 123
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": {
+              "state": "stopped"
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "name": "setter-consumed-optional-dates",
+          "operations": [
+            {
+              "date": null,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": -62135769600,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": -123.125,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": 0,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": 978307200,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": 4102444800.5,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": 64092211200,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            },
+            {
+              "date": null,
+              "kind": "setDate"
+            },
+            {
+              "kind": "getDate"
+            }
+          ]
+        },
+        "name": "setter-consumed-optional-dates",
+        "steps": [
+          {
+            "notifications": [],
+            "operation": {
+              "date": null,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": -62135769600,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "set"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -62135769600
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -62135769600
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": -62135769600
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": -123.125,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "set"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": -123.125
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": -123.125
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": 0,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "set"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 0
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 0
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": 978307200,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "set"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 978307200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 978307200
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": 4102444800.5,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "set"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 4102444800.5
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 4102444800.5
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": 64092211200,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "set"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 64092211200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {
+              "timeline.pauseResumeDate": {
+                "dateUnix": 64092211200
+              }
+            },
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": 64092211200
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "date": null,
+              "kind": "setDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "remove"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          },
+          {
+            "notifications": [],
+            "operation": {
+              "kind": "getDate"
+            },
+            "preferenceCalls": [
+              {
+                "key": "timeline.pauseResumeDate",
+                "kind": "get"
+              }
+            ],
+            "preferenceValues": {},
+            "statusAfter": {
+              "state": "stopped"
+            },
+            "value": null
+          }
+        ]
+      }
+    ]
+  }
+}

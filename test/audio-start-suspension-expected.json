@@ -1,0 +1,456 @@
+{
+  "cases": [
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "name": "query-error",
+      "outputExistsDuringQuery": false,
+      "outputInTemporaryDirectory": true,
+      "outputNameHasExpectedShape": true,
+      "queryFlags": [
+        [
+          false,
+          true
+        ]
+      ],
+      "result": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "name": "no-display",
+      "outputExistsDuringQuery": false,
+      "outputInTemporaryDirectory": true,
+      "outputNameHasExpectedShape": true,
+      "queryFlags": [
+        [
+          false,
+          true
+        ]
+      ],
+      "result": {
+        "code": 2,
+        "error": "noDisplay"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "name": "default-duration-error",
+      "outputExistsDuringQuery": false,
+      "outputInTemporaryDirectory": true,
+      "outputNameHasExpectedShape": true,
+      "queryFlags": [
+        [
+          false,
+          true
+        ]
+      ],
+      "result": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "name": "invalid-duration--1",
+      "queries": 0,
+      "result": {
+        "code": 0,
+        "error": "invalidDuration"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "name": "invalid-duration-0",
+      "queries": 0,
+      "result": {
+        "code": 0,
+        "error": "invalidDuration"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "name": "invalid-duration-99",
+      "queries": 0,
+      "result": {
+        "code": 0,
+        "error": "invalidDuration"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "name": "invalid-duration-300001",
+      "queries": 0,
+      "result": {
+        "code": 0,
+        "error": "invalidDuration"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "name": "invalid-duration-9223372036854775807",
+      "queries": 0,
+      "result": {
+        "code": 0,
+        "error": "invalidDuration"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterOther": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "start-during-query",
+      "other": {
+        "code": 3,
+        "error": "recordingAlreadyActive"
+      },
+      "queries": 1
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterOther": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "invalid-start-during-query",
+      "other": {
+        "code": 3,
+        "error": "recordingAlreadyActive"
+      },
+      "queries": 1
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterOther": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "stop-during-query",
+      "other": {
+        "exists": false,
+        "url": "<own output URL>"
+      },
+      "queries": 1
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterOther": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "wrong-owner-during-query",
+      "other": {
+        "code": 4,
+        "error": "recordingNotOwned"
+      },
+      "queries": 1
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterOther": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "turn-during-query",
+      "other": {
+        "ok": true
+      },
+      "queries": 1
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterOther": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "during": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "wrong-turn-during-query",
+      "other": {
+        "ok": true
+      },
+      "queries": 1
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterReplacement": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "late-start-error-after-stop-and-restart",
+      "other": {
+        "exists": false,
+        "url": "<own output URL>"
+      },
+      "queries": 2,
+      "second": {
+        "code": 2,
+        "error": "noDisplay"
+      }
+    },
+    {
+      "after": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterFirstCompletion": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": false,
+        "hasResource": false,
+        "hasURL": false
+      },
+      "afterReplacement": {
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasOwner": true,
+        "hasResource": false,
+        "hasURL": true
+      },
+      "claim": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "first": {
+        "code": 43,
+        "domain": "OwnedAudioSetup",
+        "error": "Error Domain=OwnedAudioSetup Code=43 \"(null)\""
+      },
+      "name": "late-start-error-after-turn-and-restart",
+      "other": {
+        "ok": true
+      },
+      "queries": 2,
+      "second": {
+        "code": 2,
+        "error": "noDisplay"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "alreadyMonitoring": false,
+      "callbackStored": true,
+      "context": 0,
+      "isPID": true,
+      "location": 4242,
+      "mask": 1581056,
+      "name": "per-pid nil tap",
+      "port": 0,
+      "repeats": 1,
+      "task": 0
+    },
+    {
+      "alreadyMonitoring": false,
+      "callbackStored": true,
+      "context": 0,
+      "isPID": false,
+      "location": 2,
+      "mask": 2097152,
+      "name": "session nil tap",
+      "port": 0,
+      "repeats": 1,
+      "task": 0
+    },
+    {
+      "alreadyMonitoring": false,
+      "callbackStored": true,
+      "context": 0,
+      "isPID": true,
+      "location": 4242,
+      "mask": 1581056,
+      "name": "nil tap retried on next start",
+      "port": 0,
+      "repeats": 2,
+      "task": 0
+    },
+    {
+      "alreadyMonitoring": false,
+      "callbackStored": true,
+      "context": 0,
+      "isPID": true,
+      "location": 0,
+      "mask": 0,
+      "name": "empty mask nil tap",
+      "port": 0,
+      "repeats": 1,
+      "task": 0
+    },
+    {
+      "alreadyMonitoring": true,
+      "callbackStored": false,
+      "context": 0,
+      "isPID": true,
+      "location": 4242,
+      "mask": 1581056,
+      "name": "monitor already exists skips replacement",
+      "port": 0,
+      "repeats": 1,
+      "task": 1
+    }
+  ],
+  "native_tap_creation_called": false,
+  "nativeInput": false,
+  "realAXQueries": false,
+  "SDKUninitialized": true
+}

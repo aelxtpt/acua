@@ -1,0 +1,998 @@
+{
+  "native_input": false,
+  "cases": [
+    {
+      "button": 0,
+      "count": 1,
+      "end": [
+        910.5,
+        440.75
+      ],
+      "events": [
+        {
+          "button": 0,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 0,
+          "point": [
+            212.75,
+            126.25
+          ],
+          "type": 1,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 1,
+          "point": [
+            212.75,
+            126.25
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 1,
+          "point": [
+            561.625,
+            283.5
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 1,
+          "point": [
+            910.5,
+            440.75
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 0,
+          "point": [
+            910.5,
+            440.75
+          ],
+          "type": 2,
+          "window_91": 0,
+          "window_92": 0
+        }
+      ],
+      "flags": 0,
+      "name": "left",
+      "start": [
+        212.75,
+        126.25
+      ],
+      "window": 0
+    },
+    {
+      "button": 1,
+      "count": 1,
+      "end": [
+        24.25,
+        87.5
+      ],
+      "events": [
+        {
+          "button": 1,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 2,
+          "point": [
+            -120.5,
+            -300.75
+          ],
+          "type": 3,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 3,
+          "point": [
+            -120.5,
+            -300.75
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 3,
+          "point": [
+            -48.125,
+            -106.625
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 3,
+          "point": [
+            24.25,
+            87.5
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 2,
+          "point": [
+            24.25,
+            87.5
+          ],
+          "type": 4,
+          "window_91": 26505,
+          "window_92": 26505
+        }
+      ],
+      "flags": 131072,
+      "name": "right",
+      "start": [
+        -120.5,
+        -300.75
+      ],
+      "window": 26505
+    },
+    {
+      "button": 2,
+      "count": 1,
+      "end": [
+        -60,
+        -80
+      ],
+      "events": [
+        {
+          "button": 2,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 4,
+          "point": [
+            19,
+            25
+          ],
+          "type": 25,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 2,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 5,
+          "point": [
+            19,
+            25
+          ],
+          "type": 27,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 2,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 5,
+          "point": [
+            -20.5,
+            -27.5
+          ],
+          "type": 27,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 2,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 5,
+          "point": [
+            -60,
+            -80
+          ],
+          "type": 27,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 2,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 4,
+          "point": [
+            -60,
+            -80
+          ],
+          "type": 26,
+          "window_91": 0,
+          "window_92": 0
+        }
+      ],
+      "flags": 1048576,
+      "name": "middle",
+      "start": [
+        19,
+        25
+      ],
+      "window": 0
+    },
+    {
+      "button": 3,
+      "count": 1,
+      "end": [
+        3.75,
+        4.5
+      ],
+      "events": [
+        {
+          "button": 3,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 6,
+          "point": [
+            1.5,
+            2.25
+          ],
+          "type": 25,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 3,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 7,
+          "point": [
+            1.5,
+            2.25
+          ],
+          "type": 27,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 3,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 7,
+          "point": [
+            2.625,
+            3.375
+          ],
+          "type": 27,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 3,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 7,
+          "point": [
+            3.75,
+            4.5
+          ],
+          "type": 27,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 3,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 6,
+          "point": [
+            3.75,
+            4.5
+          ],
+          "type": 26,
+          "window_91": 26505,
+          "window_92": 26505
+        }
+      ],
+      "flags": 0,
+      "name": "other3",
+      "start": [
+        1.5,
+        2.25
+      ],
+      "window": 26505
+    },
+    {
+      "button": 31,
+      "count": 1,
+      "end": [
+        80,
+        90
+      ],
+      "events": [
+        {
+          "button": 31,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 8,
+          "point": [
+            10,
+            20
+          ],
+          "type": 25,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 31,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 9,
+          "point": [
+            10,
+            20
+          ],
+          "type": 27,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 31,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 9,
+          "point": [
+            45,
+            55
+          ],
+          "type": 27,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 31,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 9,
+          "point": [
+            80,
+            90
+          ],
+          "type": 27,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 31,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 131072,
+          "number": 8,
+          "point": [
+            80,
+            90
+          ],
+          "type": 26,
+          "window_91": 0,
+          "window_92": 0
+        }
+      ],
+      "flags": 131072,
+      "name": "other31",
+      "start": [
+        10,
+        20
+      ],
+      "window": 0
+    },
+    {
+      "button": 4294967295,
+      "count": 1,
+      "end": [
+        80,
+        90
+      ],
+      "events": [
+        {
+          "button": -1,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 1179648,
+          "number": 10,
+          "point": [
+            10,
+            20
+          ],
+          "type": 25,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": -1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1179648,
+          "number": 11,
+          "point": [
+            10,
+            20
+          ],
+          "type": 27,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": -1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1179648,
+          "number": 11,
+          "point": [
+            45,
+            55
+          ],
+          "type": 27,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": -1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1179648,
+          "number": 11,
+          "point": [
+            80,
+            90
+          ],
+          "type": 27,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": -1,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 1179648,
+          "number": 10,
+          "point": [
+            80,
+            90
+          ],
+          "type": 26,
+          "window_91": 26505,
+          "window_92": 26505
+        }
+      ],
+      "flags": 1179648,
+      "name": "raw-button-max",
+      "start": [
+        10,
+        20
+      ],
+      "window": 26505
+    },
+    {
+      "button": 0,
+      "count": 2,
+      "end": [
+        34,
+        37
+      ],
+      "events": [
+        {
+          "button": 0,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 12,
+          "point": [
+            14,
+            17
+          ],
+          "type": 1,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 13,
+          "point": [
+            14,
+            17
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 13,
+          "point": [
+            24,
+            27
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 13,
+          "point": [
+            34,
+            37
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 12,
+          "point": [
+            34,
+            37
+          ],
+          "type": 2,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 2,
+          "field_7": 3,
+          "flags": 0,
+          "number": 14,
+          "point": [
+            14,
+            17
+          ],
+          "type": 1,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 15,
+          "point": [
+            14,
+            17
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 15,
+          "point": [
+            24,
+            27
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 15,
+          "point": [
+            34,
+            37
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 2,
+          "field_7": 3,
+          "flags": 0,
+          "number": 14,
+          "point": [
+            34,
+            37
+          ],
+          "type": 2,
+          "window_91": 0,
+          "window_92": 0
+        }
+      ],
+      "flags": 0,
+      "name": "left-repeat2",
+      "start": [
+        14,
+        17
+      ],
+      "window": 0
+    },
+    {
+      "button": 1,
+      "count": 3,
+      "end": [
+        -900,
+        -700
+      ],
+      "events": [
+        {
+          "button": 1,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 16,
+          "point": [
+            100,
+            200
+          ],
+          "type": 3,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 17,
+          "point": [
+            100,
+            200
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 17,
+          "point": [
+            -400,
+            -250
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 17,
+          "point": [
+            -900,
+            -700
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 16,
+          "point": [
+            -900,
+            -700
+          ],
+          "type": 4,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 2,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 18,
+          "point": [
+            100,
+            200
+          ],
+          "type": 3,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 19,
+          "point": [
+            100,
+            200
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 19,
+          "point": [
+            -400,
+            -250
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 19,
+          "point": [
+            -900,
+            -700
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 2,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 18,
+          "point": [
+            -900,
+            -700
+          ],
+          "type": 4,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 3,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 20,
+          "point": [
+            100,
+            200
+          ],
+          "type": 3,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 21,
+          "point": [
+            100,
+            200
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 21,
+          "point": [
+            -400,
+            -250
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 21,
+          "point": [
+            -900,
+            -700
+          ],
+          "type": 7,
+          "window_91": 26505,
+          "window_92": 26505
+        },
+        {
+          "button": 1,
+          "click_state": 3,
+          "field_7": 3,
+          "flags": 1048576,
+          "number": 20,
+          "point": [
+            -900,
+            -700
+          ],
+          "type": 4,
+          "window_91": 26505,
+          "window_92": 26505
+        }
+      ],
+      "flags": 1048576,
+      "name": "right-repeat3",
+      "start": [
+        100,
+        200
+      ],
+      "window": 26505
+    },
+    {
+      "button": 0,
+      "count": 1,
+      "end": [
+        -40.5,
+        12.75
+      ],
+      "events": [
+        {
+          "button": 0,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 22,
+          "point": [
+            -40.5,
+            12.75
+          ],
+          "type": 1,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 23,
+          "point": [
+            -40.5,
+            12.75
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 23,
+          "point": [
+            -40.5,
+            12.75
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 0,
+          "field_7": 3,
+          "flags": 0,
+          "number": 23,
+          "point": [
+            -40.5,
+            12.75
+          ],
+          "type": 6,
+          "window_91": 0,
+          "window_92": 0
+        },
+        {
+          "button": 0,
+          "click_state": 1,
+          "field_7": 3,
+          "flags": 0,
+          "number": 22,
+          "point": [
+            -40.5,
+            12.75
+          ],
+          "type": 2,
+          "window_91": 0,
+          "window_92": 0
+        }
+      ],
+      "flags": 0,
+      "name": "zero-distance",
+      "start": [
+        -40.5,
+        12.75
+      ],
+      "window": 0
+    }
+  ]
+}

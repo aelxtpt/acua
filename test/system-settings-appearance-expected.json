@@ -1,0 +1,542 @@
+[
+  {
+    "progress": "-inf",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-1.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-0.000001",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-0.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.000001",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.25",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.5",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.75",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.999999",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "1.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "1.000001",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "2.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "inf",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "nan",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-inf",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "-1.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "-0.000001",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "-0.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "0.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "0.000001",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "0.25",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "0.5",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "0.75",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "0.999999",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "1.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "1.000001",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "2.0",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "inf",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "nan",
+    "source": false,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "-inf",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-1.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-0.000001",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-0.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.000001",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.25",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.5",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.75",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.999999",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "1.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "1.000001",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "2.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "inf",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "nan",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": false,
+    "targetBlur": "0.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-inf",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": true,
+    "targetBlur": "12.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-1.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": true,
+    "targetBlur": "12.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-0.000001",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": true,
+    "targetBlur": "12.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "-0.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": true,
+    "targetBlur": "12.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.0",
+    "source": true,
+    "sourceBlur": "0.0",
+    "sourceOpacity": "1.0",
+    "target": true,
+    "targetBlur": "12.0",
+    "targetOpacity": "0.0"
+  },
+  {
+    "progress": "0.000001",
+    "source": true,
+    "sourceBlur": "1.2e-05",
+    "sourceOpacity": "0.999999",
+    "target": true,
+    "targetBlur": "11.999988",
+    "targetOpacity": "1e-06"
+  },
+  {
+    "progress": "0.25",
+    "source": true,
+    "sourceBlur": "3.0",
+    "sourceOpacity": "0.75",
+    "target": true,
+    "targetBlur": "9.0",
+    "targetOpacity": "0.25"
+  },
+  {
+    "progress": "0.5",
+    "source": true,
+    "sourceBlur": "6.0",
+    "sourceOpacity": "0.5",
+    "target": true,
+    "targetBlur": "6.0",
+    "targetOpacity": "0.5"
+  },
+  {
+    "progress": "0.75",
+    "source": true,
+    "sourceBlur": "9.0",
+    "sourceOpacity": "0.25",
+    "target": true,
+    "targetBlur": "3.0",
+    "targetOpacity": "0.75"
+  },
+  {
+    "progress": "0.999999",
+    "source": true,
+    "sourceBlur": "11.999988",
+    "sourceOpacity": "1.0000000000287557e-06",
+    "target": true,
+    "targetBlur": "1.2000000000345068e-05",
+    "targetOpacity": "0.999999"
+  },
+  {
+    "progress": "1.0",
+    "source": true,
+    "sourceBlur": "12.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "1.000001",
+    "source": true,
+    "sourceBlur": "12.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "2.0",
+    "source": true,
+    "sourceBlur": "12.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "inf",
+    "source": true,
+    "sourceBlur": "12.0",
+    "sourceOpacity": "0.0",
+    "target": true,
+    "targetBlur": "0.0",
+    "targetOpacity": "1.0"
+  },
+  {
+    "progress": "nan",
+    "source": true,
+    "sourceBlur": "nan",
+    "sourceOpacity": "nan",
+    "target": true,
+    "targetBlur": "nan",
+    "targetOpacity": "nan"
+  }
+]

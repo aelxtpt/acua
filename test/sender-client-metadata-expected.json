@@ -1,0 +1,467 @@
+{
+  "cases": [
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": true,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "absent",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": null,
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": true,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "invalid",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "node",
+      "kind": "nodeRepl",
+      "nativeBridge": false,
+      "rawClient": "node_repl",
+      "value": null,
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "case",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "Node_Repl",
+      "value": "Node_Repl",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "",
+      "value": "",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "empty",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "",
+      "value": "",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "other",
+      "value": "other",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "other",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "other",
+      "value": "other",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "long",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "value": "clientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclientclient",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": true,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "unicode",
+      "kind": "unknown",
+      "nativeBridge": false,
+      "rawClient": "ação 🦀",
+      "value": "ação 🦀",
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": null,
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseIPC-5",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": true,
+      "rawClient": null,
+      "value": null,
+      "version": "AcuaComputerUseNativeBridge-1",
+      "versionError": {},
+      "versionOK": true
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "invalid",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    },
+    {
+      "descriptor": "nil-stringValue-fixture",
+      "kind": "absent",
+      "nativeBridge": false,
+      "rawClient": null,
+      "value": null,
+      "version": "acuacomputerusenativebridge-1",
+      "versionError": {
+        "index": 13,
+        "message": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+      },
+      "versionOK": false
+    }
+  ]
+}

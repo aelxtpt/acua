@@ -1,0 +1,154 @@
+{
+  "cases": [
+    {
+      "name": "success",
+      "nativeStopCalls": 1,
+      "result": {
+        "exists": true,
+        "url": "<own output URL>"
+      }
+    },
+    {
+      "name": "already-claimed",
+      "nativeStopCalls": 1,
+      "result": {
+        "code": 1,
+        "error": "noActiveRecording"
+      }
+    },
+    {
+      "name": "same-session-other-pid",
+      "nativeStopCalls": 1,
+      "result": {
+        "exists": true,
+        "url": "<own output URL>"
+      }
+    },
+    {
+      "name": "different-session",
+      "nativeStopCalls": 0,
+      "result": {
+        "code": 4,
+        "error": "recordingNotOwned"
+      }
+    },
+    {
+      "name": "correct-owner-after-rejection",
+      "nativeStopCalls": 1,
+      "result": {
+        "exists": true,
+        "url": "<own output URL>"
+      }
+    },
+    {
+      "name": "native-stop-error",
+      "nativeStopCalls": 1,
+      "result": {
+        "code": 41,
+        "domain": "OwnedAudioStop",
+        "error": "Error Domain=OwnedAudioStop Code=41 \"(null)\""
+      }
+    },
+    {
+      "name": "retry-after-error",
+      "nativeStopCalls": 1,
+      "result": {
+        "exists": true,
+        "url": "<own output URL>"
+      }
+    },
+    {
+      "first": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "overlapping-stop",
+      "nativeStopCalls": 1,
+      "second": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "secondReturnedBeforeFirstCallback": true
+    },
+    {
+      "afterFirstCompletion": {
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": true
+      },
+      "afterReplacement": {
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "first": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "overlap-success",
+      "newStopCalls": 0,
+      "oldStopCalls": 1,
+      "second": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "third": {
+        "code": 1,
+        "error": "noActiveRecording"
+      }
+    },
+    {
+      "afterFirstCompletion": {
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "afterReplacement": {
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "first": {
+        "code": 41,
+        "domain": "OwnedAudioStop",
+        "error": "Error Domain=OwnedAudioStop Code=41 \"(null)\""
+      },
+      "name": "overlap-error",
+      "newStopCalls": 1,
+      "oldStopCalls": 1,
+      "second": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "third": {
+        "exists": true,
+        "url": "<new output URL>"
+      }
+    },
+    {
+      "first": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "start-during-stop",
+      "nativeStopCalls": 1,
+      "other": {
+        "code": 3,
+        "error": "recordingAlreadyActive"
+      }
+    },
+    {
+      "first": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "name": "wrong-owner-during-stop",
+      "nativeStopCalls": 1,
+      "other": {
+        "code": 4,
+        "error": "recordingNotOwned"
+      }
+    }
+  ],
+  "scope": "Audio Stop and the active Start guard with fake stream callbacks; real capture and initial Start setup excluded."
+}

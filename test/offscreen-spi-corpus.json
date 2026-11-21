@@ -1,0 +1,1458 @@
+{
+  "cases": [
+    {
+      "name": "0-nil",
+      "connection": "0",
+      "response": "nil",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "0-empty",
+      "connection": "0",
+      "response": "empty",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "0-one",
+      "connection": "0",
+      "response": "one",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "0-two",
+      "connection": "0",
+      "response": "two",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "0-mixed",
+      "connection": "0",
+      "response": "mixed",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "0-no-ids",
+      "connection": "0",
+      "response": "one",
+      "ids": [],
+      "options": 2048,
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "1234-nil",
+      "connection": "1234",
+      "response": "nil",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "1234-empty",
+      "connection": "1234",
+      "response": "empty",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "1234-one",
+      "connection": "1234",
+      "response": "one",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "1234-two",
+      "connection": "1234",
+      "response": "two",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "1234-mixed",
+      "connection": "1234",
+      "response": "mixed",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "1234-no-ids",
+      "connection": "1234",
+      "response": "one",
+      "ids": [],
+      "options": 2048,
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "7fffffff-nil",
+      "connection": "7fffffff",
+      "response": "nil",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "7fffffff-empty",
+      "connection": "7fffffff",
+      "response": "empty",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "7fffffff-one",
+      "connection": "7fffffff",
+      "response": "one",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "7fffffff-two",
+      "connection": "7fffffff",
+      "response": "two",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "7fffffff-mixed",
+      "connection": "7fffffff",
+      "response": "mixed",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "7fffffff-no-ids",
+      "connection": "7fffffff",
+      "response": "one",
+      "ids": [],
+      "options": 2048,
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ffffffff-nil",
+      "connection": "ffffffff",
+      "response": "nil",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "ffffffff-empty",
+      "connection": "ffffffff",
+      "response": "empty",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "ffffffff-one",
+      "connection": "ffffffff",
+      "response": "one",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "ffffffff-two",
+      "connection": "ffffffff",
+      "response": "two",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "ffffffff-mixed",
+      "connection": "ffffffff",
+      "response": "mixed",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "ffffffff-no-ids",
+      "connection": "ffffffff",
+      "response": "one",
+      "ids": [],
+      "options": 2048,
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "123456789abcdef0-nil",
+      "connection": "123456789abcdef0",
+      "response": "nil",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "123456789abcdef0-empty",
+      "connection": "123456789abcdef0",
+      "response": "empty",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "123456789abcdef0-one",
+      "connection": "123456789abcdef0",
+      "response": "one",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "123456789abcdef0-two",
+      "connection": "123456789abcdef0",
+      "response": "two",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "123456789abcdef0-mixed",
+      "connection": "123456789abcdef0",
+      "response": "mixed",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "123456789abcdef0-no-ids",
+      "connection": "123456789abcdef0",
+      "response": "one",
+      "ids": [],
+      "options": 2048,
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "fedcba9876543210-nil",
+      "connection": "fedcba9876543210",
+      "response": "nil",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "fedcba9876543210-empty",
+      "connection": "fedcba9876543210",
+      "response": "empty",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "fedcba9876543210-one",
+      "connection": "fedcba9876543210",
+      "response": "one",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "fedcba9876543210-two",
+      "connection": "fedcba9876543210",
+      "response": "two",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "fedcba9876543210-mixed",
+      "connection": "fedcba9876543210",
+      "response": "mixed",
+      "ids": [
+        1,
+        2147483648,
+        4294967295
+      ],
+      "options": 2048,
+      "rect": [
+        -3.25,
+        12.75,
+        640.5,
+        480.25
+      ]
+    },
+    {
+      "name": "fedcba9876543210-no-ids",
+      "connection": "fedcba9876543210",
+      "response": "one",
+      "ids": [],
+      "options": 2048,
+      "rect": [
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "expected": [
+    {
+      "calls": [
+        {
+          "connection": "0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "0-nil",
+      "nil": false,
+      "typedConnectionBits": "0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "0-empty",
+      "nil": false,
+      "typedConnectionBits": "0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "name": "0-one",
+      "nil": false,
+      "typedConnectionBits": "0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "name": "0-two",
+      "nil": false,
+      "typedConnectionBits": "0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "invalidImageType": true
+        }
+      ],
+      "name": "0-mixed",
+      "nil": false,
+      "typedConnectionBits": "0"
+    },
+    {
+      "calls": [],
+      "images": [],
+      "name": "0-no-ids",
+      "nil": true,
+      "typedConnectionBits": "0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "1234",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "1234-nil",
+      "nil": false,
+      "typedConnectionBits": "1234"
+    },
+    {
+      "calls": [
+        {
+          "connection": "1234",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "1234-empty",
+      "nil": false,
+      "typedConnectionBits": "1234"
+    },
+    {
+      "calls": [
+        {
+          "connection": "1234",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "name": "1234-one",
+      "nil": false,
+      "typedConnectionBits": "1234"
+    },
+    {
+      "calls": [
+        {
+          "connection": "1234",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "name": "1234-two",
+      "nil": false,
+      "typedConnectionBits": "1234"
+    },
+    {
+      "calls": [
+        {
+          "connection": "1234",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "invalidImageType": true
+        }
+      ],
+      "name": "1234-mixed",
+      "nil": false,
+      "typedConnectionBits": "1234"
+    },
+    {
+      "calls": [],
+      "images": [],
+      "name": "1234-no-ids",
+      "nil": true,
+      "typedConnectionBits": "1234"
+    },
+    {
+      "calls": [
+        {
+          "connection": "7fffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "7fffffff-nil",
+      "nil": false,
+      "typedConnectionBits": "7fffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "7fffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "7fffffff-empty",
+      "nil": false,
+      "typedConnectionBits": "7fffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "7fffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "name": "7fffffff-one",
+      "nil": false,
+      "typedConnectionBits": "7fffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "7fffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "name": "7fffffff-two",
+      "nil": false,
+      "typedConnectionBits": "7fffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "7fffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "invalidImageType": true
+        }
+      ],
+      "name": "7fffffff-mixed",
+      "nil": false,
+      "typedConnectionBits": "7fffffff"
+    },
+    {
+      "calls": [],
+      "images": [],
+      "name": "7fffffff-no-ids",
+      "nil": true,
+      "typedConnectionBits": "7fffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "ffffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "ffffffff-nil",
+      "nil": false,
+      "typedConnectionBits": "ffffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "ffffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "ffffffff-empty",
+      "nil": false,
+      "typedConnectionBits": "ffffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "ffffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "name": "ffffffff-one",
+      "nil": false,
+      "typedConnectionBits": "ffffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "ffffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "name": "ffffffff-two",
+      "nil": false,
+      "typedConnectionBits": "ffffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "ffffffff",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "invalidImageType": true
+        }
+      ],
+      "name": "ffffffff-mixed",
+      "nil": false,
+      "typedConnectionBits": "ffffffff"
+    },
+    {
+      "calls": [],
+      "images": [],
+      "name": "ffffffff-no-ids",
+      "nil": true,
+      "typedConnectionBits": "ffffffff"
+    },
+    {
+      "calls": [
+        {
+          "connection": "123456789abcdef0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "123456789abcdef0-nil",
+      "nil": false,
+      "typedConnectionBits": "123456789abcdef0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "123456789abcdef0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "123456789abcdef0-empty",
+      "nil": false,
+      "typedConnectionBits": "123456789abcdef0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "123456789abcdef0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "name": "123456789abcdef0-one",
+      "nil": false,
+      "typedConnectionBits": "123456789abcdef0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "123456789abcdef0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "name": "123456789abcdef0-two",
+      "nil": false,
+      "typedConnectionBits": "123456789abcdef0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "123456789abcdef0",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "invalidImageType": true
+        }
+      ],
+      "name": "123456789abcdef0-mixed",
+      "nil": false,
+      "typedConnectionBits": "123456789abcdef0"
+    },
+    {
+      "calls": [],
+      "images": [],
+      "name": "123456789abcdef0-no-ids",
+      "nil": true,
+      "typedConnectionBits": "123456789abcdef0"
+    },
+    {
+      "calls": [
+        {
+          "connection": "fedcba9876543210",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "fedcba9876543210-nil",
+      "nil": false,
+      "typedConnectionBits": "fedcba9876543210"
+    },
+    {
+      "calls": [
+        {
+          "connection": "fedcba9876543210",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [],
+      "name": "fedcba9876543210-empty",
+      "nil": false,
+      "typedConnectionBits": "fedcba9876543210"
+    },
+    {
+      "calls": [
+        {
+          "connection": "fedcba9876543210",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "name": "fedcba9876543210-one",
+      "nil": false,
+      "typedConnectionBits": "fedcba9876543210"
+    },
+    {
+      "calls": [
+        {
+          "connection": "fedcba9876543210",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "name": "fedcba9876543210-two",
+      "nil": false,
+      "typedConnectionBits": "fedcba9876543210"
+    },
+    {
+      "calls": [
+        {
+          "connection": "fedcba9876543210",
+          "ids": [
+            1,
+            2147483648,
+            4294967295
+          ],
+          "options": 2048,
+          "rect": [
+            "c00a000000000000",
+            "4029800000000000",
+            "4084040000000000",
+            "407e040000000000"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "height": 1,
+          "width": 2
+        },
+        {
+          "invalidImageType": true
+        }
+      ],
+      "name": "fedcba9876543210-mixed",
+      "nil": false,
+      "typedConnectionBits": "fedcba9876543210"
+    },
+    {
+      "calls": [],
+      "images": [],
+      "name": "fedcba9876543210-no-ids",
+      "nil": true,
+      "typedConnectionBits": "fedcba9876543210"
+    }
+  ]
+}

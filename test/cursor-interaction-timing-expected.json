@@ -1,0 +1,652 @@
+{
+  "cases": [
+    {
+      "name": "0",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "1",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "2",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "3",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "4",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "5",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "6",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "0000000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "7",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "0000000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "8",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "9",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "10",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "11",
+      "progressBits": "3fefd70a3d70a3d6",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "12",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "13",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "14",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "15",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "16",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "17",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "18",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "0000000000000000",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "19",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "0000000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "20",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "21",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "22",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "23",
+      "progressBits": "3fefd70a3d70a3d7",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "24",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "25",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "26",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "27",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "28",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "29",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "30",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "0000000000000000",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "31",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "0000000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "32",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "33",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "34",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "35",
+      "progressBits": "3fefd70a3d70a3d8",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "36",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "37",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "38",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "39",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "40",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "41",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "42",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "0000000000000000",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "43",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "0000000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "44",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "45",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "46",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "47",
+      "progressBits": "3ff0000000000000",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "48",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "49",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "50",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "51",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "52",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "53",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "54",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "0000000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "55",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "0000000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "56",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "57",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "58",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 4
+    },
+    {
+      "name": "59",
+      "progressBits": "7ff8000000000000",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 4
+    },
+    {
+      "name": "60",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "61",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "40094189374bc6a7",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "62",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "63",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "40094189374bc6a8",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "64",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "65",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "40094189374bc6a9",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "66",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "0000000000000000",
+      "satisfied": 0,
+      "ready": true,
+      "satisfiedAfter": 1,
+      "executed_instructions": 14
+    },
+    {
+      "name": "67",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "0000000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 12
+    },
+    {
+      "name": "68",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "69",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "7ff8000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    },
+    {
+      "name": "70",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 0,
+      "ready": false,
+      "satisfiedAfter": 0,
+      "executed_instructions": 8
+    },
+    {
+      "name": "71",
+      "progressBits": "7ff0000000000000",
+      "distanceBits": "7ff0000000000000",
+      "satisfied": 1,
+      "ready": false,
+      "satisfiedAfter": 1,
+      "executed_instructions": 8
+    }
+  ]
+}

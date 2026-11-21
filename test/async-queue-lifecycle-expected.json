@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "name": "idle-release",
+      "released": true,
+      "workerCancelled": true
+    },
+    {
+      "name": "running-sleep-release",
+      "operationCancelled": true,
+      "operationCompleted": true,
+      "released": true,
+      "workerCancelled": true
+    },
+    {
+      "beforeGate": {
+        "operationCompleted": false,
+        "released": true,
+        "workerCancelled": true
+      },
+      "name": "running-noncancellable-gate-release",
+      "operationCancelled": true,
+      "operationCompleted": true
+    },
+    {
+      "executed": 4,
+      "name": "buffered-jobs-release",
+      "payloadsReleased": true,
+      "released": true
+    },
+    {
+      "completedWithinObservation": true,
+      "name": "sync-after-stream-finished",
+      "result": {
+        "cancellationError": true,
+        "error": "CancellationError()"
+      }
+    }
+  ]
+}

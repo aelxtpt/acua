@@ -1,0 +1,88 @@
+{
+  "name": "Logging",
+  "version": "1.6.4",
+  "source": "https://github.com/apple/swift-log (tag 1.6.4)",
+  "fetched_dependency_provenance": [
+    {
+      "name": "MCP",
+      "repository": "https://github.com/modelcontextprotocol/swift-sdk",
+      "tag": "0.11.0",
+      "url": "https://codeload.github.com/modelcontextprotocol/swift-sdk/tar.gz/refs/tags/0.11.0",
+      "archive_sha256": "d0628befea79388eaed63ab79a1288ca37acaaf248a3ea4257553e59a15892c7",
+      "files": 74
+    },
+    {
+      "name": "Logging",
+      "repository": "https://github.com/apple/swift-log",
+      "tag": "1.6.4",
+      "url": "https://codeload.github.com/apple/swift-log/tar.gz/refs/tags/1.6.4",
+      "archive_sha256": "0c5ce73e9e90da99391600436317e2ed7186645c63ae9e866321c3e977b7d587",
+      "files": 39
+    },
+    {
+      "name": "System",
+      "repository": "https://github.com/apple/swift-system",
+      "tag": "1.4.2",
+      "url": "https://codeload.github.com/apple/swift-system/tar.gz/refs/tags/1.4.2",
+      "archive_sha256": "23a08d21e2fd4cb110bac717724a594e2548d2943bb9e4bc6b1494d95fe6bdeb",
+      "files": 76
+    },
+    {
+      "name": "AsyncAlgorithms",
+      "repository": "https://github.com/apple/swift-async-algorithms",
+      "tag": "1.0.4",
+      "url": "https://codeload.github.com/apple/swift-async-algorithms/tar.gz/refs/tags/1.0.4",
+      "archive_sha256": "d6220f0a985c378234cb21630b6d810648e10da6c13bc1884a3d98843e43d8ed",
+      "files": 151
+    },
+    {
+      "name": "Collections",
+      "repository": "https://github.com/apple/swift-collections",
+      "tag": "1.1.4",
+      "url": "https://codeload.github.com/apple/swift-collections/tar.gz/refs/tags/1.1.4",
+      "archive_sha256": "41f15c8768f726c0cd4f4b0c63eea7b241c11260b82c33f0b1f4bb8737cabe43",
+      "files": 592
+    }
+  ],
+  "files": {
+    "CODE_OF_CONDUCT.md": "38c6a71fee014fe79c6b666fb060ccce065b825686a91284bd0d8e9d1062b33e",
+    ".licenseignore": "de441b16eb20b7f3587941a6f0578fc3485ad11a2af6c2e20860513ce13aa5b0",
+    ".editorconfig": "ed32ed7ef7dc00c710260a849c62a7b852362c4d1a3bb9cc69d9255016218a52",
+    "README.md": "cb5fbfdcd6de1b316d775ed2556aa2db0f233aa4ce93edaf4d8236cd11bfb181",
+    "NOTICE.txt": "848261eb1f7a3ed230e51cc802407ff2741ef41575264e50246a21ccbc625c6b",
+    ".gitignore": "f55f2debf7b5ca32e694dc81c7f74e3c5ead1e8229991a50953c6bbdcece79b6",
+    "CONTRIBUTING.md": "eb00c2c899b5cc165523fc81941ce938892e9c6b01a0c5fd7f3079daef371d9c",
+    "Package.swift": "9f135736771a1e2736e054f3ed19502886cd516edd7af24abcedb2594fcd66b0",
+    ".spi.yml": "d76aeb2499affcd4c1f9c0770e94c7f688a6f595c9e17e62ebce81905c1513e9",
+    ".swift-format": "49520d173efc5719aa483a7b50dd83eb9f70fec43b210fbe651f2267c97713f6",
+    ".mailmap": "0c955c9e9d591dcdfeed8ba4f932da5acd29fbcdf2bcccaead0a418985c203d6",
+    "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "CONTRIBUTORS.txt": "59ae9bb214ab580fca4d59afb13233326b92e5994d00ce57ff6dc3f0433c5dff",
+    "SECURITY.md": "a0760bbb69933ec7a9df8cfb55ecc5d8c6c0cab5f53c9f48069f05e549663589",
+    "Tests/LoggingTests/TestLogger.swift": "0570fead1199d669a3a3ba524b64ad8f0d05e9d556e3325454c0c7d6bc520b89",
+    "Tests/LoggingTests/TestSendable.swift": "aa038efac12c5087174d87f2fb07b38cfcb96ce676e99e2ab5402a2a728b7f5c",
+    "Tests/LoggingTests/MDCTest.swift": "1014dca6d068f4c8502753ab73cec4b67105455006566b168e0802964beed39e",
+    "Tests/LoggingTests/LocalLoggingTest.swift": "7d75458a27690fbf68f920db644db85e6a7576191c1acc59fdea511aad13d164",
+    "Tests/LoggingTests/CompatibilityTest.swift": "3ceb37f811fc9bec8de0b358e8e6ecb34cc8ab918c144d461de984e07059aada",
+    "Tests/LoggingTests/MetadataProviderTest.swift": "cbb41dc7e3ca904766adc1ef304d06c512c3b4b6a96a6db31143fb9b0d10edb1",
+    "Tests/LoggingTests/GlobalLoggingTest.swift": "13f86eb3fcafdc24e74f542e089cddd182acf1e406b5ee05b2c63b6a39984c40",
+    "Tests/LoggingTests/LoggingTest.swift": "fd91af7d68a58b7f2f6f00a285b37d46342bf69b8e0c12d38694215f554b7890",
+    "Tests/LoggingTests/SubDirectoryOfLoggingTests/EmitALogFromSubDirectory.swift": "5b9ab6931601010f3588f7b807dd41baa9fb8517ec5e30a93e21e1aa6429a8ba",
+    ".github/release.yml": "0245782bbce305d43205638e649c87b29efc1781ec8dbd69d3e1b3ac0783c745",
+    ".github/PULL_REQUEST_TEMPLATE.md": "ae4b05b6da3b4b14a578c89b8b984e16874c357d96a0f598091ed1938f80d16d",
+    ".github/ISSUE_TEMPLATE.md": "32feff5af7ed1a72d6e0649ddcf10620bcaf9c99d47ab4ada78f011469d8b440",
+    ".github/workflows/pull_request.yml": "3955d83c843b73576ed0a6bef88321cc1fe1b5a01a56b5f438f1c90e6ad3de97",
+    ".github/workflows/pull_request_label.yml": "e99b8341fafc9e4069dd9ad3393a277aaf0afa0ea3f108e51b5a23c68835c82c",
+    ".github/workflows/main.yml": "63eb62ac6b7d4ef0cd04112eb5931992a676533ad55529687e33671882a95e1a",
+    "Sources/Logging/MetadataProvider.swift": "3724ab08ae3c038f7f83ac0313254c4af569be645d886a0260abc139befbc5a0",
+    "Sources/Logging/Logging.swift": "d6c556fe8800866000eb11d173ff801e089ca5ca7ddba952ede0aa0182ff8068",
+    "Sources/Logging/LogHandler.swift": "2483972629e2731a7d135d258431cec4cefac53242d563f8c122a3e43ad4d90a",
+    "Sources/Logging/Locks.swift": "ae0f3c37dfe116a16143ffb22441fb6768017f2f8d74d01551d1ebd8ae3f7129",
+    "Sources/Logging/Docs.docc/ImplementingALogHandler.md": "8508d3f9695ab9fe72e6b2fb643f6907fb68d4a7b4fb431077725e0b077c31e0",
+    "Sources/Logging/Docs.docc/LoggingBestPractices.md": "86a166d3577c8f897ffdfd8669a9533b15f2b6240b4239ce98d688b7e8dd354e",
+    "Sources/Logging/Docs.docc/index.md": "4ffc71a28601cf133c9de5999a28542f8580c23ea5a6aab06790101b8b64172c",
+    "Sources/Logging/Docs.docc/BestPractices/001-ChoosingLogLevels.md": "6dc349220bd363dabbf45acf3b14ac2334c41a7eb94affd73765bc94a8f1b224",
+    "dev/git.commit.template": "7036dbad704c6663d9ea38e3c1e7ade16ce53cd6ef27ae99f2612609918d9a4c",
+    "proposals/0001-metadata-providers.md": "131d9899b5e35be0707c397d948438e378ad3198d1342dced61a5ca544dbd349"
+  }
+}

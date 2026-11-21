@@ -1,0 +1,242 @@
+[
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCCalendarListCalendarsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesSearchChatsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesPrepareSendRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesReadImageRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppPolicyRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCListAppsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCFrontmostWindowRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": true,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppStartRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppStopRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppModifyRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": true,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppPerformActionRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCStartAudioRecordingRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCStopAudioRecordingRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": true,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppGetAppSnapshotRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppStartCaptureRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCAppNextCaptureUpdateRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTurnEndedRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCEventStreamStartRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCEventStreamStatusRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCEventStreamStopRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineStartRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineStatusRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineStopRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelinePauseRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineResumeRequest",
+    "requiresSystemPermissions": true
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineGetSettingsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineUpdateSettingsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineUpdateObservationPolicyRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": false,
+    "requestType": "ComputerUseIPCStatusItemMenuStateRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCCalendarListEventsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCCalendarGetEventRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCCalendarCreateEventRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCCalendarUpdateEventRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCCalendarDeleteEventRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesFindChatsRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesReadMessagesRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesSearchMessagesRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesCommitSendRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCMessagesCountActivityRequest",
+    "requiresSystemPermissions": false
+  },
+  {
+    "appUsage": false,
+    "exempt": true,
+    "requestType": "ComputerUseIPCTimelineClearHistoryRequest",
+    "requiresSystemPermissions": false
+  }
+]

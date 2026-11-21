@@ -1,0 +1,153 @@
+{
+  "directions": [
+    {
+      "action": "AXScrollUpByPage",
+      "direction": 0
+    },
+    {
+      "action": "AXScrollDownByPage",
+      "direction": 1
+    },
+    {
+      "action": "AXScrollLeftByPage",
+      "direction": 2
+    },
+    {
+      "action": "AXScrollRightByPage",
+      "direction": 3
+    },
+    {
+      "action": "AXScrollUp",
+      "direction": 4
+    },
+    {
+      "action": "AXScrollToVisible",
+      "direction": 4
+    },
+    {
+      "action": "AXScrollUpByPageExtra",
+      "direction": 4
+    },
+    {
+      "action": "axscrollupbypage",
+      "direction": 4
+    },
+    {
+      "action": "AXPress",
+      "direction": 4
+    },
+    {
+      "action": "",
+      "direction": 4
+    },
+    {
+      "action": "AXScrollLeftByPage ",
+      "direction": 4
+    },
+    {
+      "action": "SAIExpand",
+      "direction": 4
+    }
+  ],
+  "disclosure": [
+    {
+      "attributes": [],
+      "capability": false,
+      "failed": false,
+      "failSetter": false,
+      "name": "capability-False-state-False-throw-False",
+      "trace": [
+        "capability"
+      ],
+      "value": false,
+      "writes": []
+    },
+    {
+      "attributes": [],
+      "capability": false,
+      "failed": false,
+      "failSetter": false,
+      "name": "capability-False-state-True-throw-False",
+      "trace": [
+        "capability"
+      ],
+      "value": true,
+      "writes": []
+    },
+    {
+      "attributes": [
+        "AXDisclosing"
+      ],
+      "capability": true,
+      "failed": false,
+      "failSetter": false,
+      "name": "capability-True-state-False-throw-False",
+      "trace": [
+        "capability",
+        "value",
+        "set"
+      ],
+      "value": false,
+      "writes": [
+        true
+      ]
+    },
+    {
+      "attributes": [
+        "AXDisclosing"
+      ],
+      "capability": true,
+      "failed": false,
+      "failSetter": false,
+      "name": "capability-True-state-True-throw-False",
+      "trace": [
+        "capability",
+        "value",
+        "set"
+      ],
+      "value": true,
+      "writes": [
+        false
+      ]
+    },
+    {
+      "attributes": [
+        "AXDisclosing"
+      ],
+      "capability": true,
+      "failed": true,
+      "failSetter": true,
+      "name": "capability-True-state-False-throw-True",
+      "trace": [
+        "capability",
+        "value",
+        "set"
+      ],
+      "value": false,
+      "writes": [
+        true
+      ]
+    },
+    {
+      "attributes": [
+        "AXDisclosing"
+      ],
+      "capability": true,
+      "failed": true,
+      "failSetter": true,
+      "name": "capability-True-state-True-throw-True",
+      "trace": [
+        "capability",
+        "value",
+        "set"
+      ],
+      "value": true,
+      "writes": [
+        false
+      ]
+    }
+  ],
+  "nativeInput": false,
+  "realAXQueries": false,
+  "SDKUninitialized": true
+}

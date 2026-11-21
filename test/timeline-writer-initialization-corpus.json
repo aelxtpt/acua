@@ -1,0 +1,544 @@
+{
+  "scenario": "timeline-writer-initialization",
+  "input": {
+    "name": "timeline-writer-initialization"
+  },
+  "payload": {
+    "rows": [
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "new-boundary",
+          "now": 1704067200
+        },
+        "name": "new-boundary",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "2024-01-01T00-00-00Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "new-inside-slot",
+          "now": 1704067323
+        },
+        "name": "new-inside-slot",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "2024-01-01T00-00-00Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/1969-12-31T23-50-00Z"
+          ],
+          "files": {
+            "segments/1969-12-31T23-50-00Z/events.jsonl": "",
+            "segments/1969-12-31T23-50-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl\",\n  \"id\" : \"1969-12-31T23-50-00Z\",\n  \"startedAt\" : \"1969-12-31T23:50:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "new-before-epoch",
+          "now": -1
+        },
+        "name": "new-before-epoch",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl",
+          "id": "1969-12-31T23-50-00Z",
+          "metadataPath": "$ROOT/segments/1969-12-31T23-50-00Z/metadata.json",
+          "startedAt": -600,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-30Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-30Z/events.jsonl": "",
+            "segments/2024-01-01T00-00-30Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-30Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-30Z\",\n  \"startedAt\" : \"2024-01-01T00:00:30Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 30,
+          "files": {},
+          "name": "new-custom-duration",
+          "now": 1704067245
+        },
+        "name": "new-custom-duration",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-30Z/events.jsonl",
+          "id": "2024-01-01T00-00-30Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-30Z/metadata.json",
+          "startedAt": 1704067230,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "existing-counts-and-events",
+          "now": 1704067323
+        },
+        "name": "existing-counts-and-events",
+        "state": {
+          "eventCount": 7,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "retained-id",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 2,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":null,\"suppressedEventCount\":null}"
+          },
+          "name": "existing-null-counts",
+          "now": 1704067323
+        },
+        "name": "existing-null-counts",
+        "state": {
+          "eventCount": null,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "retained-id",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": null,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"eventsPath\": \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\", \"startedAt\": \"2024-01-01T00:00:00Z\", \"endedAt\": \"2024-01-01T00:05:00Z\", \"endReason\": \"tool_stopped\", \"eventCount\": 7, \"suppressedEventCount\": 2, \"sessionID\": \"retained-id\"}"
+          },
+          "name": "existing-legacy-session-id",
+          "now": 1704067323
+        },
+        "name": "existing-legacy-session-id",
+        "state": {
+          "eventCount": 7,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "retained-id",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 2,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{invalid"
+          },
+          "name": "invalid-metadata-falls-back",
+          "now": 1704067323
+        },
+        "name": "invalid-metadata-falls-back",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "2024-01-01T00-00-00Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n"
+          },
+          "name": "missing-metadata-falls-back",
+          "now": 1704067323
+        },
+        "name": "missing-metadata-falls-back",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "2024-01-01T00-00-00Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/custom.jsonl": "prior-custom-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/custom.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/custom.jsonl": "prior-custom-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/custom.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "custom-events-file",
+          "now": 1704067323
+        },
+        "name": "custom-events-file",
+        "state": {
+          "eventCount": 7,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/custom.jsonl",
+          "id": "retained-id",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 2,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "error": {
+          "code": 4,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/not-created/custom.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/not-created/custom.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "events-parent-missing",
+          "now": 1704067323
+        },
+        "name": "events-parent-missing"
+      },
+      {
+        "error": {
+          "code": 516,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {
+            "segments": "owned file"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments": "owned file"
+          },
+          "name": "segments-is-file",
+          "now": 1704067323
+        },
+        "name": "segments-is-file"
+      },
+      {
+        "error": {
+          "code": 4,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z",
+            "segments/2024-01-01T00-00-00Z/metadata.json"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": ""
+          }
+        },
+        "input": {
+          "directories": [
+            "segments/2024-01-01T00-00-00Z/metadata.json"
+          ],
+          "duration": 600,
+          "files": {},
+          "name": "metadata-is-directory",
+          "now": 1704067323
+        },
+        "name": "metadata-is-directory"
+      },
+      {
+        "error": {
+          "code": 512,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z",
+            "segments/2024-01-01T00-00-00Z/events.jsonl"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [
+            "segments/2024-01-01T00-00-00Z/events.jsonl"
+          ],
+          "duration": 600,
+          "files": {},
+          "name": "events-is-directory",
+          "now": 1704067323
+        },
+        "name": "events-is-directory"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z",
+            "segments/recent"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}",
+            "segments/recent/events.jsonl": "recent",
+            "segments/recent/metadata.json": "{\"id\": \"recent\", \"eventsPath\": \"$ROOT/segments/recent/events.jsonl\", \"startedAt\": \"2023-12-31T23:50:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/old/events.jsonl": "old",
+            "segments/old/metadata.json": "{\"id\": \"old\", \"eventsPath\": \"$ROOT/segments/old/events.jsonl\", \"startedAt\": \"2023-12-29T23:50:00Z\"}",
+            "segments/recent/events.jsonl": "recent",
+            "segments/recent/metadata.json": "{\"id\": \"recent\", \"eventsPath\": \"$ROOT/segments/recent/events.jsonl\", \"startedAt\": \"2023-12-31T23:50:00Z\"}"
+          },
+          "name": "constructor-prunes-expired",
+          "now": 1704067323
+        },
+        "name": "constructor-prunes-expired",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "2024-01-01T00-00-00Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z",
+            "segments/old"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}",
+            "segments/old/events.jsonl": "old",
+            "segments/old/metadata.json": "{invalid"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/old/events.jsonl": "old",
+            "segments/old/metadata.json": "{invalid"
+          },
+          "name": "constructor-retains-malformed-older-directory",
+          "now": 1704067323
+        },
+        "name": "constructor-retains-malformed-older-directory",
+        "state": {
+          "eventCount": 0,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "2024-01-01T00-00-00Z",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067200,
+          "suppressedEventCount": 0,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/2024-01-01T00-00-00Z"
+          ],
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2023-12-31T23:58:00Z\"\n}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2023-12-31T23:58:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "metadata-start-is-retained",
+          "now": 1704067323
+        },
+        "name": "metadata-start-is-retained",
+        "state": {
+          "eventCount": 7,
+          "eventHandleOpen": true,
+          "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+          "id": "retained-id",
+          "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+          "startedAt": 1704067080,
+          "suppressedEventCount": 2,
+          "suppressedEventsPath": null,
+          "suppressedHandleOpen": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,3583 @@
+{
+  "asyncCases": [
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "18442240474082181119",
+      "name": "prepare-0",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "13832806255468478464",
+      "name": "prepare-1",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "9223372036854775808",
+      "name": "prepare-2",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "0",
+      "name": "prepare-3",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "4636701403295105679",
+      "name": "prepare-4",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "4636702106982547456",
+      "name": "prepare-5",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "inputBits": "4636771772039283343",
+      "name": "prepare-6",
+      "pixelBufferReused": false,
+      "returnSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 165
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 101,
+        "logicalPixelSHA256": "a02a47805936b9fa4b64e5b70400cdc095c0cd4393382f1369f8b06b0b06c789",
+        "planar": false,
+        "width": 101
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 101,
+        "logicalPixelSHA256": "a02a47805936b9fa4b64e5b70400cdc095c0cd4393382f1369f8b06b0b06c789",
+        "width": 101
+      },
+      "inputBits": "4636772475726725120",
+      "name": "prepare-7",
+      "pixelBufferReused": false,
+      "returnSize": [
+        101,
+        101
+      ],
+      "rootBounds": [
+        0,
+        0,
+        101,
+        101
+      ],
+      "rootFrame": [
+        0,
+        0,
+        101,
+        101
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        101
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 264
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 832,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "planar": false,
+        "width": 200
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 832,
+        "colorModel": 1,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "width": 200
+      },
+      "inputBits": "4641223298795962368",
+      "name": "prepare-8",
+      "pixelBufferReused": false,
+      "returnSize": [
+        200,
+        200
+      ],
+      "rootBounds": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "rootFrame": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        200
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 264
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 832,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "planar": false,
+        "width": 200
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 832,
+        "colorModel": 1,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "width": 200
+      },
+      "inputBits": "4641258131324330312",
+      "name": "prepare-9",
+      "pixelBufferReused": false,
+      "returnSize": [
+        200,
+        200
+      ],
+      "rootBounds": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "rootFrame": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        200
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 265
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 832,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 201,
+        "logicalPixelSHA256": "28511dc1d260961d27cbedad69bdc122f36df2ffa102aba20aa6bd7c73ac7dba",
+        "planar": false,
+        "width": 201
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 832,
+        "colorModel": 1,
+        "height": 201,
+        "logicalPixelSHA256": "28511dc1d260961d27cbedad69bdc122f36df2ffa102aba20aa6bd7c73ac7dba",
+        "width": 201
+      },
+      "inputBits": "4641258483168051200",
+      "name": "prepare-10",
+      "pixelBufferReused": false,
+      "returnSize": [
+        201,
+        201
+      ],
+      "rootBounds": [
+        0,
+        0,
+        201,
+        201
+      ],
+      "rootFrame": [
+        0,
+        0,
+        201,
+        201
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        201
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 463
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 399,
+        "logicalPixelSHA256": "6a980735784b05bb6ff76b3c0ddbb7171ca4e9326289ccf09e57556cecc4cb28",
+        "planar": false,
+        "width": 399
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 399,
+        "logicalPixelSHA256": "6a980735784b05bb6ff76b3c0ddbb7171ca4e9326289ccf09e57556cecc4cb28",
+        "width": 399
+      },
+      "inputBits": "4645735518594494628",
+      "name": "prepare-11",
+      "pixelBufferReused": false,
+      "returnSize": [
+        399,
+        399
+      ],
+      "rootBounds": [
+        0,
+        0,
+        399,
+        399
+      ],
+      "rootFrame": [
+        0,
+        0,
+        399,
+        399
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        399
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 400,
+        "logicalPixelSHA256": "3546bbfdb2da2cfef911dd6885e231c594a539d5b1997ed8d574d6d57593e53c",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 400,
+        "logicalPixelSHA256": "3546bbfdb2da2cfef911dd6885e231c594a539d5b1997ed8d574d6d57593e53c",
+        "width": 400
+      },
+      "inputBits": "4645735694516355072",
+      "name": "prepare-12",
+      "pixelBufferReused": false,
+      "returnSize": [
+        400,
+        400
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        400
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        400
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        400
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 400,
+        "logicalPixelSHA256": "3546bbfdb2da2cfef911dd6885e231c594a539d5b1997ed8d574d6d57593e53c",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 400,
+        "logicalPixelSHA256": "3546bbfdb2da2cfef911dd6885e231c594a539d5b1997ed8d574d6d57593e53c",
+        "width": 400
+      },
+      "inputBits": "4645753286702399488",
+      "name": "prepare-13",
+      "pixelBufferReused": false,
+      "returnSize": [
+        400,
+        400
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        400
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        400
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        400
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 400,
+        "logicalPixelSHA256": "3546bbfdb2da2cfef911dd6885e231c594a539d5b1997ed8d574d6d57593e53c",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 400,
+        "logicalPixelSHA256": "3546bbfdb2da2cfef911dd6885e231c594a539d5b1997ed8d574d6d57593e53c",
+        "width": 400
+      },
+      "inputBits": "9218868437227405311",
+      "name": "prepare-14",
+      "pixelBufferReused": false,
+      "returnSize": [
+        400,
+        400
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        400
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        400
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        400
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 264
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 832,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "planar": false,
+        "width": 200
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 832,
+        "colorModel": 1,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "width": 200
+      },
+      "inputBits": "9218868437227405312",
+      "name": "prepare-15",
+      "pixelBufferReused": false,
+      "returnSize": [
+        200,
+        200
+      ],
+      "rootBounds": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "rootFrame": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        200
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 264
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 832,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "planar": false,
+        "width": 200
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 832,
+        "colorModel": 1,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "width": 200
+      },
+      "inputBits": "18442240474082181120",
+      "name": "prepare-16",
+      "pixelBufferReused": false,
+      "returnSize": [
+        200,
+        200
+      ],
+      "rootBounds": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "rootFrame": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        200
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 264
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 832,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "planar": false,
+        "width": 200
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 832,
+        "colorModel": 1,
+        "height": 200,
+        "logicalPixelSHA256": "9da998bd11ce420c9d7f21df6fa54e1d30c327cfdbeb109ab236e94c9d7c4671",
+        "width": 200
+      },
+      "inputBits": "9221120237041090560",
+      "name": "prepare-17",
+      "pixelBufferReused": false,
+      "returnSize": [
+        200,
+        200
+      ],
+      "rootBounds": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "rootFrame": [
+        0,
+        0,
+        200,
+        200
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        200
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 113.75
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 256,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 97,
+        "logicalPixelSHA256": "f607f935d049e847809d540894fe98ecefba518586632a649f73ce3fae09d5b4",
+        "planar": false,
+        "width": 49
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 256,
+        "colorModel": 1,
+        "height": 97,
+        "logicalPixelSHA256": "f607f935d049e847809d540894fe98ecefba518586632a649f73ce3fae09d5b4",
+        "width": 49
+      },
+      "name": "resize-0",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        49.75,
+        97.5
+      ],
+      "rootBounds": [
+        0,
+        0,
+        49.75,
+        97.5
+      ],
+      "rootFrame": [
+        0,
+        0,
+        49.75,
+        97.5
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        97.5
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 160
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 384,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "planar": false,
+        "width": 96
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 384,
+        "colorModel": 1,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "width": 96
+      },
+      "name": "resize-1",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        96,
+        48
+      ],
+      "rootBounds": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "rootFrame": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        48
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 160
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 384,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "planar": false,
+        "width": 96
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 384,
+        "colorModel": 1,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "width": 96
+      },
+      "name": "resize-2",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        0,
+        0
+      ],
+      "rootBounds": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "rootFrame": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        48
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 160
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 384,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "planar": false,
+        "width": 96
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 384,
+        "colorModel": 1,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "width": 96
+      },
+      "name": "resize-3",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        -1,
+        10
+      ],
+      "rootBounds": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "rootFrame": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        48
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 160
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 384,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "planar": false,
+        "width": 96
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 384,
+        "colorModel": 1,
+        "height": 48,
+        "logicalPixelSHA256": "43a9931272dfa9a83df36bd7cbca100e603d0a6998ecc25444909410d67a3918",
+        "width": 96
+      },
+      "name": "stop",
+      "pixelBufferReused": true,
+      "rootBounds": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "rootFrame": [
+        0,
+        0,
+        96,
+        48
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        48
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 166
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 102,
+        "logicalPixelSHA256": "f90f543998b8b46796efa88c41d8d0ca9929273ef8d11c5b4c4208988efd2a55",
+        "planar": false,
+        "width": 102
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 102,
+        "logicalPixelSHA256": "f90f543998b8b46796efa88c41d8d0ca9929273ef8d11c5b4c4208988efd2a55",
+        "width": 102
+      },
+      "name": "cancelled-prepare",
+      "pixelBufferReused": false,
+      "returnSize": [
+        102,
+        102
+      ],
+      "rootBounds": [
+        0,
+        0,
+        102,
+        102
+      ],
+      "rootFrame": [
+        0,
+        0,
+        102,
+        102
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        102
+      ],
+      "stripeReused": true,
+      "sublayers": 1,
+      "taskCancelled": true
+    }
+  ],
+  "cases": [
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 65
+      },
+      "animationKeys": [
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 64,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 1,
+        "logicalPixelSHA256": "286a02e9b2091646b79e0930c051697f69d58d011d21c176661cdb3a3adf2137",
+        "planar": false,
+        "width": 1
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 64,
+        "colorModel": 1,
+        "height": 1,
+        "logicalPixelSHA256": "286a02e9b2091646b79e0930c051697f69d58d011d21c176661cdb3a3adf2137",
+        "width": 1
+      },
+      "name": "render-false-0",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        1,
+        1
+      ],
+      "rootBounds": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "rootFrame": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        1
+      ],
+      "stripeReused": false,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 111
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 192,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 49,
+        "logicalPixelSHA256": "300b1c83125a561e3f594e5a04389558519a387247a988b3630bd4e9673df3e9",
+        "planar": false,
+        "width": 47
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 192,
+        "colorModel": 1,
+        "height": 49,
+        "logicalPixelSHA256": "300b1c83125a561e3f594e5a04389558519a387247a988b3630bd4e9673df3e9",
+        "width": 47
+      },
+      "name": "render-false-1",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        47,
+        49
+      ],
+      "rootBounds": [
+        0,
+        0,
+        47,
+        49
+      ],
+      "rootFrame": [
+        0,
+        0,
+        47,
+        49
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        49
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 112
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 192,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 48,
+        "logicalPixelSHA256": "22415619e49c406eb9897a724886ec08d1e2d008e33f1fe5066675dd52e8c753",
+        "planar": false,
+        "width": 48
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 192,
+        "colorModel": 1,
+        "height": 48,
+        "logicalPixelSHA256": "22415619e49c406eb9897a724886ec08d1e2d008e33f1fe5066675dd52e8c753",
+        "width": 48
+      },
+      "name": "render-false-2",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        48,
+        48
+      ],
+      "rootBounds": [
+        0,
+        0,
+        48,
+        48
+      ],
+      "rootFrame": [
+        0,
+        0,
+        48,
+        48
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        48
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 113
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 256,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 47,
+        "logicalPixelSHA256": "b458d452f203e46e6301a72cd69ee6207db9632f991080f2cde51cbbdc92d42f",
+        "planar": false,
+        "width": 49
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 256,
+        "colorModel": 1,
+        "height": 47,
+        "logicalPixelSHA256": "b458d452f203e46e6301a72cd69ee6207db9632f991080f2cde51cbbdc92d42f",
+        "width": 49
+      },
+      "name": "render-false-3",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        49,
+        47
+      ],
+      "rootBounds": [
+        0,
+        0,
+        49,
+        47
+      ],
+      "rootFrame": [
+        0,
+        0,
+        49,
+        47
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        47
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 160
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 384,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 97,
+        "logicalPixelSHA256": "52aa6746353b4d4ebace671bdeb2e6ad7e674f0140ccbebf219b9b4bebb69956",
+        "planar": false,
+        "width": 96
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 384,
+        "colorModel": 1,
+        "height": 97,
+        "logicalPixelSHA256": "52aa6746353b4d4ebace671bdeb2e6ad7e674f0140ccbebf219b9b4bebb69956",
+        "width": 96
+      },
+      "name": "render-false-4",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        96,
+        97
+      ],
+      "rootBounds": [
+        0,
+        0,
+        96,
+        97
+      ],
+      "rootFrame": [
+        0,
+        0,
+        96,
+        97
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        97
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "6cd25d924db725a0d63617dc4bf6a45b1dd44967edbc38a67903fc2dd1592ead",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "6cd25d924db725a0d63617dc4bf6a45b1dd44967edbc38a67903fc2dd1592ead",
+        "width": 100
+      },
+      "name": "render-false-5",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 209.75
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 640,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 98,
+        "logicalPixelSHA256": "af669b933d19501abe9d4b6b2837fe034b9450a8346f588ec5f0d59aade962df",
+        "planar": false,
+        "width": 145
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 640,
+        "colorModel": 1,
+        "height": 98,
+        "logicalPixelSHA256": "af669b933d19501abe9d4b6b2837fe034b9450a8346f588ec5f0d59aade962df",
+        "width": 145
+      },
+      "name": "render-false-6",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        145.75,
+        98.5
+      ],
+      "rootBounds": [
+        0,
+        0,
+        145.75,
+        98.5
+      ],
+      "rootFrame": [
+        0,
+        0,
+        145.75,
+        98.5
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        98.5
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "b9e65ef1fe6e5a9e6cb8e00362b2a189722c66b23b3aef62e1abac2a5ae97b03",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "b9e65ef1fe6e5a9e6cb8e00362b2a189722c66b23b3aef62e1abac2a5ae97b03",
+        "width": 400
+      },
+      "name": "render-false-7",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        400,
+        203
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 65
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 64,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 1,
+        "logicalPixelSHA256": "b5d87fbcbbf37fa779c93855769710980b1e73f3d139c54bb15afe6f48e35f58",
+        "planar": false,
+        "width": 1
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 64,
+        "colorModel": 1,
+        "height": 1,
+        "logicalPixelSHA256": "b5d87fbcbbf37fa779c93855769710980b1e73f3d139c54bb15afe6f48e35f58",
+        "width": 1
+      },
+      "name": "render-true-0",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        1,
+        1
+      ],
+      "rootBounds": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "rootFrame": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        1
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 111
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 192,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 49,
+        "logicalPixelSHA256": "50f6a7cb93b7f7c68f9e2e8d5af8fec7b9dbf62c93055da8c8f83153391164f1",
+        "planar": false,
+        "width": 47
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 192,
+        "colorModel": 1,
+        "height": 49,
+        "logicalPixelSHA256": "50f6a7cb93b7f7c68f9e2e8d5af8fec7b9dbf62c93055da8c8f83153391164f1",
+        "width": 47
+      },
+      "name": "render-true-1",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        47,
+        49
+      ],
+      "rootBounds": [
+        0,
+        0,
+        47,
+        49
+      ],
+      "rootFrame": [
+        0,
+        0,
+        47,
+        49
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        49
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 112
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 192,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 48,
+        "logicalPixelSHA256": "2dec0ca74258f293907d22f115a7817e33ec7791aeac8b81b5242d53c68ca5c8",
+        "planar": false,
+        "width": 48
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 192,
+        "colorModel": 1,
+        "height": 48,
+        "logicalPixelSHA256": "2dec0ca74258f293907d22f115a7817e33ec7791aeac8b81b5242d53c68ca5c8",
+        "width": 48
+      },
+      "name": "render-true-2",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        48,
+        48
+      ],
+      "rootBounds": [
+        0,
+        0,
+        48,
+        48
+      ],
+      "rootFrame": [
+        0,
+        0,
+        48,
+        48
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        48
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 113
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 256,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 47,
+        "logicalPixelSHA256": "949c42b82bba8c7a10501d78e40ce20c6772ed9e8dfe4ae70e012cc52a5cd127",
+        "planar": false,
+        "width": 49
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 256,
+        "colorModel": 1,
+        "height": 47,
+        "logicalPixelSHA256": "949c42b82bba8c7a10501d78e40ce20c6772ed9e8dfe4ae70e012cc52a5cd127",
+        "width": 49
+      },
+      "name": "render-true-3",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        49,
+        47
+      ],
+      "rootBounds": [
+        0,
+        0,
+        49,
+        47
+      ],
+      "rootFrame": [
+        0,
+        0,
+        49,
+        47
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        47
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 160
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 384,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 97,
+        "logicalPixelSHA256": "6749c5b4ff9c9f87e52fdad8287764f548b6681f92ea0f35d05437d6bb2dfcb7",
+        "planar": false,
+        "width": 96
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 384,
+        "colorModel": 1,
+        "height": 97,
+        "logicalPixelSHA256": "6749c5b4ff9c9f87e52fdad8287764f548b6681f92ea0f35d05437d6bb2dfcb7",
+        "width": 96
+      },
+      "name": "render-true-4",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        96,
+        97
+      ],
+      "rootBounds": [
+        0,
+        0,
+        96,
+        97
+      ],
+      "rootFrame": [
+        0,
+        0,
+        96,
+        97
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        97
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 164
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "planar": false,
+        "width": 100
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 100,
+        "logicalPixelSHA256": "89167401eda8b928d247f21b50a46e867e92a2592d3645523e1abe1199bd89a6",
+        "width": 100
+      },
+      "name": "render-true-5",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        100,
+        100
+      ],
+      "rootBounds": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "rootFrame": [
+        0,
+        0,
+        100,
+        100
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        100
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 209.75
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 640,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 98,
+        "logicalPixelSHA256": "1d315d48577060cccc880f63c7bc30087eae86f330744418b4cde336f0bede04",
+        "planar": false,
+        "width": 145
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 640,
+        "colorModel": 1,
+        "height": 98,
+        "logicalPixelSHA256": "1d315d48577060cccc880f63c7bc30087eae86f330744418b4cde336f0bede04",
+        "width": 145
+      },
+      "name": "render-true-6",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        145.75,
+        98.5
+      ],
+      "rootBounds": [
+        0,
+        0,
+        145.75,
+        98.5
+      ],
+      "rootFrame": [
+        0,
+        0,
+        145.75,
+        98.5
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        98.5
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": true,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "render-true-7",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        400,
+        203
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "invalid-size-0",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        0,
+        10
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "invalid-size-1",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        10,
+        0
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "invalid-size-2",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        0,
+        0
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "invalid-size-3",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        -1,
+        10
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "invalid-size-4",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        -0.5,
+        10
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 464
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 1600,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "planar": false,
+        "width": 400
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": {
+        "code": 1,
+        "domain": "ComputerUse.RemoteHostedPIPCheckerboardRenderer.(unknown context at $<context>).Error",
+        "userInfo": {}
+      },
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 1600,
+        "colorModel": 1,
+        "height": 203,
+        "logicalPixelSHA256": "33fecf73b8b9a1024efeee39ff81a8c45b217a9b5f0a7da7b9185d361fe89fb5",
+        "width": 400
+      },
+      "name": "invalid-size-5",
+      "pixelBufferReused": true,
+      "requestedSize": [
+        10,
+        -1
+      ],
+      "rootBounds": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "rootFrame": [
+        0,
+        0,
+        400,
+        203
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        203
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    },
+    {
+      "active": false,
+      "animation": {
+        "additive": false,
+        "autoreverses": false,
+        "cumulative": false,
+        "duration": 1.6,
+        "fillMode": "removed",
+        "from": -64,
+        "keyPath": "position.x",
+        "removedOnCompletion": true,
+        "repeatInfinite": true,
+        "speed": 1,
+        "to": 163
+      },
+      "animationKeys": [
+        "bounds",
+        "position",
+        "position.x"
+      ],
+      "buffer": {
+        "bytesPerRow": 448,
+        "format": 1111970369,
+        "hasIOSurface": true,
+        "height": 101,
+        "logicalPixelSHA256": "db3db197578da6587e51619aeb95393de58b48b73fe6c2b15bd9da53382c534a",
+        "planar": false,
+        "width": 99
+      },
+      "contentsGravity": "resizeAspectFill",
+      "error": null,
+      "image": {
+        "bitmapInfo": 8194,
+        "bitsPerComponent": 8,
+        "bitsPerPixel": 32,
+        "bytesPerRow": 448,
+        "colorModel": 1,
+        "height": 101,
+        "logicalPixelSHA256": "db3db197578da6587e51619aeb95393de58b48b73fe6c2b15bd9da53382c534a",
+        "width": 99
+      },
+      "name": "success-after-errors",
+      "pixelBufferReused": false,
+      "requestedSize": [
+        99,
+        101
+      ],
+      "rootBounds": [
+        0,
+        0,
+        99,
+        101
+      ],
+      "rootFrame": [
+        0,
+        0,
+        99,
+        101
+      ],
+      "stripeColor": [
+        1,
+        1,
+        1,
+        0.55
+      ],
+      "stripeFrame": [
+        -64,
+        0,
+        64,
+        101
+      ],
+      "stripeReused": true,
+      "sublayers": 1
+    }
+  ],
+  "normalization": [
+    {
+      "inputBits": "18442240474082181119",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "13832806255468478464",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "9223372036854775808",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "0",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "4636701403295105679",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "4636702106982547456",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "4636771772039283343",
+      "outputBits": "4636737291354636288"
+    },
+    {
+      "inputBits": "4636772475726725120",
+      "outputBits": "4636807660098813952"
+    },
+    {
+      "inputBits": "4641223298795962368",
+      "outputBits": "4641240890982006784"
+    },
+    {
+      "inputBits": "4641258131324330312",
+      "outputBits": "4641240890982006784"
+    },
+    {
+      "inputBits": "4641258483168051200",
+      "outputBits": "4641276075354095616"
+    },
+    {
+      "inputBits": "4645735518594494628",
+      "outputBits": "4645726898423332864"
+    },
+    {
+      "inputBits": "4645735694516355072",
+      "outputBits": "4645744490609377280"
+    },
+    {
+      "inputBits": "4645753286702399488",
+      "outputBits": "4645744490609377280"
+    },
+    {
+      "inputBits": "9218868437227405311",
+      "outputBits": "4645744490609377280"
+    },
+    {
+      "inputBits": "9218868437227405312",
+      "outputBits": "4641240890982006784"
+    },
+    {
+      "inputBits": "18442240474082181120",
+      "outputBits": "4641240890982006784"
+    },
+    {
+      "inputBits": "9221120237041090560",
+      "outputBits": "4641240890982006784"
+    }
+  ],
+  "normalizations": [
+    "Only the private NSError context address is normalized; all state and logical pixels compare exactly.",
+    "Allocation row padding is excluded from logical pixel files; row stride and format are still compared."
+  ]
+}

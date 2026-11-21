@@ -1,0 +1,3818 @@
+{
+  "scenario": "timeline-matching",
+  "input": {
+    "name": "timeline-matching"
+  },
+  "payload": {
+    "rows": [
+      {
+        "input": null,
+        "kind": "app",
+        "name": "0-app-0",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "0-app-1",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": true
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "0-app-2",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "0-app-3",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "0-app-4",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "0-app-5",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "0-app-6",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "0-host-0",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "0-host-1",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "0-host-2",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "0-host-3",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "0-host-4",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "0-host-5",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "0-host-6",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "0-host-7",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "0-host-8",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "0-host-9",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "0-host-10",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "0-host-11",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "0-url-0",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "0-url-1",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "0-url-2",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "0-url-3",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "0-url-4",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "0-url-5",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "0-url-6",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "0-url-7",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "0-url-8",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "0-url-9",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "0-url-10",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "0-url-11",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "0-url-12",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "1-app-0",
+        "rule": {
+          "scope": "app"
+        },
+        "value": true
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "1-app-1",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "1-app-2",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "1-app-3",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "1-app-4",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "1-app-5",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "1-app-6",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "1-host-0",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "1-host-1",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "1-host-2",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "1-host-3",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "1-host-4",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "1-host-5",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "1-host-6",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "1-host-7",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "1-host-8",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "1-host-9",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "1-host-10",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "1-host-11",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "1-url-0",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "1-url-1",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "1-url-2",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "1-url-3",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "1-url-4",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "1-url-5",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "1-url-6",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "1-url-7",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "1-url-8",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "1-url-9",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "1-url-10",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "1-url-11",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "1-url-12",
+        "rule": {
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "2-app-0",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "2-app-1",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "2-app-2",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "2-app-3",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": true
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "2-app-4",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "2-app-5",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "2-app-6",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "2-host-0",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "2-host-1",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "2-host-2",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "2-host-3",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "2-host-4",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "2-host-5",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "2-host-6",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "2-host-7",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "2-host-8",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "2-host-9",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "2-host-10",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "2-host-11",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "2-url-0",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "2-url-1",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "2-url-2",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "2-url-3",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "2-url-4",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "2-url-5",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "2-url-6",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "2-url-7",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "2-url-8",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "2-url-9",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "2-url-10",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "2-url-11",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "2-url-12",
+        "rule": {
+          "bundleID": "",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "3-app-0",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "3-app-1",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "3-app-2",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "3-app-3",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "3-app-4",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": true
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "3-app-5",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": true
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "3-app-6",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "3-host-0",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "3-host-1",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "3-host-2",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "3-host-3",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "3-host-4",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "3-host-5",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "3-host-6",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "3-host-7",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "3-host-8",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "3-host-9",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "3-host-10",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "3-host-11",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "3-url-0",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "3-url-1",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "3-url-2",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "3-url-3",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "3-url-4",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "3-url-5",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "3-url-6",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "3-url-7",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "3-url-8",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "3-url-9",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "3-url-10",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "3-url-11",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "3-url-12",
+        "rule": {
+          "bundleID": "\u00e9.\ud83d\ude00",
+          "scope": "app"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "4-app-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "4-app-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "4-app-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "4-app-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "4-app-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "4-app-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "4-app-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "4-host-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "4-host-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "4-host-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "4-host-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "4-host-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "4-host-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "4-host-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "4-host-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "4-host-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "4-host-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "4-host-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "4-host-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "4-url-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "4-url-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "4-url-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "4-url-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "4-url-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "4-url-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "4-url-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": true
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "4-url-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "4-url-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "4-url-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "4-url-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "4-url-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "4-url-12",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "Example.Test"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "5-app-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "5-app-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "5-app-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "5-app-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "5-app-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "5-app-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "5-app-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "5-host-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "5-host-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "5-host-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "5-host-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "5-host-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "5-host-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "5-host-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "5-host-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "5-host-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "5-host-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "5-host-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "5-host-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "5-url-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "5-url-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "5-url-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "5-url-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "5-url-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "5-url-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "5-url-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": true
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "5-url-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "5-url-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "5-url-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "5-url-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "5-url-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "5-url-12",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ".EXAMPLE..test."
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "6-app-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "6-app-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "6-app-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "6-app-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "6-app-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "6-app-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "6-app-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "6-host-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "6-host-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "6-host-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "6-host-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "6-host-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "6-host-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "6-host-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "6-host-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "6-host-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "6-host-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "6-host-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "6-host-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "6-url-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "6-url-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "6-url-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "6-url-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "6-url-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "6-url-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "6-url-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "6-url-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "6-url-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "6-url-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "6-url-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "6-url-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": true
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "6-url-12",
+        "rule": {
+          "scope": "url",
+          "urlDomain": ""
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "7-app-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "7-app-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "7-app-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "7-app-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "7-app-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "7-app-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "7-app-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "7-host-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "7-host-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "7-host-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "7-host-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "7-host-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "7-host-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "7-host-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "7-host-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "7-host-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "7-host-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "7-host-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "7-host-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "7-url-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "7-url-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "7-url-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "7-url-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "7-url-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "7-url-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "7-url-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "7-url-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "7-url-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "7-url-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "7-url-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "7-url-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": true
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "7-url-12",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "..."
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "8-app-0",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "8-app-1",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "8-app-2",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "8-app-3",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "8-app-4",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "8-app-5",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "8-app-6",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "8-host-0",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "8-host-1",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "8-host-2",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "8-host-3",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "8-host-4",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "8-host-5",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "8-host-6",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "8-host-7",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "8-host-8",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "8-host-9",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "8-host-10",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "8-host-11",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "8-url-0",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "8-url-1",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "8-url-2",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "8-url-3",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "8-url-4",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "8-url-5",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "8-url-6",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "8-url-7",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "8-url-8",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "8-url-9",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "8-url-10",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "8-url-11",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "8-url-12",
+        "rule": {
+          "scope": "url"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "9-app-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "9-app-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "9-app-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "9-app-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "9-app-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "9-app-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "9-app-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "9-host-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "9-host-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "9-host-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "9-host-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "9-host-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "9-host-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "9-host-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "9-host-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "9-host-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": true
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "9-host-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": true
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "9-host-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "9-host-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "9-url-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "9-url-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "9-url-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "9-url-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "9-url-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "9-url-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "9-url-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "9-url-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "9-url-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "9-url-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "9-url-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": true
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "9-url-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "9-url-12",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "\u00c9xample.test"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "10-app-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "10-app-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "10-app-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "10-app-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "10-app-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "10-app-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "10-app-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "10-host-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "10-host-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "10-host-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "10-host-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "10-host-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "10-host-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "10-host-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "10-host-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "10-host-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "10-host-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "10-host-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": true
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "10-host-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": true
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "10-url-0",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "10-url-1",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "10-url-2",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "10-url-3",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "10-url-4",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "10-url-5",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "10-url-6",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "10-url-7",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "10-url-8",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "10-url-9",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": true
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "10-url-10",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "10-url-11",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "10-url-12",
+        "rule": {
+          "scope": "url",
+          "urlDomain": "127.0.0.1"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "app",
+        "name": "11-app-0",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "Owned.App",
+        "kind": "app",
+        "name": "11-app-1",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": true
+      },
+      {
+        "input": "owned.app",
+        "kind": "app",
+        "name": "11-app-2",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "app",
+        "name": "11-app-3",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9.\ud83d\ude00",
+        "kind": "app",
+        "name": "11-app-4",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301.\ud83d\ude00",
+        "kind": "app",
+        "name": "11-app-5",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "Other.App",
+        "kind": "app",
+        "name": "11-app-6",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "host",
+        "name": "11-host-0",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "EXAMPLE.TEST",
+        "kind": "host",
+        "name": "11-host-1",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "sub.example.test",
+        "kind": "host",
+        "name": "11-host-2",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "badexample.test",
+        "kind": "host",
+        "name": "11-host-3",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test.evil",
+        "kind": "host",
+        "name": "11-host-4",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": ".example..test.",
+        "kind": "host",
+        "name": "11-host-5",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "",
+        "kind": "host",
+        "name": "11-host-6",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "...",
+        "kind": "host",
+        "name": "11-host-7",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "\u00e9xample.test",
+        "kind": "host",
+        "name": "11-host-8",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "e\u0301xample.test",
+        "kind": "host",
+        "name": "11-host-9",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "127.0.0.1",
+        "kind": "host",
+        "name": "11-host-10",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "10.127.0.0.1",
+        "kind": "host",
+        "name": "11-host-11",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": null,
+        "kind": "url",
+        "name": "11-url-0",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://EXAMPLE.TEST/path",
+        "kind": "url",
+        "name": "11-url-1",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://sub.example.test:42/path",
+        "kind": "url",
+        "name": "11-url-2",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://badexample.test",
+        "kind": "url",
+        "name": "11-url-3",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://example.test.evil",
+        "kind": "url",
+        "name": "11-url-4",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "example.test",
+        "kind": "url",
+        "name": "11-url-5",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "//example.test/path",
+        "kind": "url",
+        "name": "11-url-6",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "file:///example.test",
+        "kind": "url",
+        "name": "11-url-7",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "http://[::1]",
+        "kind": "url",
+        "name": "11-url-8",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "http://127.0.0.1/path",
+        "kind": "url",
+        "name": "11-url-9",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\u00e9xample.test",
+        "kind": "url",
+        "name": "11-url-10",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://\ud83d\ude00.test",
+        "kind": "url",
+        "name": "11-url-11",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      },
+      {
+        "input": "https://%",
+        "kind": "url",
+        "name": "11-url-12",
+        "rule": {
+          "bundleID": "Owned.App",
+          "scope": "app",
+          "urlDomain": "example.test"
+        },
+        "value": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,1148 @@
+{
+  "scenario": "timeline-settings-storage",
+  "input": {
+    "name": "timeline-settings-storage"
+  },
+  "payload": {
+    "rows": [
+      {
+        "input": {
+          "directories": [],
+          "files": {},
+          "name": "missing-settings-defaults",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "missing-settings-defaults",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [],
+              "files": {}
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"do_not_observe\", \"defaultURLBehavior\": \"do_not_observe\", \"allowlist\": [{\"scope\": \"app\", \"bundleID\": \"owned.fixture\"}, {\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}], \"blocklist\": []}}"
+          },
+          "name": "valid-settings",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "valid-settings",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"do_not_observe\", \"defaultURLBehavior\": \"do_not_observe\", \"allowlist\": [{\"scope\": \"app\", \"bundleID\": \"owned.fixture\"}, {\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "bundleID": "owned.fixture",
+                    "scope": "app"
+                  },
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "do_not_observe",
+                "defaultURLBehavior": "do_not_observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "owned-invalid"
+          },
+          "name": "malformed-json",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "malformed-json",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "owned-invalid"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "{}"
+          },
+          "name": "empty-object",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "empty-object",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "null"
+          },
+          "name": "null-object",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "null-object",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "null"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [{\"scope\": \"app\", \"bundleID\": \"\"}], \"blocklist\": []}}"
+          },
+          "name": "invalid-rule-defaults",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "invalid-rule-defaults",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [{\"scope\": \"app\", \"bundleID\": \"\"}], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [{\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}, {\"scope\": \"url\", \"urlDomain\": \"example.test\"}], \"blocklist\": []}}"
+          },
+          "name": "duplicate-domain-normalized",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "duplicate-domain-normalized",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [{\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}, {\"scope\": \"url\", \"urlDomain\": \"example.test\"}], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [{\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}], \"blocklist\": [{\"scope\": \"url\", \"urlDomain\": \"example.test\"}]}}"
+          },
+          "name": "block-wins-on-load",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "block-wins-on-load",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [{\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}], \"blocklist\": [{\"scope\": \"url\", \"urlDomain\": \"example.test\"}]}}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [
+            "timeline/settings.json"
+          ],
+          "files": {},
+          "name": "settings-path-directory",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "settings-path-directory",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline",
+                "timeline/settings.json"
+              ],
+              "files": {}
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline": "owned-blocker"
+          },
+          "name": "root-is-file",
+          "operations": [
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "root-is-file",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [],
+              "files": {
+                "timeline": "owned-blocker"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {},
+          "name": "persist-default-and-reload",
+          "operations": [
+            {
+              "kind": "get"
+            },
+            {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "observe",
+                  "defaultURLBehavior": "observe"
+                }
+              }
+            },
+            {
+              "kind": "get"
+            },
+            {
+              "kind": "reload"
+            }
+          ]
+        },
+        "name": "persist-default-and-reload",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [],
+              "files": {}
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"observe\",\n    \"defaultURLBehavior\" : \"observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "observe",
+                  "defaultURLBehavior": "observe"
+                }
+              }
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"observe\",\n    \"defaultURLBehavior\" : \"observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"observe\",\n    \"defaultURLBehavior\" : \"observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "reload"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {},
+          "name": "persist-custom-and-reload",
+          "operations": [
+            {
+              "kind": "get"
+            },
+            {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            },
+            {
+              "kind": "get"
+            },
+            {
+              "kind": "reload"
+            }
+          ]
+        },
+        "name": "persist-custom-and-reload",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [],
+              "files": {}
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"bundleID\" : \"owned.fixture\",\n        \"scope\" : \"app\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"do_not_observe\",\n    \"defaultURLBehavior\" : \"do_not_observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"bundleID\" : \"owned.fixture\",\n        \"scope\" : \"app\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"do_not_observe\",\n    \"defaultURLBehavior\" : \"do_not_observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"bundleID\" : \"owned.fixture\",\n        \"scope\" : \"app\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"do_not_observe\",\n    \"defaultURLBehavior\" : \"do_not_observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "reload"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "bundleID": "owned.fixture",
+                    "scope": "app"
+                  },
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "do_not_observe",
+                "defaultURLBehavior": "do_not_observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "owned-invalid"
+          },
+          "name": "overwrite-owned-file",
+          "operations": [
+            {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            },
+            {
+              "kind": "reload"
+            }
+          ]
+        },
+        "name": "overwrite-owned-file",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"bundleID\" : \"owned.fixture\",\n        \"scope\" : \"app\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"do_not_observe\",\n    \"defaultURLBehavior\" : \"do_not_observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"bundleID\" : \"owned.fixture\",\n        \"scope\" : \"app\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"do_not_observe\",\n    \"defaultURLBehavior\" : \"do_not_observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "reload"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "bundleID": "owned.fixture",
+                    "scope": "app"
+                  },
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "do_not_observe",
+                "defaultURLBehavior": "do_not_observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline": "owned-blocker"
+          },
+          "name": "persist-root-is-file",
+          "operations": [
+            {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            },
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "persist-root-is-file",
+        "steps": [
+          {
+            "error": {
+              "code": 516,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [],
+              "files": {
+                "timeline": "owned-blocker"
+              }
+            },
+            "operation": {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [],
+              "files": {
+                "timeline": "owned-blocker"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [
+            "timeline/settings.json"
+          ],
+          "files": {},
+          "name": "persist-settings-is-directory",
+          "operations": [
+            {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            },
+            {
+              "kind": "get"
+            }
+          ]
+        },
+        "name": "persist-settings-is-directory",
+        "steps": [
+          {
+            "error": {
+              "code": 4,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "timeline",
+                "timeline/settings.json"
+              ],
+              "files": {}
+            },
+            "operation": {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "bundleID": "owned.fixture",
+                      "scope": "app"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "do_not_observe",
+                  "defaultURLBehavior": "do_not_observe"
+                }
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline",
+                "timeline/settings.json"
+              ],
+              "files": {}
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {
+            "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"do_not_observe\", \"defaultURLBehavior\": \"do_not_observe\", \"allowlist\": [{\"scope\": \"app\", \"bundleID\": \"owned.fixture\"}, {\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}], \"blocklist\": []}}"
+          },
+          "name": "cached-settings-ignore-file-change",
+          "operations": [
+            {
+              "kind": "get"
+            },
+            {
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [], \"blocklist\": []}}"
+              },
+              "kind": "fixture"
+            },
+            {
+              "kind": "get"
+            },
+            {
+              "kind": "reload"
+            }
+          ]
+        },
+        "name": "cached-settings-ignore-file-change",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"do_not_observe\", \"defaultURLBehavior\": \"do_not_observe\", \"allowlist\": [{\"scope\": \"app\", \"bundleID\": \"owned.fixture\"}, {\"scope\": \"url\", \"urlDomain\": \"EXAMPLE.TEST\"}], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "bundleID": "owned.fixture",
+                    "scope": "app"
+                  },
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "do_not_observe",
+                "defaultURLBehavior": "do_not_observe"
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [], \"blocklist\": []}}"
+              },
+              "kind": "fixture"
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "kind": "get"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "bundleID": "owned.fixture",
+                    "scope": "app"
+                  },
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "do_not_observe",
+                "defaultURLBehavior": "do_not_observe"
+              }
+            }
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\"observation\": {\"defaultApplicationBehavior\": \"observe\", \"defaultURLBehavior\": \"observe\", \"allowlist\": [], \"blocklist\": []}}"
+              }
+            },
+            "operation": {
+              "kind": "reload"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "files": {},
+          "name": "persist-keeps-raw-reload-normalizes",
+          "operations": [
+            {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "example.test"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "observe",
+                  "defaultURLBehavior": "observe"
+                }
+              }
+            },
+            {
+              "kind": "reload"
+            }
+          ]
+        },
+        "name": "persist-keeps-raw-reload-normalizes",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"example.test\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"observe\",\n    \"defaultURLBehavior\" : \"observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "persist",
+              "settings": {
+                "observation": {
+                  "allowlist": [
+                    {
+                      "scope": "url",
+                      "urlDomain": "EXAMPLE.TEST"
+                    },
+                    {
+                      "scope": "url",
+                      "urlDomain": "example.test"
+                    }
+                  ],
+                  "blocklist": [],
+                  "defaultApplicationBehavior": "observe",
+                  "defaultURLBehavior": "observe"
+                }
+              }
+            },
+            "value": null
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "timeline"
+              ],
+              "files": {
+                "timeline/settings.json": "{\n  \"observation\" : {\n    \"allowlist\" : [\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"EXAMPLE.TEST\"\n      },\n      {\n        \"scope\" : \"url\",\n        \"urlDomain\" : \"example.test\"\n      }\n    ],\n    \"blocklist\" : [\n\n    ],\n    \"defaultApplicationBehavior\" : \"observe\",\n    \"defaultURLBehavior\" : \"observe\"\n  }\n}"
+              }
+            },
+            "operation": {
+              "kind": "reload"
+            },
+            "value": {
+              "observation": {
+                "allowlist": [
+                  {
+                    "scope": "url",
+                    "urlDomain": "example.test"
+                  }
+                ],
+                "blocklist": [],
+                "defaultApplicationBehavior": "observe",
+                "defaultURLBehavior": "observe"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

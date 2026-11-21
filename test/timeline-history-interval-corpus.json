@@ -1,0 +1,2410 @@
+{
+  "scenario": "timeline-history-interval",
+  "input": {
+    "name": "timeline-history-interval"
+  },
+  "payload": {
+    "rows": [
+      {
+        "end": 794647800,
+        "kind": 0,
+        "name": "UTC-2026-03-08T06:30:00+00:00-0",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 794647800,
+        "kind": 1,
+        "name": "UTC-2026-03-08T06:30:00+00:00-1",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794647800,
+          "start": 794640600
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 794647800,
+        "kind": 2,
+        "name": "UTC-2026-03-08T06:30:00+00:00-2",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794643600
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 794647800,
+        "kind": 3,
+        "name": "UTC-2026-03-08T06:30:00+00:00-3",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 794647800,
+        "kind": 4,
+        "name": "UTC-2026-03-08T06:30:00+00:00-4",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794620800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 794647800,
+        "kind": 5,
+        "name": "UTC-2026-03-08T06:30:00+00:00-5",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": -63114076800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815207400,
+        "kind": 0,
+        "name": "UTC-2026-11-01T05:30:00+00:00-0",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815207400,
+        "kind": 1,
+        "name": "UTC-2026-11-01T05:30:00+00:00-1",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815207400,
+          "start": 815200200
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815207400,
+        "kind": 2,
+        "name": "UTC-2026-11-01T05:30:00+00:00-2",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815203200
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815207400,
+        "kind": 3,
+        "name": "UTC-2026-11-01T05:30:00+00:00-3",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815207400,
+        "kind": 4,
+        "name": "UTC-2026-11-01T05:30:00+00:00-4",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815184000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815207400,
+        "kind": 5,
+        "name": "UTC-2026-11-01T05:30:00+00:00-5",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": -63114076800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815211000,
+        "kind": 0,
+        "name": "UTC-2026-11-01T06:30:00+00:00-0",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815211000,
+        "kind": 1,
+        "name": "UTC-2026-11-01T06:30:00+00:00-1",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815211000,
+          "start": 815203800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815211000,
+        "kind": 2,
+        "name": "UTC-2026-11-01T06:30:00+00:00-2",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815206800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815211000,
+        "kind": 3,
+        "name": "UTC-2026-11-01T06:30:00+00:00-3",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815211000,
+        "kind": 4,
+        "name": "UTC-2026-11-01T06:30:00+00:00-4",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815184000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815211000,
+        "kind": 5,
+        "name": "UTC-2026-11-01T06:30:00+00:00-5",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": -63114076800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 0,
+        "name": "UTC-2026-12-31T23:59:59.125+00:00-0",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 1,
+        "name": "UTC-2026-12-31T23:59:59.125+00:00-1",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820457999.125,
+          "start": 820450799.125
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 2,
+        "name": "UTC-2026-12-31T23:59:59.125+00:00-2",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820453799.125
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 3,
+        "name": "UTC-2026-12-31T23:59:59.125+00:00-3",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 4,
+        "name": "UTC-2026-12-31T23:59:59.125+00:00-4",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820368000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 5,
+        "name": "UTC-2026-12-31T23:59:59.125+00:00-5",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": -63114076800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 346885200,
+        "kind": 0,
+        "name": "UTC-2011-12-29T20:00:00+00:00-0",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 346885200,
+        "kind": 1,
+        "name": "UTC-2011-12-29T20:00:00+00:00-1",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346885200,
+          "start": 346878000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 346885200,
+        "kind": 2,
+        "name": "UTC-2011-12-29T20:00:00+00:00-2",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346881000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 346885200,
+        "kind": 3,
+        "name": "UTC-2011-12-29T20:00:00+00:00-3",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 346885200,
+        "kind": 4,
+        "name": "UTC-2011-12-29T20:00:00+00:00-4",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346809600
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 346885200,
+        "kind": 5,
+        "name": "UTC-2011-12-29T20:00:00+00:00-5",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": -63114076800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815403600,
+        "kind": 0,
+        "name": "UTC-2026-11-03T12:00:00+00:00-0",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815403600,
+        "kind": 1,
+        "name": "UTC-2026-11-03T12:00:00+00:00-1",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815403600,
+          "start": 815396400
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815403600,
+        "kind": 2,
+        "name": "UTC-2026-11-03T12:00:00+00:00-2",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815399400
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815403600,
+        "kind": 3,
+        "name": "UTC-2026-11-03T12:00:00+00:00-3",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815403600,
+        "kind": 4,
+        "name": "UTC-2026-11-03T12:00:00+00:00-4",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815356800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 815403600,
+        "kind": 5,
+        "name": "UTC-2026-11-03T12:00:00+00:00-5",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": -63114076800
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 50,
+        "kind": 0,
+        "name": "UTC-application-clamp-0",
+        "now": 100,
+        "start": 0,
+        "value": {
+          "end": 50,
+          "start": 0
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 200,
+        "kind": 0,
+        "name": "UTC-application-clamp-150",
+        "now": 100,
+        "start": 150,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 100,
+        "kind": 0,
+        "name": "UTC-application-clamp-100",
+        "now": 100,
+        "start": 100,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": -100,
+        "kind": 0,
+        "name": "UTC-application-clamp--200",
+        "now": 100,
+        "start": -200,
+        "value": {
+          "end": -100,
+          "start": -200
+        },
+        "zone": "UTC"
+      },
+      {
+        "end": 794647800,
+        "kind": 0,
+        "name": "America/Sao_Paulo-2026-03-08T06:30:00+00:00-0",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 794647800,
+        "kind": 1,
+        "name": "America/Sao_Paulo-2026-03-08T06:30:00+00:00-1",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794647800,
+          "start": 794640600
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 794647800,
+        "kind": 2,
+        "name": "America/Sao_Paulo-2026-03-08T06:30:00+00:00-2",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794643600
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 794647800,
+        "kind": 3,
+        "name": "America/Sao_Paulo-2026-03-08T06:30:00+00:00-3",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 794647800,
+        "kind": 4,
+        "name": "America/Sao_Paulo-2026-03-08T06:30:00+00:00-4",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794631600
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 794647800,
+        "kind": 5,
+        "name": "America/Sao_Paulo-2026-03-08T06:30:00+00:00-5",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": -63114076800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815207400,
+        "kind": 0,
+        "name": "America/Sao_Paulo-2026-11-01T05:30:00+00:00-0",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815207400,
+        "kind": 1,
+        "name": "America/Sao_Paulo-2026-11-01T05:30:00+00:00-1",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815207400,
+          "start": 815200200
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815207400,
+        "kind": 2,
+        "name": "America/Sao_Paulo-2026-11-01T05:30:00+00:00-2",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815203200
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815207400,
+        "kind": 3,
+        "name": "America/Sao_Paulo-2026-11-01T05:30:00+00:00-3",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815207400,
+        "kind": 4,
+        "name": "America/Sao_Paulo-2026-11-01T05:30:00+00:00-4",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815194800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815207400,
+        "kind": 5,
+        "name": "America/Sao_Paulo-2026-11-01T05:30:00+00:00-5",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": -63114076800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815211000,
+        "kind": 0,
+        "name": "America/Sao_Paulo-2026-11-01T06:30:00+00:00-0",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815211000,
+        "kind": 1,
+        "name": "America/Sao_Paulo-2026-11-01T06:30:00+00:00-1",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815211000,
+          "start": 815203800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815211000,
+        "kind": 2,
+        "name": "America/Sao_Paulo-2026-11-01T06:30:00+00:00-2",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815206800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815211000,
+        "kind": 3,
+        "name": "America/Sao_Paulo-2026-11-01T06:30:00+00:00-3",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815211000,
+        "kind": 4,
+        "name": "America/Sao_Paulo-2026-11-01T06:30:00+00:00-4",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815194800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815211000,
+        "kind": 5,
+        "name": "America/Sao_Paulo-2026-11-01T06:30:00+00:00-5",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": -63114076800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 0,
+        "name": "America/Sao_Paulo-2026-12-31T23:59:59.125+00:00-0",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 1,
+        "name": "America/Sao_Paulo-2026-12-31T23:59:59.125+00:00-1",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820457999.125,
+          "start": 820450799.125
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 2,
+        "name": "America/Sao_Paulo-2026-12-31T23:59:59.125+00:00-2",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820453799.125
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 3,
+        "name": "America/Sao_Paulo-2026-12-31T23:59:59.125+00:00-3",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 4,
+        "name": "America/Sao_Paulo-2026-12-31T23:59:59.125+00:00-4",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820378800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 5,
+        "name": "America/Sao_Paulo-2026-12-31T23:59:59.125+00:00-5",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": -63114076800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 346885200,
+        "kind": 0,
+        "name": "America/Sao_Paulo-2011-12-29T20:00:00+00:00-0",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 346885200,
+        "kind": 1,
+        "name": "America/Sao_Paulo-2011-12-29T20:00:00+00:00-1",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346885200,
+          "start": 346878000
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 346885200,
+        "kind": 2,
+        "name": "America/Sao_Paulo-2011-12-29T20:00:00+00:00-2",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346881000
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 346885200,
+        "kind": 3,
+        "name": "America/Sao_Paulo-2011-12-29T20:00:00+00:00-3",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 346885200,
+        "kind": 4,
+        "name": "America/Sao_Paulo-2011-12-29T20:00:00+00:00-4",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346816800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 346885200,
+        "kind": 5,
+        "name": "America/Sao_Paulo-2011-12-29T20:00:00+00:00-5",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": -63114076800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815403600,
+        "kind": 0,
+        "name": "America/Sao_Paulo-2026-11-03T12:00:00+00:00-0",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815403600,
+        "kind": 1,
+        "name": "America/Sao_Paulo-2026-11-03T12:00:00+00:00-1",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815403600,
+          "start": 815396400
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815403600,
+        "kind": 2,
+        "name": "America/Sao_Paulo-2026-11-03T12:00:00+00:00-2",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815399400
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815403600,
+        "kind": 3,
+        "name": "America/Sao_Paulo-2026-11-03T12:00:00+00:00-3",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815403600,
+        "kind": 4,
+        "name": "America/Sao_Paulo-2026-11-03T12:00:00+00:00-4",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815367600
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 815403600,
+        "kind": 5,
+        "name": "America/Sao_Paulo-2026-11-03T12:00:00+00:00-5",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": -63114076800
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 50,
+        "kind": 0,
+        "name": "America/Sao_Paulo-application-clamp-0",
+        "now": 100,
+        "start": 0,
+        "value": {
+          "end": 50,
+          "start": 0
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 200,
+        "kind": 0,
+        "name": "America/Sao_Paulo-application-clamp-150",
+        "now": 100,
+        "start": 150,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 100,
+        "kind": 0,
+        "name": "America/Sao_Paulo-application-clamp-100",
+        "now": 100,
+        "start": 100,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": -100,
+        "kind": 0,
+        "name": "America/Sao_Paulo-application-clamp--200",
+        "now": 100,
+        "start": -200,
+        "value": {
+          "end": -100,
+          "start": -200
+        },
+        "zone": "America/Sao_Paulo"
+      },
+      {
+        "end": 794647800,
+        "kind": 0,
+        "name": "America/New_York-2026-03-08T06:30:00+00:00-0",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 794647800,
+        "kind": 1,
+        "name": "America/New_York-2026-03-08T06:30:00+00:00-1",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794647800,
+          "start": 794640600
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 794647800,
+        "kind": 2,
+        "name": "America/New_York-2026-03-08T06:30:00+00:00-2",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794643600
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 794647800,
+        "kind": 3,
+        "name": "America/New_York-2026-03-08T06:30:00+00:00-3",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 794647800,
+        "kind": 4,
+        "name": "America/New_York-2026-03-08T06:30:00+00:00-4",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794638800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 794647800,
+        "kind": 5,
+        "name": "America/New_York-2026-03-08T06:30:00+00:00-5",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": -63114076800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815207400,
+        "kind": 0,
+        "name": "America/New_York-2026-11-01T05:30:00+00:00-0",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815207400,
+        "kind": 1,
+        "name": "America/New_York-2026-11-01T05:30:00+00:00-1",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815207400,
+          "start": 815200200
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815207400,
+        "kind": 2,
+        "name": "America/New_York-2026-11-01T05:30:00+00:00-2",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815203200
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815207400,
+        "kind": 3,
+        "name": "America/New_York-2026-11-01T05:30:00+00:00-3",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815207400,
+        "kind": 4,
+        "name": "America/New_York-2026-11-01T05:30:00+00:00-4",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815198400
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815207400,
+        "kind": 5,
+        "name": "America/New_York-2026-11-01T05:30:00+00:00-5",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": -63114076800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815211000,
+        "kind": 0,
+        "name": "America/New_York-2026-11-01T06:30:00+00:00-0",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815211000,
+        "kind": 1,
+        "name": "America/New_York-2026-11-01T06:30:00+00:00-1",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815211000,
+          "start": 815203800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815211000,
+        "kind": 2,
+        "name": "America/New_York-2026-11-01T06:30:00+00:00-2",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815206800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815211000,
+        "kind": 3,
+        "name": "America/New_York-2026-11-01T06:30:00+00:00-3",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815211000,
+        "kind": 4,
+        "name": "America/New_York-2026-11-01T06:30:00+00:00-4",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815198400
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815211000,
+        "kind": 5,
+        "name": "America/New_York-2026-11-01T06:30:00+00:00-5",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": -63114076800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 0,
+        "name": "America/New_York-2026-12-31T23:59:59.125+00:00-0",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 1,
+        "name": "America/New_York-2026-12-31T23:59:59.125+00:00-1",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820457999.125,
+          "start": 820450799.125
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 2,
+        "name": "America/New_York-2026-12-31T23:59:59.125+00:00-2",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820453799.125
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 3,
+        "name": "America/New_York-2026-12-31T23:59:59.125+00:00-3",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 4,
+        "name": "America/New_York-2026-12-31T23:59:59.125+00:00-4",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820386000
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 5,
+        "name": "America/New_York-2026-12-31T23:59:59.125+00:00-5",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": -63114076800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 346885200,
+        "kind": 0,
+        "name": "America/New_York-2011-12-29T20:00:00+00:00-0",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 346885200,
+        "kind": 1,
+        "name": "America/New_York-2011-12-29T20:00:00+00:00-1",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346885200,
+          "start": 346878000
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 346885200,
+        "kind": 2,
+        "name": "America/New_York-2011-12-29T20:00:00+00:00-2",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346881000
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 346885200,
+        "kind": 3,
+        "name": "America/New_York-2011-12-29T20:00:00+00:00-3",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 346885200,
+        "kind": 4,
+        "name": "America/New_York-2011-12-29T20:00:00+00:00-4",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346827600
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 346885200,
+        "kind": 5,
+        "name": "America/New_York-2011-12-29T20:00:00+00:00-5",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": -63114076800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815403600,
+        "kind": 0,
+        "name": "America/New_York-2026-11-03T12:00:00+00:00-0",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815403600,
+        "kind": 1,
+        "name": "America/New_York-2026-11-03T12:00:00+00:00-1",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815403600,
+          "start": 815396400
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815403600,
+        "kind": 2,
+        "name": "America/New_York-2026-11-03T12:00:00+00:00-2",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815399400
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815403600,
+        "kind": 3,
+        "name": "America/New_York-2026-11-03T12:00:00+00:00-3",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815403600,
+        "kind": 4,
+        "name": "America/New_York-2026-11-03T12:00:00+00:00-4",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815374800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 815403600,
+        "kind": 5,
+        "name": "America/New_York-2026-11-03T12:00:00+00:00-5",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": -63114076800
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 50,
+        "kind": 0,
+        "name": "America/New_York-application-clamp-0",
+        "now": 100,
+        "start": 0,
+        "value": {
+          "end": 50,
+          "start": 0
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 200,
+        "kind": 0,
+        "name": "America/New_York-application-clamp-150",
+        "now": 100,
+        "start": 150,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 100,
+        "kind": 0,
+        "name": "America/New_York-application-clamp-100",
+        "now": 100,
+        "start": 100,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": -100,
+        "kind": 0,
+        "name": "America/New_York-application-clamp--200",
+        "now": 100,
+        "start": -200,
+        "value": {
+          "end": -100,
+          "start": -200
+        },
+        "zone": "America/New_York"
+      },
+      {
+        "end": 794647800,
+        "kind": 0,
+        "name": "Europe/Berlin-2026-03-08T06:30:00+00:00-0",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 794647800,
+        "kind": 1,
+        "name": "Europe/Berlin-2026-03-08T06:30:00+00:00-1",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794647800,
+          "start": 794640600
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 794647800,
+        "kind": 2,
+        "name": "Europe/Berlin-2026-03-08T06:30:00+00:00-2",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794643600
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 794647800,
+        "kind": 3,
+        "name": "Europe/Berlin-2026-03-08T06:30:00+00:00-3",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 794647800,
+        "kind": 4,
+        "name": "Europe/Berlin-2026-03-08T06:30:00+00:00-4",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794617200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 794647800,
+        "kind": 5,
+        "name": "Europe/Berlin-2026-03-08T06:30:00+00:00-5",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": -63114076800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815207400,
+        "kind": 0,
+        "name": "Europe/Berlin-2026-11-01T05:30:00+00:00-0",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815207400,
+        "kind": 1,
+        "name": "Europe/Berlin-2026-11-01T05:30:00+00:00-1",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815207400,
+          "start": 815200200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815207400,
+        "kind": 2,
+        "name": "Europe/Berlin-2026-11-01T05:30:00+00:00-2",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815203200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815207400,
+        "kind": 3,
+        "name": "Europe/Berlin-2026-11-01T05:30:00+00:00-3",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815207400,
+        "kind": 4,
+        "name": "Europe/Berlin-2026-11-01T05:30:00+00:00-4",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815180400
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815207400,
+        "kind": 5,
+        "name": "Europe/Berlin-2026-11-01T05:30:00+00:00-5",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": -63114076800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815211000,
+        "kind": 0,
+        "name": "Europe/Berlin-2026-11-01T06:30:00+00:00-0",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815211000,
+        "kind": 1,
+        "name": "Europe/Berlin-2026-11-01T06:30:00+00:00-1",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815211000,
+          "start": 815203800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815211000,
+        "kind": 2,
+        "name": "Europe/Berlin-2026-11-01T06:30:00+00:00-2",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815206800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815211000,
+        "kind": 3,
+        "name": "Europe/Berlin-2026-11-01T06:30:00+00:00-3",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815211000,
+        "kind": 4,
+        "name": "Europe/Berlin-2026-11-01T06:30:00+00:00-4",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815180400
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815211000,
+        "kind": 5,
+        "name": "Europe/Berlin-2026-11-01T06:30:00+00:00-5",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": -63114076800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 0,
+        "name": "Europe/Berlin-2026-12-31T23:59:59.125+00:00-0",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 1,
+        "name": "Europe/Berlin-2026-12-31T23:59:59.125+00:00-1",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820457999.125,
+          "start": 820450799.125
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 2,
+        "name": "Europe/Berlin-2026-12-31T23:59:59.125+00:00-2",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820453799.125
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 3,
+        "name": "Europe/Berlin-2026-12-31T23:59:59.125+00:00-3",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 4,
+        "name": "Europe/Berlin-2026-12-31T23:59:59.125+00:00-4",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 5,
+        "name": "Europe/Berlin-2026-12-31T23:59:59.125+00:00-5",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": -63114076800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 346885200,
+        "kind": 0,
+        "name": "Europe/Berlin-2011-12-29T20:00:00+00:00-0",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 346885200,
+        "kind": 1,
+        "name": "Europe/Berlin-2011-12-29T20:00:00+00:00-1",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346885200,
+          "start": 346878000
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 346885200,
+        "kind": 2,
+        "name": "Europe/Berlin-2011-12-29T20:00:00+00:00-2",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346881000
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 346885200,
+        "kind": 3,
+        "name": "Europe/Berlin-2011-12-29T20:00:00+00:00-3",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 346885200,
+        "kind": 4,
+        "name": "Europe/Berlin-2011-12-29T20:00:00+00:00-4",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346806000
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 346885200,
+        "kind": 5,
+        "name": "Europe/Berlin-2011-12-29T20:00:00+00:00-5",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": -63114076800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815403600,
+        "kind": 0,
+        "name": "Europe/Berlin-2026-11-03T12:00:00+00:00-0",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815403600,
+        "kind": 1,
+        "name": "Europe/Berlin-2026-11-03T12:00:00+00:00-1",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815403600,
+          "start": 815396400
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815403600,
+        "kind": 2,
+        "name": "Europe/Berlin-2026-11-03T12:00:00+00:00-2",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815399400
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815403600,
+        "kind": 3,
+        "name": "Europe/Berlin-2026-11-03T12:00:00+00:00-3",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815403600,
+        "kind": 4,
+        "name": "Europe/Berlin-2026-11-03T12:00:00+00:00-4",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815353200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 815403600,
+        "kind": 5,
+        "name": "Europe/Berlin-2026-11-03T12:00:00+00:00-5",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": -63114076800
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 50,
+        "kind": 0,
+        "name": "Europe/Berlin-application-clamp-0",
+        "now": 100,
+        "start": 0,
+        "value": {
+          "end": 50,
+          "start": 0
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 200,
+        "kind": 0,
+        "name": "Europe/Berlin-application-clamp-150",
+        "now": 100,
+        "start": 150,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 100,
+        "kind": 0,
+        "name": "Europe/Berlin-application-clamp-100",
+        "now": 100,
+        "start": 100,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": -100,
+        "kind": 0,
+        "name": "Europe/Berlin-application-clamp--200",
+        "now": 100,
+        "start": -200,
+        "value": {
+          "end": -100,
+          "start": -200
+        },
+        "zone": "Europe/Berlin"
+      },
+      {
+        "end": 794647800,
+        "kind": 0,
+        "name": "Pacific/Apia-2026-03-08T06:30:00+00:00-0",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 794647800,
+        "kind": 1,
+        "name": "Pacific/Apia-2026-03-08T06:30:00+00:00-1",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794647800,
+          "start": 794640600
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 794647800,
+        "kind": 2,
+        "name": "Pacific/Apia-2026-03-08T06:30:00+00:00-2",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794643600
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 794647800,
+        "kind": 3,
+        "name": "Pacific/Apia-2026-03-08T06:30:00+00:00-3",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794640600
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 794647800,
+        "kind": 4,
+        "name": "Pacific/Apia-2026-03-08T06:30:00+00:00-4",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": 794574000
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 794647800,
+        "kind": 5,
+        "name": "Pacific/Apia-2026-03-08T06:30:00+00:00-5",
+        "now": 794644200,
+        "start": 794640600,
+        "value": {
+          "end": 794644200,
+          "start": -63114076800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815207400,
+        "kind": 0,
+        "name": "Pacific/Apia-2026-11-01T05:30:00+00:00-0",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815207400,
+        "kind": 1,
+        "name": "Pacific/Apia-2026-11-01T05:30:00+00:00-1",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815207400,
+          "start": 815200200
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815207400,
+        "kind": 2,
+        "name": "Pacific/Apia-2026-11-01T05:30:00+00:00-2",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815203200
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815207400,
+        "kind": 3,
+        "name": "Pacific/Apia-2026-11-01T05:30:00+00:00-3",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815200200
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815207400,
+        "kind": 4,
+        "name": "Pacific/Apia-2026-11-01T05:30:00+00:00-4",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": 815137200
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815207400,
+        "kind": 5,
+        "name": "Pacific/Apia-2026-11-01T05:30:00+00:00-5",
+        "now": 815203800,
+        "start": 815200200,
+        "value": {
+          "end": 815203800,
+          "start": -63114076800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815211000,
+        "kind": 0,
+        "name": "Pacific/Apia-2026-11-01T06:30:00+00:00-0",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815211000,
+        "kind": 1,
+        "name": "Pacific/Apia-2026-11-01T06:30:00+00:00-1",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815211000,
+          "start": 815203800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815211000,
+        "kind": 2,
+        "name": "Pacific/Apia-2026-11-01T06:30:00+00:00-2",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815206800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815211000,
+        "kind": 3,
+        "name": "Pacific/Apia-2026-11-01T06:30:00+00:00-3",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815203800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815211000,
+        "kind": 4,
+        "name": "Pacific/Apia-2026-11-01T06:30:00+00:00-4",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": 815137200
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815211000,
+        "kind": 5,
+        "name": "Pacific/Apia-2026-11-01T06:30:00+00:00-5",
+        "now": 815207400,
+        "start": 815203800,
+        "value": {
+          "end": 815207400,
+          "start": -63114076800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 0,
+        "name": "Pacific/Apia-2026-12-31T23:59:59.125+00:00-0",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 1,
+        "name": "Pacific/Apia-2026-12-31T23:59:59.125+00:00-1",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820457999.125,
+          "start": 820450799.125
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 2,
+        "name": "Pacific/Apia-2026-12-31T23:59:59.125+00:00-2",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820453799.125
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 3,
+        "name": "Pacific/Apia-2026-12-31T23:59:59.125+00:00-3",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820450799.125
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 4,
+        "name": "Pacific/Apia-2026-12-31T23:59:59.125+00:00-4",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": 820407600
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 820457999.125,
+        "kind": 5,
+        "name": "Pacific/Apia-2026-12-31T23:59:59.125+00:00-5",
+        "now": 820454399.125,
+        "start": 820450799.125,
+        "value": {
+          "end": 820454399.125,
+          "start": -63114076800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 346885200,
+        "kind": 0,
+        "name": "Pacific/Apia-2011-12-29T20:00:00+00:00-0",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 346885200,
+        "kind": 1,
+        "name": "Pacific/Apia-2011-12-29T20:00:00+00:00-1",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346885200,
+          "start": 346878000
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 346885200,
+        "kind": 2,
+        "name": "Pacific/Apia-2011-12-29T20:00:00+00:00-2",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346881000
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 346885200,
+        "kind": 3,
+        "name": "Pacific/Apia-2011-12-29T20:00:00+00:00-3",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346878000
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 346885200,
+        "kind": 4,
+        "name": "Pacific/Apia-2011-12-29T20:00:00+00:00-4",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": 346845600
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 346885200,
+        "kind": 5,
+        "name": "Pacific/Apia-2011-12-29T20:00:00+00:00-5",
+        "now": 346881600,
+        "start": 346878000,
+        "value": {
+          "end": 346881600,
+          "start": -63114076800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815403600,
+        "kind": 0,
+        "name": "Pacific/Apia-2026-11-03T12:00:00+00:00-0",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815403600,
+        "kind": 1,
+        "name": "Pacific/Apia-2026-11-03T12:00:00+00:00-1",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815403600,
+          "start": 815396400
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815403600,
+        "kind": 2,
+        "name": "Pacific/Apia-2026-11-03T12:00:00+00:00-2",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815399400
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815403600,
+        "kind": 3,
+        "name": "Pacific/Apia-2026-11-03T12:00:00+00:00-3",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815403600,
+        "kind": 4,
+        "name": "Pacific/Apia-2026-11-03T12:00:00+00:00-4",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": 815396400
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 815403600,
+        "kind": 5,
+        "name": "Pacific/Apia-2026-11-03T12:00:00+00:00-5",
+        "now": 815400000,
+        "start": 815396400,
+        "value": {
+          "end": 815400000,
+          "start": -63114076800
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 50,
+        "kind": 0,
+        "name": "Pacific/Apia-application-clamp-0",
+        "now": 100,
+        "start": 0,
+        "value": {
+          "end": 50,
+          "start": 0
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 200,
+        "kind": 0,
+        "name": "Pacific/Apia-application-clamp-150",
+        "now": 100,
+        "start": 150,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": 100,
+        "kind": 0,
+        "name": "Pacific/Apia-application-clamp-100",
+        "now": 100,
+        "start": 100,
+        "value": {
+          "end": 100,
+          "start": 100
+        },
+        "zone": "Pacific/Apia"
+      },
+      {
+        "end": -100,
+        "kind": 0,
+        "name": "Pacific/Apia-application-clamp--200",
+        "now": 100,
+        "start": -200,
+        "value": {
+          "end": -100,
+          "start": -200
+        },
+        "zone": "Pacific/Apia"
+      }
+    ]
+  }
+}

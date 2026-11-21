@@ -1,0 +1,1033 @@
+{
+  "scenario": "timeline-writer-lifecycle",
+  "input": {
+    "name": "timeline-writer-lifecycle"
+  },
+  "payload": {
+    "rows": [
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "empty-finish",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "finish"
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "empty-finish",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.115502,
+            "beforeReferenceTime": 815414539.115426,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815414539.115828,
+            "beforeReferenceTime": 815414539.115811,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "counted-finish",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "finish"
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "counted-finish",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.117382,
+            "beforeReferenceTime": 815414539.117099,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:02:19Z\",\n  \"eventCount\" : 7,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 2\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815414539.117116,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000,
+              "suppressedEventCount": 2
+            }
+          },
+          {
+            "afterReferenceTime": 815414539.117705,
+            "beforeReferenceTime": 815414539.117509,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:02:19Z\",\n  \"eventCount\" : 7,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 2\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815414539.117519,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000,
+              "suppressedEventCount": 2
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":null,\"suppressedEventCount\":null}"
+          },
+          "name": "nil-count-finish",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "nil-count-finish",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.118789,
+            "beforeReferenceTime": 815414539.118591,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:02:19Z\",\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815414539.118601,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "boundary-rotation",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067799,
+              "kind": "rotate"
+            },
+            {
+              "at": 1704067800,
+              "kind": "rotate"
+            },
+            {
+              "at": 1704067801,
+              "kind": "rotate"
+            },
+            {
+              "at": 1704068400,
+              "kind": "rotate"
+            },
+            {
+              "at": 1704067260,
+              "kind": "rotate"
+            }
+          ]
+        },
+        "name": "boundary-rotation",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.11938,
+            "beforeReferenceTime": 815414539.11937,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067799,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815414539.120109,
+            "beforeReferenceTime": 815414539.119492,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067800,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760600,
+              "eventCount": 0,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000,
+              "suppressedEventCount": 0
+            }
+          },
+          {
+            "afterReferenceTime": 815414539.120281,
+            "beforeReferenceTime": 815414539.120272,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067801,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815414539.121222,
+            "beforeReferenceTime": 815414539.120442,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z",
+                "segments/2024-01-01T00-20-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:20:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-20-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-20-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-20-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-20-00Z\",\n  \"startedAt\" : \"2024-01-01T00:20:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704068400,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-20-00Z/events.jsonl",
+              "id": "2024-01-01T00-20-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-20-00Z/metadata.json",
+              "startedAt": 1704068400,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725761200,
+              "eventCount": 0,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "startedAt": 725760600,
+              "suppressedEventCount": 0
+            }
+          },
+          {
+            "afterReferenceTime": 815414539.1215,
+            "beforeReferenceTime": 815414539.12149,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z",
+                "segments/2024-01-01T00-20-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:20:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-20-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-20-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-20-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-20-00Z\",\n  \"startedAt\" : \"2024-01-01T00:20:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067260,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-20-00Z/events.jsonl",
+              "id": "2024-01-01T00-20-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-20-00Z/metadata.json",
+              "startedAt": 1704068400,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "counted-rotation",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "kind": "rotate"
+            },
+            {
+              "at": 1704068100,
+              "kind": "rotate"
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "counted-rotation",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.1225,
+            "beforeReferenceTime": 815414539.122489,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815414539.123254,
+            "beforeReferenceTime": 815414539.122616,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 7,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 2\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704068100,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760600,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000,
+              "suppressedEventCount": 2
+            }
+          },
+          {
+            "afterReferenceTime": 815414539.123432,
+            "beforeReferenceTime": 815414539.123422,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 7,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 2\n}",
+                "segments/2024-01-01T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-10-00Z\",\n  \"startedAt\" : \"2024-01-01T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "before-epoch-rotation",
+          "now": -1,
+          "operations": [
+            {
+              "at": -1,
+              "kind": "rotate"
+            },
+            {
+              "at": 0,
+              "kind": "rotate"
+            }
+          ]
+        },
+        "name": "before-epoch-rotation",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.124143,
+            "beforeReferenceTime": 815414539.124133,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/1969-12-31T23-50-00Z"
+              ],
+              "files": {
+                "segments/1969-12-31T23-50-00Z/events.jsonl": "",
+                "segments/1969-12-31T23-50-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl\",\n  \"id\" : \"1969-12-31T23-50-00Z\",\n  \"startedAt\" : \"1969-12-31T23:50:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": -1,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl",
+              "id": "1969-12-31T23-50-00Z",
+              "metadataPath": "$ROOT/segments/1969-12-31T23-50-00Z/metadata.json",
+              "startedAt": -600,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815414539.12488,
+            "beforeReferenceTime": 815414539.124264,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/1969-12-31T23-50-00Z",
+                "segments/1970-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/1969-12-31T23-50-00Z/events.jsonl": "",
+                "segments/1969-12-31T23-50-00Z/metadata.json": "{\n  \"endedAt\" : \"1970-01-01T00:00:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl\",\n  \"id\" : \"1969-12-31T23-50-00Z\",\n  \"startedAt\" : \"1969-12-31T23:50:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/1970-01-01T00-00-00Z/events.jsonl": "",
+                "segments/1970-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/1970-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"1970-01-01T00-00-00Z\",\n  \"startedAt\" : \"1970-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 0,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/1970-01-01T00-00-00Z/events.jsonl",
+              "id": "1970-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/1970-01-01T00-00-00Z/metadata.json",
+              "startedAt": 0,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": -978307200,
+              "eventCount": 0,
+              "eventsPath": "$ROOT/segments/1969-12-31T23-50-00Z/events.jsonl",
+              "id": "1969-12-31T23-50-00Z",
+              "startedAt": -978307800,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "skipped-slots",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704069600,
+              "kind": "rotate"
+            }
+          ]
+        },
+        "name": "skipped-slots",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.126217,
+            "beforeReferenceTime": 815414539.125487,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-40-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-40-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-40-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-40-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-40-00Z\",\n  \"startedAt\" : \"2024-01-01T00:40:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704069600,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-40-00Z/events.jsonl",
+              "id": "2024-01-01T00-40-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-40-00Z/metadata.json",
+              "startedAt": 1704069600,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760600,
+              "eventCount": 0,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000,
+              "suppressedEventCount": 0
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "long-gap-retention",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704240600,
+              "kind": "rotate"
+            }
+          ]
+        },
+        "name": "long-gap-retention",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.127919,
+            "beforeReferenceTime": 815414539.127225,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-03T00-10-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 7,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 2\n}",
+                "segments/2024-01-03T00-10-00Z/events.jsonl": "",
+                "segments/2024-01-03T00-10-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-03T00-10-00Z/events.jsonl\",\n  \"id\" : \"2024-01-03T00-10-00Z\",\n  \"startedAt\" : \"2024-01-03T00:10:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704240600,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-03T00-10-00Z/events.jsonl",
+              "id": "2024-01-03T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-03T00-10-00Z/metadata.json",
+              "startedAt": 1704240600,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760600,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000,
+              "suppressedEventCount": 2
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-10-00Z": "owned blocker"
+          },
+          "name": "rotation-file-blocks-new-directory",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067800,
+              "kind": "rotate"
+            }
+          ]
+        },
+        "name": "rotation-file-blocks-new-directory",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.129398,
+            "beforeReferenceTime": 815414539.128843,
+            "error": {
+              "code": 516,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2024-01-01T00:10:00Z\",\n  \"eventCount\" : 0,\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\",\n  \"suppressedEventCount\" : 0\n}",
+                "segments/2024-01-01T00-10-00Z": "owned blocker"
+              }
+            },
+            "operation": {
+              "at": 1704067800,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "finish-write-failure",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "metadata-directory"
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "finish-write-failure",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-00-00Z/metadata.json"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n"
+              }
+            },
+            "operation": {
+              "kind": "metadata-directory"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "afterReferenceTime": 815414539.131018,
+            "beforeReferenceTime": 815414539.13079,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z",
+                "segments/2024-01-01T00-00-00Z/metadata.json"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815414539.130812,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000,
+              "suppressedEventCount": 2
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2023-12-31T23:58:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "retained-start-repeated-rotation",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "kind": "rotate"
+            },
+            {
+              "at": 1704067324,
+              "kind": "rotate"
+            }
+          ]
+        },
+        "name": "retained-start-repeated-rotation",
+        "steps": [
+          {
+            "afterReferenceTime": 815414539.132691,
+            "beforeReferenceTime": 815414539.13199,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2023-12-31T23:58:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067080,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760480,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725759880,
+              "suppressedEventCount": 2
+            }
+          },
+          {
+            "afterReferenceTime": 815414539.133406,
+            "beforeReferenceTime": 815414539.132828,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2023-12-31T23:58:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067324,
+              "kind": "rotate"
+            },
+            "state": {
+              "eventCount": 7,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067080,
+              "suppressedEventCount": 2,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 725760480,
+              "eventCount": 7,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725759880,
+              "suppressedEventCount": 2
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

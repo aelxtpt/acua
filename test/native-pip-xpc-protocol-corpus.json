@@ -1,0 +1,66 @@
+{
+  "host": [
+    {
+      "selector": "publishPresentationWithID:threadID:turnID:contextID:width:height:withReply:",
+      "types": "v68@0:8@16@24@32I40d44d52@?60"
+    },
+    {
+      "selector": "setSourceProcessIdentifier:forPresentationWithID:withReply:",
+      "types": "v36@0:8i16@20@?28"
+    },
+    {
+      "selector": "publishFrameWithPresentationID:videoData:decoderConfiguration:codec:timestamp:isKeyFrame:withReply:",
+      "types": "v68@0:8@16@24@32@40Q48B56@?60"
+    },
+    {
+      "selector": "prepareOperationWithPresentationID:operationID:kind:contextID:width:height:fencePayload:withReply:",
+      "types": "v76@0:8@16Q24@32I40d44d52@60@?68"
+    },
+    {
+      "selector": "completeOperationWithPresentationID:operationID:withReply:",
+      "types": "v40@0:8@16Q24@?32"
+    },
+    {
+      "selector": "willEndStreamWithPresentationID:withReply:",
+      "types": "v32@0:8@16@?24"
+    },
+    {
+      "selector": "invalidatePresentationWithID:withReply:",
+      "types": "v32@0:8@16@?24"
+    },
+    {
+      "selector": "noteInteractionWithPresentationID:withReply:",
+      "types": "v32@0:8@16@?24"
+    },
+    {
+      "selector": "setComputerUseCursorLocationWithX:y:isActive:withReply:",
+      "types": "v44@0:8d16d24B32@?36"
+    }
+  ],
+  "producer": [
+    {
+      "selector": "connectWithReply:",
+      "types": "v24@0:8@?16"
+    },
+    {
+      "selector": "setMaxDisplaySize:withReply:",
+      "types": "v32@0:8d16@?24"
+    },
+    {
+      "selector": "setVideoMaxPixelDimension:forPresentationWithID:withReply:",
+      "types": "v40@0:8d16@24@?32"
+    },
+    {
+      "selector": "performActionWithPresentationID:kind:withReply:",
+      "types": "v40@0:8@16@24@?32"
+    },
+    {
+      "selector": "didEndStreamWithPresentationID:withReply:",
+      "types": "v32@0:8@16@?24"
+    },
+    {
+      "selector": "setPetLocationWithX:y:available:withReply:",
+      "types": "v44@0:8d16d24B32@?36"
+    }
+  ]
+}

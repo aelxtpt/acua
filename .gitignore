@@ -1,0 +1,10 @@
+# Build output
+service/.build/
+service/AexComputerUseService
+service/*.app/
+**/target/
+*.o
+*.dylib
+.DS_Store
+
+*.crash-*/

@@ -1,0 +1,192 @@
+{
+  "scenario": "timeline-history-rejection",
+  "input": {
+    "name": "timeline-history-rejection"
+  },
+  "payload": {
+    "rows": [
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: scope 'application_session' requires an interval.",
+          "reflected": "Invalid Computer History clear history request: scope 'application_session' requires an interval.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: scope 'application_session' requires an interval."
+          }
+        },
+        "name": "application_session-missing",
+        "request": {
+          "scope": "application_session"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "reflected": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: interval start must be earlier than interval end."
+          }
+        },
+        "name": "application_session-equal",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 1
+          },
+          "scope": "application_session"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "reflected": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: interval start must be earlier than interval end."
+          }
+        },
+        "name": "application_session-reverse",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 2
+          },
+          "scope": "application_session"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: scope 'interval' requires an interval.",
+          "reflected": "Invalid Computer History clear history request: scope 'interval' requires an interval.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: scope 'interval' requires an interval."
+          }
+        },
+        "name": "interval-missing",
+        "request": {
+          "scope": "interval"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "reflected": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: interval start must be earlier than interval end."
+          }
+        },
+        "name": "interval-equal",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 1
+          },
+          "scope": "interval"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "reflected": "Invalid Computer History clear history request: interval start must be earlier than interval end.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: interval start must be earlier than interval end."
+          }
+        },
+        "name": "interval-reverse",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 2
+          },
+          "scope": "interval"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: scope 'last_ten_minutes' does not accept an interval.",
+          "reflected": "Invalid Computer History clear history request: scope 'last_ten_minutes' does not accept an interval.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: scope 'last_ten_minutes' does not accept an interval."
+          }
+        },
+        "name": "last_ten_minutes-extra-interval",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 0
+          },
+          "scope": "last_ten_minutes"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: scope 'last_hour' does not accept an interval.",
+          "reflected": "Invalid Computer History clear history request: scope 'last_hour' does not accept an interval.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: scope 'last_hour' does not accept an interval."
+          }
+        },
+        "name": "last_hour-extra-interval",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 0
+          },
+          "scope": "last_hour"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: scope 'last_day' does not accept an interval.",
+          "reflected": "Invalid Computer History clear history request: scope 'last_day' does not accept an interval.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: scope 'last_day' does not accept an interval."
+          }
+        },
+        "name": "last_day-extra-interval",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 0
+          },
+          "scope": "last_day"
+        }
+      },
+      {
+        "error": {
+          "code": -10005,
+          "domain": "ComputerUseIPCXPC",
+          "message": "Invalid Computer History clear history request: scope 'all' does not accept an interval.",
+          "reflected": "Invalid Computer History clear history request: scope 'all' does not accept an interval.",
+          "userInfo": {
+            "NSLocalizedDescription": "Invalid Computer History clear history request: scope 'all' does not accept an interval."
+          }
+        },
+        "name": "all-extra-interval",
+        "request": {
+          "interval": {
+            "end": 1,
+            "start": 0
+          },
+          "scope": "all"
+        }
+      }
+    ]
+  }
+}

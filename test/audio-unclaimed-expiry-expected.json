@@ -1,0 +1,259 @@
+{
+  "cases": [
+    {
+      "afterAutomaticStop": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "afterExpiry": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "afterIntervention": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "beforeExpiry": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "claimAfterExpiry": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "intervention": {
+        "none": true
+      },
+      "loopCompletedAfterExpiry": true,
+      "loopCompletedBeforeIntervention": false,
+      "loopCompletedSoonAfterIntervention": false,
+      "name": "unclaimed-success",
+      "newStopCalls": 0,
+      "oldFileExistsAfterExpiry": false,
+      "oldFileExistsAfterIntervention": true,
+      "oldFileExistsBeforeExpiry": true,
+      "oldStopCalls": 1
+    },
+    {
+      "afterAutomaticStop": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "afterExpiry": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "afterIntervention": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "beforeExpiry": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "claimAfterExpiry": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "intervention": {
+        "none": true
+      },
+      "loopCompletedAfterExpiry": true,
+      "loopCompletedBeforeIntervention": false,
+      "loopCompletedSoonAfterIntervention": false,
+      "name": "unclaimed-error",
+      "newStopCalls": 0,
+      "oldFileExistsAfterExpiry": false,
+      "oldFileExistsAfterIntervention": true,
+      "oldFileExistsBeforeExpiry": true,
+      "oldStopCalls": 1
+    },
+    {
+      "afterAutomaticStop": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "afterExpiry": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasAutomaticTask": true,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "beforeExpiry": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "claimAfterExpiry": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "intervention": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "loopCompletedAfterExpiry": true,
+      "loopCompletedBeforeIntervention": false,
+      "loopCompletedSoonAfterIntervention": true,
+      "name": "claim-before-expiry",
+      "newStopCalls": 0,
+      "oldFileExistsAfterExpiry": false,
+      "oldFileExistsAfterIntervention": true,
+      "oldFileExistsBeforeExpiry": true,
+      "oldStopCalls": 1
+    },
+    {
+      "afterAutomaticStop": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "afterExpiry": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "beforeExpiry": {
+        "autoStopped": false,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": true
+      },
+      "claimAfterExpiry": {
+        "exists": true,
+        "url": "<new output URL>"
+      },
+      "intervention": {
+        "exists": true,
+        "url": "<own output URL>"
+      },
+      "loopCompletedAfterExpiry": true,
+      "loopCompletedBeforeIntervention": false,
+      "loopCompletedSoonAfterIntervention": true,
+      "name": "claim-then-replace",
+      "newStopCalls": 1,
+      "oldFileExistsAfterExpiry": false,
+      "oldFileExistsAfterIntervention": true,
+      "oldFileExistsBeforeExpiry": true,
+      "oldStopCalls": 1
+    },
+    {
+      "afterAutomaticStop": {
+        "autoStopped": true,
+        "fileExists": true,
+        "hasAutomaticTask": true,
+        "hasURL": true,
+        "matchesNewURL": true,
+        "retainsNewResource": false
+      },
+      "afterExpiry": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "afterIntervention": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "beforeExpiry": {
+        "autoStopped": false,
+        "fileExists": false,
+        "hasAutomaticTask": false,
+        "hasURL": false,
+        "matchesNewURL": false,
+        "retainsNewResource": false
+      },
+      "claimAfterExpiry": {
+        "code": 1,
+        "error": "noActiveRecording"
+      },
+      "intervention": {
+        "ok": true
+      },
+      "loopCompletedAfterExpiry": true,
+      "loopCompletedBeforeIntervention": false,
+      "loopCompletedSoonAfterIntervention": true,
+      "name": "turn-before-expiry",
+      "newStopCalls": 0,
+      "oldFileExistsAfterExpiry": false,
+      "oldFileExistsAfterIntervention": false,
+      "oldFileExistsBeforeExpiry": false,
+      "oldStopCalls": 1
+    }
+  ],
+  "before_expiry_observation_seconds": 29,
+  "after_expiry_observation_seconds": 31.5,
+  "observation_origin": "latest observed automatic Stop"
+}

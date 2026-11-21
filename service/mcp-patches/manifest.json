@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "upstream_manifest_sha256": "fff37dca9a91f8256653bb70dfc2d6d65def0e3c56380e46f4b3c305c16c4f5f",
+  "patches": [
+    "call-tool-result.json"
+  ],
+  "reason": "Add the nested CallTool.ToolResult wire extension that ACUA's computer-use responses use; keep the pinned upstream sources unmodified."
+}

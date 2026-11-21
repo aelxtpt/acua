@@ -1,0 +1,694 @@
+{
+  "cases": [
+    {
+      "name": "code0",
+      "code": -10000,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10000: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code1",
+      "code": -10001,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10001: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code2",
+      "code": -10002,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10002: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code3",
+      "code": -10003,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10003: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code4",
+      "code": -10004,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10004: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code5",
+      "code": -10005,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10005: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code6",
+      "code": -10006,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use is not allowed to use the app 'owned \u03c0 \ud83d\udc4b\n' for safety reasons."
+    },
+    {
+      "name": "code7",
+      "code": -10007,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Running application not found: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code8",
+      "code": -10008,
+      "payload": "-25204",
+      "description": "Accessibility error: AXError.cannotComplete"
+    },
+    {
+      "name": "code9",
+      "code": -10009,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use permissions are not granted"
+    },
+    {
+      "name": "code10",
+      "code": -10010,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Invalid app: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code11",
+      "code": -10011,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use is not active for 'owned \u03c0 \ud83d\udc4b\n'. You first must call `get_app_state` to get the latest state before doing other Computer Use actions. If `get_app_state` is not available in your environment, use `tool_search` to surface it."
+    },
+    {
+      "name": "code12",
+      "code": -10012,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "This application session has been explicitly stopped by the user for this turn. Stop your work and send a final message noting they stopped the session and you're ready to continue if they want you to. Computer Use can be used again in the next assistant turn."
+    },
+    {
+      "name": "code13",
+      "code": -10013,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10013: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code14",
+      "code": -10014,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use permissions are still pending. The user has not finished granting Accessibility and Screen Recording permissions in the Aex Computer Use window. Call this tool again, as the user is almost done finishing granting permissions. Do not end your turn yet, just call this tool again."
+    },
+    {
+      "name": "code15",
+      "code": -10015,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "This session has been stopped because Computer Use is not allowed on the current browser URL. Stop your work and send a final message noting why the session has been ended. Note that Computer Use is not allowed on this URL even if the user navigates to it themselves."
+    },
+    {
+      "name": "code16",
+      "code": -10016,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code17",
+      "code": -10017,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10017: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code18",
+      "code": -10018,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code19",
+      "code": -10019,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use server error -10019: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code20",
+      "code": -10020,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code21",
+      "code": -10021,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Computer Use is unavailable because the current turn ended. It will work again after the next user message."
+    },
+    {
+      "name": "code22",
+      "code": -10022,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Messages permission setup is still open."
+    },
+    {
+      "name": "code23",
+      "code": -10023,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Required Messages permissions were not granted."
+    },
+    {
+      "name": "code24",
+      "code": -10024,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "The Messages database query exceeded its time limit."
+    },
+    {
+      "name": "code25",
+      "code": -10025,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Invalid Messages request: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code26",
+      "code": -10026,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Ambiguous Messages destination: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code27",
+      "code": -10027,
+      "payload": "missing",
+      "description": "Messages send plan is unavailable (missing)."
+    },
+    {
+      "name": "code28",
+      "code": -10028,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Messages could not verify whether the send completed. Sending again could duplicate the message."
+    },
+    {
+      "name": "code29",
+      "code": -10029,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "code30",
+      "code": -10030,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Calendar permissions are pending"
+    },
+    {
+      "name": "code31",
+      "code": -10031,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Calendar permissions are not granted"
+    },
+    {
+      "name": "code32",
+      "code": -10032,
+      "payload": "owned \u03c0 \ud83d\udc4b\n",
+      "description": "Invalid Calendar request: owned \u03c0 \ud83d\udc4b\n"
+    },
+    {
+      "name": "AX-invalid-''",
+      "code": -10008,
+      "payload": "",
+      "description": "Computer Use server error -10008: "
+    },
+    {
+      "name": "AX-invalid-'oops'",
+      "code": -10008,
+      "payload": "oops",
+      "description": "Computer Use server error -10008: oops"
+    },
+    {
+      "name": "AX-invalid-' 0'",
+      "code": -10008,
+      "payload": " 0",
+      "description": "Computer Use server error -10008:  0"
+    },
+    {
+      "name": "AX-invalid-'0 '",
+      "code": -10008,
+      "payload": "0 ",
+      "description": "Computer Use server error -10008: 0 "
+    },
+    {
+      "name": "AX-invalid-'2147483648'",
+      "code": -10008,
+      "payload": "2147483648",
+      "description": "Computer Use server error -10008: 2147483648"
+    },
+    {
+      "name": "AX-invalid-'-2147483649'",
+      "code": -10008,
+      "payload": "-2147483649",
+      "description": "Computer Use server error -10008: -2147483649"
+    },
+    {
+      "name": "AX-invalid-'1.0'",
+      "code": -10008,
+      "payload": "1.0",
+      "description": "Computer Use server error -10008: 1.0"
+    },
+    {
+      "name": "AX-invalid-'\uff11\uff12'",
+      "code": -10008,
+      "payload": "\uff11\uff12",
+      "description": "Computer Use server error -10008: \uff11\uff12"
+    },
+    {
+      "name": "AX-invalid-'-'",
+      "code": -10008,
+      "payload": "-",
+      "description": "Computer Use server error -10008: -"
+    },
+    {
+      "name": "AX-invalid-'+'",
+      "code": -10008,
+      "payload": "+",
+      "description": "Computer Use server error -10008: +"
+    },
+    {
+      "name": "AX-notEnoughPrecision",
+      "code": -10008,
+      "payload": "-25214",
+      "description": "Accessibility error: AXError.notEnoughPrecision"
+    },
+    {
+      "name": "AX-parameterizedAttributeUnsupported",
+      "code": -10008,
+      "payload": "-25213",
+      "description": "Accessibility error: AXError.parameterizedAttributeUnsupported"
+    },
+    {
+      "name": "AX-noValue",
+      "code": -10008,
+      "payload": "-25212",
+      "description": "Accessibility error: AXError.noValue"
+    },
+    {
+      "name": "AX-apiDisabled",
+      "code": -10008,
+      "payload": "-25211",
+      "description": "Accessibility error: AXError.apiDisabled"
+    },
+    {
+      "name": "AX-notificationNotRegistered",
+      "code": -10008,
+      "payload": "-25210",
+      "description": "Accessibility error: AXError.notificationNotRegistered"
+    },
+    {
+      "name": "AX-notificationAlreadyRegistered",
+      "code": -10008,
+      "payload": "-25209",
+      "description": "Accessibility error: AXError.notificationAlreadyRegistered"
+    },
+    {
+      "name": "AX-notImplemented",
+      "code": -10008,
+      "payload": "-25208",
+      "description": "Accessibility error: AXError.notImplemented"
+    },
+    {
+      "name": "AX-notificationUnsupported",
+      "code": -10008,
+      "payload": "-25207",
+      "description": "Accessibility error: AXError.notificationUnsupported"
+    },
+    {
+      "name": "AX-actionUnsupported",
+      "code": -10008,
+      "payload": "-25206",
+      "description": "Accessibility error: AXError.actionUnsupported"
+    },
+    {
+      "name": "AX-attributeUnsupported",
+      "code": -10008,
+      "payload": "-25205",
+      "description": "Accessibility error: AXError.attributeUnsupported"
+    },
+    {
+      "name": "AX-cannotComplete",
+      "code": -10008,
+      "payload": "-25204",
+      "description": "Accessibility error: AXError.cannotComplete"
+    },
+    {
+      "name": "AX-invalidUIElementObserver",
+      "code": -10008,
+      "payload": "-25203",
+      "description": "Accessibility error: AXError.invalidUIElementObserver"
+    },
+    {
+      "name": "AX-invalidUIElement",
+      "code": -10008,
+      "payload": "-25202",
+      "description": "Accessibility error: AXError.invalidUIElement"
+    },
+    {
+      "name": "AX-illegalArgument",
+      "code": -10008,
+      "payload": "-25201",
+      "description": "Accessibility error: AXError.illegalArgument"
+    },
+    {
+      "name": "AX-failure",
+      "code": -10008,
+      "payload": "-25200",
+      "description": "Accessibility error: AXError.failure"
+    },
+    {
+      "name": "AX-boundary-0",
+      "code": -10008,
+      "payload": "0",
+      "description": "Accessibility error: AXError.success"
+    },
+    {
+      "name": "AX-boundary-+0000",
+      "code": -10008,
+      "payload": "+0000",
+      "description": "Accessibility error: AXError.success"
+    },
+    {
+      "name": "AX-boundary--0",
+      "code": -10008,
+      "payload": "-0",
+      "description": "Accessibility error: AXError.success"
+    },
+    {
+      "name": "AX-boundary-2147483647",
+      "code": -10008,
+      "payload": "2147483647",
+      "description": "Accessibility error: (undocumented AXError)"
+    },
+    {
+      "name": "AX-boundary--2147483648",
+      "code": -10008,
+      "payload": "-2147483648",
+      "description": "Accessibility error: (undocumented AXError)"
+    },
+    {
+      "name": "plan-'expired'",
+      "code": -10027,
+      "payload": "expired",
+      "description": "Messages send plan is unavailable (expired)."
+    },
+    {
+      "name": "plan-'already_consumed'",
+      "code": -10027,
+      "payload": "already_consumed",
+      "description": "Messages send plan was already consumed. Delivery may already have occurred."
+    },
+    {
+      "name": "plan-'missing '",
+      "code": -10027,
+      "payload": "missing ",
+      "description": "Computer Use server error -10027: missing "
+    },
+    {
+      "name": "plan-'Expired'",
+      "code": -10027,
+      "payload": "Expired",
+      "description": "Computer Use server error -10027: Expired"
+    },
+    {
+      "name": "plan-''",
+      "code": -10027,
+      "payload": "",
+      "description": "Computer Use server error -10027: "
+    },
+    {
+      "name": "plan-'already_consumed\\n'",
+      "code": -10027,
+      "payload": "already_consumed\n",
+      "description": "Computer Use server error -10027: already_consumed\n"
+    },
+    {
+      "name": "unknown-0",
+      "code": 0,
+      "payload": "raw \ud83d\udc4b",
+      "description": "Computer Use server error 0: raw \ud83d\udc4b"
+    },
+    {
+      "name": "unknown-1",
+      "code": 1,
+      "payload": "raw \ud83d\udc4b",
+      "description": "Computer Use server error 1: raw \ud83d\udc4b"
+    },
+    {
+      "name": "unknown--9999",
+      "code": -9999,
+      "payload": "raw \ud83d\udc4b",
+      "description": "Computer Use server error -9999: raw \ud83d\udc4b"
+    },
+    {
+      "name": "unknown--10033",
+      "code": -10033,
+      "payload": "raw \ud83d\udc4b",
+      "description": "Computer Use server error -10033: raw \ud83d\udc4b"
+    },
+    {
+      "name": "unknown--2147483648",
+      "code": -2147483648,
+      "payload": "raw \ud83d\udc4b",
+      "description": "Computer Use server error -2147483648: raw \ud83d\udc4b"
+    },
+    {
+      "name": "unknown-2147483647",
+      "code": 2147483647,
+      "payload": "raw \ud83d\udc4b",
+      "description": "Computer Use server error 2147483647: raw \ud83d\udc4b"
+    },
+    {
+      "name": "sdk:senderProcessNotAuthenticated",
+      "code": -10000,
+      "payload": "Sender process is not authenticated",
+      "description": "Computer Use server error -10000: Sender process is not authenticated"
+    },
+    {
+      "name": "sdk:couldNotGetRequestData",
+      "code": -10001,
+      "payload": "Could not get request data",
+      "description": "Computer Use server error -10001: Could not get request data"
+    },
+    {
+      "name": "sdk:couldNotGetRequestTypeName",
+      "code": -10002,
+      "payload": "Could not get request type name from Apple event",
+      "description": "Computer Use server error -10002: Could not get request type name from Apple event"
+    },
+    {
+      "name": "sdk:permissionsNotGranted",
+      "code": -10009,
+      "payload": "Computer Use permissions are not granted",
+      "description": "Computer Use permissions are not granted"
+    },
+    {
+      "name": "sdk:incompatibleClientVersion",
+      "code": -10013,
+      "payload": "The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version.",
+      "description": "Computer Use server error -10013: The Computer Use server and client have a version mismatch. To use Computer Use, ask the user to relaunch their agent app so that the client will be updated to the latest version."
+    },
+    {
+      "name": "sdk:permissionsPending",
+      "code": -10014,
+      "payload": "Computer Use permissions are still pending",
+      "description": "Computer Use permissions are still pending. The user has not finished granting Accessibility and Screen Recording permissions in the Aex Computer Use window. Call this tool again, as the user is almost done finishing granting permissions. Do not end your turn yet, just call this tool again."
+    },
+    {
+      "name": "sdk:couldNotGetSenderPID",
+      "code": -10017,
+      "payload": "Could not get sender PID from Apple event",
+      "description": "Computer Use server error -10017: Could not get sender PID from Apple event"
+    },
+    {
+      "name": "sdk:couldNotGetBootstrapPort",
+      "code": -10019,
+      "payload": "Could not get XPC bootstrap mach port from Apple event",
+      "description": "Computer Use server error -10019: Could not get XPC bootstrap mach port from Apple event"
+    },
+    {
+      "name": "sdk:screenLocked",
+      "code": -10020,
+      "payload": "The Mac is locked. Unlock it before reading accessibility text.",
+      "description": "The Mac is locked. Unlock it before reading accessibility text."
+    },
+    {
+      "name": "sdk:agentTurnAlreadyEnded",
+      "code": -10021,
+      "payload": "Computer Use is unavailable because the current turn ended. It will work again after the next user message.",
+      "description": "Computer Use is unavailable because the current turn ended. It will work again after the next user message."
+    },
+    {
+      "name": "sdk:messagesPermissionsPending",
+      "code": -10022,
+      "payload": "Messages permission setup is still open",
+      "description": "Messages permission setup is still open."
+    },
+    {
+      "name": "sdk:messagesPermissionsDenied",
+      "code": -10023,
+      "payload": "Required Messages permissions were not granted",
+      "description": "Required Messages permissions were not granted."
+    },
+    {
+      "name": "sdk:messagesQueryTimedOut",
+      "code": -10024,
+      "payload": "The Messages database query exceeded its time limit",
+      "description": "The Messages database query exceeded its time limit."
+    },
+    {
+      "name": "sdk:messagesSendOutcomeUncertain",
+      "code": -10028,
+      "payload": "Messages could not verify whether the send completed",
+      "description": "Messages could not verify whether the send completed. Sending again could duplicate the message."
+    },
+    {
+      "name": "sdk:calendarPermissionsPending",
+      "code": -10030,
+      "payload": "Calendar permissions are pending",
+      "description": "Calendar permissions are pending"
+    },
+    {
+      "name": "sdk:calendarPermissionsDenied",
+      "code": -10031,
+      "payload": "Calendar permissions are not granted",
+      "description": "Calendar permissions are not granted"
+    },
+    {
+      "name": "sdk:couldNotResolveRequestType",
+      "code": -10003,
+      "payload": "Could not resolve request type: owned \u03c0 \ud83d\udc4b",
+      "description": "Computer Use server error -10003: Could not resolve request type: owned \u03c0 \ud83d\udc4b"
+    },
+    {
+      "name": "sdk:unknown",
+      "code": -10005,
+      "payload": "owned \u03c0 \ud83d\udc4b",
+      "description": "Computer Use server error -10005: owned \u03c0 \ud83d\udc4b"
+    },
+    {
+      "name": "sdk:messagesInvalidRequest",
+      "code": -10025,
+      "payload": "owned \u03c0 \ud83d\udc4b",
+      "description": "Invalid Messages request: owned \u03c0 \ud83d\udc4b"
+    },
+    {
+      "name": "sdk:messagesAmbiguousDestination",
+      "code": -10026,
+      "payload": "owned \u03c0 \ud83d\udc4b",
+      "description": "Ambiguous Messages destination: owned \u03c0 \ud83d\udc4b"
+    },
+    {
+      "name": "sdk:calendarInvalidRequest",
+      "code": -10032,
+      "payload": "owned \u03c0 \ud83d\udc4b",
+      "description": "Invalid Calendar request: owned \u03c0 \ud83d\udc4b"
+    },
+    {
+      "name": "sdk:unhandledEvent",
+      "code": -10004,
+      "payload": "Unhandled event: 4294967295 2147483648",
+      "description": "Computer Use server error -10004: Unhandled event: 4294967295 2147483648"
+    },
+    {
+      "name": "sdk:plan:missing",
+      "code": -10027,
+      "payload": "missing",
+      "description": "Messages send plan is unavailable (missing)."
+    },
+    {
+      "name": "sdk:plan:expired",
+      "code": -10027,
+      "payload": "expired",
+      "description": "Messages send plan is unavailable (expired)."
+    },
+    {
+      "name": "sdk:plan:alreadyConsumed",
+      "code": -10027,
+      "payload": "already_consumed",
+      "description": "Messages send plan was already consumed. Delivery may already have occurred."
+    },
+    {
+      "name": "sdk:rate:0",
+      "code": -10029,
+      "payload": "Messages sending is temporarily rate limited. Try again in 0 seconds.",
+      "description": "Messages sending is temporarily rate limited. Try again in 0 seconds."
+    },
+    {
+      "name": "sdk:rate:-9223372036854775808",
+      "code": -10029,
+      "payload": "Messages sending is temporarily rate limited. Try again in -9223372036854775808 seconds.",
+      "description": "Messages sending is temporarily rate limited. Try again in -9223372036854775808 seconds."
+    },
+    {
+      "name": "lock:unlockFailed",
+      "code": -10020,
+      "payload": "The Mac is locked and automatic unlock could not unlock it. Ask the user to unlock the Mac manually before continuing.",
+      "description": "The Mac is locked and automatic unlock could not unlock it. Ask the user to unlock the Mac manually before continuing."
+    },
+    {
+      "name": "lock:physicalInputDetected",
+      "code": -10020,
+      "payload": "The Mac is locked and automatic unlock is paused because physical input was detected. Ask the user to unlock the Mac manually before continuing.",
+      "description": "The Mac is locked and automatic unlock is paused because physical input was detected. Ask the user to unlock the Mac manually before continuing."
+    },
+    {
+      "name": "lock:requestHasNoThread",
+      "code": -10020,
+      "payload": "The Mac is locked and this Computer Use request cannot be associated with an agent thread. Ask the user to unlock the Mac manually before continuing.",
+      "description": "The Mac is locked and this Computer Use request cannot be associated with an agent thread. Ask the user to unlock the Mac manually before continuing."
+    },
+    {
+      "name": "refetch:missingID:0",
+      "code": -10005,
+      "payload": "0 is an invalid element ID",
+      "description": "Computer Use server error -10005: 0 is an invalid element ID"
+    },
+    {
+      "name": "refetch:missingID:-1",
+      "code": -10005,
+      "payload": "-1 is an invalid element ID",
+      "description": "Computer Use server error -10005: -1 is an invalid element ID"
+    },
+    {
+      "name": "refetch:missingID:99999999",
+      "code": -10005,
+      "payload": "99999999 is an invalid element ID",
+      "description": "Computer Use server error -10005: 99999999 is an invalid element ID"
+    },
+    {
+      "name": "refetch:missingID:-9223372036854775808",
+      "code": -10005,
+      "payload": "-9223372036854775808 is an invalid element ID",
+      "description": "Computer Use server error -10005: -9223372036854775808 is an invalid element ID"
+    },
+    {
+      "name": "refetch:missingID:9223372036854775807",
+      "code": -10005,
+      "payload": "9223372036854775807 is an invalid element ID",
+      "description": "Computer Use server error -10005: 9223372036854775807 is an invalid element ID"
+    },
+    {
+      "name": "refetch:unavailable:0",
+      "code": -10005,
+      "payload": "The appSnapshot is unexpectedly missing an invalidation monitor. This state shouldn't happen, likely programmer error.",
+      "description": "Computer Use server error -10005: The appSnapshot is unexpectedly missing an invalidation monitor. This state shouldn't happen, likely programmer error."
+    },
+    {
+      "name": "refetch:unavailable:1",
+      "code": -10005,
+      "payload": "The element was invalidated, and an attempt was made to refetch it, but the refetch couldn't be started because multiple elements were found that match the criteria. Try to get the on-screen content again and see if that resolves the issue.",
+      "description": "Computer Use server error -10005: The element was invalidated, and an attempt was made to refetch it, but the refetch couldn't be started because multiple elements were found that match the criteria. Try to get the on-screen content again and see if that resolves the issue."
+    },
+    {
+      "name": "refetch:unavailable:2",
+      "code": -10005,
+      "payload": "The element was invalidated, and an attempt was made to refetch it, but the refetch couldn't be finished because multiple elements were found that match the criteria. Try to get the on-screen content again and see if that resolves the issue.",
+      "description": "Computer Use server error -10005: The element was invalidated, and an attempt was made to refetch it, but the refetch couldn't be finished because multiple elements were found that match the criteria. Try to get the on-screen content again and see if that resolves the issue."
+    },
+    {
+      "name": "refetch:unavailable:3",
+      "code": -10005,
+      "payload": "The element ID is no longer valid. Try to get the on-screen content again and see if that resolves the issue.",
+      "description": "Computer Use server error -10005: The element ID is no longer valid. Try to get the on-screen content again and see if that resolves the issue."
+    },
+    {
+      "name": "refetch:unavailable:4",
+      "code": -10005,
+      "payload": "The element ID is no longer valid. Try to get the on-screen content again and see if that resolves the issue.",
+      "description": "Computer Use server error -10005: The element ID is no longer valid. Try to get the on-screen content again and see if that resolves the issue."
+    }
+  ]
+}

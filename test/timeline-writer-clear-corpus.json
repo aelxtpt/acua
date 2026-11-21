@@ -1,0 +1,1189 @@
+{
+  "scenario": "timeline-writer-clear",
+  "input": {
+    "name": "timeline-writer-clear"
+  },
+  "payload": {
+    "rows": [
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-current-and-repeat",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-current-and-repeat",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          },
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-future-boundary",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704068400,
+              "kind": "clear",
+              "start": 1704067800
+            }
+          ]
+        },
+        "name": "clear-future-boundary",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704068400,
+              "kind": "clear",
+              "start": 1704067800
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-past-boundary",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            }
+          ]
+        },
+        "name": "clear-past-boundary",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-zero-inside",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067201,
+              "kind": "clear",
+              "start": 1704067201
+            }
+          ]
+        },
+        "name": "clear-zero-inside",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067201,
+              "kind": "clear",
+              "start": 1704067201
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-zero-at-start",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-zero-at-start",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-outside-then-finish",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "clear-outside-then-finish",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          },
+          {
+            "afterReferenceTime": 815415388.116074,
+            "beforeReferenceTime": 815415388.115803,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:16:28Z\",\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415388.115836,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "startedAt": 725760000
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "clear-counted-current",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-counted-current",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":7,\"suppressedEventCount\":2}"
+          },
+          "name": "clear-counted-outside",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            {
+              "kind": "finish"
+            }
+          ]
+        },
+        "name": "clear-counted-outside",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          },
+          {
+            "afterReferenceTime": 815415388.118836,
+            "beforeReferenceTime": 815415388.118653,
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"endedAt\" : \"2026-11-03T16:16:28Z\",\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"retained-id\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "kind": "finish"
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": {
+              "endedAt": 815415388.118666,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "retained-id",
+              "startedAt": 725760000
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\":\"retained-id\",\"eventsPath\":\"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:05:00Z\",\"endReason\":\"tool_stopped\",\"eventCount\":null,\"suppressedEventCount\":null}"
+          },
+          "name": "clear-nil-count-current",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-nil-count-current",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-and-reset-future",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704069000,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-and-reset-future",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-30-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-30-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-30-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-30-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-30-00Z\",\n  \"startedAt\" : \"2024-01-01T00:30:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704069000,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-30-00Z/events.jsonl",
+              "id": "2024-01-01T00-30-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-30-00Z/metadata.json",
+              "startedAt": 1704069000,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-and-reset-past",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704066600,
+              "end": 1704068400,
+              "kind": "clear",
+              "start": 1704067800
+            }
+          ]
+        },
+        "name": "clear-and-reset-past",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2023-12-31T23-50-00Z",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2023-12-31T23-50-00Z/events.jsonl": "",
+                "segments/2023-12-31T23-50-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2023-12-31T23-50-00Z/events.jsonl\",\n  \"id\" : \"2023-12-31T23-50-00Z\",\n  \"startedAt\" : \"2023-12-31T23:50:00Z\"\n}",
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704066600,
+              "end": 1704068400,
+              "kind": "clear",
+              "start": 1704067800
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2023-12-31T23-50-00Z/events.jsonl",
+              "id": "2023-12-31T23-50-00Z",
+              "metadataPath": "$ROOT/segments/2023-12-31T23-50-00Z/metadata.json",
+              "startedAt": 1704066600,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": []
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-after-corrupt-metadata",
+          "now": 1704067323,
+          "operations": [
+            {
+              "files": {
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json"
+              },
+              "kind": "fixture"
+            },
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-after-corrupt-metadata",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json"
+              }
+            },
+            "operation": {
+              "files": {
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json"
+              },
+              "kind": "fixture"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "error": {
+              "code": 4864,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-after-missing-metadata",
+          "now": 1704067323,
+          "operations": [
+            {
+              "kind": "fixture",
+              "remove": [
+                "segments/2024-01-01T00-00-00Z/metadata.json"
+              ]
+            },
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-after-missing-metadata",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": ""
+              }
+            },
+            "operation": {
+              "kind": "fixture",
+              "remove": [
+                "segments/2024-01-01T00-00-00Z/metadata.json"
+              ]
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "error": {
+              "code": 260,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-deletion-error-recovery-error",
+          "now": 1704067323,
+          "operations": [
+            {
+              "files": {
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json",
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              },
+              "kind": "fixture"
+            },
+            {
+              "at": 1704067800,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-deletion-error-recovery-error",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json",
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              }
+            },
+            "operation": {
+              "files": {
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json",
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              },
+              "kind": "fixture"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "error": {
+              "code": 516,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "owned-invalid-json",
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              }
+            },
+            "operation": {
+              "at": 1704067800,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": false,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {},
+          "name": "clear-success-reopen-error",
+          "now": 1704067323,
+          "operations": [
+            {
+              "files": {
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              },
+              "kind": "fixture"
+            },
+            {
+              "at": 1704067800,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-success-reopen-error",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}",
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              }
+            },
+            "operation": {
+              "files": {
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              },
+              "kind": "fixture"
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": null
+          },
+          {
+            "error": {
+              "code": 516,
+              "domain": "NSCocoaErrorDomain"
+            },
+            "filesystem": {
+              "directories": [
+                "segments"
+              ],
+              "files": {
+                "segments/2024-01-01T00-10-00Z": "owned-blocker"
+              }
+            },
+            "operation": {
+              "at": 1704067800,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": false,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-10-00Z/events.jsonl",
+              "id": "2024-01-01T00-10-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-10-00Z/metadata.json",
+              "startedAt": 1704067800,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            }
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "segments/2023-12-31T23-50-00Z/events.jsonl": "owned-prior\n",
+            "segments/2023-12-31T23-50-00Z/metadata.json": "{\"id\": \"old\", \"eventsPath\": \"$ROOT/segments/2023-12-31T23-50-00Z/events.jsonl\", \"startedAt\": \"2023-12-31T23:50:00Z\", \"endedAt\": \"2024-01-01T00:00:00Z\", \"eventCount\": 4}"
+          },
+          "name": "clear-other-completed-segment",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            }
+          ]
+        },
+        "name": "clear-other-completed-segment",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067200,
+              "kind": "clear",
+              "start": 1704066600
+            },
+            "state": {
+              "eventCount": null,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": null,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704066600,
+                1704067200
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "input": {
+          "directories": [],
+          "duration": 600,
+          "files": {
+            "owned/events.jsonl": "owned-custom-prior\n",
+            "segments/2024-01-01T00-00-00Z/events.jsonl": "prior-owned-event\n",
+            "segments/2024-01-01T00-00-00Z/metadata.json": "{\"id\": \"retained-id\", \"eventsPath\": \"$ROOT/owned/events.jsonl\", \"startedAt\": \"2024-01-01T00:00:00Z\", \"endedAt\": \"2024-01-01T00:05:00Z\", \"endReason\": \"tool_stopped\", \"eventCount\": 7, \"suppressedEventCount\": 2}"
+          },
+          "name": "clear-custom-events-retains-external-file",
+          "now": 1704067323,
+          "operations": [
+            {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            }
+          ]
+        },
+        "name": "clear-custom-events-retains-external-file",
+        "steps": [
+          {
+            "filesystem": {
+              "directories": [
+                "owned",
+                "segments",
+                "segments/2024-01-01T00-00-00Z"
+              ],
+              "files": {
+                "owned/events.jsonl": "owned-custom-prior\n",
+                "segments/2024-01-01T00-00-00Z/events.jsonl": "",
+                "segments/2024-01-01T00-00-00Z/metadata.json": "{\n  \"eventsPath\" : \"$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl\",\n  \"id\" : \"2024-01-01T00-00-00Z\",\n  \"startedAt\" : \"2024-01-01T00:00:00Z\"\n}"
+              }
+            },
+            "operation": {
+              "at": 1704067323,
+              "end": 1704067800,
+              "kind": "clear",
+              "start": 1704067200
+            },
+            "state": {
+              "eventCount": 0,
+              "eventHandleOpen": true,
+              "eventsPath": "$ROOT/segments/2024-01-01T00-00-00Z/events.jsonl",
+              "id": "2024-01-01T00-00-00Z",
+              "metadataPath": "$ROOT/segments/2024-01-01T00-00-00Z/metadata.json",
+              "startedAt": 1704067200,
+              "suppressedEventCount": 0,
+              "suppressedEventsPath": null,
+              "suppressedHandleOpen": false
+            },
+            "value": [
+              [
+                1704067200,
+                1704067800
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

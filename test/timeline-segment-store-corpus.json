@@ -1,0 +1,1953 @@
+{
+  "scenario": "timeline-segment-store",
+  "input": {
+    "name": "timeline-segment-store"
+  },
+  "payload": {
+    "rows": [
+      {
+        "error": {
+          "code": 260,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {},
+          "name": "missing-list",
+          "now": 1704067800,
+          "operation": "list",
+          "start": 1704067200
+        },
+        "name": "missing-list"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [
+            "segments"
+          ],
+          "end": 1704067800,
+          "files": {},
+          "name": "empty-list",
+          "now": 1704067800,
+          "operation": "list",
+          "start": 1704067200
+        },
+        "name": "empty-list",
+        "value": []
+      },
+      {
+        "error": {
+          "code": 256,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {
+            "segments": "owned file"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments": "owned file"
+          },
+          "name": "segments-is-file-list",
+          "now": 1704067800,
+          "operation": "list",
+          "start": 1704067200
+        },
+        "name": "segments-is-file-list"
+      },
+      {
+        "filesystem": {
+          "directories": [],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {},
+          "name": "missing-latest",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "missing-latest",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [
+            "segments"
+          ],
+          "end": 1704067800,
+          "files": {},
+          "name": "empty-latest",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "empty-latest",
+        "value": null
+      },
+      {
+        "error": {
+          "code": 256,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {
+            "segments": "owned file"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments": "owned file"
+          },
+          "name": "segments-is-file-latest",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "segments-is-file-latest"
+      },
+      {
+        "filesystem": {
+          "directories": [],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {},
+          "name": "missing-contains",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "missing-contains",
+        "value": false
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [
+            "segments"
+          ],
+          "end": 1704067800,
+          "files": {},
+          "name": "empty-contains",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "empty-contains",
+        "value": false
+      },
+      {
+        "error": {
+          "code": 256,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {
+            "segments": "owned file"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments": "owned file"
+          },
+          "name": "segments-is-file-contains",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "segments-is-file-contains"
+      },
+      {
+        "filesystem": {
+          "directories": [],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {},
+          "name": "missing-remove",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "missing-remove",
+        "value": []
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [
+            "segments"
+          ],
+          "end": 1704067800,
+          "files": {},
+          "name": "empty-remove",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "empty-remove",
+        "value": []
+      },
+      {
+        "error": {
+          "code": 256,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {
+            "segments": "owned file"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments": "owned file"
+          },
+          "name": "segments-is-file-remove",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "segments-is-file-remove"
+      },
+      {
+        "filesystem": {
+          "directories": [],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {},
+          "name": "missing-prune",
+          "now": 1704067800,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "missing-prune",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [
+            "segments"
+          ],
+          "end": 1704067800,
+          "files": {},
+          "name": "empty-prune",
+          "now": 1704067800,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "empty-prune",
+        "value": null
+      },
+      {
+        "error": {
+          "code": 256,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [],
+          "files": {
+            "segments": "owned file"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments": "owned file"
+          },
+          "name": "segments-is-file-prune",
+          "now": 1704067800,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "segments-is-file-prune"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/.hidden",
+            "segments/a",
+            "segments/empty"
+          ],
+          "files": {
+            "segments/.hidden/data": "hidden",
+            "segments/a/data": "owned",
+            "segments/plain": "file"
+          }
+        },
+        "input": {
+          "directories": [
+            "segments/empty"
+          ],
+          "end": 1704067800,
+          "files": {
+            "segments/.hidden/data": "hidden",
+            "segments/a/data": "owned",
+            "segments/plain": "file"
+          },
+          "name": "directory-selection",
+          "now": 1704067800,
+          "operation": "list",
+          "start": 1704067200
+        },
+        "name": "directory-selection",
+        "value": [
+          "segments/.hidden",
+          "segments/a",
+          "segments/empty"
+        ]
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "completed-boundary",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "completed-boundary",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "a",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "not-completed",
+          "now": 1704067799,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "not-completed",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "completed-later",
+          "now": 1704067801,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "completed-later",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "a",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "cutoff-equal",
+          "now": 1704240600,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "cutoff-equal",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "cutoff-newer",
+          "now": 1704240599,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "cutoff-newer",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "a",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "cutoff-older",
+          "now": 1704240601,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "cutoff-older",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "duration": 30,
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "custom-duration",
+          "now": 1704067230,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "custom-duration",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "a",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-12T13:46:39Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-12T13:46:39Z\"}"
+          },
+          "name": "ended-date-does-not-control-completion",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "ended-date-does-not-control-completion",
+        "value": {
+          "endedAt": 726759999,
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "a",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "events-missing",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "events-missing",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a",
+            "segments/z"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T01:00:00Z\"}",
+            "segments/z/events.jsonl": "owned-event\n",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2023-12-31T23:50:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T01:00:00Z\"}",
+            "segments/z/events.jsonl": "owned-event\n",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2023-12-31T23:50:00Z\"}"
+          },
+          "name": "lexical-latest",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "lexical-latest",
+        "value": {
+          "eventsPath": "$ROOT/segments/z/events.jsonl",
+          "id": "z",
+          "startedAt": 725759400
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a",
+            "segments/z"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "latest-missing-events-no-older-fallback",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "latest-missing-events-no-older-fallback",
+        "value": null
+      },
+      {
+        "error": {
+          "code": 260,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          },
+          "name": "latest-missing-metadata",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "latest-missing-metadata"
+      },
+      {
+        "error": {
+          "kind": "dataCorrupted",
+          "path": []
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned",
+            "segments/a/metadata.json": "{invalid"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned",
+            "segments/a/metadata.json": "{invalid"
+          },
+          "name": "latest-invalid-metadata",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "latest-invalid-metadata"
+      },
+      {
+        "error": {
+          "key": "segmentID",
+          "kind": "keyNotFound",
+          "path": []
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/metadata.json": "{}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/metadata.json": "{}"
+          },
+          "name": "latest-missing-required-key",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "latest-missing-required-key"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067220,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "contains-overlap",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067210
+        },
+        "name": "contains-overlap",
+        "value": true
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067900,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "contains-touch-end",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067800
+        },
+        "name": "contains-touch-end",
+        "value": false
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067200,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "contains-touch-start",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067199
+        },
+        "name": "contains-touch-start",
+        "value": false
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704068000,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "contains-outside",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067900
+        },
+        "name": "contains-outside",
+        "value": false
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067300,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "contains-point-inside",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067300
+        },
+        "name": "contains-point-inside",
+        "value": true
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067200,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "contains-point-at-start",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "contains-point-at-start",
+        "value": false
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:01:40Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067400,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:01:40Z\"}"
+          },
+          "name": "contains-explicit-end",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067350
+        },
+        "name": "contains-explicit-end",
+        "value": false
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2023-12-31T23:58:20Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067201,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2023-12-31T23:58:20Z\"}"
+          },
+          "name": "contains-reversed-metadata-clamps",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067199
+        },
+        "name": "contains-reversed-metadata-clamps",
+        "value": true
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a",
+            "segments/b",
+            "segments/z"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}",
+            "segments/b/events.jsonl": "owned-event\n",
+            "segments/b/metadata.json": "{\"id\":\"b\",\"eventsPath\":\"$ROOT/segments/b/events.jsonl\",\"startedAt\":\"2024-01-01T00:05:00Z\",\"endedAt\":\"2024-01-01T00:07:30Z\"}",
+            "segments/z/events.jsonl": "owned-event\n",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2024-01-01T00:16:40Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}",
+            "segments/b/events.jsonl": "owned-event\n",
+            "segments/b/metadata.json": "{\"id\":\"b\",\"eventsPath\":\"$ROOT/segments/b/events.jsonl\",\"startedAt\":\"2024-01-01T00:05:00Z\",\"endedAt\":\"2024-01-01T00:07:30Z\"}",
+            "segments/z/events.jsonl": "owned-event\n",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2024-01-01T00:16:40Z\"}"
+          },
+          "name": "contains-multiple",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "contains-multiple",
+        "value": true
+      },
+      {
+        "error": {
+          "code": 260,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          },
+          "name": "contains-metadata-missing",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "contains-metadata-missing"
+      },
+      {
+        "error": {
+          "kind": "dataCorrupted",
+          "path": []
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/metadata.json": "{invalid"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/metadata.json": "{invalid"
+          },
+          "name": "contains-invalid-metadata",
+          "now": 1704067800,
+          "operation": "contains",
+          "start": 1704067200
+        },
+        "name": "contains-invalid-metadata"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067220,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "remove-overlap",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067210
+        },
+        "name": "remove-overlap",
+        "value": [
+          {
+            "end": 1704067800,
+            "start": 1704067200
+          }
+        ]
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067900,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "remove-touch-end",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067800
+        },
+        "name": "remove-touch-end",
+        "value": []
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067200,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "remove-touch-start",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067199
+        },
+        "name": "remove-touch-start",
+        "value": []
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704068000,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "remove-outside",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067900
+        },
+        "name": "remove-outside",
+        "value": []
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067300,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "remove-point-inside",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067300
+        },
+        "name": "remove-point-inside",
+        "value": [
+          {
+            "end": 1704067800,
+            "start": 1704067200
+          }
+        ]
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067200,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "remove-point-at-start",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "remove-point-at-start",
+        "value": []
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:01:40Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067400,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-01T00:01:40Z\"}"
+          },
+          "name": "remove-explicit-end",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067350
+        },
+        "name": "remove-explicit-end",
+        "value": []
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067201,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2023-12-31T23:58:20Z\"}"
+          },
+          "name": "remove-reversed-metadata-clamps",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067199
+        },
+        "name": "remove-reversed-metadata-clamps",
+        "value": [
+          {
+            "end": 1704067200,
+            "start": 1704067200
+          }
+        ]
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/z"
+          ],
+          "files": {
+            "segments/z/events.jsonl": "owned-event\n",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2024-01-01T00:16:40Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}",
+            "segments/b/events.jsonl": "owned-event\n",
+            "segments/b/metadata.json": "{\"id\":\"b\",\"eventsPath\":\"$ROOT/segments/b/events.jsonl\",\"startedAt\":\"2024-01-01T00:05:00Z\",\"endedAt\":\"2024-01-01T00:07:30Z\"}",
+            "segments/z/events.jsonl": "owned-event\n",
+            "segments/z/metadata.json": "{\"id\":\"z\",\"eventsPath\":\"$ROOT/segments/z/events.jsonl\",\"startedAt\":\"2024-01-01T00:16:40Z\"}"
+          },
+          "name": "remove-multiple",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "remove-multiple",
+        "value": [
+          {
+            "end": 1704067800,
+            "start": 1704067200
+          },
+          {
+            "end": 1704067650,
+            "start": 1704067500
+          }
+        ]
+      },
+      {
+        "error": {
+          "code": 260,
+          "domain": "NSCocoaErrorDomain"
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          },
+          "name": "remove-metadata-missing",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "remove-metadata-missing"
+      },
+      {
+        "error": {
+          "kind": "dataCorrupted",
+          "path": []
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/metadata.json": "{invalid"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/metadata.json": "{invalid"
+          },
+          "name": "remove-invalid-metadata",
+          "now": 1704067800,
+          "operation": "remove",
+          "start": 1704067200
+        },
+        "name": "remove-invalid-metadata"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "expiry-boundary",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "expiry-boundary",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "still-retained",
+          "now": 1704240599,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "still-retained",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "expired",
+          "now": 1704240601,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "expired",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments"
+          ],
+          "files": {}
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"endedAt\":\"2024-01-12T13:46:39Z\"}"
+          },
+          "name": "ignores-ended-date",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "ignores-ended-date",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/metadata.json": "{invalid"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/metadata.json": "{invalid"
+          },
+          "name": "malformed-retained",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "malformed-retained",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned"
+          },
+          "name": "missing-metadata-retained",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "missing-metadata-retained",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "keep": [
+            "segments/a"
+          ],
+          "name": "keep-exact",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "keep-exact",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "keep": [
+            "segments/a/../a"
+          ],
+          "name": "keep-standardized",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "keep-standardized",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/recent"
+          ],
+          "files": {
+            "segments/recent/events.jsonl": "owned-event\n",
+            "segments/recent/metadata.json": "{\"id\":\"recent\",\"eventsPath\":\"$ROOT/segments/recent/events.jsonl\",\"startedAt\":\"2024-01-03T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"id\":\"a\",\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}",
+            "segments/recent/events.jsonl": "owned-event\n",
+            "segments/recent/metadata.json": "{\"id\":\"recent\",\"eventsPath\":\"$ROOT/segments/recent/events.jsonl\",\"startedAt\":\"2024-01-03T00:00:00Z\"}"
+          },
+          "name": "mixed-ages",
+          "now": 1704240600,
+          "operation": "prune",
+          "start": 1704067200
+        },
+        "name": "mixed-ages",
+        "value": null
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"sessionID\":\"session\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"sessionID\":\"session\"}"
+          },
+          "name": "metadata-legacy-session",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-legacy-session",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "session",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"segmentID\":\"segment\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"segmentID\":\"segment\"}"
+          },
+          "name": "metadata-legacy-segment",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-legacy-segment",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "segment",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":\"first\",\"sessionID\":\"second\",\"segmentID\":\"third\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":\"first\",\"sessionID\":\"second\",\"segmentID\":\"third\"}"
+          },
+          "name": "metadata-id-wins",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-id-wins",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "first",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":null,\"sessionID\":\"session\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":null,\"sessionID\":\"session\"}"
+          },
+          "name": "metadata-null-id-falls-back",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-null-id-falls-back",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "session",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":null,\"sessionID\":null,\"segmentID\":\"segment\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":null,\"sessionID\":null,\"segmentID\":\"segment\"}"
+          },
+          "name": "metadata-null-session-falls-back",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-null-session-falls-back",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "segment",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":\"\",\"sessionID\":\"session\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":\"\",\"sessionID\":\"session\"}"
+          },
+          "name": "metadata-empty-id-preserved",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-empty-id-preserved",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "error": {
+          "kind": "typeMismatch",
+          "path": [
+            "id"
+          ]
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":3,\"sessionID\":\"session\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":3,\"sessionID\":\"session\"}"
+          },
+          "name": "metadata-bad-id-no-fallback",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-bad-id-no-fallback"
+      },
+      {
+        "error": {
+          "kind": "typeMismatch",
+          "path": [
+            "sessionID"
+          ]
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"sessionID\":3,\"segmentID\":\"segment\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"sessionID\":3,\"segmentID\":\"segment\"}"
+          },
+          "name": "metadata-bad-session-no-fallback",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-bad-session-no-fallback"
+      },
+      {
+        "error": {
+          "kind": "typeMismatch",
+          "path": [
+            "segmentID"
+          ]
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"segmentID\":3}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"segmentID\":3}"
+          },
+          "name": "metadata-bad-segment-type",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-bad-segment-type"
+      },
+      {
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":\"first\",\"sessionID\":3,\"segmentID\":false}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":\"first\",\"sessionID\":3,\"segmentID\":false}"
+          },
+          "name": "metadata-id-ignores-unused-bad-aliases",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-id-ignores-unused-bad-aliases",
+        "value": {
+          "eventsPath": "$ROOT/segments/a/events.jsonl",
+          "id": "first",
+          "startedAt": 725760000
+        }
+      },
+      {
+        "error": {
+          "key": "segmentID",
+          "kind": "keyNotFound",
+          "path": []
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\"}"
+          },
+          "name": "metadata-missing-all-id-keys",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-missing-all-id-keys"
+      },
+      {
+        "error": {
+          "kind": "valueNotFound",
+          "path": [
+            "segmentID"
+          ]
+        },
+        "filesystem": {
+          "directories": [
+            "segments",
+            "segments/a"
+          ],
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":null,\"sessionID\":null,\"segmentID\":null}"
+          }
+        },
+        "input": {
+          "directories": [],
+          "end": 1704067800,
+          "files": {
+            "segments/a/events.jsonl": "owned-event\n",
+            "segments/a/metadata.json": "{\"eventsPath\":\"$ROOT/segments/a/events.jsonl\",\"startedAt\":\"2024-01-01T00:00:00Z\",\"id\":null,\"sessionID\":null,\"segmentID\":null}"
+          },
+          "name": "metadata-null-all-id-keys",
+          "now": 1704067800,
+          "operation": "latest",
+          "start": 1704067200
+        },
+        "name": "metadata-null-all-id-keys"
+      }
+    ]
+  }
+}

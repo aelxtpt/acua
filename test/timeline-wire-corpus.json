@@ -1,0 +1,1845 @@
+{
+  "scenario": "timeline-normalization",
+  "input": {
+    "name": "timeline-normalization"
+  },
+  "payload": {
+    "normalization": [
+      {
+        "name": "defaults",
+        "settings": {
+          "allowlist": [],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "both-blocked",
+        "settings": {
+          "allowlist": [],
+          "blocklist": [],
+          "defaultApplicationBehavior": "do_not_observe",
+          "defaultURLBehavior": "do_not_observe"
+        },
+        "value": {
+          "allowlist": [],
+          "blocklist": [],
+          "defaultApplicationBehavior": "do_not_observe",
+          "defaultURLBehavior": "do_not_observe"
+        }
+      },
+      {
+        "name": "valid-app",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned.App",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "Owned.App",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "whitespace-app",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": " ",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": " ",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 0,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 0.)",
+          "reflected": "Computer History app observation rules require only a non-empty bundleID.",
+          "userInfo": {}
+        },
+        "name": "empty-app",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 0,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 0.)",
+          "reflected": "Computer History app observation rules require only a non-empty bundleID.",
+          "userInfo": {}
+        },
+        "name": "missing-app",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 0,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 0.)",
+          "reflected": "Computer History app observation rules require only a non-empty bundleID.",
+          "userInfo": {}
+        },
+        "name": "app-with-url",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app",
+              "urlDomain": "example.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 0,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 0.)",
+          "reflected": "Computer History app observation rules require only a non-empty bundleID.",
+          "userInfo": {}
+        },
+        "name": "app-with-empty-url",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app",
+              "urlDomain": ""
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "app-unicode",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "aplica\u00e7\u00e3o.\ud83d\ude00",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "aplica\u00e7\u00e3o.\ud83d\ude00",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "lowercase-url",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "EXAMPLE.TEST."
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "example.test."
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "url-whitespace",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": " EXAMPLE.TEST "
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": " example.test "
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "url-scheme",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "HTTPS://EXAMPLE.TEST/path"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "https://example.test/path"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "url-unicode",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "\u00c9XAMPLE.\u0130STANBUL"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "\u00e9xample.i\u0307stanbul"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 1,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 1.)",
+          "reflected": "Computer History URL observation rules require only a valid urlDomain.",
+          "userInfo": {}
+        },
+        "name": "empty-url",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": ""
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 1,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 1.)",
+          "reflected": "Computer History URL observation rules require only a valid urlDomain.",
+          "userInfo": {}
+        },
+        "name": "missing-url",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 1,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 1.)",
+          "reflected": "Computer History URL observation rules require only a valid urlDomain.",
+          "userInfo": {}
+        },
+        "name": "url-with-bundle",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "url",
+              "urlDomain": "example.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 1,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 1.)",
+          "reflected": "Computer History URL observation rules require only a valid urlDomain.",
+          "userInfo": {}
+        },
+        "name": "url-with-empty-bundle",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "",
+              "scope": "url",
+              "urlDomain": "example.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "duplicate-app",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "Other",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "Other",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "app-case-sensitive",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "owned",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "owned",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "canonical-url-duplicates",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "EXAMPLE.TEST"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "example.test"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "other.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "example.test"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "other.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "block-wins-app",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "Other",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "Other",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "block-wins-url",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "EXAMPLE.TEST"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "other.test"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "example.test"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "other.test"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "example.test"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "both-duplicate",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            },
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [],
+          "blocklist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 0,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 0.)",
+          "reflected": "Computer History app observation rules require only a non-empty bundleID.",
+          "userInfo": {}
+        },
+        "name": "validation-allow-first",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "error": {
+          "code": 1,
+          "domain": "ComputerUse.(unknown context at $1019e711c).TimelineError",
+          "message": "The operation couldn\u2019t be completed. (ComputerUse.(unknown context at $1019e711c).TimelineError error 1.)",
+          "reflected": "Computer History URL observation rules require only a valid urlDomain.",
+          "userInfo": {}
+        },
+        "name": "validation-block",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "cross-scope",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "same",
+              "scope": "app"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "same"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "same"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "same",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "same"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "normalization-order",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "Z"
+            },
+            {
+              "bundleID": "B",
+              "scope": "app"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "A"
+            },
+            {
+              "bundleID": "A",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "X"
+            },
+            {
+              "bundleID": "Z",
+              "scope": "app"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "z"
+            },
+            {
+              "bundleID": "B",
+              "scope": "app"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "a"
+            },
+            {
+              "bundleID": "A",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "x"
+            },
+            {
+              "bundleID": "Z",
+              "scope": "app"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "emoji-domains",
+        "settings": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "\ud83d\ude00.TEST"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "\ud83d\ude00.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "scope": "url",
+              "urlDomain": "\ud83d\ude00.test"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "null-optional",
+        "settings": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app",
+              "urlDomain": null
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [
+            {
+              "bundleID": "Owned",
+              "scope": "app"
+            }
+          ],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      },
+      {
+        "name": "block-only",
+        "settings": {
+          "allowlist": [],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "EXAMPLE.TEST"
+            },
+            {
+              "scope": "url",
+              "urlDomain": "example.test"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        },
+        "value": {
+          "allowlist": [],
+          "blocklist": [
+            {
+              "scope": "url",
+              "urlDomain": "example.test"
+            }
+          ],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "observe"
+        }
+      }
+    ],
+    "rows": [
+      {
+        "input": "{}",
+        "name": "object",
+        "size": 0,
+        "stride": 1,
+        "type": "start",
+        "value": {}
+      },
+      {
+        "input": "{\"ignored\":42}",
+        "name": "unknown",
+        "size": 0,
+        "stride": 1,
+        "type": "start",
+        "value": {}
+      },
+      {
+        "input": "[]",
+        "name": "array",
+        "size": 0,
+        "stride": 1,
+        "type": "start",
+        "value": {}
+      },
+      {
+        "input": "null",
+        "name": "null",
+        "size": 0,
+        "stride": 1,
+        "type": "start",
+        "value": {}
+      },
+      {
+        "input": "42",
+        "name": "scalar",
+        "size": 0,
+        "stride": 1,
+        "type": "start",
+        "value": {}
+      },
+      {
+        "input": "true",
+        "name": "bool",
+        "size": 0,
+        "stride": 1,
+        "type": "start",
+        "value": {}
+      },
+      {
+        "input": "{}",
+        "name": "object",
+        "size": 0,
+        "stride": 1,
+        "type": "statusRequest",
+        "value": {}
+      },
+      {
+        "input": "{\"ignored\":42}",
+        "name": "unknown",
+        "size": 0,
+        "stride": 1,
+        "type": "statusRequest",
+        "value": {}
+      },
+      {
+        "input": "[]",
+        "name": "array",
+        "size": 0,
+        "stride": 1,
+        "type": "statusRequest",
+        "value": {}
+      },
+      {
+        "input": "null",
+        "name": "null",
+        "size": 0,
+        "stride": 1,
+        "type": "statusRequest",
+        "value": {}
+      },
+      {
+        "input": "42",
+        "name": "scalar",
+        "size": 0,
+        "stride": 1,
+        "type": "statusRequest",
+        "value": {}
+      },
+      {
+        "input": "true",
+        "name": "bool",
+        "size": 0,
+        "stride": 1,
+        "type": "statusRequest",
+        "value": {}
+      },
+      {
+        "input": "{}",
+        "name": "object",
+        "size": 0,
+        "stride": 1,
+        "type": "stop",
+        "value": {}
+      },
+      {
+        "input": "{\"ignored\":42}",
+        "name": "unknown",
+        "size": 0,
+        "stride": 1,
+        "type": "stop",
+        "value": {}
+      },
+      {
+        "input": "[]",
+        "name": "array",
+        "size": 0,
+        "stride": 1,
+        "type": "stop",
+        "value": {}
+      },
+      {
+        "input": "null",
+        "name": "null",
+        "size": 0,
+        "stride": 1,
+        "type": "stop",
+        "value": {}
+      },
+      {
+        "input": "42",
+        "name": "scalar",
+        "size": 0,
+        "stride": 1,
+        "type": "stop",
+        "value": {}
+      },
+      {
+        "input": "true",
+        "name": "bool",
+        "size": 0,
+        "stride": 1,
+        "type": "stop",
+        "value": {}
+      },
+      {
+        "input": "{}",
+        "name": "object",
+        "size": 0,
+        "stride": 1,
+        "type": "resume",
+        "value": {}
+      },
+      {
+        "input": "{\"ignored\":42}",
+        "name": "unknown",
+        "size": 0,
+        "stride": 1,
+        "type": "resume",
+        "value": {}
+      },
+      {
+        "input": "[]",
+        "name": "array",
+        "size": 0,
+        "stride": 1,
+        "type": "resume",
+        "value": {}
+      },
+      {
+        "input": "null",
+        "name": "null",
+        "size": 0,
+        "stride": 1,
+        "type": "resume",
+        "value": {}
+      },
+      {
+        "input": "42",
+        "name": "scalar",
+        "size": 0,
+        "stride": 1,
+        "type": "resume",
+        "value": {}
+      },
+      {
+        "input": "true",
+        "name": "bool",
+        "size": 0,
+        "stride": 1,
+        "type": "resume",
+        "value": {}
+      },
+      {
+        "input": "{}",
+        "name": "object",
+        "size": 0,
+        "stride": 1,
+        "type": "getSettings",
+        "value": {}
+      },
+      {
+        "input": "{\"ignored\":42}",
+        "name": "unknown",
+        "size": 0,
+        "stride": 1,
+        "type": "getSettings",
+        "value": {}
+      },
+      {
+        "input": "[]",
+        "name": "array",
+        "size": 0,
+        "stride": 1,
+        "type": "getSettings",
+        "value": {}
+      },
+      {
+        "input": "null",
+        "name": "null",
+        "size": 0,
+        "stride": 1,
+        "type": "getSettings",
+        "value": {}
+      },
+      {
+        "input": "42",
+        "name": "scalar",
+        "size": 0,
+        "stride": 1,
+        "type": "getSettings",
+        "value": {}
+      },
+      {
+        "input": "true",
+        "name": "bool",
+        "size": 0,
+        "stride": 1,
+        "type": "getSettings",
+        "value": {}
+      },
+      {
+        "input": "\"observe\"",
+        "name": "0",
+        "size": 1,
+        "stride": 1,
+        "type": "behavior",
+        "value": "observe"
+      },
+      {
+        "input": "\"do_not_observe\"",
+        "name": "1",
+        "size": 1,
+        "stride": 1,
+        "type": "behavior",
+        "value": "do_not_observe"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "\"doNotObserve\"",
+        "name": "2",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "behavior"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "\"invalid\"",
+        "name": "3",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "behavior"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "null",
+        "name": "4",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "behavior"
+      },
+      {
+        "error": "typeMismatch",
+        "input": "1",
+        "name": "5",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "behavior"
+      },
+      {
+        "input": "\"app\"",
+        "name": "0",
+        "size": 1,
+        "stride": 1,
+        "type": "scope",
+        "value": "app"
+      },
+      {
+        "input": "\"url\"",
+        "name": "1",
+        "size": 1,
+        "stride": 1,
+        "type": "scope",
+        "value": "url"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "\"invalid\"",
+        "name": "2",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "scope"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "null",
+        "name": "3",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "scope"
+      },
+      {
+        "error": "typeMismatch",
+        "input": "1",
+        "name": "4",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "scope"
+      },
+      {
+        "input": "\"stopped\"",
+        "name": "0",
+        "size": 1,
+        "stride": 1,
+        "type": "state",
+        "value": "stopped"
+      },
+      {
+        "input": "\"running\"",
+        "name": "1",
+        "size": 1,
+        "stride": 1,
+        "type": "state",
+        "value": "running"
+      },
+      {
+        "input": "\"paused\"",
+        "name": "2",
+        "size": 1,
+        "stride": 1,
+        "type": "state",
+        "value": "paused"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "\"invalid\"",
+        "name": "3",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "state"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "null",
+        "name": "4",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "state"
+      },
+      {
+        "input": "\"thirty_minutes\"",
+        "name": "0",
+        "size": 1,
+        "stride": 1,
+        "type": "duration",
+        "value": "thirty_minutes"
+      },
+      {
+        "input": "\"one_hour\"",
+        "name": "1",
+        "size": 1,
+        "stride": 1,
+        "type": "duration",
+        "value": "one_hour"
+      },
+      {
+        "input": "\"until_tomorrow\"",
+        "name": "2",
+        "size": 1,
+        "stride": 1,
+        "type": "duration",
+        "value": "until_tomorrow"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "\"invalid\"",
+        "name": "3",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "duration"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "null",
+        "name": "4",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "duration"
+      },
+      {
+        "input": "\"application_session\"",
+        "name": "0",
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope",
+        "value": "application_session"
+      },
+      {
+        "input": "\"last_ten_minutes\"",
+        "name": "1",
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope",
+        "value": "last_ten_minutes"
+      },
+      {
+        "input": "\"last_hour\"",
+        "name": "2",
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope",
+        "value": "last_hour"
+      },
+      {
+        "input": "\"last_day\"",
+        "name": "3",
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope",
+        "value": "last_day"
+      },
+      {
+        "input": "\"all\"",
+        "name": "4",
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope",
+        "value": "all"
+      },
+      {
+        "input": "\"interval\"",
+        "name": "5",
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope",
+        "value": "interval"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "\"invalid\"",
+        "name": "6",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "null",
+        "name": "7",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "clearScope"
+      },
+      {
+        "input": "{}",
+        "name": "{}",
+        "size": 1,
+        "stride": 1,
+        "type": "pause",
+        "value": {}
+      },
+      {
+        "input": "{\"duration\":null}",
+        "name": "{'duration': None}",
+        "size": 1,
+        "stride": 1,
+        "type": "pause",
+        "value": {}
+      },
+      {
+        "input": "{\"duration\":\"one_hour\"}",
+        "name": "{'duration': 'one_hour'}",
+        "size": 1,
+        "stride": 1,
+        "type": "pause",
+        "value": {
+          "duration": "one_hour"
+        }
+      },
+      {
+        "input": "{\"duration\":\"thirty_minutes\"}",
+        "name": "{'duration': 'thirty_minutes'}",
+        "size": 1,
+        "stride": 1,
+        "type": "pause",
+        "value": {
+          "duration": "thirty_minutes"
+        }
+      },
+      {
+        "input": "{\"duration\":\"until_tomorrow\"}",
+        "name": "{'duration': 'until_tomorrow'}",
+        "size": 1,
+        "stride": 1,
+        "type": "pause",
+        "value": {
+          "duration": "until_tomorrow"
+        }
+      },
+      {
+        "error": "typeMismatch",
+        "input": "{\"duration\":3}",
+        "name": "{'duration': 3}",
+        "path": [
+          "duration"
+        ],
+        "size": 1,
+        "stride": 1,
+        "type": "pause"
+      },
+      {
+        "error": "typeMismatch",
+        "input": "[]",
+        "name": "[]",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "pause"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "null",
+        "name": "None",
+        "path": [],
+        "size": 1,
+        "stride": 1,
+        "type": "pause"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "scope",
+        "name": "{}",
+        "path": [],
+        "size": 40,
+        "stride": 40,
+        "type": "rule"
+      },
+      {
+        "input": "{\"scope\":\"app\"}",
+        "name": "{'scope': 'app'}",
+        "size": 40,
+        "stride": 40,
+        "type": "rule",
+        "value": {
+          "scope": "app"
+        }
+      },
+      {
+        "input": "{\"scope\":\"app\",\"bundleID\":\"owned.app\"}",
+        "name": "{'scope': 'app', 'bundleID': 'owned.app'}",
+        "size": 40,
+        "stride": 40,
+        "type": "rule",
+        "value": {
+          "bundleID": "owned.app",
+          "scope": "app"
+        }
+      },
+      {
+        "input": "{\"scope\":\"url\",\"urlDomain\":\"EXAMPLE.test.\"}",
+        "name": "{'scope': 'url', 'urlDomain': 'EXAMPLE.test.'}",
+        "size": 40,
+        "stride": 40,
+        "type": "rule",
+        "value": {
+          "scope": "url",
+          "urlDomain": "EXAMPLE.test."
+        }
+      },
+      {
+        "input": "{\"scope\":\"app\",\"bundleID\":\"\",\"urlDomain\":\"also.test\"}",
+        "name": "{'scope': 'app', 'bundleID': '', 'urlDomain': 'also.test'}",
+        "size": 40,
+        "stride": 40,
+        "type": "rule",
+        "value": {
+          "bundleID": "",
+          "scope": "app",
+          "urlDomain": "also.test"
+        }
+      },
+      {
+        "error": "typeMismatch",
+        "input": "{\"scope\":\"app\",\"bundleID\":3}",
+        "name": "{'scope': 'app', 'bundleID': 3}",
+        "path": [
+          "bundleID"
+        ],
+        "size": 40,
+        "stride": 40,
+        "type": "rule"
+      },
+      {
+        "error": "dataCorrupted",
+        "input": "{\"scope\":\"invalid\"}",
+        "name": "{'scope': 'invalid'}",
+        "path": [
+          "scope"
+        ],
+        "size": 40,
+        "stride": 40,
+        "type": "rule"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "defaultApplicationBehavior",
+        "name": "{}",
+        "path": [],
+        "size": 24,
+        "stride": 24,
+        "type": "observation"
+      },
+      {
+        "input": "{\"defaultApplicationBehavior\":\"observe\",\"defaultURLBehavior\":\"do_not_observe\",\"allowlist\":[],\"blocklist\":[]}",
+        "name": "{'defaultApplicationBehavior': 'observe', 'defaultURLBehavior': 'do_not_observe', 'allowlist': [], 'blocklist': []}",
+        "size": 24,
+        "stride": 24,
+        "type": "observation",
+        "value": {
+          "allowlist": [],
+          "blocklist": [],
+          "defaultApplicationBehavior": "observe",
+          "defaultURLBehavior": "do_not_observe"
+        }
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{\"defaultApplicationBehavior\":\"observe\",\"defaultURLBehavior\":\"observe\"}",
+        "key": "allowlist",
+        "name": "{'defaultApplicationBehavior': 'observe', 'defaultURLBehavior': 'observe'}",
+        "path": [],
+        "size": 24,
+        "stride": 24,
+        "type": "observation"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "{\"defaultApplicationBehavior\":\"observe\",\"defaultURLBehavior\":\"observe\",\"allowlist\":null,\"blocklist\":[]}",
+        "name": "{'defaultApplicationBehavior': 'observe', 'defaultURLBehavior': 'observe', 'allowlist': None, 'blocklist': []}",
+        "path": [
+          "allowlist"
+        ],
+        "size": 24,
+        "stride": 24,
+        "type": "observation"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "observation",
+        "name": "{}",
+        "path": [],
+        "size": 24,
+        "stride": 24,
+        "type": "settings"
+      },
+      {
+        "input": "{\"observation\":{\"defaultApplicationBehavior\":\"observe\",\"defaultURLBehavior\":\"do_not_observe\",\"allowlist\":[],\"blocklist\":[]}}",
+        "name": "{'observation': {'defaultApplicationBehavior': 'observe', 'defaultURLBehavior': 'do_not_observe', 'allowlist': [], 'blocklist': []}}",
+        "size": 24,
+        "stride": 24,
+        "type": "settings",
+        "value": {
+          "observation": {
+            "allowlist": [],
+            "blocklist": [],
+            "defaultApplicationBehavior": "observe",
+            "defaultURLBehavior": "do_not_observe"
+          }
+        }
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{\"observation\":{}}",
+        "key": "defaultApplicationBehavior",
+        "name": "{'observation': {}}",
+        "path": [
+          "observation"
+        ],
+        "size": 24,
+        "stride": 24,
+        "type": "settings"
+      },
+      {
+        "error": "valueNotFound",
+        "input": "{\"observation\":null}",
+        "name": "{'observation': None}",
+        "path": [
+          "observation"
+        ],
+        "size": 24,
+        "stride": 24,
+        "type": "settings"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "settings",
+        "name": "{}",
+        "path": [],
+        "size": 24,
+        "stride": 24,
+        "type": "updateSettings"
+      },
+      {
+        "input": "{\"settings\":{\"observation\":{\"defaultApplicationBehavior\":\"observe\",\"defaultURLBehavior\":\"do_not_observe\",\"allowlist\":[],\"blocklist\":[]}}}",
+        "name": "{'settings': {'observation': {'defaultApplicationBehavior': 'observe', 'defaultURLBehavior': 'do_not_observe', 'allowlist': [], 'blocklist': []}}}",
+        "size": 24,
+        "stride": 24,
+        "type": "updateSettings",
+        "value": {
+          "settings": {
+            "observation": {
+              "allowlist": [],
+              "blocklist": [],
+              "defaultApplicationBehavior": "observe",
+              "defaultURLBehavior": "do_not_observe"
+            }
+          }
+        }
+      },
+      {
+        "error": "valueNotFound",
+        "input": "{\"settings\":null}",
+        "name": "{'settings': None}",
+        "path": [
+          "settings"
+        ],
+        "size": 24,
+        "stride": 24,
+        "type": "updateSettings"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "target",
+        "name": "{}",
+        "path": [],
+        "size": 41,
+        "stride": 48,
+        "type": "updatePolicy"
+      },
+      {
+        "input": "{\"target\":{\"scope\":\"app\",\"bundleID\":\"owned\"},\"observe\":true}",
+        "name": "{'target': {'scope': 'app', 'bundleID': 'owned'}, 'observe': True}",
+        "size": 41,
+        "stride": 48,
+        "type": "updatePolicy",
+        "value": {
+          "observe": true,
+          "target": {
+            "bundleID": "owned",
+            "scope": "app"
+          }
+        }
+      },
+      {
+        "input": "{\"target\":{\"scope\":\"url\",\"urlDomain\":\"example.test\"},\"observe\":false}",
+        "name": "{'target': {'scope': 'url', 'urlDomain': 'example.test'}, 'observe': False}",
+        "size": 41,
+        "stride": 48,
+        "type": "updatePolicy",
+        "value": {
+          "observe": false,
+          "target": {
+            "scope": "url",
+            "urlDomain": "example.test"
+          }
+        }
+      },
+      {
+        "error": "typeMismatch",
+        "input": "{\"target\":{\"scope\":\"app\"},\"observe\":1}",
+        "name": "{'target': {'scope': 'app'}, 'observe': 1}",
+        "path": [
+          "observe"
+        ],
+        "size": 41,
+        "stride": 48,
+        "type": "updatePolicy"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{\"target\":{\"scope\":\"app\"}}",
+        "key": "observe",
+        "name": "{'target': {'scope': 'app'}}",
+        "path": [],
+        "size": 41,
+        "stride": 48,
+        "type": "updatePolicy"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "state",
+        "name": "{}",
+        "path": [],
+        "size": 97,
+        "stride": 104,
+        "type": "status"
+      },
+      {
+        "input": "{\"state\":\"stopped\"}",
+        "name": "{'state': 'stopped'}",
+        "size": 97,
+        "stride": 104,
+        "type": "status",
+        "value": {
+          "state": "stopped"
+        }
+      },
+      {
+        "input": "{\"state\":\"running\",\"eventStreamRootPath\":\"/owned\",\"currentSegmentEventsPath\":\"/owned/events\",\"currentSegmentMetadataPath\":\"/owned/meta\",\"suppressedEventsPath\":null,\"startedAt\":12.25,\"endedAt\":-978307200}",
+        "name": "{'state': 'running', 'eventStreamRootPath': '/owned', 'currentSegmentEventsPath': '/owned/events', 'currentSegmentMetadataPath': '/owned/meta', 'suppressedEventsPath': None, 'startedAt': 12.25, 'endedAt': -978307200}",
+        "size": 97,
+        "stride": 104,
+        "type": "status",
+        "value": {
+          "currentSegmentEventsPath": "/owned/events",
+          "currentSegmentMetadataPath": "/owned/meta",
+          "endedAt": -978307200,
+          "eventStreamRootPath": "/owned",
+          "startedAt": 12.25,
+          "state": "running"
+        }
+      },
+      {
+        "error": "typeMismatch",
+        "input": "{\"state\":\"paused\",\"startedAt\":\"2026-11-03T00:00:00Z\"}",
+        "name": "{'state': 'paused', 'startedAt': '2026-11-03T00:00:00Z'}",
+        "path": [
+          "startedAt"
+        ],
+        "size": 97,
+        "stride": 104,
+        "type": "status"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "start",
+        "name": "{}",
+        "path": [],
+        "size": 16,
+        "stride": 16,
+        "type": "interval"
+      },
+      {
+        "input": "{\"start\":0,\"end\":12.25}",
+        "name": "{'start': 0, 'end': 12.25}",
+        "size": 16,
+        "stride": 16,
+        "type": "interval",
+        "value": {
+          "end": 12.25,
+          "start": 0
+        }
+      },
+      {
+        "input": "{\"start\":12.25,\"end\":0}",
+        "name": "{'start': 12.25, 'end': 0}",
+        "size": 16,
+        "stride": 16,
+        "type": "interval",
+        "value": {
+          "end": 0,
+          "start": 12.25
+        }
+      },
+      {
+        "error": "typeMismatch",
+        "input": "{\"start\":\"2026-11-03T00:00:00Z\",\"end\":null}",
+        "name": "{'start': '2026-11-03T00:00:00Z', 'end': None}",
+        "path": [
+          "start"
+        ],
+        "size": 16,
+        "stride": 16,
+        "type": "interval"
+      },
+      {
+        "error": "keyNotFound",
+        "input": "{}",
+        "key": "scope",
+        "name": "{}",
+        "path": [],
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory"
+      },
+      {
+        "input": "{\"scope\":\"all\"}",
+        "name": "{'scope': 'all'}",
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory",
+        "value": {
+          "scope": "all"
+        }
+      },
+      {
+        "input": "{\"scope\":\"application_session\"}",
+        "name": "{'scope': 'application_session'}",
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory",
+        "value": {
+          "scope": "application_session"
+        }
+      },
+      {
+        "input": "{\"scope\":\"interval\"}",
+        "name": "{'scope': 'interval'}",
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory",
+        "value": {
+          "scope": "interval"
+        }
+      },
+      {
+        "input": "{\"scope\":\"interval\",\"interval\":{\"start\":0,\"end\":12.25}}",
+        "name": "{'scope': 'interval', 'interval': {'start': 0, 'end': 12.25}}",
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory",
+        "value": {
+          "interval": {
+            "end": 12.25,
+            "start": 0
+          },
+          "scope": "interval"
+        }
+      },
+      {
+        "input": "{\"scope\":\"interval\",\"interval\":{\"start\":12.25,\"end\":0}}",
+        "name": "{'scope': 'interval', 'interval': {'start': 12.25, 'end': 0}}",
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory",
+        "value": {
+          "interval": {
+            "end": 0,
+            "start": 12.25
+          },
+          "scope": "interval"
+        }
+      },
+      {
+        "input": "{\"scope\":\"last_day\",\"interval\":{\"start\":0,\"end\":12.25}}",
+        "name": "{'scope': 'last_day', 'interval': {'start': 0, 'end': 12.25}}",
+        "size": 25,
+        "stride": 32,
+        "type": "clearHistory",
+        "value": {
+          "interval": {
+            "end": 12.25,
+            "start": 0
+          },
+          "scope": "last_day"
+        }
+      }
+    ]
+  }
+}

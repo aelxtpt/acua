@@ -1,0 +1,3193 @@
+[
+  {
+    "events": [
+      {
+        "button": 0,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 0,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 0,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "button-0"
+  },
+  {
+    "events": [
+      {
+        "button": 1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 1,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 3,
+        "window_91": 26505,
+        "window_92": 26505
+      },
+      {
+        "button": 1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 1,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 4,
+        "window_91": 26505,
+        "window_92": 26505
+      }
+    ],
+    "name": "button-1"
+  },
+  {
+    "events": [
+      {
+        "button": 2,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 2,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 2,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 2,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "button-2"
+  },
+  {
+    "events": [
+      {
+        "button": 3,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 3,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 26505,
+        "window_92": 26505
+      },
+      {
+        "button": 3,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 3,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 26505,
+        "window_92": 26505
+      }
+    ],
+    "name": "button-3"
+  },
+  {
+    "events": [
+      {
+        "button": 5,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 4,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 5,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 4,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "button-5"
+  },
+  {
+    "events": [
+      {
+        "button": 31,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 5,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 26505,
+        "window_92": 26505
+      },
+      {
+        "button": 31,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 5,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 26505,
+        "window_92": 26505
+      }
+    ],
+    "name": "button-31"
+  },
+  {
+    "events": [
+      {
+        "button": -1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 6,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": -1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 6,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "button-255"
+  },
+  {
+    "events": [
+      {
+        "button": -1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 7,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 26505,
+        "window_92": 26505
+      },
+      {
+        "button": -1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 7,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 26505,
+        "window_92": 26505
+      }
+    ],
+    "name": "button-65535"
+  },
+  {
+    "events": [
+      {
+        "button": -1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 8,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 25,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": -1,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 131072,
+        "number": 8,
+        "point": [
+          212.75,
+          126.25
+        ],
+        "type": 26,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "button-4294967295"
+  },
+  {
+    "events": [
+      {
+        "button": 5,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 9,
+        "point": [
+          14,
+          17
+        ],
+        "type": 25,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 5,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 9,
+        "point": [
+          14,
+          17
+        ],
+        "type": 26,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 5,
+        "click_state": 2,
+        "field_7": 3,
+        "flags": 0,
+        "number": 10,
+        "point": [
+          14,
+          17
+        ],
+        "type": 25,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 5,
+        "click_state": 2,
+        "field_7": 3,
+        "flags": 0,
+        "number": 10,
+        "point": [
+          14,
+          17
+        ],
+        "type": 26,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "button5-double"
+  },
+  {
+    "events": [
+      {
+        "button": 0,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 11,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 1,
+        "field_7": 3,
+        "flags": 0,
+        "number": 11,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 2,
+        "field_7": 3,
+        "flags": 0,
+        "number": 12,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 2,
+        "field_7": 3,
+        "flags": 0,
+        "number": 12,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 3,
+        "field_7": 3,
+        "flags": 0,
+        "number": 13,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 3,
+        "field_7": 3,
+        "flags": 0,
+        "number": 13,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 4,
+        "field_7": 3,
+        "flags": 0,
+        "number": 14,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 4,
+        "field_7": 3,
+        "flags": 0,
+        "number": 14,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 5,
+        "field_7": 3,
+        "flags": 0,
+        "number": 15,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 5,
+        "field_7": 3,
+        "flags": 0,
+        "number": 15,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 6,
+        "field_7": 3,
+        "flags": 0,
+        "number": 16,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 6,
+        "field_7": 3,
+        "flags": 0,
+        "number": 16,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 7,
+        "field_7": 3,
+        "flags": 0,
+        "number": 17,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 7,
+        "field_7": 3,
+        "flags": 0,
+        "number": 17,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 8,
+        "field_7": 3,
+        "flags": 0,
+        "number": 18,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 8,
+        "field_7": 3,
+        "flags": 0,
+        "number": 18,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 9,
+        "field_7": 3,
+        "flags": 0,
+        "number": 19,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 9,
+        "field_7": 3,
+        "flags": 0,
+        "number": 19,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 10,
+        "field_7": 3,
+        "flags": 0,
+        "number": 20,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 10,
+        "field_7": 3,
+        "flags": 0,
+        "number": 20,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 11,
+        "field_7": 3,
+        "flags": 0,
+        "number": 21,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 11,
+        "field_7": 3,
+        "flags": 0,
+        "number": 21,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 12,
+        "field_7": 3,
+        "flags": 0,
+        "number": 22,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 12,
+        "field_7": 3,
+        "flags": 0,
+        "number": 22,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 13,
+        "field_7": 3,
+        "flags": 0,
+        "number": 23,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 13,
+        "field_7": 3,
+        "flags": 0,
+        "number": 23,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 14,
+        "field_7": 3,
+        "flags": 0,
+        "number": 24,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 14,
+        "field_7": 3,
+        "flags": 0,
+        "number": 24,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 15,
+        "field_7": 3,
+        "flags": 0,
+        "number": 25,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 15,
+        "field_7": 3,
+        "flags": 0,
+        "number": 25,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 16,
+        "field_7": 3,
+        "flags": 0,
+        "number": 26,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 16,
+        "field_7": 3,
+        "flags": 0,
+        "number": 26,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 17,
+        "field_7": 3,
+        "flags": 0,
+        "number": 27,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 17,
+        "field_7": 3,
+        "flags": 0,
+        "number": 27,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 18,
+        "field_7": 3,
+        "flags": 0,
+        "number": 28,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 18,
+        "field_7": 3,
+        "flags": 0,
+        "number": 28,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 19,
+        "field_7": 3,
+        "flags": 0,
+        "number": 29,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 19,
+        "field_7": 3,
+        "flags": 0,
+        "number": 29,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 20,
+        "field_7": 3,
+        "flags": 0,
+        "number": 30,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 20,
+        "field_7": 3,
+        "flags": 0,
+        "number": 30,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 21,
+        "field_7": 3,
+        "flags": 0,
+        "number": 31,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 21,
+        "field_7": 3,
+        "flags": 0,
+        "number": 31,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 22,
+        "field_7": 3,
+        "flags": 0,
+        "number": 32,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 22,
+        "field_7": 3,
+        "flags": 0,
+        "number": 32,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 23,
+        "field_7": 3,
+        "flags": 0,
+        "number": 33,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 23,
+        "field_7": 3,
+        "flags": 0,
+        "number": 33,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 24,
+        "field_7": 3,
+        "flags": 0,
+        "number": 34,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 24,
+        "field_7": 3,
+        "flags": 0,
+        "number": 34,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 25,
+        "field_7": 3,
+        "flags": 0,
+        "number": 35,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 25,
+        "field_7": 3,
+        "flags": 0,
+        "number": 35,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 26,
+        "field_7": 3,
+        "flags": 0,
+        "number": 36,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 26,
+        "field_7": 3,
+        "flags": 0,
+        "number": 36,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 27,
+        "field_7": 3,
+        "flags": 0,
+        "number": 37,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 27,
+        "field_7": 3,
+        "flags": 0,
+        "number": 37,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 28,
+        "field_7": 3,
+        "flags": 0,
+        "number": 38,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 28,
+        "field_7": 3,
+        "flags": 0,
+        "number": 38,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 29,
+        "field_7": 3,
+        "flags": 0,
+        "number": 39,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 29,
+        "field_7": 3,
+        "flags": 0,
+        "number": 39,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 30,
+        "field_7": 3,
+        "flags": 0,
+        "number": 40,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 30,
+        "field_7": 3,
+        "flags": 0,
+        "number": 40,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 31,
+        "field_7": 3,
+        "flags": 0,
+        "number": 41,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 31,
+        "field_7": 3,
+        "flags": 0,
+        "number": 41,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 32,
+        "field_7": 3,
+        "flags": 0,
+        "number": 42,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 32,
+        "field_7": 3,
+        "flags": 0,
+        "number": 42,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 33,
+        "field_7": 3,
+        "flags": 0,
+        "number": 43,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 33,
+        "field_7": 3,
+        "flags": 0,
+        "number": 43,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 34,
+        "field_7": 3,
+        "flags": 0,
+        "number": 44,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 34,
+        "field_7": 3,
+        "flags": 0,
+        "number": 44,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 35,
+        "field_7": 3,
+        "flags": 0,
+        "number": 45,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 35,
+        "field_7": 3,
+        "flags": 0,
+        "number": 45,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 36,
+        "field_7": 3,
+        "flags": 0,
+        "number": 46,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 36,
+        "field_7": 3,
+        "flags": 0,
+        "number": 46,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 37,
+        "field_7": 3,
+        "flags": 0,
+        "number": 47,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 37,
+        "field_7": 3,
+        "flags": 0,
+        "number": 47,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 38,
+        "field_7": 3,
+        "flags": 0,
+        "number": 48,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 38,
+        "field_7": 3,
+        "flags": 0,
+        "number": 48,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 39,
+        "field_7": 3,
+        "flags": 0,
+        "number": 49,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 39,
+        "field_7": 3,
+        "flags": 0,
+        "number": 49,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 40,
+        "field_7": 3,
+        "flags": 0,
+        "number": 50,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 40,
+        "field_7": 3,
+        "flags": 0,
+        "number": 50,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 41,
+        "field_7": 3,
+        "flags": 0,
+        "number": 51,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 41,
+        "field_7": 3,
+        "flags": 0,
+        "number": 51,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 42,
+        "field_7": 3,
+        "flags": 0,
+        "number": 52,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 42,
+        "field_7": 3,
+        "flags": 0,
+        "number": 52,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 43,
+        "field_7": 3,
+        "flags": 0,
+        "number": 53,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 43,
+        "field_7": 3,
+        "flags": 0,
+        "number": 53,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 44,
+        "field_7": 3,
+        "flags": 0,
+        "number": 54,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 44,
+        "field_7": 3,
+        "flags": 0,
+        "number": 54,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 45,
+        "field_7": 3,
+        "flags": 0,
+        "number": 55,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 45,
+        "field_7": 3,
+        "flags": 0,
+        "number": 55,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 46,
+        "field_7": 3,
+        "flags": 0,
+        "number": 56,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 46,
+        "field_7": 3,
+        "flags": 0,
+        "number": 56,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 47,
+        "field_7": 3,
+        "flags": 0,
+        "number": 57,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 47,
+        "field_7": 3,
+        "flags": 0,
+        "number": 57,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 48,
+        "field_7": 3,
+        "flags": 0,
+        "number": 58,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 48,
+        "field_7": 3,
+        "flags": 0,
+        "number": 58,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 49,
+        "field_7": 3,
+        "flags": 0,
+        "number": 59,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 49,
+        "field_7": 3,
+        "flags": 0,
+        "number": 59,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 50,
+        "field_7": 3,
+        "flags": 0,
+        "number": 60,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 50,
+        "field_7": 3,
+        "flags": 0,
+        "number": 60,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 51,
+        "field_7": 3,
+        "flags": 0,
+        "number": 61,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 51,
+        "field_7": 3,
+        "flags": 0,
+        "number": 61,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 52,
+        "field_7": 3,
+        "flags": 0,
+        "number": 62,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 52,
+        "field_7": 3,
+        "flags": 0,
+        "number": 62,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 53,
+        "field_7": 3,
+        "flags": 0,
+        "number": 63,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 53,
+        "field_7": 3,
+        "flags": 0,
+        "number": 63,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 54,
+        "field_7": 3,
+        "flags": 0,
+        "number": 64,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 54,
+        "field_7": 3,
+        "flags": 0,
+        "number": 64,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 55,
+        "field_7": 3,
+        "flags": 0,
+        "number": 65,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 55,
+        "field_7": 3,
+        "flags": 0,
+        "number": 65,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 56,
+        "field_7": 3,
+        "flags": 0,
+        "number": 66,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 56,
+        "field_7": 3,
+        "flags": 0,
+        "number": 66,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 57,
+        "field_7": 3,
+        "flags": 0,
+        "number": 67,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 57,
+        "field_7": 3,
+        "flags": 0,
+        "number": 67,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 58,
+        "field_7": 3,
+        "flags": 0,
+        "number": 68,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 58,
+        "field_7": 3,
+        "flags": 0,
+        "number": 68,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 59,
+        "field_7": 3,
+        "flags": 0,
+        "number": 69,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 59,
+        "field_7": 3,
+        "flags": 0,
+        "number": 69,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 60,
+        "field_7": 3,
+        "flags": 0,
+        "number": 70,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 60,
+        "field_7": 3,
+        "flags": 0,
+        "number": 70,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 61,
+        "field_7": 3,
+        "flags": 0,
+        "number": 71,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 61,
+        "field_7": 3,
+        "flags": 0,
+        "number": 71,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 62,
+        "field_7": 3,
+        "flags": 0,
+        "number": 72,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 62,
+        "field_7": 3,
+        "flags": 0,
+        "number": 72,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 63,
+        "field_7": 3,
+        "flags": 0,
+        "number": 73,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 63,
+        "field_7": 3,
+        "flags": 0,
+        "number": 73,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 64,
+        "field_7": 3,
+        "flags": 0,
+        "number": 74,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 64,
+        "field_7": 3,
+        "flags": 0,
+        "number": 74,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 65,
+        "field_7": 3,
+        "flags": 0,
+        "number": 75,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 65,
+        "field_7": 3,
+        "flags": 0,
+        "number": 75,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 66,
+        "field_7": 3,
+        "flags": 0,
+        "number": 76,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 66,
+        "field_7": 3,
+        "flags": 0,
+        "number": 76,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 67,
+        "field_7": 3,
+        "flags": 0,
+        "number": 77,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 67,
+        "field_7": 3,
+        "flags": 0,
+        "number": 77,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 68,
+        "field_7": 3,
+        "flags": 0,
+        "number": 78,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 68,
+        "field_7": 3,
+        "flags": 0,
+        "number": 78,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 69,
+        "field_7": 3,
+        "flags": 0,
+        "number": 79,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 69,
+        "field_7": 3,
+        "flags": 0,
+        "number": 79,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 70,
+        "field_7": 3,
+        "flags": 0,
+        "number": 80,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 70,
+        "field_7": 3,
+        "flags": 0,
+        "number": 80,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 71,
+        "field_7": 3,
+        "flags": 0,
+        "number": 81,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 71,
+        "field_7": 3,
+        "flags": 0,
+        "number": 81,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 72,
+        "field_7": 3,
+        "flags": 0,
+        "number": 82,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 72,
+        "field_7": 3,
+        "flags": 0,
+        "number": 82,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 73,
+        "field_7": 3,
+        "flags": 0,
+        "number": 83,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 73,
+        "field_7": 3,
+        "flags": 0,
+        "number": 83,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 74,
+        "field_7": 3,
+        "flags": 0,
+        "number": 84,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 74,
+        "field_7": 3,
+        "flags": 0,
+        "number": 84,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 75,
+        "field_7": 3,
+        "flags": 0,
+        "number": 85,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 75,
+        "field_7": 3,
+        "flags": 0,
+        "number": 85,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 76,
+        "field_7": 3,
+        "flags": 0,
+        "number": 86,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 76,
+        "field_7": 3,
+        "flags": 0,
+        "number": 86,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 77,
+        "field_7": 3,
+        "flags": 0,
+        "number": 87,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 77,
+        "field_7": 3,
+        "flags": 0,
+        "number": 87,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 78,
+        "field_7": 3,
+        "flags": 0,
+        "number": 88,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 78,
+        "field_7": 3,
+        "flags": 0,
+        "number": 88,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 79,
+        "field_7": 3,
+        "flags": 0,
+        "number": 89,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 79,
+        "field_7": 3,
+        "flags": 0,
+        "number": 89,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 80,
+        "field_7": 3,
+        "flags": 0,
+        "number": 90,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 80,
+        "field_7": 3,
+        "flags": 0,
+        "number": 90,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 81,
+        "field_7": 3,
+        "flags": 0,
+        "number": 91,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 81,
+        "field_7": 3,
+        "flags": 0,
+        "number": 91,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 82,
+        "field_7": 3,
+        "flags": 0,
+        "number": 92,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 82,
+        "field_7": 3,
+        "flags": 0,
+        "number": 92,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 83,
+        "field_7": 3,
+        "flags": 0,
+        "number": 93,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 83,
+        "field_7": 3,
+        "flags": 0,
+        "number": 93,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 84,
+        "field_7": 3,
+        "flags": 0,
+        "number": 94,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 84,
+        "field_7": 3,
+        "flags": 0,
+        "number": 94,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 85,
+        "field_7": 3,
+        "flags": 0,
+        "number": 95,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 85,
+        "field_7": 3,
+        "flags": 0,
+        "number": 95,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 86,
+        "field_7": 3,
+        "flags": 0,
+        "number": 96,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 86,
+        "field_7": 3,
+        "flags": 0,
+        "number": 96,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 87,
+        "field_7": 3,
+        "flags": 0,
+        "number": 97,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 87,
+        "field_7": 3,
+        "flags": 0,
+        "number": 97,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 88,
+        "field_7": 3,
+        "flags": 0,
+        "number": 98,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 88,
+        "field_7": 3,
+        "flags": 0,
+        "number": 98,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 89,
+        "field_7": 3,
+        "flags": 0,
+        "number": 99,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 89,
+        "field_7": 3,
+        "flags": 0,
+        "number": 99,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 90,
+        "field_7": 3,
+        "flags": 0,
+        "number": 100,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 90,
+        "field_7": 3,
+        "flags": 0,
+        "number": 100,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 91,
+        "field_7": 3,
+        "flags": 0,
+        "number": 101,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 91,
+        "field_7": 3,
+        "flags": 0,
+        "number": 101,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 92,
+        "field_7": 3,
+        "flags": 0,
+        "number": 102,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 92,
+        "field_7": 3,
+        "flags": 0,
+        "number": 102,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 93,
+        "field_7": 3,
+        "flags": 0,
+        "number": 103,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 93,
+        "field_7": 3,
+        "flags": 0,
+        "number": 103,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 94,
+        "field_7": 3,
+        "flags": 0,
+        "number": 104,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 94,
+        "field_7": 3,
+        "flags": 0,
+        "number": 104,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 95,
+        "field_7": 3,
+        "flags": 0,
+        "number": 105,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 95,
+        "field_7": 3,
+        "flags": 0,
+        "number": 105,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 96,
+        "field_7": 3,
+        "flags": 0,
+        "number": 106,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 96,
+        "field_7": 3,
+        "flags": 0,
+        "number": 106,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 97,
+        "field_7": 3,
+        "flags": 0,
+        "number": 107,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 97,
+        "field_7": 3,
+        "flags": 0,
+        "number": 107,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 98,
+        "field_7": 3,
+        "flags": 0,
+        "number": 108,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 98,
+        "field_7": 3,
+        "flags": 0,
+        "number": 108,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 99,
+        "field_7": 3,
+        "flags": 0,
+        "number": 109,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 99,
+        "field_7": 3,
+        "flags": 0,
+        "number": 109,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 100,
+        "field_7": 3,
+        "flags": 0,
+        "number": 110,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 100,
+        "field_7": 3,
+        "flags": 0,
+        "number": 110,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 101,
+        "field_7": 3,
+        "flags": 0,
+        "number": 111,
+        "point": [
+          14,
+          17
+        ],
+        "type": 1,
+        "window_91": 0,
+        "window_92": 0
+      },
+      {
+        "button": 0,
+        "click_state": 101,
+        "field_7": 3,
+        "flags": 0,
+        "number": 111,
+        "point": [
+          14,
+          17
+        ],
+        "type": 2,
+        "window_91": 0,
+        "window_92": 0
+      }
+    ],
+    "name": "left-count101"
+  }
+]

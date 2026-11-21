@@ -1,0 +1,202 @@
+{
+  "scope": "Catalogue values only, before main; no native permission/window/activation effects; not pixel/rendering pairs.",
+  "cases": [
+    {
+      "catalogue": {
+        "description": "Aex Computer Use needs these permissions to use apps on your Mac.\nThese permissions are used when you ask an agent to perform tasks.",
+        "headerIcon": {
+          "kind": "currentApplication"
+        },
+        "requestSource": 2,
+        "rows": [
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "accessibility"
+            },
+            "iconFrameSize": 59,
+            "identifier": "system_settings_Privacy_Accessibility",
+            "isSupplemental": false,
+            "subtitle": "Allows the agent to access app interfaces",
+            "title": "Accessibility"
+          },
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "camera.viewfinder"
+            },
+            "iconFrameSize": 44,
+            "identifier": "system_settings_Privacy_ScreenCapture",
+            "isSupplemental": false,
+            "subtitle": "The agent uses screenshots to know where to click",
+            "title": "Screenshots"
+          }
+        ],
+        "title": "Enable Aex Computer Use"
+      },
+      "name": "service-0",
+      "source": 0
+    },
+    {
+      "catalogue": {
+        "description": "Aex Computer Use needs these permissions to take appshots. Appshots are captured when you attach from the + menu or press both command keys simultaneously.",
+        "headerIcon": {
+          "kind": "symbol",
+          "value": "macwindow.on.rectangle"
+        },
+        "requestSource": 0,
+        "rows": [
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "accessibility"
+            },
+            "iconFrameSize": 59,
+            "identifier": "system_settings_Privacy_Accessibility",
+            "isSupplemental": false,
+            "subtitle": "Allows the agent to read the text in apps",
+            "title": "Accessibility"
+          },
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "camera.viewfinder"
+            },
+            "iconFrameSize": 44,
+            "identifier": "system_settings_Privacy_ScreenCapture",
+            "isSupplemental": false,
+            "subtitle": "Allows the agent to see the visuals in apps",
+            "title": "Screenshots"
+          }
+        ],
+        "title": "Enable Appshots"
+      },
+      "name": "service-1",
+      "source": 1
+    },
+    {
+      "catalogue": {
+        "description": "Aex Computer Use needs permission to privately capture activity on your Mac so that it can help you pick up where you left off.",
+        "headerIcon": {
+          "kind": "symbol",
+          "value": "clock.arrow.circlepath"
+        },
+        "requestSource": 5,
+        "rows": [
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "accessibility"
+            },
+            "iconFrameSize": 59,
+            "identifier": "system_settings_Privacy_Accessibility",
+            "isSupplemental": false,
+            "subtitle": "Allows the agent to access app interfaces",
+            "title": "Accessibility"
+          },
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "camera.viewfinder"
+            },
+            "iconFrameSize": 44,
+            "identifier": "system_settings_Privacy_ScreenCapture",
+            "isSupplemental": false,
+            "subtitle": "Allows the agent to see the visuals in apps",
+            "title": "Screenshots"
+          }
+        ],
+        "title": "Enable Aex Computer History"
+      },
+      "name": "service-2",
+      "source": 2
+    },
+    {
+      "catalogue": {
+        "description": "Aex Computer Use uses Calendar to read and manage your events.",
+        "headerIcon": {
+          "kind": "application",
+          "value": "com.apple.iCal"
+        },
+        "requestSource": 1,
+        "rows": [
+          {
+            "icon": {
+              "fallback": "calendar",
+              "kind": "application",
+              "value": "com.apple.iCal"
+            },
+            "iconFrameSize": 48,
+            "identifier": "eventkit_events",
+            "isSupplemental": false,
+            "subtitle": "Allows reading and managing your events when asked",
+            "title": "Calendar"
+          }
+        ],
+        "title": "Enable Aex Computer Use with Calendar"
+      },
+      "name": "calendar"
+    },
+    {
+      "catalogue": {
+        "description": "By default, Aex Computer Use uses messages only from conversations you approve to answer your requests, and sends messages only after you approve the message and its recipients.",
+        "headerIcon": {
+          "kind": "application",
+          "value": "com.apple.MobileSMS"
+        },
+        "requestSource": 4,
+        "rows": [
+          {
+            "icon": {
+              "fallback": "gearshape.2.fill",
+              "kind": "contentType",
+              "value": "com.apple.graphic-icon.automation"
+            },
+            "iconFrameSize": 48,
+            "identifier": "apple_events_com.apple.MobileSMS",
+            "isSupplemental": false,
+            "subtitle": "Allows sending messages",
+            "title": "Automation"
+          },
+          {
+            "icon": {
+              "fallback": "person.crop.circle.fill",
+              "kind": "application",
+              "value": "com.apple.AddressBook"
+            },
+            "iconFrameSize": 48,
+            "identifier": "contacts",
+            "isSupplemental": false,
+            "subtitle": "Enables finding contacts by name",
+            "title": "Contacts"
+          },
+          {
+            "icon": {
+              "kind": "symbol",
+              "value": "accessibility"
+            },
+            "iconFrameSize": 48,
+            "identifier": "system_settings_Privacy_Accessibility",
+            "isSupplemental": false,
+            "subtitle": "Start a new multi-person conversation",
+            "title": "Accessibility"
+          },
+          {
+            "icon": {
+              "fallback": "internaldrive.fill",
+              "kind": "bundle",
+              "value": "/System/Library/ExtensionKit/Extensions/StartupDisk.appex"
+            },
+            "iconFrameSize": 44,
+            "identifier": "system_settings_Privacy_AllFiles",
+            "isSupplemental": false,
+            "subtitle": "Allows searching your messages when asked",
+            "title": "Full Disk Access"
+          }
+        ],
+        "title": "Enable Aex Computer Use with Messages"
+      },
+      "name": "messages"
+    }
+  ]
+}

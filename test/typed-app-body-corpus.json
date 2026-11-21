@@ -1,0 +1,962 @@
+[
+  {
+    "name": "action/click-coordinate",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18]}},\"clickCount\":1,\"mouseButton\":0}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "click": {
+            "at": {
+              "coordinate": {
+                "_0": [
+                  -9,
+                  18
+                ]
+              }
+            },
+            "clickCount": 1,
+            "mouseButton": 0
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/click-element-with-hold",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"elementID\":{\"_0\":\"42\"}},\"clickCount\":2,\"mouseButton\":1,\"duration\":0.25,\"key\":\"Shift_L\"}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "click": {
+            "at": {
+              "elementID": {
+                "_0": "42"
+              }
+            },
+            "clickCount": 2,
+            "duration": 0.25,
+            "key": "Shift_L",
+            "mouseButton": 1
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/click-missing-count",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18]}},\"mouseButton\":0}}}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [
+        "action",
+        "click"
+      ],
+      "key": "clickCount"
+    }
+  },
+  {
+    "name": "action/click-missing-button",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18]}},\"clickCount\":1}}}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [
+        "action",
+        "click"
+      ],
+      "key": "mouseButton"
+    }
+  },
+  {
+    "name": "action/click-negative-button",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18]}},\"clickCount\":1,\"mouseButton\":-1}}}",
+    "expected": {
+      "outcome": "dataCorrupted",
+      "path": []
+    }
+  },
+  {
+    "name": "action/click-high-button",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18]}},\"clickCount\":1,\"mouseButton\":5}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "click": {
+            "at": {
+              "coordinate": {
+                "_0": [
+                  -9,
+                  18
+                ]
+              }
+            },
+            "clickCount": 1,
+            "mouseButton": 5
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/click-zero-count",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18]}},\"clickCount\":0,\"mouseButton\":0}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "click": {
+            "at": {
+              "coordinate": {
+                "_0": [
+                  -9,
+                  18
+                ]
+              }
+            },
+            "clickCount": 0,
+            "mouseButton": 0
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/click-numeric-element",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"elementID\":{\"_0\":42}},\"clickCount\":1,\"mouseButton\":0}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "action",
+        "click",
+        "at",
+        "elementID",
+        "_0"
+      ]
+    }
+  },
+  {
+    "name": "action/click-point-object",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":{\"x\":-9,\"y\":18}}},\"clickCount\":1,\"mouseButton\":0}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "action",
+        "click",
+        "at",
+        "coordinate",
+        "_0"
+      ]
+    }
+  },
+  {
+    "name": "action/click-point-extra",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"click\":{\"at\":{\"coordinate\":{\"_0\":[-9,18,4]}},\"clickCount\":1,\"mouseButton\":0}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "click": {
+            "at": {
+              "coordinate": {
+                "_0": [
+                  -9,
+                  18
+                ]
+              }
+            },
+            "clickCount": 1,
+            "mouseButton": 0
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/secondary",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"performSecondaryAction\":{\"elementID\":\"42\",\"action\":\"AXShowMenu\"}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "performSecondaryAction": {
+            "action": "AXShowMenu",
+            "elementID": "42"
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/set-string",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"setValue\":{\"elementID\":\"42\",\"value\":\"test\"}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "setValue": {
+            "elementID": "42",
+            "value": "test"
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/set-bool",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"setValue\":{\"elementID\":\"42\",\"value\":true}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "action",
+        "setValue",
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "action/set-number",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"setValue\":{\"elementID\":\"42\",\"value\":1.5}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "action",
+        "setValue",
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "action/select-text",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"selectText\":{\"elementID\":\"42\",\"text\":\"Olá 😀\",\"prefix\":\"a\",\"selection\":\"cursor_after\"}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "selectText": {
+            "elementID": "42",
+            "prefix": "a",
+            "selection": "cursor_after",
+            "text": "Olá 😀"
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/select-default-missing",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"selectText\":{\"elementID\":\"42\",\"text\":\"x\"}}}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [
+        "action",
+        "selectText"
+      ],
+      "key": "selection"
+    }
+  },
+  {
+    "name": "action/select-invalid-enum",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"selectText\":{\"elementID\":\"42\",\"text\":\"x\",\"selection\":\"unknown\"}}}",
+    "expected": {
+      "outcome": "dataCorrupted",
+      "path": [
+        "action",
+        "selectText",
+        "selection"
+      ]
+    }
+  },
+  {
+    "name": "action/scroll",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"scroll\":{\"at\":{\"elementID\":{\"_0\":\"42\"}},\"direction\":\"down\",\"pages\":1.5}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "scroll": {
+            "at": {
+              "elementID": {
+                "_0": "42"
+              }
+            },
+            "direction": "down",
+            "pages": 1.5
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/scroll-negative",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"scroll\":{\"at\":{\"elementID\":{\"_0\":\"42\"}},\"direction\":\"up\",\"pages\":-1}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "scroll": {
+            "at": {
+              "elementID": {
+                "_0": "42"
+              }
+            },
+            "direction": "up",
+            "pages": -1
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/scroll-invalid-enum",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"scroll\":{\"at\":{\"elementID\":{\"_0\":\"42\"}},\"direction\":\"unknown\",\"pages\":1}}}",
+    "expected": {
+      "outcome": "dataCorrupted",
+      "path": [
+        "action",
+        "scroll",
+        "direction"
+      ]
+    }
+  },
+  {
+    "name": "action/drag",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"drag\":{\"from\":[-2,3],\"to\":[2,7]}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "drag": {
+            "from": [
+              -2,
+              3
+            ],
+            "to": [
+              2,
+              7
+            ]
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/drag-missing",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"drag\":{\"from\":[-2,3]}}}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [
+        "action",
+        "drag"
+      ],
+      "key": "to"
+    }
+  },
+  {
+    "name": "action/press-key",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"pressKey\":{\"_0\":\"Control_L+a\",\"duration\":0.1}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "pressKey": {
+            "_0": "Control_L+a",
+            "duration": 0.1
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/type-text",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"type\":{\"_0\":\"Olá 😀\"}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "type": {
+            "_0": "Olá 😀"
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/paste-html",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"paste\":{\"text\":\"<b>Olá</b>\",\"format\":\"html\"}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "action": {
+          "paste": {
+            "format": "html",
+            "text": "<b>Olá</b>"
+          }
+        },
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "action/paste-unknown",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"paste\":{\"text\":\"x\",\"format\":\"unknown\"}}}",
+    "expected": {
+      "outcome": "dataCorrupted",
+      "path": [
+        "action",
+        "paste",
+        "format"
+      ]
+    }
+  },
+  {
+    "name": "action/ambiguous-action",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"type\":{\"_0\":\"x\"},\"pressKey\":{\"_0\":\"x\"}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "action"
+      ]
+    }
+  },
+  {
+    "name": "action/unknown-action",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\",\"action\":{\"future\":{}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "action"
+      ]
+    }
+  },
+  {
+    "name": "action/missing-action",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":\"fixture\"}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [],
+      "key": "action"
+    }
+  },
+  {
+    "name": "action/bad-app",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPerformActionRequest",
+    "input": "{\"app\":123,\"action\":{\"type\":{\"_0\":\"x\"}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "appSnapshot/normal",
+    "mode": "native",
+    "type": "ComputerUseIPCAppGetAppSnapshotRequest",
+    "input": "{\"app\":\"fixture\"}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture",
+        "disableDiff": false
+      }
+    }
+  },
+  {
+    "name": "appSnapshot/full",
+    "mode": "native",
+    "type": "ComputerUseIPCAppGetAppSnapshotRequest",
+    "input": "{\"app\":\"fixture\",\"disableDiff\":true}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture",
+        "disableDiff": true
+      }
+    }
+  },
+  {
+    "name": "appSnapshot/null",
+    "mode": "native",
+    "type": "ComputerUseIPCAppGetAppSnapshotRequest",
+    "input": "{\"app\":\"fixture\",\"disableDiff\":null}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture",
+        "disableDiff": false
+      }
+    }
+  },
+  {
+    "name": "appSnapshot/string",
+    "mode": "native",
+    "type": "ComputerUseIPCAppGetAppSnapshotRequest",
+    "input": "{\"app\":\"fixture\",\"disableDiff\":\"true\"}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "disableDiff"
+      ]
+    }
+  },
+  {
+    "name": "app-start/valid",
+    "mode": "native",
+    "type": "ComputerUseIPCAppStartRequest",
+    "input": "{\"app\":\"fixture\"}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "app-start/missing",
+    "mode": "native",
+    "type": "ComputerUseIPCAppStartRequest",
+    "input": "{}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [],
+      "key": "app"
+    }
+  },
+  {
+    "name": "app-start/wrong-type",
+    "mode": "native",
+    "type": "ComputerUseIPCAppStartRequest",
+    "input": "{\"app\":false}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "app-stop/valid",
+    "mode": "native",
+    "type": "ComputerUseIPCAppStopRequest",
+    "input": "{\"app\":\"fixture\"}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "app-stop/missing",
+    "mode": "native",
+    "type": "ComputerUseIPCAppStopRequest",
+    "input": "{}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [],
+      "key": "app"
+    }
+  },
+  {
+    "name": "app-stop/wrong-type",
+    "mode": "native",
+    "type": "ComputerUseIPCAppStopRequest",
+    "input": "{\"app\":false}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "app-policy/valid",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "input": "{\"app\":\"fixture\"}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture"
+      }
+    }
+  },
+  {
+    "name": "app-policy/missing",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "input": "{}",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [],
+      "key": "app"
+    }
+  },
+  {
+    "name": "app-policy/wrong-type",
+    "mode": "native",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "input": "{\"app\":false}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "app-modify/activate",
+    "mode": "native",
+    "type": "ComputerUseIPCAppModifyRequest",
+    "input": "{\"app\":\"fixture\",\"modification\":{\"activate\":{}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture",
+        "modification": {
+          "activate": {}
+        }
+      }
+    }
+  },
+  {
+    "name": "app-modify/deactivate",
+    "mode": "native",
+    "type": "ComputerUseIPCAppModifyRequest",
+    "input": "{\"app\":\"fixture\",\"modification\":{\"deactivate\":{}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture",
+        "modification": {
+          "deactivate": {}
+        }
+      }
+    }
+  },
+  {
+    "name": "app-modify/activation-extra",
+    "mode": "native",
+    "type": "ComputerUseIPCAppModifyRequest",
+    "input": "{\"app\":\"fixture\",\"modification\":{\"activate\":{\"extra\":true}}}",
+    "expected": {
+      "outcome": "decoded",
+      "value": {
+        "app": "fixture",
+        "modification": {
+          "activate": {}
+        }
+      }
+    }
+  },
+  {
+    "name": "app-modify/ambiguous",
+    "mode": "native",
+    "type": "ComputerUseIPCAppModifyRequest",
+    "input": "{\"app\":\"fixture\",\"modification\":{\"activate\":{},\"deactivate\":{}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "modification"
+      ]
+    }
+  },
+  {
+    "name": "app-modify/unknown",
+    "mode": "native",
+    "type": "ComputerUseIPCAppModifyRequest",
+    "input": "{\"app\":\"fixture\",\"modification\":{\"future\":{}}}",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "modification"
+      ]
+    }
+  },
+  {
+    "name": "socket/missing-request",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\"}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [
+        "params"
+      ],
+      "key": "request"
+    }
+  },
+  {
+    "name": "socket/null",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":null}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "valueNotFound",
+      "path": [
+        "params",
+        "request"
+      ]
+    }
+  },
+  {
+    "name": "socket/boolean",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":true}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "request"
+      ]
+    }
+  },
+  {
+    "name": "socket/number",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":7}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "request"
+      ]
+    }
+  },
+  {
+    "name": "socket/array",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":[]}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "request"
+      ]
+    }
+  },
+  {
+    "name": "socket/empty",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "keyNotFound",
+      "path": [
+        "params",
+        "request"
+      ],
+      "key": "app"
+    }
+  },
+  {
+    "name": "socket/wrong-app",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":7}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "request",
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "socket/app-null",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":null}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "valueNotFound",
+      "path": [
+        "params",
+        "request",
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "socket/valid",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned.nonexistent\"}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "socket/extra",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned.nonexistent\",\"extra\":4}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "socket/metadata-valid",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned.nonexistent\"},\"agentTurnMetadata\":{\"model\":\"x\"}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "socket/metadata-bad-known",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned.nonexistent\"},\"agentTurnMetadata\":{\"model\":7}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "agentTurnMetadata",
+        "model"
+      ]
+    }
+  },
+  {
+    "name": "socket/metadata-boolean",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned.nonexistent\"},\"agentTurnMetadata\":true}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "agentTurnMetadata"
+      ]
+    }
+  },
+  {
+    "name": "socket/metadata-null",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned.nonexistent\"},\"agentTurnMetadata\":null}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "decoded"
+    }
+  },
+  {
+    "name": "socket/body-and-metadata",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":4},\"agentTurnMetadata\":{\"model\":4}}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "request",
+        "app"
+      ]
+    }
+  },
+  {
+    "name": "socket/metadata-and-deadline",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":\"owned\"},\"agentTurnMetadata\":{\"model\":4},\"deadlineUnixMilliseconds\":\"bad\"}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "agentTurnMetadata",
+        "model"
+      ]
+    }
+  },
+  {
+    "name": "socket/body-and-deadline",
+    "input": "{\"jsonrpc\":\"2.0\",\"id\":7,\"method\":\"request\",\"params\":{\"clientApiVersion\":\"AcuaComputerUseIPC-5\",\"requestType\":\"ComputerUseIPCAppPolicyRequest\",\"request\":{\"app\":4},\"deadlineUnixMilliseconds\":\"bad\"}}",
+    "mode": "socket",
+    "type": "ComputerUseIPCAppPolicyRequest",
+    "expected": {
+      "outcome": "typeMismatch",
+      "path": [
+        "params",
+        "request",
+        "app"
+      ]
+    }
+  }
+]

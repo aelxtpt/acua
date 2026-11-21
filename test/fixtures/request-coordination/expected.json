@@ -1,0 +1,350 @@
+{
+  "cases": [
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 0,
+      "resultTag": 4,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 0,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 2,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 5,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 0
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": null,
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "",
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0,
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 2,
+      "resultTag": 6,
+      "source": 2
+    },
+    {
+      "cache": {
+        "": 0
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 0,
+      "source": 1
+    },
+    {
+      "cache": {
+        "agente\ud83d\ude00": 0
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 0,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 1
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 1,
+      "source": 1
+    },
+    {
+      "cache": {
+        "agente\ud83d\ude00": 1
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 1,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 2
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 2,
+      "source": 1
+    },
+    {
+      "cache": {
+        "agente\ud83d\ude00": 2
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 2,
+      "source": 1
+    },
+    {
+      "cache": {
+        "": 3
+      },
+      "id": "",
+      "presentation": 1,
+      "resultTag": 3,
+      "source": 1
+    },
+    {
+      "cache": {
+        "agente\ud83d\ude00": 3
+      },
+      "id": "agente\ud83d\ude00",
+      "presentation": 1,
+      "resultTag": 3,
+      "source": 1
+    }
+  ],
+  "classMetadataRealizedOnly": true,
+  "ownedRawReceiverAndSwiftDictionary": true,
+  "realUIInputCapturePowerOrSessionUsed": false,
+  "SDKUninitialized": true
+}
