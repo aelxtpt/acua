@@ -114,6 +114,33 @@ acua-configuration-test:
 
 .PHONY: acua-configuration-test
 
+# App approval for MCP clients without elicitation: the service-side decision
+# (allow list, then the native dialog) with a fake dialog.
+ACUA_APP_APPROVAL_SOURCES = Configuration/AcuaConfiguration.swift Native/acua-app-approval/AcuaAppApproval.swift
+
+acua-app-approval-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-app-approval-tests $(ACUA_APP_APPROVAL_SOURCES) ../test/acua-app-approval.swift
+	/tmp/cua-acua-app-approval-tests
+
+.PHONY: acua-app-approval-test
+
+# MCP app approval in the client: channel choice from the initialize
+# capabilities and the service dialog's decisions, with fakes for the service.
+ACUA_MCP_APPROVAL_SOURCES = ClientMCPAutomationApproval.swift ClientMCPClientCapabilities.swift ClientAppApprovalStore.swift \
+	ClientMCPAutomationArguments.swift ClientMCPAutomationSpanTelemetry.swift ClientAutomationRequests.swift \
+	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
+	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
+
+acua-mcp-approval-test:
+	@MCP_DIR="$$($(NATIVE_BUILD) --print-mcp-module | tail -n 1 | awk '{print $$NF}')" && \
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-I "$$MCP_DIR" -L "$$MCP_DIR" -lMCP -lLogging -lSystemPackage \
+		-o /tmp/cua-acua-mcp-approval-tests $(ACUA_MCP_APPROVAL_SOURCES) ../test/acua-mcp-approval-channel.swift
+	/tmp/cua-acua-mcp-approval-tests
+
+.PHONY: acua-mcp-approval-test
+
 # The public turn contract: session tracking in the service and turn
 # resolution in the MCP client. Pure logic, no service or MCP connection.
 ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \

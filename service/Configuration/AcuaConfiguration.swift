@@ -32,15 +32,30 @@ struct AcuaAppAccessConfiguration: Equatable, Sendable {
     var allowPersistentApproval = true
 
     func access(forBundleIdentifier bundleIdentifier: String) -> AcuaAppAccess {
-        if deniedBundleIdentifiers.contains(bundleIdentifier) {
+        if isDenied(bundleIdentifier) {
             return .deny
         }
 
-        if allowedBundleIdentifiers.contains(bundleIdentifier) {
+        if isExplicitlyAllowed(bundleIdentifier) {
             return .allow
         }
 
         return defaultAccess
+    }
+
+    /// Listed in `allow`. Bundle identifiers compare without case, as Launch
+    /// Services resolves them: `deny = ["com.apple.Calculator"]` must block
+    /// Calculator, whose identifier is `com.apple.calculator`.
+    func isExplicitlyAllowed(_ bundleIdentifier: String) -> Bool {
+        Self.contains(allowedBundleIdentifiers, bundleIdentifier)
+    }
+
+    func isDenied(_ bundleIdentifier: String) -> Bool {
+        Self.contains(deniedBundleIdentifiers, bundleIdentifier)
+    }
+
+    private static func contains(_ list: Set<String>, _ bundleIdentifier: String) -> Bool {
+        list.contains { $0.caseInsensitiveCompare(bundleIdentifier) == .orderedSame }
     }
 }
 
@@ -187,7 +202,7 @@ extension AcuaAppAccessConfiguration: Decodable {
 
         // Listing an app in both arrays is almost certainly a mistake, so it is
         // reported instead of being resolved by a precedence rule.
-        let contradictions = allowedBundleIdentifiers.intersection(deniedBundleIdentifiers).sorted()
+        let contradictions = allowedBundleIdentifiers.filter(isDenied).sorted()
         guard contradictions.isEmpty else {
             throw AcuaInvalidSettingValue(setting: table.settingPath("allow"),
                 message: "listed in both allow and deny: " + contradictions.joined(separator: ", "))

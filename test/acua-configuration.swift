@@ -27,8 +27,13 @@ private final class TemporaryDirectory {
 enum AcuaConfigurationTests {
     private static var passed = 0
 
+    // -O strips precondition messages, so a failure names itself and exits.
     private static func check(_ name: String, _ condition: Bool) {
-        precondition(condition, name)
+        guard condition else {
+            print("FAIL \(name)")
+            exit(1)
+        }
+
         passed += 1
         print("PASS \(name)")
     }
@@ -157,6 +162,9 @@ enum AcuaConfigurationTests {
         let contradiction = try loadingError("[apps]\nallow = [\"com.apple.Notes\"]\ndeny = [\"com.apple.Notes\"]\n", in: directory)
         check("Load_SameAppAllowedAndDenied_IsRejected", contradiction?.description.contains("com.apple.Notes") == true)
 
+        let caseContradiction = try loadingError("[apps]\nallow = [\"com.apple.Notes\"]\ndeny = [\"COM.APPLE.NOTES\"]\n", in: directory)
+        check("Load_SameAppAllowedAndDeniedInDifferentCase_IsRejected", caseContradiction?.description.contains("both allow and deny") == true)
+
         let unreadable = directory.url.appendingPathComponent("directory-not-file", isDirectory: true)
         try FileManager.default.createDirectory(at: unreadable, withIntermediateDirectories: true)
         do {
@@ -206,6 +214,14 @@ enum AcuaConfigurationTests {
         let denying = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))
         check("Policy_DenyList_DeniesListedApp", !denying.allows("com.apple.Terminal"))
         check("Policy_DenyList_StillAllowsOtherApps", denying.allows("com.apple.TextEdit"))
+
+        apps.deniedBundleIdentifiers = ["com.apple.Calculator"]
+        let caseDenying = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))
+        check("Policy_DenyListDifferentCase_DeniesTheApp", !caseDenying.allows("com.apple.calculator"))
+
+        apps = AcuaAppAccessConfiguration(defaultAccess: .deny, allowedBundleIdentifiers: ["com.apple.Calculator"])
+        let caseAllowing = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))
+        check("Policy_AllowListDifferentCase_AllowsWithDefaultDeny", caseAllowing.allows("com.apple.calculator"))
 
         apps = AcuaAppAccessConfiguration(defaultAccess: .deny, allowedBundleIdentifiers: ["com.apple.TextEdit"])
         let closed = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))

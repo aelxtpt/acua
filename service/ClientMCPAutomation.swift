@@ -12,6 +12,7 @@ struct CUAMCPAutomation: Sendable {
     let getAppState: @Sendable (ComputerUseIPCAppGetAppSnapshotRequest) async throws -> ComputerUseIPCAppSnapshotResult
     let performAction: @Sendable (ComputerUseIPCAppPerformActionRequest) async throws -> ComputerUseIPCActionResult
     let policy: AutomationMCPApproval.Policy
+    let serviceDialog: AutomationMCPApproval.ServiceDialog
     let store: AppApprovalStore
     let deliveryState: AppInstructionDeliveryState
     let tracker: any AutomationMCPTurnMetricsTracking
@@ -23,10 +24,13 @@ struct CUAMCPAutomation: Sendable {
 
     func call(_ parameters: CallTool.Parameters, server: Server) async throws -> CallTool.Result {
         do {
-            return try await call(parameters) { parameters in
-                try await server.requestElicitation(message: parameters.message, mode: parameters.mode,
-                    requestedSchema: parameters.requestedSchema, _meta: parameters._meta)
-            }
+            let channel: AutomationMCPApprovalChannel = CUAMCPInvocationContext.clientSupportsElicitation
+                ? .elicitation { parameters in
+                    try await server.requestElicitation(message: parameters.message, mode: parameters.mode,
+                        requestedSchema: parameters.requestedSchema, _meta: parameters._meta)
+                }
+                : .serviceDialog(serviceDialog)
+            return try await call(parameters, channel: channel)
         } catch {
             // The outer MCP callback also formats errors thrown
             // before the inner authorization/execution branches (unknown names).
@@ -44,7 +48,7 @@ struct CUAMCPAutomation: Sendable {
         let authorization: AutomationMCPAuthorization?
         do {
             authorization = try await AutomationMCPApproval(store: store, policy: policy,
-                elicit: elicit, telemetry: approvalTelemetry).authorize(tool, arguments: arguments)
+                channel: channel, telemetry: approvalTelemetry).authorize(tool, arguments: arguments)
         } catch {
             return AutomationMCPErrorFormatting.result(error, span: nil)
         }
@@ -86,7 +90,8 @@ extension CUAMCPAutomation {
         .init(listApps: { try await ComputerUseIPCClient.sendRequest(ComputerUseIPCListAppsRequest()) },
             getAppState: { try await ComputerUseIPCClient.sendRequest($0) },
             performAction: { try await ComputerUseIPCClient.sendRequest($0) },
-            policy: { try await ComputerUseIPCClient.sendRequest($0) }, store: store,
+            policy: { try await ComputerUseIPCClient.sendRequest($0) },
+            serviceDialog: { try await ComputerUseIPCClient.sendRequest($0) }, store: store,
             deliveryState: .init(), tracker: tracker, approvalTelemetry: approvalTelemetry, toolTelemetry: toolTelemetry)
     }
 }

@@ -13,6 +13,7 @@ enum CUAMCPServer {
     /// `_meta` or implicit for this connection.
     static func make(catalog: CUAMCPToolCatalog, dispatchUnknownTools: Bool = false,
                      endTurn: AcuaMCPEndTurnTool? = nil, turnScope: AcuaMCPTurnScope = .init(),
+                     clientCapabilities: CUAMCPClientCapabilities = .init(),
                      now: @escaping @Sendable () -> Date = Date.init, handler: @escaping Handler) async throws -> Server {
         let server = Server(name: catalog.domain.serverName, version: try catalog.definitionVersion,
             instructions: catalog.domain == .calendar
@@ -27,7 +28,9 @@ enum CUAMCPServer {
             let turn: ComputerUseJSONRPCCodexTurnMetadata
             do { turn = try CUAMCPInvocationContext.turn(parameters._meta, scope: turnScope) }
             catch { return .init(content: [.text(String(describing: error))], isError: true) }
+            let elicitation = clientCapabilities.supportsElicitation
             return try await CUAMCPInvocationContext.$startedAt.withValue(startedAt) {
+              try await CUAMCPInvocationContext.$clientSupportsElicitation.withValue(elicitation) {
               try await CUAMCPInvocationContext.withTurn(turn) {
                 if let endTurn, parameters.name == AcuaMCPEndTurnTool.name {
                     return await endTurn.call(parameters, scope: turnScope, callMetadata: turn)
@@ -39,6 +42,7 @@ enum CUAMCPServer {
                 }
                 return try await handler(catalog.domain, parameters, server)
               }
+              }
             }
         }
         return server
@@ -46,9 +50,10 @@ enum CUAMCPServer {
 
     static func run(catalog: CUAMCPToolCatalog, dispatchUnknownTools: Bool = false, endTurn: AcuaMCPEndTurnTool? = nil,
                     now: @escaping @Sendable () -> Date = Date.init, handler: @escaping Handler) async throws {
+        let capabilities = CUAMCPClientCapabilities()
         let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, endTurn: endTurn,
-                                    now: now, handler: handler)
-        try await server.start(transport: StdioTransport())
+                                    clientCapabilities: capabilities, now: now, handler: handler)
+        try await server.start(transport: StdioTransport()) { _, declared in capabilities.record(declared) }
         await server.waitUntilCompleted()
     }
 }

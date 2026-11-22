@@ -430,6 +430,8 @@ def main():
     parser.add_argument("--identity", default="-")
     parser.add_argument("--print-toml-module", action="store_true",
                         help="build only the TOML module and print its directory (used by unit tests)")
+    parser.add_argument("--print-mcp-module", action="store_true",
+                        help="build only the MCP SDK modules and print their directory (used by unit tests)")
     args = parser.parse_args()
     if not re.fullmatch(r"(arm64|x86_64)-apple-macosx\d+(?:\.\d+){0,2}", args.target):
         parser.error("provide an arm64 or x86_64 macOS target")
@@ -440,6 +442,9 @@ def main():
         builder = NativeBuild(args)
         if args.print_toml_module:
             print(builder.build_toml(), flush=True)
+            return
+        if args.print_mcp_module:
+            print(builder.build_mcp(), flush=True)
             return
         result = builder.service()
         if args.bundle:

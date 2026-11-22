@@ -22,3 +22,9 @@ struct AutomationMCPSpanTelemetry: Sendable {
             isError: result.isError, toolResult: result.toolResult, _meta: metadata)
     }
 }
+
+struct AutomationMCPErrorWithSpanTelemetry: Error, CustomStringConvertible {
+    let underlyingError: any Error
+    let span: AutomationMCPSpanTelemetry
+    var description: String { String(describing: underlyingError) }
+}

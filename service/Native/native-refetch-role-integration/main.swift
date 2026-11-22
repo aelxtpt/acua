@@ -751,6 +751,12 @@ enum Dispatch {
         guard let requestType = str(params["requestType"]) else {
             throw ServiceError(.couldNotGetRequestTypeName, "Missing requestType")
         }
+        // Approval may wait for the user, so it runs before any activity,
+        // turn preparation or unlock, as the policy request does.
+        if requestType == DirectRequestType.appApproval.rawValue {
+            let body = try decodeXPCBody?() ?? decodedSocketBody ?? params["request"]
+            return try AcuaAppApprovalIPC.perform(str(asDict(body)?["app"]) ?? "")
+        }
         let preparation = RequestPreparation(requestType: requestType)
         let preflight = try ServiceRequestPreflight<Any?>.run(contract: .init(typeName: requestType), decode: {
             try decodeXPCBody?() ?? decodedSocketBody ?? params["request"]

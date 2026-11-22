@@ -23,8 +23,12 @@ enum ComputerUsePolicyIPC {
     }
 
     private static func policy() throws -> ComputerUsePolicy {
+        ComputerUsePolicy(configuration: try configuration())
+    }
+
+    static func configuration() throws -> AcuaConfiguration {
         do {
-            return ComputerUsePolicy(configuration: try AcuaConfigurationLoader().load())
+            return try AcuaConfigurationLoader().load()
         } catch let error as AcuaConfigurationError {
             // An invalid file fails closed: no request runs on a guessed policy.
             throw ServiceError(.unknownError, "Computer Use configuration is invalid: \(error.description)")

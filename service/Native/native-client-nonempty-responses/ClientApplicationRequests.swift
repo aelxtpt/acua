@@ -68,3 +68,25 @@ struct ComputerUseIPCAppPolicyRequest: ComputerUseIPCRequest, Codable, Sendable 
     typealias Response = ComputerUseIPCAppPolicyResult
     let app: String
 }
+
+/// Mirrors the service's
+/// `AcuaAppApprovalDecision`.
+enum ComputerUseIPCAppApprovalDecision: String, Codable, Sendable {
+    /// Listed in `[apps].allow`; the client stores no approval.
+    case preApproved = "pre_approved"
+    case allowedForSession = "allowed_for_session"
+    case allowedAlways = "allowed_always"
+    case denied
+    case canceled
+}
+
+struct ComputerUseIPCAppApprovalResult: Codable, Equatable, Sendable {
+    let decision: ComputerUseIPCAppApprovalDecision
+}
+
+/// Asks the service to approve an app for an MCP client that cannot show an
+/// elicitation form: `[apps].allow`, then the service's dialog.
+struct ComputerUseIPCAppApprovalRequest: ComputerUseIPCRequest, Codable, Sendable {
+    typealias Response = ComputerUseIPCAppApprovalResult
+    let app: String
+}
