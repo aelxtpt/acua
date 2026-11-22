@@ -398,4 +398,9 @@ echo; echo "== ACUA standalone: local policy over IPC, no external agent CLI, no
 node test/computer-use-policy-ipc.mjs || fail=1
 echo; echo "== Native in-process checks: coordinates, actions, targets, errors, screenshots, launch state, windows and default policy =="
 python3 test/native-in-process-checks.py || fail=1
+echo; echo "== ACUA turn contract and Unicode typing: session tracking, _meta turn scope, end_turn and keyless characters =="
+(cd service && make acua-turn-contract-test acua-keyboard-text-test acua-mouse-target-test acua-scroll-reveal-test) || fail=1
+node test/mcp-turn-contract.mjs || fail=1
+echo; echo "== ACUA turn contract: real service user stop, turn end and session end =="
+node test/turn-contract.mjs || fail=1
 exit $fail

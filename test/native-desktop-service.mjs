@@ -9,11 +9,11 @@ export function requireNativeDesktop() {
   assert.ok(!diagnostics.screenLocked && diagnostics.accessibility && diagnostics.screenRecording, JSON.stringify(diagnostics));
 }
 
-export function startNativeDesktop(directory, bundle, mode = 'standard', socketName = 'service.sock') {
+export function startNativeDesktop(directory, bundle, app, mode = 'standard', socketName = 'service.sock') {
   const review = process.env.CUA_REVIEW_DESKTOP_LAUNCHER;
   const executable = review || process.env.CUA_NATIVE_AUTOMATION_HARNESS;
   const socket = path.join(directory, socketName);
-  const env = review ? { ...process.env, CUA_REVIEW_DESKTOP_BUNDLE: bundle, CUA_REVIEW_DESKTOP_MODE: mode } : {
+  const env = review ? { ...process.env, CUA_REVIEW_DESKTOP_BUNDLE: bundle, CUA_REVIEW_DESKTOP_APP: app, CUA_REVIEW_DESKTOP_MODE: mode } : {
     ...process.env, ACUA_ALLOW_UNSIGNED_LOCAL_CLIENTS: '1', CODEX_HOME: directory,
     ACUA_SCREENSHOT_DIRECTORY: path.join(directory, 'shots'),
   };

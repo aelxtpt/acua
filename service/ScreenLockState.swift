@@ -59,6 +59,13 @@ enum ScreenLockState {
         if boolean(session[lockedKey]) == false && onConsole == true {
             return .init(state: .unlocked, source: .currentSession, onConsole: true, reason: "unlocked")
         }
+        // macOS removes the lock key after unlocking. A logged-in own
+        // console session supplies positive identity/state evidence; an absent
+        // key is distinct from a present invalid value such as NSNull.
+        if session[lockedKey] == nil, onConsole == true,
+           boolean(session[loginKey]) == true, userID(session[userKey]) == currentUID {
+            return .init(state: .unlocked, source: .currentSession, onConsole: true, reason: "unlocked")
+        }
         return nil
     }
 
@@ -79,6 +86,11 @@ enum ScreenLockState {
         }
         guard boolean(row[loginKey]) == true else {
             return .init(state: .unavailable, source: .consoleUsers, onConsole: true, reason: "loginNotComplete")
+        }
+        // The unique own on-console user and completed login were checked
+        // above. A missing lock key is the normal unlocked representation.
+        if row[lockedKey] == nil {
+            return .init(state: .unlocked, source: .consoleUsers, onConsole: true, reason: "unlocked")
         }
         guard let locked = boolean(row[lockedKey]) else {
             return .init(state: .unavailable, source: .consoleUsers, onConsole: true, reason: "missingLockState")

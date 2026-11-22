@@ -114,6 +114,49 @@ acua-configuration-test:
 
 .PHONY: acua-configuration-test
 
+# The public turn contract: session tracking in the service and turn
+# resolution in the MCP client. Pure logic, no service or MCP connection.
+ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \
+	ComputerUseTelemetryContext.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift ClientMCPTurn.swift
+
+acua-turn-contract-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-turn-contract-tests $(ACUA_TURN_CONTRACT_SOURCES) ../test/acua-turn-contract.swift
+	/tmp/cua-acua-turn-contract-tests
+
+.PHONY: acua-turn-contract-test
+
+# type_text's text-to-keystroke translation, with a fake keyboard layout.
+ACUA_KEYBOARD_TEXT_SOURCES = Native/native-keyboard-actions/ControllerKeyboardEvents.swift \
+	Native/native-keyboard-actions/ControllerKeyboardTextTranslation.swift
+
+acua-keyboard-text-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-keyboard-text-tests $(ACUA_KEYBOARD_TEXT_SOURCES) ../test/acua-keyboard-text-translation.swift
+	/tmp/cua-acua-keyboard-text-tests
+
+.PHONY: acua-keyboard-text-test
+
+# Choosing the window a mouse event is addressed to, with a fake AX backend.
+ACUA_MOUSE_TARGET_SOURCES = Native/controller-native-delivery/ControllerMouseEventTarget.swift AXParentChain.swift
+
+acua-mouse-target-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-mouse-target-tests $(ACUA_MOUSE_TARGET_SOURCES) ../test/acua-mouse-event-target.swift
+	/tmp/cua-acua-mouse-target-tests
+
+.PHONY: acua-mouse-target-test
+
+# Revealing an offscreen element through its scroll area, with a fake AX tree.
+ACUA_SCROLL_REVEAL_SOURCES = Native/controller-native-position/ControllerClickablePoint.swift ScrollToVisiblePlan.swift ClickableGeometry.swift
+
+acua-scroll-reveal-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-scroll-reveal-tests $(ACUA_SCROLL_REVEAL_SOURCES) ../test/acua-scroll-reveal.swift
+	/tmp/cua-acua-scroll-reveal-tests
+
+.PHONY: acua-scroll-reveal-test
+
 computer-use-policy-test:
 	$(SWIFTC) $(SWIFTFLAGS) -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-computer-use-policy-tests ComputerUsePolicy.swift Configuration/AcuaConfiguration.swift ../test/computer-use-policy.swift
 	/tmp/cua-computer-use-policy-tests
@@ -955,6 +998,7 @@ event-stream-telemetry-wire-test:
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-event-stream-telemetry-wire-tests EventStreamProtocol.swift ComputerUseTelemetryContext.swift ../test/event-stream-telemetry-wire.swift
 	/tmp/cua-event-stream-telemetry-wire-tests ../test/event-stream-telemetry-wire-corpus.json
 
+event-stream-ipc-native-build:
 	$(SWIFTC) $(SWIFTFLAGS) $(LEGACY_FIXTURE_FLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-event-stream-ipc-native $(filter-out main.swift,$(SOURCES)) ../test/event-stream-ipc-native.swift
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-event-stream-native-producer-input-fixture ../test/InputFixture.swift
 

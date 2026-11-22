@@ -1,5 +1,5 @@
 import { publishFixtureCommand } from './fixture-command.mjs';
-import { serviceTestEnvironment, serviceTestExecutable } from './service-test-environment.mjs';
+import { serviceTestEnvironment, serviceTestExecutable, uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 // Actual Start/Next native capture through the shipped client wrapper and socket.
 // Runs only a disposable fixture; it does not capture arbitrary user windows.
 import assert from "node:assert/strict";
@@ -21,6 +21,7 @@ const fixture = path.join(macos, "CUACoordinateFixture");
 const bundle = uniqueFixtureBundle("test.acua.coordinate-fixture");
 fs.writeFileSync(path.join(app, "Contents/Info.plist"), `<?xml version="1.0"?><plist version="1.0"><dict><key>CFBundleIdentifier</key><string>${bundle}</string><key>CFBundleExecutable</key><string>CUACoordinateFixture</string><key>CFBundleName</key><string>CUACoordinateFixture</string><key>CFBundlePackageType</key><string>APPL</string></dict></plist>`);
 execFileSync("swiftc", ["-parse-as-library", "-module-cache-path", "/private/tmp/cua-swift-module-cache", path.join(root, "test/CoordinateFixture.swift"), "-o", fixture], { stdio: "inherit" });
+const target = fixtureAppTarget(app);
 let fixtureProcess, service, client;
 const files = new Set();
 const captureDirectory = path.join(temp, "captures");
@@ -72,7 +73,7 @@ try {
     if (invalid === "destination") animationTarget.destinationFrame.width = 0;
     if (invalid === "display-bounds") animationTarget.agentDisplay.bounds.height = 0;
     if (invalid === "display-scale") animationTarget.agentDisplay.scaleFactor = 0;
-    const response = await client.startAppCapture({ app: bundle, requestID, animationTarget, version: 1 });
+    const response = await client.startAppCapture({ app: target, requestID, animationTarget, version: 1 });
     check(`${invalid}: invalid optional transition falls back to native capture`, response.result === "started" && response.animationDuration === undefined);
     const updates = await collect(requestID);
     check(`${invalid}: fallback retains the finite metadata/completed sequence`, updates[0]?.type === "metadata" && updates.at(-1)?.type === "completed");
@@ -82,7 +83,7 @@ try {
   }
   for (const version of [1, 2]) {
     const requestID = `native-${version}`;
-    const response = await client.startAppCapture({ app: bundle, requestID, version });
+    const response = await client.startAppCapture({ app: target, requestID, version });
     check(`v${version}: Start returns the native started contract`, response.result === "started");
     const updates = await collect(requestID);
     fs.writeFileSync(path.join(temp, `v${version}-updates.json`), JSON.stringify(updates, null, 2));
@@ -110,7 +111,7 @@ try {
     const work = display.workArea, width = Math.min(480, work.width * 0.5), height = Math.min(330, work.height * 0.5);
     const animationTarget = { destinationFrame: { x: work.x + (work.width - width) / 2, y: work.y + work.height * 0.2, width, height },
       destinationCornerRadius: 12, presentationStyle, agentDisplay: display };
-    const response = await client.startAppCapture({ app: bundle, requestID, version, animationTarget });
+    const response = await client.startAppCapture({ app: target, requestID, version, animationTarget });
     check(`${requestID}: native transition returns duration and spring metadata`, response.result === "started" && response.animationDuration > 0.9 && response.transitionSpringResponse >= 0.28 && response.transitionSpringDampingFraction === 0.73);
     check(`${requestID}: snapshot height follows the presentation style`, presentationStyle === "standard" ? response.transitionSnapshotHeight > height : response.transitionSnapshotHeight === Math.ceil(height));
     await until(() => overlayWindows().length > 0, "native overlay becomes onscreen");
@@ -140,16 +141,16 @@ try {
     check(`${requestID}: terminal delivery closes every overlay while retaining the PNG`, fs.existsSync(finalFile));
     fs.copyFileSync(finalFile, path.join(temp, `${requestID}.png`));
   }
-  const stateForClick = await client.getAppState({ app: bundle, disableDiff: true });
+  const stateForClick = await client.getAppState({ app: target, disableDiff: true });
   const clickImage = path.join(temp, "overlay-click-source.jpg");
   fs.writeFileSync(clickImage, fs.readFileSync(new URL(stateForClick.appSnapshot.screenshot.url)));
   const clickTargets = JSON.parse(execFileSync(fixture, ["--locate-image", clickImage], { encoding: "utf8" }));
   const clickRequestID = "overlay-does-not-intercept-input";
   const clickAnimation = { destinationFrame: { x: display.workArea.x + 100, y: display.workArea.y + 100, width: 450, height: 300 }, agentDisplay: display };
-  await client.startAppCapture({ app: bundle, requestID: clickRequestID, version: 2, animationTarget: clickAnimation });
+  await client.startAppCapture({ app: target, requestID: clickRequestID, version: 2, animationTarget: clickAnimation });
   await until(() => overlayWindows().length > 0, "overlay visible before source click");
   const beforeClick = fs.readFileSync(path.join(temp, "events.jsonl"), "utf8").trim().split("\n").length;
-  await client.click({ app: bundle, x: clickTargets.green[0], y: clickTargets.green[1] });
+  await client.click({ app: target, x: clickTargets.green[0], y: clickTargets.green[1] });
   await until(() => fs.readFileSync(path.join(temp, "events.jsonl"), "utf8").trim().split("\n").slice(beforeClick).map(JSON.parse)
     .some(event => event.event === "down" && event.green), "source receives click while overlay is visible");
   const clickedEvents = fs.readFileSync(path.join(temp, "events.jsonl"), "utf8").trim().split("\n").slice(beforeClick).map(JSON.parse);
@@ -168,12 +169,12 @@ try {
   };
   for (const failure of ["deadline", "replaced", "moved", "closed"]) {
     const requestID = `failure-${failure}`;
-    const response = await client.startAppCapture({ app: bundle, requestID, version: 2, animationTarget: failureTarget },
+    const response = await client.startAppCapture({ app: target, requestID, version: 2, animationTarget: failureTarget },
       failure === "deadline" ? { timeoutSeconds: 0.5 } : {});
     assert.equal(response.result, "started");
     await until(() => overlayWindows().length > 0, "failure case overlay is onscreen");
     if (failure === "replaced") {
-      await client.startAppCapture({ app: bundle, requestID, version: 2, animationTarget: failureTarget });
+      await client.startAppCapture({ app: target, requestID, version: 2, animationTarget: failureTarget });
       check("reused capture ID removes its previous native overlay generation", overlayWindows().length === 1);
     }
     if (failure === "moved") await command("move", "moved");

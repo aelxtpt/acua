@@ -131,7 +131,11 @@ struct ControllerClickablePoint<Backend: ControllerClickablePointBackend>: Senda
             let low = vertical ? target.minY : target.minX, high = vertical ? target.maxY : target.maxX
             let start = vertical ? viewport.minY : viewport.minX, end = vertical ? viewport.maxY : viewport.maxX
             if low >= start && high <= end { handled = true; continue }
-            let content = contentFrame(area)
+            // AppKit does not expose a plain NSView document, only the controls
+            // in it, so the children's union can be smaller than the viewport
+            // even with the target far outside it. That made every axis look
+            // unscrollable. The content always spans at least the viewport.
+            let content = contentFrame(area).union(viewport)
             let extent = (vertical ? content.height : content.width) - (vertical ? viewport.height : viewport.width)
             if extent <= 0 { handled = true; continue }
             let delta: CGFloat

@@ -395,7 +395,7 @@ def main():
     env.pop("CODEX_HOME", None)
     env.pop("CARGO_TARGET_DIR", None)
     env.pop("CODEX_CLI_PATH", None)
-    env.update(CUA_REVIEW_RUN=str(run), CUA_REVIEW_LAUNCHER=str(launcher),
+    env.update(CUA_REVIEW_RUN=str(run), CUA_REVIEW_LAUNCHER=str(launcher), CUA_REVIEW_BUNDLE=plan["bundle"],
                CUA_REVIEW_RUST_MANIFEST=plan["rust_manifest"], CUA_REVIEW_BUILD_MANIFEST=plan["build_manifest"],
                CUA_REVIEW_DESKTOP_LAUNCHER=str(desktop_launcher), CUA_REVIEW_DESKTOP_BINARY=str(run / "t/desktop/AexComputerUseService"),
                CUA_REVIEW_NATIVE_AX_BINARY=str(native_ax_binary),

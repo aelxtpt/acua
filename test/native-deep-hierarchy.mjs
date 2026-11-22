@@ -7,6 +7,7 @@ import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { requireNativeDesktop, startNativeDesktop } from './native-desktop-service.mjs';
+import { uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 requireNativeDesktop();
@@ -17,7 +18,9 @@ fs.mkdirSync(path.dirname(binary), { recursive: true });
 fs.writeFileSync(path.join(app, 'Contents/Info.plist'), `<?xml version="1.0"?><plist version="1.0"><dict><key>CFBundleIdentifier</key><string>${bundle}</string><key>CFBundleExecutable</key><string>OwnedDeepHierarchy</string><key>CFBundleName</key><string>OwnedDeepHierarchy</string><key>CFBundlePackageType</key><string>APPL</string></dict></plist>`);
 execFileSync('swiftc', ['-O', '-parse-as-library', '-module-cache-path', '/private/tmp/cua-swift-module-cache', path.join(root, 'test/DeepHierarchyFixture.swift'), '-o', binary], { stdio: 'inherit' });
 execFileSync('codesign', ['--force', '--sign', '-', app], { stdio: 'inherit' });
-const { socket, service } = startNativeDesktop(directory, bundle);
+// Requests name the fixture by path; see fixtureAppTarget.
+const fixtureApp = fixtureAppTarget(app);
+const { socket, service } = startNativeDesktop(directory, bundle, fixtureApp);
 const fixture = spawn(binary, [directory], { stdio: ['ignore', 'ignore', 'inherit'] });
 const events = () => { const f = path.join(directory, 'events.jsonl'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8').trim().split('\n').filter(Boolean).map(JSON.parse) : []; };
 async function until(predicate, label) {
@@ -31,7 +34,7 @@ async function command(value, expected) {
   return until(() => events().slice(count).find(e => e.event === expected), value);
 }
 async function request(name, fields = {}, clientType) {
-  const body = Buffer.from(JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'ownedFixtureNativeRequest', params: { requestType: `ComputerUseIPCApp${name}Request`, request: { app: bundle, ...fields }, clientType } }));
+  const body = Buffer.from(JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'ownedFixtureNativeRequest', params: { requestType: `ComputerUseIPCApp${name}Request`, request: { app: fixtureApp, ...fields }, clientType } }));
   const header = Buffer.alloc(4); header.writeUInt32LE(body.length);
   const client = net.createConnection({ path: socket });
   try {

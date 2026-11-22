@@ -29,6 +29,12 @@ if CommandLine.arguments == [CommandLine.arguments[0], "--owned-coordinate-setti
     exit(0)
 }
 let ownedDesktopBundle = ProcessInfo.processInfo.environment["CUA_REVIEW_DESKTOP_BUNDLE"] ?? ""
+// Tests give each run's fixture a unique ".run-..." suffix, so stale copies of
+// earlier fixtures never make the bundle identifier ambiguous.
+let ownedDesktopBundleBase = ownedDesktopBundle.components(separatedBy: ".run-").first ?? ""
+// Requests name the fixture by its canonical path: Launch Services ignores apps
+// in temporary folders, so a bundle identifier would not resolve.
+let ownedDesktopApp = ProcessInfo.processInfo.environment["CUA_REVIEW_DESKTOP_APP"] ?? ""
 let ownedDesktopMode = ProcessInfo.processInfo.environment["CUA_REVIEW_DESKTOP_MODE"] ?? "standard"
 let ownedDesktopCoordinates = ["points", "legacy"].contains(ownedDesktopMode)
 guard CommandLine.arguments.count == 3, CommandLine.arguments[1] == "--owned-desktop-socket",
@@ -47,7 +53,8 @@ let ownedDesktopSocket = CommandLine.arguments[2]
 let ownedDesktopSocketDirectory = URL(fileURLWithPath: ownedDesktopSocket).deletingLastPathComponent().resolvingSymlinksInPath()
 guard ownedDesktopRun.deletingLastPathComponent().path == URL(fileURLWithPath: "/private/tmp").resolvingSymlinksInPath().path,
       ownedDesktopRun.lastPathComponent.hasPrefix("cua-rv-"),
-      ownedDesktopSocketDirectory.path.hasPrefix(ownedDesktopRun.path + "/t/")
+      ownedDesktopSocketDirectory.path.hasPrefix(ownedDesktopRun.path + "/t/"),
+      URL(fileURLWithPath: ownedDesktopApp).resolvingSymlinksInPath().path.hasPrefix(ownedDesktopRun.path + "/t/")
 else { exit(64) }
 guard ScreenLockState.read().interactionAvailable else { exit(69) }
 guard Permissions.accessibilityGranted(), Permissions.screenRecordingGranted() else { exit(77) }
@@ -61,7 +68,7 @@ func ownedDesktopSender(_ base: SenderRequestContext, clientType: String?) -> Se
 func requireOwnedDesktopTarget(_ body: Any?, requestType: String) throws {
     guard let route = DirectRequestType(rawValue: requestType),
           [.appGetAppSnapshot, .appPerformAction, .appModify].contains(route),
-          str(asDict(body)?["app"]) == ownedDesktopBundle else {
+          str(asDict(body)?["app"]) == ownedDesktopApp else {
         throw ServiceError(.appNotAllowed, "Desktop fixture request is outside its owned target")
     }
     guard ScreenLockState.read().interactionAvailable else {
@@ -70,7 +77,9 @@ func requireOwnedDesktopTarget(_ body: Any?, requestType: String) throws {
     guard Permissions.accessibilityGranted(), Permissions.screenRecordingGranted() else {
         throw ServiceError(.permissionsNotGranted, "Desktop fixture permissions are unavailable")
     }
-    let targets = NSRunningApplication.runningApplications(withBundleIdentifier: ownedDesktopBundle)
+    // A fixture from the previous step can still be exiting while the next one
+    // runs under the same bundle identifier; only live processes count.
+    let targets = NSRunningApplication.runningApplications(withBundleIdentifier: ownedDesktopBundle).filter { !$0.isTerminated }
     guard !targets.isEmpty, targets.allSatisfy({
         $0.bundleURL?.resolvingSymlinksInPath().path.hasPrefix(ownedDesktopRun.path + "/t/") == true
     }) else { throw ServiceError(.appNotAllowed, "Desktop fixture application is outside the review run") }
@@ -102,12 +111,13 @@ def prepare_main(source):
     source = replace_once(source, "import OSLog\n", "import OSLog\n" + ENTRY)
     source = replace_once(source, "wireData: Data? = nil,\n                       serializationFailed:",
                           "wireData: Data? = nil, fixturePeer: PeerAuditCredentials? = nil,\n                       serializationFailed:")
-    source = replace_once(source, "        do {\n            if !files.isEmpty {",
-                          """        do {
-            guard files.isEmpty, method == "ping" || (ownedDesktopCoordinates ? method == "request" : method == "ownedFixtureNativeRequest") else {
+    # handle() opens its do block right after reading the method, ahead of the
+    # method switch; the fixture guard goes first in that block.
+    method_read = 'guard let method = str(message["method"]) else { return errorResponse(id, .couldNotGetRequestTypeName, "Missing method") }\n        do {\n'
+    source = replace_once(source, method_read, method_read + """            guard files.isEmpty, method == "ping" || (ownedDesktopCoordinates ? method == "request" : method == "ownedFixtureNativeRequest") else {
                 throw ServiceError(.unhandledEvent, "Method is not available in the desktop fixture")
             }
-            if !files.isEmpty {""")
+""")
     route = '            case "request":\n                let params = asDict(message["params"]) ?? [:]'
     source = replace_once(source, route, NATIVE_ROUTE + route)
     socket_body = "                    return try ComputerUseTelemetryContext.withAgentTurnMetadata(metadata) {"

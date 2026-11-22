@@ -645,6 +645,8 @@
     "service/ClientMCPToolCatalog.swift",
     "service/ClientMCPServer.swift",
     "service/ClientMCPInvocationContext.swift",
+    "service/ClientMCPTurn.swift",
+    "service/ClientMCPEndTurn.swift",
     "service/ClientEventStreamRequests.swift",
     "service/ClientMCPEventStream.swift",
     "service/ClientMCPEventStreamBackend.swift",

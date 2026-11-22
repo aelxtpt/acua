@@ -19,7 +19,7 @@ import Darwin
                 let tracker = AutomationMCPTurnMetricsTracker(emit: { DiscardedTelemetry.drop($0) })
                 let backend = CUAMCPAutomation.native(store: .init(storageURL: storage.appApprovals), tracker: tracker,
                     approvalTelemetry: { DiscardedTelemetry.drop($0) }, toolTelemetry: { DiscardedTelemetry.drop($0) })
-                try await CUAMCPServer.run(catalog: catalog) { domain, parameters, server in
+                try await CUAMCPServer.run(catalog: catalog, endTurn: .native()) { domain, parameters, server in
                     precondition(domain == .automation)
                     return try await backend.call(parameters, server: server)
                 }
@@ -137,18 +137,6 @@ import Darwin
 
         @MainActor mutating func run() async {
             let logger = Logger(subsystem: "com.aex.computeruse.client", category: "turn-ended")
-
-            guard let notification else {
-                let sessions = AcuaAgentProcessSession.hookSessionIDs(hookPID: getpid(), lookup: AcuaProcessTable.identity)
-                let report = await AcuaAgentTurnEnded.run(sessionIDs: sessions,
-                    findRunningService: { AcuaRunningService.find() }, send: { service, request in
-                        try await ClientTurnEndedTransport.send(request, pid: service.processIdentifier)
-                    })
-                logger.log("\(report, privacy: .public)")
-                FileHandle.standardError.write(Data((report + "\n").utf8))
-                return
-            }
-
             await AgentTurnEnded.run(notification: notification, previousNotify: previousNotify,
                 findRunningService: { AcuaRunningService.find() }, send: { service, request in
                     try await ClientTurnEndedTransport.send(request, pid: service.processIdentifier)

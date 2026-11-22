@@ -3,9 +3,6 @@ import MCP
 
 enum CUAMCPInvocationContext {
     @TaskLocal static var startedAt: Date?
-    /// Whether this tool call's client declared form elicitation. Set by
-    /// `CUAMCPServer` from `CUAMCPClientCapabilities`.
-    @TaskLocal static var clientSupportsElicitation = false
 
     /// A turn metadata key is accepted only as an object; strings
     /// containing JSON and other Value cases do not create a scope.

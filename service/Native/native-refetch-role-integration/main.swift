@@ -593,7 +593,8 @@ enum Dispatch {
     }
     @MainActor static var endAuthenticatedTurn: (String) -> Void = { preparationOwner.agentTurnEnded(threadID: $0) }
     static func applicationUsed(_ bundle: String) {
-        agentTurns.recordUse(bundle, threadID: ComputerUseTelemetryContext.snapshot().agentSessionID)
+        let turn = ComputerUseTelemetryContext.snapshot()
+        agentTurns.recordUse(bundle, threadID: turn.agentSessionID, turnID: turn.agentTurnID)
     }
     private static func sessionEnded(threadID: String, turnID: String?) {
         for bundle in agentTurns.end(threadID: threadID, turnID: turnID) { AppSessions.shared.clearStoppedByUser(bundle); nativeUsage.clearStoppedByUser(bundle) }
@@ -2012,6 +2013,7 @@ func runSelfTest() -> Int32 {
         foreground.stop()
         TimelineNativeOwner.stopIfLoaded()
         EventStreamIPC.shutdownIfLoaded()
+        Dispatch.nativeUsage.deactivateAllForShutdown()
         SyntheticFocusSessions.endAll()
         AXMenuSessions.endAll()
         AXVoiceOverPreference.shared?.shutdown()

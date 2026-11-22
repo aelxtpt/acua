@@ -86,4 +86,24 @@ final class ControllerNativeUsageRuntime: Sendable {
         }
     }
     func clearStoppedByUser(_ identifier:String){bindings.manager.clearStoppedByUser(for:identifier)}
+
+    /// Service shutdown. A native controller keeps the app's invented
+    /// activation (synthetic focus) until it is deactivated, and its focus
+    /// objects deliberately do not undo that when destroyed. Without this an
+    /// app the agent used would still believe it is active after we exit.
+    /// Queued jobs are not awaited: the process exits right after.
+    func deactivateAllForShutdown() {
+        let deactivate = {
+            MainActor.assumeIsolated {
+                for instance in self.bindings.manager.activeInstances { instance.controller.deactivate() }
+            }
+        }
+
+        if Thread.isMainThread {
+            deactivate()
+            return
+        }
+
+        DispatchQueue.main.sync(execute: deactivate)
+    }
 }

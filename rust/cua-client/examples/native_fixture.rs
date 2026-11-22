@@ -50,8 +50,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args: Vec<_> = env::args().collect();
     assert_eq!(
         args.len(),
-        5,
-        "socket, fixture directory, bundle and PID required"
+        6,
+        "socket, fixture directory, bundle, PID and app path required"
     );
     // Asserts compare the bundle identifier; requests name the fixture by its
     // canonical path, because Launch Services ignores apps in temporary folders.
@@ -63,7 +63,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let directory = Path::new(&args[2]);
     let mut cua = Client::connect_to(&args[1])?;
     pass("socket handshake");
-    assert!(cua.list_apps()?.iter().any(|a| a.bundle_identifier == *app));
+    assert!(cua.list_apps()?.iter().any(|a| a.bundle_identifier == *bundle));
     pass("typed app list");
     assert_eq!(cua.event_stream_status()?["isRecording"], false);
     assert_eq!(
@@ -74,13 +74,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // This disposable bundle is not registered with Launch Services.
     let fixture_path = directory.join("RustFixture.app");
     let policy = cua.app_policy(fixture_path.to_str().expect("fixture app path"))?;
-    assert_eq!(policy["target"]["bundleIdentifier"], *app);
+    assert_eq!(policy["target"]["bundleIdentifier"], *bundle);
     assert_eq!(policy["decision"], "allowed");
     pass("app policy");
     cua.start_app(app)?;
     let appSnapshot = cua.appSnapshot(app, true)?;
     assert_eq!(appSnapshot["app"]["pid"], pid);
-    assert_eq!(appSnapshot["app"]["bundleIdentifier"], *app);
+    assert_eq!(appSnapshot["app"]["bundleIdentifier"], *bundle);
     let tree = appSnapshot["appSnapshot"]["text"]
         .as_str()
         .expect("missing AX tree");
@@ -149,7 +149,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             value: json!("never write"),
         },
     );
-    assert!(matches!(invalid,Err(Error::Remote(ref e)) if e.code == -10008));
+    // The native service reports a missing ID as a generic server error (-10005).
+    assert!(matches!(invalid,Err(Error::Remote(ref e)) if e.code == -10005 && e.message.contains("99999999 is an invalid element ID")));
     assert!(!cua.is_closed());
     assert!(!cua.list_apps()?.is_empty());
     pass("native AX error and continued connection");
