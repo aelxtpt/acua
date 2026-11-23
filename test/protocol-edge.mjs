@@ -8,6 +8,7 @@ import { spawn, execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), "cua-protocol-edge-"));
 const socketPath = path.join(temp, "service.sock");
 const service = spawn(serviceTestExecutable(root), [socketPath], { env: serviceTestEnvironment(), stdio: ["ignore", "ignore", "pipe"] });
