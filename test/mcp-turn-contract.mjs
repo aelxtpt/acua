@@ -3,8 +3,8 @@
 // the MCP layer without physical input:
 //   - tools/list keeps the ten automation tools and adds end_turn;
 //   - malformed _meta.x-acua-turn and end_turn arguments are rejected;
-//   - end_turn without arguments ends this connection's implicit session and
-//     never launches the service.
+//   - end_turn without arguments ends the session of the agent process that
+//     started the helper and never launches the service.
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -101,7 +101,8 @@ try {
 
   const ended = await callTool('end_turn', {});
   assert.equal(ended.isError, false, text(ended));
-  assert.match(text(ended), /^Ended session acua-mcp-[0-9A-F-]{36}\./);
+  // This test process started the helper, so it is the agent whose session ends.
+  assert.match(text(ended), new RegExp(`^Ended session acua-agent-${process.pid}-\\d+\\.\\d{6}\\.`));
   if (!serviceWasRunning)
     assert.match(text(ended), /was not running, so nothing was stopped/);
   assert.equal(serviceRunning(), serviceWasRunning, 'end_turn never launches the service');

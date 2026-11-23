@@ -44,11 +44,13 @@ struct AcuaEndTurnArguments: Equatable {
 /// connection. The service ties every app an agent touches to that session,
 /// and only an end of that turn lifts a "stopped by the user" lock.
 struct AcuaMCPTurnScope: Sendable {
-    /// Used when a call names no session. A stdio MCP server serves exactly one
-    /// connection per process, so this is one session per agent connection.
+    /// Used when a call names no session: the session of the agent process
+    /// that started this helper, which that agent's stop hook can end too
+    /// (see AcuaAgentProcessSession). A helper with no agent parent, such as
+    /// one adopted by launchd, gets a session of its own.
     let implicitSessionID: String
 
-    init(implicitSessionID: String = "acua-mcp-" + UUID().uuidString) {
+    init(implicitSessionID: String = Self.defaultImplicitSessionID()) {
         self.implicitSessionID = implicitSessionID
     }
 

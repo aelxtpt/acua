@@ -177,7 +177,8 @@ acua-mcp-output-test:
 # The public turn contract: session tracking in the service and turn
 # resolution in the MCP client. Pure logic, no service or MCP connection.
 ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \
-	ComputerUseTelemetryContext.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift ClientMCPTurn.swift
+	ComputerUseTelemetryContext.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift ClientMCPTurn.swift \
+	ClientAgentProcess.swift
 
 acua-turn-contract-test:
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
@@ -185,6 +186,25 @@ acua-turn-contract-test:
 	/tmp/cua-acua-turn-contract-tests
 
 .PHONY: acua-turn-contract-test
+
+# The agent-process session shared by an agent's stop hook and the MCP helper
+# it started, and `turn-ended --agent-process`, with stubbed process tables.
+acua-agent-process-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-agent-process-tests ClientAgentProcess.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift \
+		../test/acua-agent-process.swift
+	/tmp/cua-acua-agent-process-tests
+
+.PHONY: acua-agent-process-test
+
+# `hooks install` and `hooks uninstall`: Claude Code settings.json, Cursor
+# hooks.json and Codex config.toml edits, in a temporary directory.
+acua-hooks-install-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-hooks-install-tests ClientMCPInstall.swift ClientHooksInstall.swift ../test/acua-hooks-install.swift
+	/tmp/cua-acua-hooks-install-tests
+
+.PHONY: acua-hooks-install-test
 
 # type_text's text-to-keystroke translation, with a fake keyboard layout.
 ACUA_KEYBOARD_TEXT_SOURCES = Native/native-keyboard-actions/ControllerKeyboardEvents.swift \

@@ -415,4 +415,7 @@ echo; echo "== ACUA screenshot limits: [screenshots] resolution and max_image_by
 (cd service && make acua-configuration-test acua-screenshot-budget-test acua-mcp-output-test) || fail=1
 echo; echo "== ACUA screenshot limits: real service fitted default, PNG fallback, native resolution and clicks from fitted images =="
 node test/screenshot-limits.mjs || fail=1
+echo; echo "== ACUA hooks: agent-process sessions, hooks install and uninstall for Claude Code, Cursor and Codex, turn-ended --agent-process =="
+(cd service && make acua-agent-process-test acua-hooks-install-test) || fail=1
+node test/hooks-install.mjs || fail=1
 exit $fail

@@ -4,7 +4,7 @@ import os
 import Darwin
 
 @main struct OwnedComputerUseClient: AsyncParsableCommand {
-    static let configuration = CommandConfiguration(commandName: "cua", subcommands: [MCP.self, EventStream.self, ComputerHistory.self, Calendar.self, Messages.self, TurnEnded.self])
+    static let configuration = CommandConfiguration(commandName: "cua", subcommands: [MCP.self, EventStream.self, ComputerHistory.self, Calendar.self, Messages.self, TurnEnded.self, HooksCommand.self])
 
     struct MCP: AsyncParsableCommand {
         // Without a subcommand `mcp` runs the server, as MCP hosts start it.
@@ -134,12 +134,33 @@ import Darwin
     }
 
     struct TurnEnded: AsyncParsableCommand {
-        static let configuration = CommandConfiguration(commandName: "turn-ended", abstract: "Handles a Codex turn-ended notification")
+        static let configuration = CommandConfiguration(commandName: "turn-ended",
+            abstract: "Ends an agent turn: a Codex notify payload, or --agent-process from a Claude Code or Cursor stop hook")
         @Option var previousNotify: String?
-        @Argument var notification: String
+        @Flag(help: "End the session of the agent process that runs this command, as the hooks install adds.")
+        var agentProcess = false
+        @Argument var notification: String?
+
+        func validate() throws {
+            guard agentProcess != (notification != nil) else {
+                throw ValidationError("Pass either a Codex notification or --agent-process.")
+            }
+        }
 
         @MainActor mutating func run() async {
             let logger = Logger(subsystem: "com.aex.computeruse.client", category: "turn-ended")
+
+            guard let notification else {
+                let sessions = AcuaAgentProcessSession.hookSessionIDs(hookPID: getpid(), lookup: AcuaProcessTable.identity)
+                let report = await AcuaAgentTurnEnded.run(sessionIDs: sessions,
+                    findRunningService: { AcuaRunningService.find() }, send: { service, request in
+                        try await ClientTurnEndedTransport.send(request, pid: service.processIdentifier)
+                    })
+                logger.log("\(report, privacy: .public)")
+                FileHandle.standardError.write(Data((report + "\n").utf8))
+                return
+            }
+
             await AgentTurnEnded.run(notification: notification, previousNotify: previousNotify,
                 findRunningService: { AcuaRunningService.find() }, send: { service, request in
                     try await ClientTurnEndedTransport.send(request, pid: service.processIdentifier)

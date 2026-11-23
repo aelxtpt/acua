@@ -137,8 +137,13 @@ enum AcuaTurnContractTests {
             check("TurnScopeMetadata_AcuaKeyWrongFieldType_IsRejected", false)
         }
 
-        check("TurnScope_DefaultImplicitSessions_AreDistinctPerConnection",
-              AcuaMCPTurnScope().implicitSessionID != AcuaMCPTurnScope().implicitSessionID)
+        // This test runs as a child of make, which plays the agent here.
+        let parent = AcuaProcessTable.identity(of: getppid())!
+        check("TurnScope_DefaultImplicitSession_IsTheParentAgentsSession",
+              AcuaMCPTurnScope().implicitSessionID == AcuaAgentProcessSession.sessionID(parent))
+
+        check("TurnScope_DefaultImplicitSessions_OfOneAgentAreTheSame",
+              AcuaMCPTurnScope().implicitSessionID == AcuaMCPTurnScope().implicitSessionID)
     }
 
     // MARK: - end_turn
