@@ -181,11 +181,15 @@ enum Policy {
         var descriptor: JSON = ["bundleIdentifier": resolved.bundleIdentifier, "displayName": resolved.displayName,
             "appPath": resolved.appPath, "risk": highRisk ? "high" : "low"]
         if highRisk { descriptor["warningSubtitle"] = ApplicationPolicyRisk.warning }
+
+        let decision = !policy.allows(resolved.bundleIdentifier) ? "denied" :
+            (NativeTargetPolicy.isForbidden(resolved.bundleIdentifier) ? "forbidden" : "allowed")
         return [
-            "decision": !policy.allows(resolved.bundleIdentifier) ? "denied" :
-                (NativeTargetPolicy.isForbidden(resolved.bundleIdentifier) ? "forbidden" : "allowed"),
+            "decision": decision,
             "target": descriptor,
             "allowPersistentApproval": policy.allowPersistentApproval,
+            // ACUA only. A forbidden app stays forbidden even when listed.
+            "preApproved": decision == "allowed" && policy.preApproves(resolved.bundleIdentifier),
         ]
     }
 }

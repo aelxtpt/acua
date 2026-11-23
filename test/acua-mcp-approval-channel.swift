@@ -28,11 +28,12 @@ enum AcuaMCPApprovalChannelTests {
     private static let bundle = "com.apple.TextEdit"
     private static let arguments = AutomationMCPArguments(["app": .string(bundle)])
 
-    private static func policy(_ decision: ComputerUseIPCAppPolicyDecision) -> AutomationMCPApproval.Policy {
+    private static func policy(_ decision: ComputerUseIPCAppPolicyDecision,
+                               preApproved: Bool? = nil) -> AutomationMCPApproval.Policy {
         { _ in
             .init(decision: decision, target: .init(bundleIdentifier: bundle, displayName: "TextEdit",
                 appPath: "/System/Applications/TextEdit.app", risk: .low, warningSubtitle: nil),
-                allowPersistentApproval: true)
+                allowPersistentApproval: true, preApproved: preApproved)
         }
     }
 
@@ -49,8 +50,17 @@ enum AcuaMCPApprovalChannelTests {
     }
 
     private static func approval(_ channel: AutomationMCPApprovalChannel, store: AppApprovalStore,
-                                 policy decision: ComputerUseIPCAppPolicyDecision = .allowed) -> AutomationMCPApproval {
-        AutomationMCPApproval(store: store, policy: policy(decision), channel: channel, telemetry: { _ in })
+                                 policy decision: ComputerUseIPCAppPolicyDecision = .allowed,
+                                 preApproved: Bool? = nil) -> AutomationMCPApproval {
+        AutomationMCPApproval(store: store, policy: policy(decision, preApproved: preApproved), channel: channel,
+                              telemetry: { _ in })
+    }
+
+    private static func elicitation(_ recorder: DialogRecorder) -> AutomationMCPApprovalChannel {
+        .elicitation { parameters in
+            recorder.requests.append(parameters.message)
+            return .init(action: .accept)
+        }
     }
 
     private static func thrown(_ body: () async throws -> Void) async -> (any Error)? {
@@ -149,6 +159,48 @@ enum AcuaMCPApprovalChannelTests {
         check("Authorize_ElicitationChannel_AsksTheClientForm",
               elicited?.requestedApproval == true && elicitations.requests == ["Allow the agent to use TextEdit?"],
               "\(elicitations.requests)")
+
+        // [apps].allow, as the service reports it in the policy result, applies
+        // to every client. Claude Code in print mode declares elicitation but
+        // cancels every form, so a listed app must not depend on the form.
+        let decodedWithout = try JSONDecoder().decode(ComputerUseIPCAppPolicyResult.self, from: Data(
+            #"{"decision":"allowed","allowPersistentApproval":true,"target":{"bundleIdentifier":"a.b","displayName":"B","appPath":"/B.app","risk":"low"}}"#.utf8))
+        check("PolicyResult_DecodedWithoutPreApproved_Nil", decodedWithout.preApproved == nil)
+        let decodedWith = try JSONDecoder().decode(ComputerUseIPCAppPolicyResult.self, from: Data(
+            #"{"decision":"allowed","allowPersistentApproval":true,"preApproved":true,"target":{"bundleIdentifier":"a.b","displayName":"B","appPath":"/B.app","risk":"low"}}"#.utf8))
+        check("PolicyResult_DecodedPreApproved_True", decodedWith.preApproved == true)
+
+        let listedForms = DialogRecorder()
+        let listedFormStore = AppApprovalStore(storageURL: temporaryStoreURL())
+        let listedForm = try await approval(elicitation(listedForms), store: listedFormStore, preApproved: true)
+            .authorize(.getAppState, arguments: arguments)
+        check("Authorize_ElicitationClientAppPreApproved_AuthorizedWithoutForm",
+              listedForm == .init(bundleIdentifier: bundle, requestedApproval: false) && listedForms.requests.isEmpty,
+              "\(String(describing: listedForm)) \(listedForms.requests)")
+        check("Authorize_ElicitationClientAppPreApproved_StoresNoApproval", !(await listedFormStore.isApproved(bundle)))
+
+        let listedDialogs = DialogRecorder()
+        let listedDialog = try await approval(dialog(.denied, listedDialogs), store: AppApprovalStore(storageURL: temporaryStoreURL()),
+                                              preApproved: true).authorize(.getAppState, arguments: arguments)
+        check("Authorize_ServiceDialogClientAppPreApproved_DialogNeverAsked",
+              listedDialog == .init(bundleIdentifier: bundle, requestedApproval: false) && listedDialogs.requests.isEmpty)
+
+        let unlistedForms = DialogRecorder()
+        _ = try await approval(elicitation(unlistedForms), store: AppApprovalStore(storageURL: temporaryStoreURL()),
+                               preApproved: false).authorize(.getAppState, arguments: arguments)
+        check("Authorize_ElicitationClientAppNotPreApproved_AsksTheClientForm", unlistedForms.requests.count == 1)
+
+        // A policy refusal still wins over a pre-approval the service should
+        // never send alongside it.
+        let refusedForms = DialogRecorder()
+        let refused = await thrown {
+            _ = try await approval(elicitation(refusedForms), store: AppApprovalStore(storageURL: temporaryStoreURL()),
+                                   policy: .denied, preApproved: true).authorize(.getAppState, arguments: arguments)
+        }
+        let blockedByPolicy: Bool
+        if case .appBlockedByPolicy(let app)? = refused as? MCPToolError { blockedByPolicy = app == bundle } else { blockedByPolicy = false }
+        check("Authorize_PolicyDeniedAndPreApproved_ThrowsBlockedByPolicy", blockedByPolicy && refusedForms.requests.isEmpty,
+              "\(String(describing: refused))")
 
         print("\(passed) MCP approval channel tests passed")
     }

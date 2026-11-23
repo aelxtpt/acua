@@ -11,13 +11,13 @@ enum AutomationMCPApprovalTelemetry: Equatable, Sendable {
     case resolved(tool: String?, bundleIdentifier: String?, result: String, persistence: String?)
 }
 
-/// How the user is asked to approve an app.
+/// How the user is asked to approve an app that `[apps].allow` does not list.
 enum AutomationMCPApprovalChannel: Sendable {
     /// The MCP client shows the form; it declared elicitation at initialize.
     case elicitation(AutomationMCPApproval.Elicit)
-    /// ACUA only, for clients without elicitation: `[apps].allow` in
-    /// `~/.acua/config.toml`, then the service's own dialog. The MCP spec
-    /// forbids sending elicitation to a client that did not declare it.
+    /// ACUA only, for clients without elicitation: the service's own dialog.
+    /// The MCP spec forbids sending elicitation to a client that did not
+    /// declare it.
     case serviceDialog(AutomationMCPApproval.ServiceDialog)
 }
 
@@ -67,6 +67,14 @@ struct AutomationMCPApproval: Sendable {
         case .forbidden: throw MCPToolError.appNotAllowed(bundleIdentifier: bundle)
         case .allowed: break
         }
+
+        // ACUA only: [apps].allow applies to every client. Claude Code in
+        // print mode declares elicitation yet cancels every form, so a headless
+        // agent could never use an app if this depended on the channel.
+        // Nothing is stored, so removing the app from the list applies to the
+        // next call.
+        if policy.preApproved == true { return .init(bundleIdentifier: bundle, requestedApproval: false) }
+
         if await store.isApproved(bundle) { return .init(bundleIdentifier: bundle, requestedApproval: false) }
         switch channel {
         case .elicitation(let elicit):

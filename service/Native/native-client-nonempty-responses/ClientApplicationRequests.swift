@@ -31,6 +31,9 @@ struct ComputerUseIPCAppPolicyResult: Codable, Equatable, Sendable {
     let decision: ComputerUseIPCAppPolicyDecision
     let target: ComputerUseIPCTargetDescriptor
     let allowPersistentApproval: Bool
+    /// The app is listed in
+    /// `[apps].allow`, so no client asks for approval.
+    var preApproved: Bool? = nil
 }
 
 enum ComputerUseIPCEventStreamEndReason: String, Codable, Sendable {

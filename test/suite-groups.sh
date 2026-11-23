@@ -426,4 +426,6 @@ node test/mcp-elicitation.mjs || fail=1
 echo; echo "== ACUA MCP over HTTP: loopback only, token, path, Origin and session checks, independent sessions and DELETE =="
 (cd service && make acua-mcp-http-test) || fail=1
 node test/mcp-http.mjs || fail=1
+echo; echo "== ACUA with Claude Code: claude -p types into and clicks a disposable app through the MCP tools, and the Stop hook from hooks install ends its session =="
+node test/claude-code-e2e.mjs || fail=1
 exit $fail
