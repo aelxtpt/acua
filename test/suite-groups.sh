@@ -428,4 +428,6 @@ echo; echo "== ACUA MCP over HTTP: loopback only, token, path, Origin and sessio
 node test/mcp-http.mjs || fail=1
 echo; echo "== ACUA with Claude Code: claude -p types into and clicks a disposable app through the MCP tools, and the Stop hook from hooks install ends its session =="
 node test/claude-code-e2e.mjs || fail=1
+echo; echo "== Second display: screenshot-pixel click, drag, scroll and slider on a display other than the primary one, through the real service =="
+node test/coordinates-other-display.mjs || fail=1
 exit $fail

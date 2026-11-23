@@ -222,10 +222,11 @@ enum Capture {
     }
 
     @MainActor private static func nativeBackingScale(for frame: CGRect) -> CGFloat {
-        // CGWindow.scale (0x1002663D4) compares the WindowServer frame
-        // directly with NSScreen frames and defaults to 2 when none exist.
+        // The backing scale defaults to 2 when no screen contains the window.
+        // Screens are compared in WindowServer coordinates,
+        // so a window on another display gets that display's scale.
         let screens = NSScreen.screens
-        guard let index = CaptureLayout.bestDisplayIndex(for: frame, displayFrames: screens.map(\.frame)) else { return 2 }
+        guard let index = CaptureLayout.screenIndex(for: frame, appKitScreenFrames: screens.map(\.frame)) else { return 2 }
         return screens[index].backingScaleFactor
     }
 

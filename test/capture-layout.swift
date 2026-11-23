@@ -43,6 +43,30 @@ import CoreGraphics
         check("off-display frames retain the first screen and an empty list has no match",
               CaptureLayout.bestDisplayIndex(for: beyond, displayFrames: frames) == 0 &&
               CaptureLayout.bestDisplayIndex(for: beyond, displayFrames: []) == nil)
+        // NSScreen frames are AppKit (y up from the primary's bottom); window
+        // frames are WindowServer (y down from the primary's top). A 1x display
+        // above a 2x primary, as measured on a real two-display Mac.
+        let primaryScreen = CGRect(x: 0, y: 0, width: 1600, height: 900)
+        let upperScreen = CGRect(x: -124, y: 900, width: 1920, height: 1080)
+        check("WindowServerFrame_PrimaryScreen_Unchanged",
+              CaptureLayout.windowServerFrame(ofScreen: primaryScreen, primaryHeight: 900) == primaryScreen)
+        check("WindowServerFrame_ScreenAbovePrimary_NegativeY",
+              CaptureLayout.windowServerFrame(ofScreen: upperScreen, primaryHeight: 900) == CGRect(x: -124, y: -1080, width: 1920, height: 1080))
+        let belowScreen = CGRect(x: 200, y: -768, width: 1024, height: 768)
+        check("WindowServerFrame_ScreenBelowPrimary_StartsAtPrimaryBottom",
+              CaptureLayout.windowServerFrame(ofScreen: belowScreen, primaryHeight: 900) == CGRect(x: 200, y: 900, width: 1024, height: 768))
+        let windowOnUpper = CGRect(x: 526, y: -736, width: 620, height: 392)
+        let screenFrames = [primaryScreen, upperScreen]
+        check("ScreenIndex_WindowOnScreenAbovePrimary_UpperScreen",
+              CaptureLayout.screenIndex(for: windowOnUpper, appKitScreenFrames: screenFrames) == 1)
+        check("ScreenIndex_WindowOnPrimary_Primary",
+              CaptureLayout.screenIndex(for: CGRect(x: 260, y: 268, width: 620, height: 392), appKitScreenFrames: screenFrames) == 0)
+        // Window and display frames are compared without converting between
+        // their coordinate spaces: the window above matches no screen and
+        // falls back to the primary's scale.
+        check("BestDisplayIndex_UnconvertedScreenFrames_FallsBackToPrimary",
+              CaptureLayout.bestDisplayIndex(for: windowOnUpper, displayFrames: screenFrames) == 0)
+        check("ScreenIndex_NoScreens_Nil", CaptureLayout.screenIndex(for: windowOnUpper, appKitScreenFrames: []) == nil)
         let invalidCursor = CaptureLayout.Window(id: 6, frame: CGRect(x: CGFloat.nan, y: 0, width: 10, height: 10))
         let compacted = try CaptureLayout.make(primaryID: 1, additionalIDs: [6], windows: [primary, invalidCursor], displays: displays)
         check("invalid optional frame is omitted", compacted.windowIDs == [1])

@@ -138,7 +138,9 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
         guard root == nil && !skipScreenshot else { return .init(settings: settings, sizing: nil) }
         let frame = context.context.nativeWindow.frame
         let screens = NSScreen.screens
-        let scale = CaptureLayout.bestDisplayIndex(for: frame, displayFrames: screens.map(\.frame)).map { screens[$0].backingScaleFactor } ?? 2
+        // WindowServer frame against screens converted to the same space; see
+        // CaptureLayout.screenIndex for the matching rule.
+        let scale = CaptureLayout.screenIndex(for: frame, appKitScreenFrames: screens.map(\.frame)).map { screens[$0].backingScaleFactor } ?? 2
         owner.visibleRect = frame
         let sizing = ControllerScreenshotSizing.read(frame: frame, scale: scale, legacy: settings.legacySizing, normalizeToPoints: settings.normalizeToPoints)
         owner.scalingFactor = sizing.pointScale; owner.scaledScreenSize = sizing.size

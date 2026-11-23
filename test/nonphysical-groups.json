@@ -1,5 +1,5 @@
 {
-  "description": "Suite groups that run without physical input, focus changes or user-visible windows. Groups 56-65 are retired slots. Physical groups are listed separately and run one at a time. Group 1 is in neither list: it rebuilds the package itself (make bundle), so it runs alone, with CODESIGN_IDENTITY set to keep the package signature.",
+  "description": "Suite groups that run without physical input, focus changes or user-visible windows. Groups 56-65 are retired slots. Physical groups are listed separately and run one at a time. Group 1 is in neither list: it rebuilds the package itself (make bundle), so it runs alone, with CODESIGN_IDENTITY set to keep the package signature. Multi-display groups need at least two displays and run only on request.",
   "groups": [
     2,
     3,
@@ -181,5 +181,8 @@
     188,
     191,
     193
+  ],
+  "multi_display_groups": [
+    194
   ]
 }

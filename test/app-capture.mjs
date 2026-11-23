@@ -174,8 +174,14 @@ try {
     assert.equal(response.result, "started");
     await until(() => overlayWindows().length > 0, "failure case overlay is onscreen");
     if (failure === "replaced") {
+      // A generation draws one overlay per display, so compare window IDs
+      // rather than assuming a single overlay window.
+      const previous = overlayWindows().map(window => window.id);
       await client.startAppCapture({ app: target, requestID, version: 2, animationTarget: failureTarget });
-      check("reused capture ID removes its previous native overlay generation", overlayWindows().length === 1);
+      const remaining = overlayWindows();
+      assert.ok(remaining.length === previous.length && remaining.every(window => !previous.includes(window.id)),
+        `reused capture ID removes its previous native overlay generation: before ${JSON.stringify(previous)}, after ${JSON.stringify(remaining)}`);
+      passed++; console.log("PASS reused capture ID removes its previous native overlay generation");
     }
     if (failure === "moved") await command("move", "moved");
     if (failure === "closed") await command("close", "closed");
