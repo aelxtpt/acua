@@ -418,4 +418,9 @@ node test/screenshot-limits.mjs || fail=1
 echo; echo "== ACUA hooks: agent-process sessions, hooks install and uninstall for Claude Code, Cursor and Codex, turn-ended --agent-process =="
 (cd service && make acua-agent-process-test acua-hooks-install-test) || fail=1
 node test/hooks-install.mjs || fail=1
+echo; echo "== ACUA MCP protocol: initialize, 31-tool schema snapshot, protocol and argument errors, elicitation only when declared and never past a cancellation =="
+(cd service && make acua-mcp-elicitation-test) || fail=1
+node test/mcp-protocol.mjs || fail=1
+echo; echo "== ACUA MCP approvals: real service elicitation decline and cancel, cancelled tool calls get no response, no elicitation without the capability =="
+node test/mcp-elicitation.mjs || fail=1
 exit $fail

@@ -49,7 +49,9 @@ struct MessagesMCPApproval: Sendable {
     init(readStore: MessagesReadDecisionStore, sendStore: MessagesSendApprovalStore, server: Server,
          telemetry: @escaping @Sendable (CUAMessagesApprovalTelemetry) -> Void = { _ in }) {
         self.init(readStore: readStore, sendStore: sendStore, elicit: { message, schema in
-            try await server.requestElicitation(message: message, mode: .form, requestedSchema: schema)
+            try await AcuaMCPElicitation.request {
+                try await server.requestElicitation(message: message, mode: .form, requestedSchema: schema)
+            }
         }, telemetry: telemetry)
     }
 

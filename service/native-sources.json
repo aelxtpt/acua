@@ -649,6 +649,7 @@
     "service/ClientMCPToolCatalog.swift",
     "service/ClientMCPServer.swift",
     "service/ClientMCPInvocationContext.swift",
+    "service/ClientMCPElicitation.swift",
     "service/ClientMCPTurn.swift",
     "service/ClientMCPClientCapabilities.swift",
     "service/ClientMCPInstall.swift",

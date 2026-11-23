@@ -40,7 +40,13 @@ enum CUAMCPServer {
                     let text = catalog.domain == .calendar ? String(describing: MCPError.invalidParams(message)) : message
                     return .init(content: [.text(text)], isError: true)
                 }
-                return try await handler(catalog.domain, parameters, server)
+                let result = try await handler(catalog.domain, parameters, server)
+                // Domain handlers turn every error, cancellation included,
+                // into an error result. The SDK sends no response only for a
+                // thrown CancellationError, which is what the MCP spec asks
+                // for a request the client cancelled.
+                try Task.checkCancellation()
+                return result
               }
               }
             }

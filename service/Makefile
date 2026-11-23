@@ -174,6 +174,22 @@ acua-mcp-output-test:
 
 .PHONY: acua-mcp-output-test
 
+# Approval requests to the MCP client: none to a client without elicitation,
+# and none waited on past the cancellation of the tool call.
+ACUA_MCP_ELICITATION_SOURCES = ClientMCPElicitation.swift ClientMCPInvocationContext.swift ClientMCPTurn.swift \
+	ClientAgentProcess.swift ClientMCPEventStream.swift ComputerUseTelemetryContext.swift \
+	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
+	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
+
+acua-mcp-elicitation-test:
+	@MCP_DIR="$$($(NATIVE_BUILD) --print-mcp-module | tail -n 1 | awk '{print $$NF}')" && \
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-I "$$MCP_DIR" -L "$$MCP_DIR" -lMCP -lLogging -lSystemPackage \
+		-o /tmp/cua-acua-mcp-elicitation-tests $(ACUA_MCP_ELICITATION_SOURCES) ../test/acua-mcp-elicitation.swift
+	/tmp/cua-acua-mcp-elicitation-tests
+
+.PHONY: acua-mcp-elicitation-test
+
 # The public turn contract: session tracking in the service and turn
 # resolution in the MCP client. Pure logic, no service or MCP connection.
 ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \

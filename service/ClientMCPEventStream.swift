@@ -48,8 +48,10 @@ struct CUAMCPEventStream: Sendable {
 
     private func approveRecording(server: Server) async throws {
         telemetry(.approvalRequested)
-        let result = try await server.requestElicitation(message: Self.approvalMessage,
-            requestedSchema: .init(), _meta: Self.approvalMetadata)
+        let result = try await AcuaMCPElicitation.request {
+            try await server.requestElicitation(message: Self.approvalMessage,
+                requestedSchema: .init(), _meta: Self.approvalMetadata)
+        }
         switch result.action {
         case .accept:
             telemetry(.approvalResolved(action: "accepted"))
