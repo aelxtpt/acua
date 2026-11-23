@@ -209,6 +209,11 @@ try {
     const from = pixel(x+8+(w-16)*0.2,y+h/2), to = pixel(x+8+(w-16)*0.8,y+h/2);
     count = events().length;
     await action({ drag: { from, to } });
+    // WebKit dispatches the range input in the WebContent process after the
+    // drag reply returns, so wait for the trusted input that settles near 80
+    // before reading the state. Without the wait a fast reply reads level 20.
+    await until(() => events().slice(count).find(e => e.event === 'dom' && e.kind === 'input' && e.target === 'level' && e.trusted && Math.abs(Number(e.value)-80)<=3),
+      'trusted slider input near 80 after the drag');
     state = await command('state');
     assert.ok(Math.abs(state.level-80)<=3, `slider ended at ${state.level}`);
     // A drag posts only start, midpoint and destination drag events

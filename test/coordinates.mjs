@@ -70,14 +70,22 @@ const sameMarkers = (actual, expected, message) => {
 };
 try {
   const ready = await until(() => events().find(e => e.event === "ready"), "fixture ready");
-  for (const sizing of ["points", "native", "legacy"]) {
+  // "native" and "fit" run the real service with [screenshots].resolution:
+  // "native" is every Retina pixel; "fit" is the ACUA default, a fitted,
+  // point-normalized sizing.
+  const realServiceSizing = { native: '[screenshots]\nresolution = "native"\nmax_image_bytes = 0\n', fit: "" };
+  for (const sizing of ["points", "native", "fit", "legacy"]) {
     const socketName = `${sizing}.sock`;
     const socket = path.join(temp, socketName);
-    if (reviewSettings && sizing !== "native") {
+    const realService = sizing in realServiceSizing;
+    const acuaHome = path.join(temp, `acua-${sizing}`);
+    fs.mkdirSync(acuaHome, { recursive: true });
+    fs.writeFileSync(path.join(acuaHome, "config.toml"), realServiceSizing[sizing] ?? "");
+    if (reviewSettings && !realService) {
       ({ service } = startNativeDesktop(temp, bundle, fixtureApp, sizing, socketName));
     } else {
-      service = spawn(sizing === "native" ? serviceTestExecutable(root) : settingsHarness, [socket], {
-        env: serviceTestEnvironment({ CODEX_HOME: path.join(temp, sizing), CUA_OWNED_IMAGE_SIZING: sizing }),
+      service = spawn(realService ? serviceTestExecutable(root) : settingsHarness, [socket], {
+        env: serviceTestEnvironment({ CODEX_HOME: path.join(temp, sizing), ACUA_HOME: acuaHome, CUA_OWNED_IMAGE_SIZING: sizing }),
         stdio: ["ignore", "ignore", "pipe"],
       });
       service.stderr.on("data", data => process.stderr.write(data));
@@ -105,6 +113,10 @@ try {
       Math.round(targets.red[1] + (y - ready.redScreen[1]) * (targets.blue[1] - targets.red[1]) / (ready.blueScreen[1] - ready.redScreen[1])),
     ];
     report(`${sizing}: captured focused window; ${targets.__size[0]}×${targets.__size[1]}, display scale ${ready.backingScale}`);
+    if (sizing === "fit") {
+      assert.ok(Math.max(...targets.__size) <= 2048 && Math.min(...targets.__size) <= 768, `fit image ${targets.__size} exceeds 2048x768`);
+      report("fit: the default image is within 2048 on the long edge and 768 on the short edge");
+    }
     await command("focus-decoy", "decoy-focused");
     let before = events().length;
     // Targeting delivers to the first window, front to back, that

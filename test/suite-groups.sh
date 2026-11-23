@@ -411,4 +411,8 @@ node test/app-approval-dialog.mjs || fail=1
 echo; echo "== ACUA mcp install: host snippets, mcpServers file edits and written entries that start real MCP servers =="
 (cd service && make acua-mcp-install-test) || fail=1
 node test/mcp-install.mjs || fail=1
+echo; echo "== ACUA screenshot limits: [screenshots] resolution and max_image_bytes, base64 image content and instructions once per app =="
+(cd service && make acua-configuration-test acua-screenshot-budget-test acua-mcp-output-test) || fail=1
+echo; echo "== ACUA screenshot limits: real service fitted default, PNG fallback, native resolution and clicks from fitted images =="
+node test/screenshot-limits.mjs || fail=1
 exit $fail

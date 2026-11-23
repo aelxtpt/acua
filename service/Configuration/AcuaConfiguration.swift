@@ -72,12 +72,26 @@ enum AcuaScreenshotFormat: String, Sendable, CaseIterable {
     case png
 }
 
-/// `[screenshots]`: how captured images are encoded.
+/// How many pixels a screenshot has.
+enum AcuaScreenshotResolution: String, Sendable, CaseIterable {
+    /// One pixel per point, then fitted within 2048 on the long edge and 768
+    /// on the short edge, never upscaled. This is the default.
+    case fit
+    /// Every backing pixel: about 3000 x 1700 for a full Retina window.
+    case native
+}
+
+/// `[screenshots]`: how captured images are sized and encoded.
 struct AcuaScreenshotConfiguration: Equatable, Sendable {
     static let jpegQualityRange: ClosedRange<Double> = 0.01...1.0
 
     var format = AcuaScreenshotFormat.jpeg
     var jpegQuality = 0.8
+    var resolution = AcuaScreenshotResolution.fit
+    /// Encoded bytes allowed per screenshot; 0 means no limit. Base64 adds a
+    /// third, so the default keeps the image near 1,000,000 bytes in an MCP
+    /// result, under the 1 MiB that common clients accept.
+    var maxImageBytes = 750_000
 }
 
 /// `[privacy]`: sites that are never recorded or captured.
@@ -221,10 +235,17 @@ extension AcuaFeatureConfiguration: Decodable {
 
 extension AcuaScreenshotConfiguration: Decodable {
     init(from decoder: any Decoder) throws {
-        let table = try AcuaTableReader(decoder, allowedKeys: ["format", "jpeg_quality"])
+        let table = try AcuaTableReader(decoder, allowedKeys: ["format", "jpeg_quality", "resolution", "max_image_bytes"])
 
         format = try table.choice("format", default: AcuaScreenshotFormat.jpeg)
         jpegQuality = try table.value("jpeg_quality", default: 0.8)
+        resolution = try table.choice("resolution", default: AcuaScreenshotResolution.fit)
+        maxImageBytes = try table.value("max_image_bytes", default: 750_000)
+
+        guard maxImageBytes >= 0 else {
+            throw AcuaInvalidSettingValue(setting: table.settingPath("max_image_bytes"),
+                message: "\(maxImageBytes) is negative; use 0 for no limit")
+        }
 
         guard Self.jpegQualityRange.contains(jpegQuality) else {
             throw AcuaInvalidSettingValue(setting: table.settingPath("jpeg_quality"),

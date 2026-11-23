@@ -625,6 +625,7 @@
     "service/CursorArtwork.swift",
     "service/Native/native-refetch-error-description/ControllerElementRefetchFailureDescription.swift",
     "service/Configuration/AcuaConfiguration.swift",
+    "service/Native/acua-screenshot-budget/AcuaScreenshotBudget.swift",
     "service/Configuration/AcuaConfigurationLoader.swift",
     "service/Configuration/AcuaSettings.swift",
     "service/Configuration/DiscardedTelemetry.swift"

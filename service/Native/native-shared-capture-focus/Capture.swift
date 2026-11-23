@@ -192,9 +192,11 @@ enum Capture {
         let url: URL
         var nativePath:FilePath?
         if let nativeAppName, let nativeSettings {
-            let file = try NativeAppSnapshotImage.writeFile(image, appName: nativeAppName,
+            // The MIME type is later read from the file extension, which
+            // follows the encoding the budget chose.
+            let (file, _) = try NativeAppSnapshotImage.writeFileWithinBudget(image, appName: nativeAppName,
                                                directory: directory ?? overrideDirectory ?? NativeAppSnapshotImage.defaultDirectory,
-                                               encoding: nativeSettings.encoding)
+                                               settings: nativeSettings)
             url=file.url;nativePath=file.path
         } else {
             let dir = directory ?? temporaryDirectory

@@ -1,6 +1,7 @@
 import Darwin
 import Foundation
 import ImageIO
+import OSLog
 import System
 import UniformTypeIdentifiers
 
@@ -11,6 +12,11 @@ enum NativeAppSnapshotImage {
         let legacySizing: Bool
         let normalizeToPoints: Bool
         let encoding: Encoding
+        /// Encodings tried in order to stay within `maxImageBytes`; empty
+        /// means `encoding` alone.
+        var attempts: [AcuaScreenshotEncodingAttempt] = []
+        /// 0 means no limit.
+        var maxImageBytes = 0
 
         /// `[screenshots].resolution` chooses the sizing. "fit" turns on the
         /// legacy fitted, point-normalized sizing; otherwise every Retina
@@ -44,6 +50,38 @@ enum NativeAppSnapshotImage {
     static func encoding(useJPEG: Bool, quality: Double) -> Encoding {
         guard useJPEG else { return .png }
         return .jpeg(quality > 0 && quality <= 1 ? CGFloat(quality) : nil)
+    }
+
+    static func encoding(_ attempt: AcuaScreenshotEncodingAttempt) -> Encoding {
+        switch attempt {
+        case .png: return encoding(useJPEG: false, quality: 0)
+        case .jpeg(let quality): return encoding(useJPEG: true, quality: quality)
+        }
+    }
+
+    private static let logger = Logger(subsystem: "com.aex.computeruse", category: "Screenshots")
+
+    /// Writes the image with the first of `settings.attempts` that fits
+    /// `settings.maxImageBytes`, and returns the encoding used so the reply
+    /// names the right MIME type.
+    static func writeFileWithinBudget(_ image: CGImage, appName: String?, directory: URL,
+                                      settings: Settings) throws -> (file: ControllerScreenshotWrittenFile, encoding: Encoding) {
+        guard !settings.attempts.isEmpty else {
+            return (try writeFile(image, appName: appName, directory: directory, encoding: settings.encoding), settings.encoding)
+        }
+
+        let written = try AcuaScreenshotBudget.write(settings.attempts, maxBytes: settings.maxImageBytes, write: { attempt in
+            let file = try writeFile(image, appName: appName, directory: directory, encoding: encoding(attempt))
+            let byteCount = (try? FileManager.default.attributesOfItem(atPath: file.url.path)[.size] as? Int) ?? 0
+            return (file, byteCount)
+        }, discard: { file in
+            _ = removeIfOwned(file.url)
+        })
+
+        if !written.withinLimit {
+            logger.error("Screenshot of \(image.width)x\(image.height) is \(written.byteCount) bytes, over max_image_bytes \(settings.maxImageBytes) even at the lowest quality")
+        }
+        return (written.file, encoding(written.attempt))
     }
 
     static func write(_ image:CGImage,appName:String?,directory:URL,date:Date=Date(),encoding:Encoding)throws->URL {

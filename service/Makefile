@@ -150,6 +150,30 @@ acua-mcp-install-test:
 
 .PHONY: acua-mcp-install-test
 
+# Screenshot size budget: encodings tried and the file kept, with a fake writer.
+acua-screenshot-budget-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-screenshot-budget-tests Configuration/AcuaConfiguration.swift \
+		Native/acua-screenshot-budget/AcuaScreenshotBudget.swift ../test/acua-screenshot-budget.swift
+	/tmp/cua-acua-screenshot-budget-tests
+
+.PHONY: acua-screenshot-budget-test
+
+# What get_app_state returns over MCP: base64 image content and app-specific
+# instructions once per app per connection, with injected file reads.
+ACUA_MCP_OUTPUT_SOURCES = ClientMCPAutomationFormatting.swift ClientAutomationRequests.swift \
+	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
+	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
+
+acua-mcp-output-test:
+	@MCP_DIR="$$($(NATIVE_BUILD) --print-mcp-module | tail -n 1 | awk '{print $$NF}')" && \
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-I "$$MCP_DIR" -L "$$MCP_DIR" -lMCP -lLogging -lSystemPackage \
+		-o /tmp/cua-acua-mcp-output-tests $(ACUA_MCP_OUTPUT_SOURCES) ../test/acua-mcp-output.swift
+	/tmp/cua-acua-mcp-output-tests
+
+.PHONY: acua-mcp-output-test
+
 # The public turn contract: session tracking in the service and turn
 # resolution in the MCP client. Pure logic, no service or MCP connection.
 ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \
