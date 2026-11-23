@@ -7,7 +7,10 @@ import Darwin
     static let configuration = CommandConfiguration(commandName: "cua", subcommands: [MCP.self, EventStream.self, ComputerHistory.self, Calendar.self, Messages.self, TurnEnded.self])
 
     struct MCP: AsyncParsableCommand {
-        static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Computer Use client as an MCP server")
+        // Without a subcommand `mcp` runs the server, as MCP hosts start it.
+        static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Computer Use client as an MCP server",
+                                                        discussion: "Without a subcommand, serves MCP on stdin and stdout. Use install to configure an MCP host.",
+                                                        subcommands: [MCPInstallCommand.self, MCPUninstallCommand.self])
         mutating func run() async {
             signal(SIGPIPE, SIG_IGN)
             let storage = ClientMCPAutomationStorage.native()

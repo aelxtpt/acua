@@ -650,6 +650,8 @@
     "service/ClientMCPInvocationContext.swift",
     "service/ClientMCPTurn.swift",
     "service/ClientMCPClientCapabilities.swift",
+    "service/ClientMCPInstall.swift",
+    "service/ClientMCPInstallCommands.swift",
     "service/ClientMCPEndTurn.swift",
     "service/ClientEventStreamRequests.swift",
     "service/ClientMCPEventStream.swift",

@@ -141,6 +141,15 @@ acua-mcp-approval-test:
 
 .PHONY: acua-mcp-approval-test
 
+# `mcp install` and `mcp uninstall`: server entries, "mcpServers" file edits
+# and printed instructions, in a temporary directory.
+acua-mcp-install-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-mcp-install-tests ClientMCPInstall.swift ../test/acua-mcp-install.swift
+	/tmp/cua-acua-mcp-install-tests
+
+.PHONY: acua-mcp-install-test
+
 # The public turn contract: session tracking in the service and turn
 # resolution in the MCP client. Pure logic, no service or MCP connection.
 ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \

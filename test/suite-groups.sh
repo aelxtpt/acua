@@ -408,4 +408,7 @@ echo; echo "== ACUA app approval without elicitation: [apps].allow, service dial
 node test/app-approval.mjs || fail=1
 echo; echo "== ACUA app approval dialog: real service dialog opens, closes when its client exits, no dialog for dead queued clients =="
 node test/app-approval-dialog.mjs || fail=1
+echo; echo "== ACUA mcp install: host snippets, mcpServers file edits and written entries that start real MCP servers =="
+(cd service && make acua-mcp-install-test) || fail=1
+node test/mcp-install.mjs || fail=1
 exit $fail
