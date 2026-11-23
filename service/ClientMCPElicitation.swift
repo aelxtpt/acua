@@ -1,29 +1,33 @@
 import Foundation
 import MCP
 
-enum AcuaMCPElicitationError: Error, Equatable, CustomStringConvertible {
-    case notDeclaredByClient
-
-    var description: String {
-        switch self {
-        case .notDeclaredByClient:
-            "This action needs the user's approval through MCP elicitation, which this MCP client did not declare at initialize."
-        }
-    }
+/// An approval the helper needs from the user: the elicitation form it sends
+/// to a client that declared elicitation, or has the service draw otherwise.
+struct AcuaApprovalForm: Sendable {
+    let message: String
+    /// Shown under the message by the service dialog. An elicitation carries
+    /// it in `_meta` (as "subtitle"), if at all.
+    var detail: String?
+    let schema: Elicitation.RequestSchema
+    var meta: Metadata?
 }
 
-/// Approval requests from the helper to its MCP client.
+/// Approval requests from the helper to the user.
 enum AcuaMCPElicitation {
+    typealias Ask = @Sendable (AcuaApprovalForm) async throws -> CreateElicitation.Result
+
     /// The MCP spec forbids sending elicitation to a client that did not
-    /// declare it, and the SDK (in its default, non-strict mode) would send
-    /// it anyway and wait for an answer that never comes.
-    static func request(clientSupportsElicitation: Bool = CUAMCPInvocationContext.clientSupportsElicitation,
-                        _ elicit: @escaping @Sendable () async throws -> CreateElicitation.Result) async throws -> CreateElicitation.Result {
+    /// declare it (and the SDK, in its default non-strict mode, would send it
+    /// anyway and wait for an answer that never comes), so such a client's
+    /// user is asked by the service's dialog instead.
+    static func request(_ form: AcuaApprovalForm,
+                        clientSupportsElicitation: Bool = CUAMCPInvocationContext.clientSupportsElicitation,
+                        elicit: @escaping Ask, serviceDialog: @escaping Ask) async throws -> CreateElicitation.Result {
         guard clientSupportsElicitation else {
-            throw AcuaMCPElicitationError.notDeclaredByClient
+            return try await untilCancelled { try await serviceDialog(form) }
         }
 
-        return try await untilCancelled(elicit)
+        return try await untilCancelled { try await elicit(form) }
     }
 
     /// Runs `operation`, but returns CancellationError as soon as the calling

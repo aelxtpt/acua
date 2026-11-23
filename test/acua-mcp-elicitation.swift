@@ -103,27 +103,42 @@ enum AcuaMCPElicitationTests {
 
     // MARK: - Declared capability
 
+    private final class Forms: @unchecked Sendable {
+        private let lock = NSLock()
+        private var asked: [String] = []
+        func record(_ channel: String) { lock.lock(); asked.append(channel); lock.unlock() }
+        var all: [String] { lock.lock(); defer { lock.unlock() }; return asked }
+    }
+
+    private static let form = AcuaApprovalForm(message: "Allow?", detail: "Details", schema: .init())
+
     private static func capabilityTests() async {
-        let calls = Counter()
-        do {
-            _ = try await AcuaMCPElicitation.request(clientSupportsElicitation: false) {
-                calls.increment()
-                return CreateElicitation.Result(action: .accept)
-            }
-            check("Request_ClientWithoutElicitation_Throws", false)
-        } catch {
-            check("Request_ClientWithoutElicitation_Throws", error as? AcuaMCPElicitationError == .notDeclaredByClient, "\(error)")
-        }
-        check("Request_ClientWithoutElicitation_NeverSendsTheRequest", calls.count == 0)
+        let withoutElicitation = Forms()
+        let dialogAnswer = try? await AcuaMCPElicitation.request(form, clientSupportsElicitation: false,
+            elicit: { _ in withoutElicitation.record("elicitation"); return .init(action: .accept) },
+            serviceDialog: { _ in withoutElicitation.record("dialog"); return .init(action: .decline) })
+        check("Request_ClientWithoutElicitation_AsksTheServiceDialog", withoutElicitation.all == ["dialog"], "\(withoutElicitation.all)")
+        check("Request_ClientWithoutElicitation_ReturnsTheDialogsAnswer", dialogAnswer?.action == .decline)
 
-        let accepted = try? await AcuaMCPElicitation.request(clientSupportsElicitation: true) {
-            calls.increment()
-            return CreateElicitation.Result(action: .decline)
-        }
-        check("Request_ClientWithElicitation_ReturnsTheAnswer", accepted?.action == .decline && calls.count == 1)
+        let withElicitation = Forms()
+        let elicited = try? await AcuaMCPElicitation.request(form, clientSupportsElicitation: true,
+            elicit: { _ in withElicitation.record("elicitation"); return .init(action: .accept) },
+            serviceDialog: { _ in withElicitation.record("dialog"); return .init(action: .decline) })
+        check("Request_ClientWithElicitation_SendsTheElicitationOnly", withElicitation.all == ["elicitation"], "\(withElicitation.all)")
+        check("Request_ClientWithElicitation_ReturnsTheClientsAnswer", elicited?.action == .accept)
 
-        check("Error_NotDeclared_NamesElicitation",
-              String(describing: AcuaMCPElicitationError.notDeclaredByClient).contains("elicitation"))
+        // The dialog wait ends with the tool call too.
+        let waiting = Task {
+            try await AcuaMCPElicitation.request(form, clientSupportsElicitation: false,
+                elicit: { _ in .init(action: .accept) }, serviceDialog: { _ in try await neverAnswered() })
+        }
+        try? await Task.sleep(for: .milliseconds(100))
+        waiting.cancel()
+        if case .failure(let error) = await waiting.result {
+            check("Request_ServiceDialogAndCancelled_ThrowsCancellation", error is CancellationError)
+        } else {
+            check("Request_ServiceDialogAndCancelled_ThrowsCancellation", false)
+        }
     }
 
     // MARK: - Record & Replay
@@ -140,25 +155,45 @@ enum AcuaMCPElicitationTests {
         return try! JSONDecoder().decode(ComputerUseIPCEventStreamSessionStatus.self, from: data)
     }
 
-    private static func eventStreamTests() async {
-        let calls = EventStreamCalls()
-        let eventStream = CUAMCPEventStream(
+    private static func eventStream(_ calls: EventStreamCalls, answer: CreateElicitation.Result.Action) -> CUAMCPEventStream {
+        CUAMCPEventStream(
             status: { calls.record("status"); return status(recording: false) },
             start: { calls.record("start"); return status(recording: true) },
             stop: { _ in calls.record("stop"); return status(recording: false) },
-            telemetry: { _ in })
-        // Never connected: an elicitation request would fail rather than reach anyone.
-        let server = Server(name: "Record & Replay", version: "test")
+            telemetry: { _ in },
+            serviceDialog: { form in
+                calls.record("dialog: \(form.message) | \(form.detail ?? "")")
+                return .init(action: answer)
+            })
+    }
 
-        let result = await CUAMCPInvocationContext.$clientSupportsElicitation.withValue(false) {
-            await eventStream.call(.init(name: "event_stream_start", arguments: [:]), server: server)
-        }
-        let text = result.content.compactMap { content -> String? in
+    private static func text(_ result: CallTool.Result) -> String {
+        result.content.compactMap { content -> String? in
             if case .text(let text) = content { return text }
             return nil
         }.joined()
-        check("EventStreamStart_ClientWithoutElicitation_IsAnError", result.isError == true, text)
-        check("EventStreamStart_ClientWithoutElicitation_SaysApprovalNeedsElicitation", text.contains("elicitation"), text)
-        check("EventStreamStart_ClientWithoutElicitation_NeverStartsRecording", !calls.all.contains("start"), "\(calls.all)")
+    }
+
+    private static func eventStreamTests() async {
+        // Never connected: an elicitation request would fail rather than reach anyone.
+        let server = Server(name: "Record & Replay", version: "test")
+        let start = CallTool.Parameters(name: "event_stream_start", arguments: [:])
+
+        let declinedCalls = EventStreamCalls()
+        let declined = await CUAMCPInvocationContext.$clientSupportsElicitation.withValue(false) {
+            await eventStream(declinedCalls, answer: .decline).call(start, server: server)
+        }
+        check("EventStreamStart_ClientWithoutElicitation_AsksTheServiceDialog",
+              declinedCalls.all == ["status", "dialog: \(CUAMCPEventStream.approvalMessage) | \(CUAMCPEventStream.approvalSubtitle)"],
+              "\(declinedCalls.all)")
+        check("EventStreamStart_DialogDeclined_IsTheElicitationDenial",
+              declined.isError == true && text(declined) == "Record & Replay approval denied via MCP elicitation.", text(declined))
+
+        let acceptedCalls = EventStreamCalls()
+        let accepted = await CUAMCPInvocationContext.$clientSupportsElicitation.withValue(false) {
+            await eventStream(acceptedCalls, answer: .accept).call(start, server: server)
+        }
+        check("EventStreamStart_DialogAllowed_StartsRecording",
+              acceptedCalls.all.last == "start" && accepted.isError != true, "\(acceptedCalls.all) \(text(accepted))")
     }
 }

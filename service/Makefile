@@ -190,6 +190,24 @@ acua-mcp-elicitation-test:
 
 .PHONY: acua-mcp-elicitation-test
 
+# The service's approval form for MCP clients without elicitation: accepted
+# schemas, field order and the elicitation-shaped answer, without a dialog.
+acua-approval-form-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-approval-form-tests Native/acua-app-approval/AcuaApprovalForm.swift ../test/acua-approval-form.swift
+	/tmp/cua-acua-approval-form-tests
+
+.PHONY: acua-approval-form-test
+
+# The HTTP layer under MCP over streamable HTTP: request parsing, response
+# encoding and the path and token gate, without a socket.
+acua-mcp-http-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-mcp-http-tests ClientMCPHTTP.swift ../test/acua-mcp-http.swift
+	/tmp/cua-acua-mcp-http-tests
+
+.PHONY: acua-mcp-http-test
+
 # The public turn contract: session tracking in the service and turn
 # resolution in the MCP client. Pure logic, no service or MCP connection.
 ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \

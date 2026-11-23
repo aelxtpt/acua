@@ -15,6 +15,8 @@ struct CUAMCPMessages: Sendable {
     let readStore: MessagesReadDecisionStore
     let sendStore: MessagesSendApprovalStore
     let telemetry: @Sendable (CUAMessagesApprovalTelemetry) -> Void
+    /// Asks the user of a client without elicitation (ACUA only).
+    let serviceDialog: AcuaMCPElicitation.Ask
 
     static let sendDeclined = "Message was not sent because the send was not approved. If the task's current approval_policy is confirmed to be never, explain, without naming the internal policy value, that the task's approval settings may have blocked the send confirmation, and suggest switching the task to Ask for approval or Approve for me before retrying. Otherwise, only report that the send was not approved; do not suggest changing approval settings."
     static let sendCanceled = "Message was not sent because the send approval was canceled."
@@ -59,7 +61,8 @@ struct CUAMCPMessages: Sendable {
     func call(_ parameters: CallTool.Parameters, server: Server) async -> CallTool.Result {
         do {
             let arguments = MessagesMCPArguments(parameters.arguments)
-            let approval = MessagesMCPApproval(readStore: readStore, sendStore: sendStore, server: server, telemetry: telemetry)
+            let approval = MessagesMCPApproval(readStore: readStore, sendStore: sendStore, server: server,
+                                               serviceDialog: serviceDialog, telemetry: telemetry)
             switch parameters.name {
             case "find_chats": return try await MessagesMCPFormatting.chats(findChats(arguments.findChats()))
             case "read_messages": return try await read(readMessages(arguments.readMessages()), approval: approval)
@@ -96,6 +99,7 @@ struct CUAMCPMessages: Sendable {
               commitSend: { try await ComputerUseIPCClient.sendRequest($0, files: $1) },
               countActivity: { try await ComputerUseIPCClient.sendRequest($0) },
               readImage: { try await ComputerUseIPCClient.sendRequest($0) },
-              readStore: readStore, sendStore: sendStore, telemetry: { DiscardedTelemetry.drop($0) })
+              readStore: readStore, sendStore: sendStore, telemetry: { DiscardedTelemetry.drop($0) },
+              serviceDialog: AcuaMCPElicitation.nativeServiceDialog)
     }
 }

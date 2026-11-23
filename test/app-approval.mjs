@@ -75,6 +75,29 @@ try {
     return replies.shift();
   }
 
+  async function form(request) {
+    const params = {clientApiVersion: 'AcuaComputerUseIPC-5', requestType: 'ComputerUseIPCApprovalFormRequest', request};
+    const message = Buffer.from(JSON.stringify({id: ++id, jsonrpc: '2.0', method: 'request', params}));
+    const header = Buffer.alloc(4);
+    header.writeUInt32LE(message.length);
+    socket.write(Buffer.concat([header, message]));
+
+    const until = Date.now() + 15000;
+    while (!replies.length) {
+      assert.ok(Date.now() < until, `the approval form got no reply (a dialog may have opened): ${errors}`);
+      await new Promise(resolve => setTimeout(resolve, 10));
+    }
+    return replies.shift();
+  }
+
+  // Forms the dialog cannot draw are refused before any dialog opens.
+  const numberField = await form({message: 'Allow?', requestedSchema: {type: 'object', properties: {n: {type: 'number'}}}});
+  assert.equal(numberField.result, undefined, JSON.stringify(numberField));
+  assert.match(numberField.error?.message ?? '', /field 'n' is not a kind the service dialog can show/, JSON.stringify(numberField));
+  const noMessage = await form({requestedSchema: {type: 'object', properties: {}}});
+  assert.match(noMessage.error?.message ?? '', /no message/, JSON.stringify(noMessage));
+  console.log('PASS an approval form the dialog cannot draw is refused without a dialog');
+
   const listed = await approve(ALLOWED_APP);
   assert.deepEqual(listed.result, {decision: 'pre_approved'}, JSON.stringify(listed));
   console.log('PASS an app in [apps].allow is pre-approved without a dialog');

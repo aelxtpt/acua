@@ -26,7 +26,7 @@ struct CUAMCPAutomation: Sendable {
         do {
             let channel: AutomationMCPApprovalChannel = CUAMCPInvocationContext.clientSupportsElicitation
                 ? .elicitation { parameters in
-                    try await AcuaMCPElicitation.request {
+                    try await AcuaMCPElicitation.untilCancelled {
                         try await server.requestElicitation(message: parameters.message, mode: parameters.mode,
                             requestedSchema: parameters.requestedSchema, _meta: parameters._meta)
                     }

@@ -757,6 +757,9 @@ enum Dispatch {
             let body = try decodeXPCBody?() ?? decodedSocketBody ?? params["request"]
             return try AcuaAppApprovalIPC.perform(str(asDict(body)?["app"]) ?? "")
         }
+        if requestType == DirectRequestType.approvalForm.rawValue {
+            return try AcuaApprovalFormIPC.perform(try decodeXPCBody?() ?? decodedSocketBody ?? params["request"])
+        }
         let preparation = RequestPreparation(requestType: requestType)
         let preflight = try ServiceRequestPreflight<Any?>.run(contract: .init(typeName: requestType), decode: {
             try decodeXPCBody?() ?? decodedSocketBody ?? params["request"]

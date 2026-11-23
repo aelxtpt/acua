@@ -54,12 +54,32 @@ enum CUAMCPServer {
         return server
     }
 
+    /// `makeHandler` builds one domain backend per MCP connection: once for
+    /// stdio, and once per session over HTTP, so per-connection state (app
+    /// instructions sent, Messages approvals for this conversation) stays
+    /// per connection.
     static func run(catalog: CUAMCPToolCatalog, dispatchUnknownTools: Bool = false, endTurn: AcuaMCPEndTurnTool? = nil,
-                    now: @escaping @Sendable () -> Date = Date.init, handler: @escaping Handler) async throws {
-        let capabilities = CUAMCPClientCapabilities()
-        let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, endTurn: endTurn,
-                                    clientCapabilities: capabilities, now: now, handler: handler)
-        try await server.start(transport: StdioTransport()) { _, declared in capabilities.record(declared) }
-        await server.waitUntilCompleted()
+                    transport: AcuaMCPTransport = .stdio, now: @escaping @Sendable () -> Date = Date.init,
+                    makeHandler: @escaping @Sendable () throws -> Handler) async throws {
+        guard case .http(let port) = transport else {
+            let capabilities = CUAMCPClientCapabilities()
+            let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, endTurn: endTurn,
+                                        clientCapabilities: capabilities, now: now, handler: try makeHandler())
+            try await server.start(transport: StdioTransport()) { _, declared in capabilities.record(declared) }
+            await server.waitUntilCompleted()
+            return
+        }
+
+        try await AcuaMCPHTTPServing.run(port: port, serverName: catalog.domain.serverName) {
+            // An HTTP client has no agent process the helper could name its
+            // session after; each MCP session is its own turn session.
+            let capabilities = CUAMCPClientCapabilities()
+            let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, endTurn: endTurn,
+                                        turnScope: .init(implicitSessionID: AcuaMCPHTTPServing.sessionPrefix + UUID().uuidString),
+                                        clientCapabilities: capabilities, now: now, handler: try makeHandler())
+            let transport = StatefulHTTPServerTransport()
+            try await server.start(transport: transport) { _, declared in capabilities.record(declared) }
+            return (server, transport)
+        }
     }
 }

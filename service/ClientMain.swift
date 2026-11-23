@@ -3,6 +3,24 @@ import ArgumentParser
 import os
 import Darwin
 
+/// `--http PORT` on every MCP server command.
+struct AcuaMCPTransportOptions: ParsableArguments {
+    @Option(name: .customLong("http"),
+            help: "Serve MCP streamable HTTP on 127.0.0.1:PORT instead of stdio (0 picks a free port). The URL and a new token are printed to standard error.")
+    var httpPort: Int?
+
+    func validate() throws {
+        guard let httpPort else { return }
+        guard (0...Int(UInt16.max)).contains(httpPort) else {
+            throw ValidationError("--http takes a port from 0 to 65535.")
+        }
+    }
+
+    var transport: AcuaMCPTransport {
+        httpPort.map { .http(port: UInt16($0)) } ?? .stdio
+    }
+}
+
 @main struct OwnedComputerUseClient: AsyncParsableCommand {
     static let configuration = CommandConfiguration(commandName: "cua", subcommands: [MCP.self, EventStream.self, ComputerHistory.self, Calendar.self, Messages.self, TurnEnded.self, HooksCommand.self])
 
@@ -11,6 +29,8 @@ import Darwin
         static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Computer Use client as an MCP server",
                                                         discussion: "Without a subcommand, serves MCP on stdin and stdout. Use install to configure an MCP host.",
                                                         subcommands: [MCPInstallCommand.self, MCPUninstallCommand.self])
+        @OptionGroup var transport: AcuaMCPTransportOptions
+
         mutating func run() async {
             signal(SIGPIPE, SIG_IGN)
             let storage = ClientMCPAutomationStorage.native()
@@ -19,12 +39,14 @@ import Darwin
                     throw CocoaError(.fileNoSuchFile)
                 }
                 let catalog = try CUAMCPToolCatalog(domain: .automation, definitions: Data(contentsOf: definitions))
-                let tracker = AutomationMCPTurnMetricsTracker(emit: { DiscardedTelemetry.drop($0) })
-                let backend = CUAMCPAutomation.native(store: .init(storageURL: storage.appApprovals), tracker: tracker,
-                    approvalTelemetry: { DiscardedTelemetry.drop($0) }, toolTelemetry: { DiscardedTelemetry.drop($0) })
-                try await CUAMCPServer.run(catalog: catalog, endTurn: .native()) { domain, parameters, server in
-                    precondition(domain == .automation)
-                    return try await backend.call(parameters, server: server)
+                try await CUAMCPServer.run(catalog: catalog, endTurn: .native(), transport: transport.transport) {
+                    let tracker = AutomationMCPTurnMetricsTracker(emit: { DiscardedTelemetry.drop($0) })
+                    let backend = CUAMCPAutomation.native(store: .init(storageURL: storage.appApprovals), tracker: tracker,
+                        approvalTelemetry: { DiscardedTelemetry.drop($0) }, toolTelemetry: { DiscardedTelemetry.drop($0) })
+                    return { domain, parameters, server in
+                        precondition(domain == .automation)
+                        return try await backend.call(parameters, server: server)
+                    }
                 }
             } catch {
                 Logger(subsystem: "com.aex.computeruse.client", category: "ComputerUseMCPServer")
@@ -37,6 +59,8 @@ import Darwin
         static let configuration = CommandConfiguration(commandName: "messages", subcommands: [MCP.self])
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Messages client as an MCP server")
+            @OptionGroup var transport: AcuaMCPTransportOptions
+
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
                 do {
@@ -45,11 +69,13 @@ import Darwin
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .messages, definitions: Data(contentsOf: definitions))
                     let storage = ClientMCPMessagesStorage.native()
-                    let backend = CUAMCPMessages.native(readStore: .init(storageURL: storage.readDecisions),
-                        sendStore: .init(storageURL: storage.sendApprovals))
-                    try await CUAMCPServer.run(catalog: catalog) { domain, parameters, server in
-                        precondition(domain == .messages)
-                        return await backend.call(parameters, server: server)
+                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport) {
+                        let backend = CUAMCPMessages.native(readStore: .init(storageURL: storage.readDecisions),
+                            sendStore: .init(storageURL: storage.sendApprovals))
+                        return { domain, parameters, server in
+                            precondition(domain == .messages)
+                            return await backend.call(parameters, server: server)
+                        }
                     }
                 } catch {
                     Logger(subsystem: "com.aex.computeruse.client", category: "MessagesClient")
@@ -63,6 +89,8 @@ import Darwin
         static let configuration = CommandConfiguration(commandName: "calendar", subcommands: [MCP.self])
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Calendar client as an MCP server")
+            @OptionGroup var transport: AcuaMCPTransportOptions
+
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
                 do {
@@ -70,10 +98,12 @@ import Darwin
                         throw CocoaError(.fileNoSuchFile)
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .calendar, definitions: Data(contentsOf: definitions))
-                    let backend = CUAMCPCalendar.native()
-                    try await CUAMCPServer.run(catalog: catalog) { domain, parameters, _ in
-                        precondition(domain == .calendar)
-                        return await backend.call(parameters)
+                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport) {
+                        let backend = CUAMCPCalendar.native()
+                        return { domain, parameters, _ in
+                            precondition(domain == .calendar)
+                            return await backend.call(parameters)
+                        }
                     }
                 } catch {
                     Logger(subsystem: "com.aex.computeruse.client", category: "CalendarMCPServer")
@@ -87,6 +117,8 @@ import Darwin
         static let configuration = CommandConfiguration(commandName: "computer-history", subcommands: [MCP.self])
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Computer History client as an MCP server")
+            @OptionGroup var transport: AcuaMCPTransportOptions
+
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
                 do {
@@ -94,10 +126,12 @@ import Darwin
                         throw CocoaError(.fileNoSuchFile)
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .history, definitions: Data(contentsOf: definitions))
-                    let backend = CUAMCPHistory.native(telemetry: { DiscardedTelemetry.drop($0) })
-                    try await CUAMCPServer.run(catalog: catalog, dispatchUnknownTools: true) { domain, parameters, _ in
-                        precondition(domain == .history)
-                        return await backend.call(parameters)
+                    try await CUAMCPServer.run(catalog: catalog, dispatchUnknownTools: true, transport: transport.transport) {
+                        let backend = CUAMCPHistory.native(telemetry: { DiscardedTelemetry.drop($0) })
+                        return { domain, parameters, _ in
+                            precondition(domain == .history)
+                            return await backend.call(parameters)
+                        }
                     }
                 } catch {
                     Logger(subsystem: "com.aex.computeruse.client", category: "ComputerHistoryMCPServer")
@@ -112,6 +146,7 @@ import Darwin
 
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Record & Replay client as an MCP server")
+            @OptionGroup var transport: AcuaMCPTransportOptions
 
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
@@ -120,10 +155,12 @@ import Darwin
                         throw CocoaError(.fileNoSuchFile)
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .eventStream, definitions: Data(contentsOf: definitions))
-                    let backend = CUAMCPEventStream.native(telemetry: { DiscardedTelemetry.drop($0) })
-                    try await CUAMCPServer.run(catalog: catalog) { domain, parameters, server in
-                        precondition(domain == .eventStream)
-                        return await backend.call(parameters, server: server)
+                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport) {
+                        let backend = CUAMCPEventStream.native(telemetry: { DiscardedTelemetry.drop($0) })
+                        return { domain, parameters, server in
+                            precondition(domain == .eventStream)
+                            return await backend.call(parameters, server: server)
+                        }
                     }
                 } catch {
                     Logger(subsystem: "com.aex.computeruse.client", category: "EventStreamMCPServer")

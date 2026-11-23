@@ -419,8 +419,11 @@ echo; echo "== ACUA hooks: agent-process sessions, hooks install and uninstall f
 (cd service && make acua-agent-process-test acua-hooks-install-test) || fail=1
 node test/hooks-install.mjs || fail=1
 echo; echo "== ACUA MCP protocol: initialize, 31-tool schema snapshot, protocol and argument errors, elicitation only when declared and never past a cancellation =="
-(cd service && make acua-mcp-elicitation-test) || fail=1
+(cd service && make acua-mcp-elicitation-test acua-approval-form-test) || fail=1
 node test/mcp-protocol.mjs || fail=1
-echo; echo "== ACUA MCP approvals: real service elicitation decline and cancel, cancelled tool calls get no response, no elicitation without the capability =="
+echo; echo "== ACUA MCP approvals: real service elicitation decline and cancel, cancelled tool calls get no response, elicitation over HTTP, and the service dialog for clients without elicitation =="
 node test/mcp-elicitation.mjs || fail=1
+echo; echo "== ACUA MCP over HTTP: loopback only, token, path, Origin and session checks, independent sessions and DELETE =="
+(cd service && make acua-mcp-http-test) || fail=1
+node test/mcp-http.mjs || fail=1
 exit $fail
