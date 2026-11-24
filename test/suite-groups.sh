@@ -430,4 +430,7 @@ echo; echo "== ACUA with Claude Code: claude -p types into and clicks a disposab
 node test/claude-code-e2e.mjs || fail=1
 echo; echo "== Second display: screenshot-pixel click, drag, scroll and slider on a display other than the primary one, through the real service =="
 node test/coordinates-other-display.mjs || fail=1
+echo; echo "== Release signature: hardened runtime, secure timestamp, exact entitlements, product version, and DYLD injection refused by the shipped service =="
+(cd service && make bundle-signing-test) || fail=1
+python3 test/release-signature.py || fail=1
 exit $fail

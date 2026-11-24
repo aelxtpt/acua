@@ -638,6 +638,12 @@ intervention-test:
 	$(SWIFTC) $(SWIFTFLAGS) -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-intervention-tests Protocol.swift AppSessions.swift UserInteraction.swift ../test/intervention.swift
 	/tmp/cua-intervention-tests
 
+# Shipped signing choices: hardened runtime, timestamp, entitlements, version
+bundle-signing-test:
+	python3 ../test/bundle-signing.py
+
+.PHONY: bundle-signing-test
+
 install: bundle
 	python3 install_native.py --distribution "$(NATIVE_BUILD_DIR)/dist" --destination "$(SERVICE_DIR)"
 
