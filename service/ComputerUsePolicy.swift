@@ -20,6 +20,12 @@ struct ComputerUsePolicy: Equatable, Sendable {
     func allows(_ bundleIdentifier: String) -> Bool {
         enabled && appAccess.access(forBundleIdentifier: bundleIdentifier) == .allow
     }
+
+    /// Listed in `[apps].allow` (and not denied): the agent uses the app
+    /// without an approval prompt, whatever client it runs in.
+    func preApproves(_ bundleIdentifier: String) -> Bool {
+        allows(bundleIdentifier) && appAccess.isExplicitlyAllowed(bundleIdentifier)
+    }
 }
 
 enum ApplicationPolicyRisk {

@@ -150,6 +150,9 @@ private final class ConcurrentCallbacks:@unchecked Sendable {
         try await wait {racing!.isFinished}
         check("stop during configuration cannot start a lingering run loop",racing!.isCancelled && racing!.isFinished)
         racing=nil
+        // isFinished flips on the worker thread before that thread drops its last
+        // reference, so under load the release can trail it by a moment.
+        try? await wait {retained.value==nil}
         check("finished worker releases callback context",retained.value==nil)
         let workers=(0..<32).map {i in EventStreamAXObserverRunLoop(source:source(),context:WorkerContext(),name:"CUA monitor race \(i)",configurationBarrier:{})}
         for worker in workers {worker.start()}

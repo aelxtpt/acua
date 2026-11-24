@@ -398,4 +398,39 @@ echo; echo "== ACUA standalone: local policy over IPC, no external agent CLI, no
 node test/computer-use-policy-ipc.mjs || fail=1
 echo; echo "== Native in-process checks: coordinates, actions, targets, errors, screenshots, launch state, windows and default policy =="
 python3 test/native-in-process-checks.py || fail=1
+echo; echo "== ACUA turn contract and Unicode typing: session tracking, _meta turn scope, end_turn and keyless characters =="
+(cd service && make acua-turn-contract-test acua-keyboard-text-test acua-mouse-target-test acua-scroll-reveal-test) || fail=1
+node test/mcp-turn-contract.mjs || fail=1
+echo; echo "== ACUA turn contract: real service user stop, turn end and session end =="
+node test/turn-contract.mjs || fail=1
+echo; echo "== ACUA app approval without elicitation: [apps].allow, service dialog decisions and case-insensitive app lists =="
+(cd service && make acua-app-approval-test acua-mcp-approval-test acua-configuration-test) || fail=1
+node test/app-approval.mjs || fail=1
+echo; echo "== ACUA app approval dialog: real service dialog opens, closes when its client exits, no dialog for dead queued clients =="
+node test/app-approval-dialog.mjs || fail=1
+echo; echo "== ACUA mcp install: host snippets, mcpServers file edits and written entries that start real MCP servers =="
+(cd service && make acua-mcp-install-test) || fail=1
+node test/mcp-install.mjs || fail=1
+echo; echo "== ACUA screenshot limits: [screenshots] resolution and max_image_bytes, base64 image content and instructions once per app =="
+(cd service && make acua-configuration-test acua-screenshot-budget-test acua-mcp-output-test) || fail=1
+echo; echo "== ACUA screenshot limits: real service fitted default, PNG fallback, native resolution and clicks from fitted images =="
+node test/screenshot-limits.mjs || fail=1
+echo; echo "== ACUA hooks: agent-process sessions, hooks install and uninstall for Claude Code, Cursor and Codex, turn-ended --agent-process =="
+(cd service && make acua-agent-process-test acua-hooks-install-test) || fail=1
+node test/hooks-install.mjs || fail=1
+echo; echo "== ACUA MCP protocol: initialize, 31-tool schema snapshot, protocol and argument errors, elicitation only when declared and never past a cancellation =="
+(cd service && make acua-mcp-elicitation-test acua-approval-form-test) || fail=1
+node test/mcp-protocol.mjs || fail=1
+echo; echo "== ACUA MCP approvals: real service elicitation decline and cancel, cancelled tool calls get no response, elicitation over HTTP, and the service dialog for clients without elicitation =="
+node test/mcp-elicitation.mjs || fail=1
+echo; echo "== ACUA MCP over HTTP: loopback only, token, path, Origin and session checks, independent sessions and DELETE =="
+(cd service && make acua-mcp-http-test) || fail=1
+node test/mcp-http.mjs || fail=1
+echo; echo "== ACUA with Claude Code: claude -p types into and clicks a disposable app through the MCP tools, and the Stop hook from hooks install ends its session =="
+node test/claude-code-e2e.mjs || fail=1
+echo; echo "== Second display: screenshot-pixel click, drag, scroll and slider on a display other than the primary one, through the real service =="
+node test/coordinates-other-display.mjs || fail=1
+echo; echo "== Release signature: hardened runtime, secure timestamp, exact entitlements, product version, and DYLD injection refused by the shipped service =="
+(cd service && make bundle-signing-test) || fail=1
+python3 test/release-signature.py || fail=1
 exit $fail

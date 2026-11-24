@@ -8,35 +8,78 @@ import MCP
 enum CUAMCPServer {
     typealias Handler = @Sendable (CUAMCPDomain, CallTool.Parameters, Server) async throws -> CallTool.Result
 
+    /// `endTurn` adds the public `end_turn` tool to the catalog. Every call is
+    /// tied to a session and turn through `turnScope`, named by the agent in
+    /// `_meta` or implicit for this connection.
     static func make(catalog: CUAMCPToolCatalog, dispatchUnknownTools: Bool = false,
+                     endTurn: AcuaMCPEndTurnTool? = nil, turnScope: AcuaMCPTurnScope = .init(),
+                     clientCapabilities: CUAMCPClientCapabilities = .init(),
                      now: @escaping @Sendable () -> Date = Date.init, handler: @escaping Handler) async throws -> Server {
         let server = Server(name: catalog.domain.serverName, version: try catalog.definitionVersion,
             instructions: catalog.domain == .calendar
                 ? "Tools for working with calendars and events in the macOS Calendar app." : nil,
             capabilities: .init(tools: .init(listChanged: catalog.domain == .calendar ? nil : false)))
-        await server.withMethodHandler(ListTools.self) { _ in .init(tools: catalog.tools) }
+        let tools = endTurn == nil ? catalog.tools : catalog.tools + [AcuaMCPEndTurnTool.definition]
+        await server.withMethodHandler(ListTools.self) { _ in .init(tools: tools) }
         await server.withMethodHandler(CallTool.self) { parameters in
             // History measures the complete metadata-scoped invocation, with
             // its start date captured before extracting turn metadata.
             let startedAt = catalog.domain == .history ? now() : nil
+            let turn: ComputerUseJSONRPCCodexTurnMetadata
+            do { turn = try CUAMCPInvocationContext.turn(parameters._meta, scope: turnScope) }
+            catch { return .init(content: [.text(String(describing: error))], isError: true) }
+            let elicitation = clientCapabilities.supportsElicitation
             return try await CUAMCPInvocationContext.$startedAt.withValue(startedAt) {
-              try await CUAMCPInvocationContext.withMetadata(parameters._meta) {
+              try await CUAMCPInvocationContext.$clientSupportsElicitation.withValue(elicitation) {
+              try await CUAMCPInvocationContext.withTurn(turn) {
+                if let endTurn, parameters.name == AcuaMCPEndTurnTool.name {
+                    return await endTurn.call(parameters, scope: turnScope, callMetadata: turn)
+                }
                 guard dispatchUnknownTools || catalog.tools.contains(where: { $0.name == parameters.name }) else {
                     let message = "Unknown tool: " + parameters.name
                     let text = catalog.domain == .calendar ? String(describing: MCPError.invalidParams(message)) : message
                     return .init(content: [.text(text)], isError: true)
                 }
-                return try await handler(catalog.domain, parameters, server)
+                let result = try await handler(catalog.domain, parameters, server)
+                // Domain handlers turn every error, cancellation included,
+                // into an error result. The SDK sends no response only for a
+                // thrown CancellationError, which is what the MCP spec asks
+                // for a request the client cancelled.
+                try Task.checkCancellation()
+                return result
+              }
               }
             }
         }
         return server
     }
 
-    static func run(catalog: CUAMCPToolCatalog, dispatchUnknownTools: Bool = false,
-                    now: @escaping @Sendable () -> Date = Date.init, handler: @escaping Handler) async throws {
-        let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, now: now, handler: handler)
-        try await server.start(transport: StdioTransport())
-        await server.waitUntilCompleted()
+    /// `makeHandler` builds one domain backend per MCP connection: once for
+    /// stdio, and once per session over HTTP, so per-connection state (app
+    /// instructions sent, Messages approvals for this conversation) stays
+    /// per connection.
+    static func run(catalog: CUAMCPToolCatalog, dispatchUnknownTools: Bool = false, endTurn: AcuaMCPEndTurnTool? = nil,
+                    transport: AcuaMCPTransport = .stdio, now: @escaping @Sendable () -> Date = Date.init,
+                    makeHandler: @escaping @Sendable () throws -> Handler) async throws {
+        guard case .http(let port) = transport else {
+            let capabilities = CUAMCPClientCapabilities()
+            let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, endTurn: endTurn,
+                                        clientCapabilities: capabilities, now: now, handler: try makeHandler())
+            try await server.start(transport: StdioTransport()) { _, declared in capabilities.record(declared) }
+            await server.waitUntilCompleted()
+            return
+        }
+
+        try await AcuaMCPHTTPServing.run(port: port, serverName: catalog.domain.serverName) {
+            // An HTTP client has no agent process the helper could name its
+            // session after; each MCP session is its own turn session.
+            let capabilities = CUAMCPClientCapabilities()
+            let server = try await make(catalog: catalog, dispatchUnknownTools: dispatchUnknownTools, endTurn: endTurn,
+                                        turnScope: .init(implicitSessionID: AcuaMCPHTTPServing.sessionPrefix + UUID().uuidString),
+                                        clientCapabilities: capabilities, now: now, handler: try makeHandler())
+            let transport = StatefulHTTPServerTransport()
+            try await server.start(transport: transport) { _, declared in capabilities.record(declared) }
+            return (server, transport)
+        }
     }
 }

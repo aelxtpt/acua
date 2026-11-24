@@ -7,6 +7,7 @@ import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { requireNativeDesktop, startNativeDesktop } from './native-desktop-service.mjs';
+import { uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 requireNativeDesktop();
@@ -20,7 +21,9 @@ for (const [source, destination, library] of [['HostedPanelFixture.swift', binar
   execFileSync('swiftc', ['-O', ...(library ? ['-parse-as-library'] : []), '-module-cache-path', '/private/tmp/cua-swift-module-cache', path.join(root, 'test', source), '-o', destination], { stdio: 'inherit' });
 }
 execFileSync('codesign', ['--force', '--sign', '-', app], { stdio: 'inherit' });
-const { socket, service } = startNativeDesktop(directory, bundle);
+// Requests name the fixture by path; see fixtureAppTarget.
+const fixtureApp = fixtureAppTarget(app);
+const { socket, service } = startNativeDesktop(directory, bundle, fixtureApp);
 const fixture = spawn(binary, [directory], { stdio: ['ignore', 'ignore', 'inherit'] });
 const events = () => {
   const file = path.join(directory, 'events.jsonl');
@@ -38,7 +41,7 @@ async function command(value, expected = value) {
 }
 async function request(name, fields = {}, clientType) {
   const body = Buffer.from(JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'ownedFixtureNativeRequest', params: {
-    requestType: `ComputerUseIPCApp${name}Request`, request: { app: bundle, ...fields }, clientType,
+    requestType: `ComputerUseIPCApp${name}Request`, request: { app: fixtureApp, ...fields }, clientType,
   } }));
   const header = Buffer.alloc(4); header.writeUInt32LE(body.length);
   const client = net.createConnection({ path: socket });
@@ -129,7 +132,7 @@ try {
   const standalone = await capture('standalone');
   assert.match(standalone.appSnapshot.text, /Select owned file/);
   pass('standalone hosted chooser also publishes controls and a screenshot');
-  await key('Command+Shift+g');
+  await key('Command+Shift_L+g');
   await until(() => owners().some(e => e.role === 'AXComboBox' || (e.role === 'AXTextField' && e.title !== 'Search')), 'Go to Folder input');
   const goto = await capture('go-to-folder');
   fs.writeFileSync(path.join(directory, 'go-to-folder-owners.json'), JSON.stringify(owners(), null, 2));

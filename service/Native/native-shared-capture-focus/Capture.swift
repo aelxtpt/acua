@@ -192,9 +192,11 @@ enum Capture {
         let url: URL
         var nativePath:FilePath?
         if let nativeAppName, let nativeSettings {
-            let file = try NativeAppSnapshotImage.writeFile(image, appName: nativeAppName,
+            // The MIME type is later read from the file extension, which
+            // follows the encoding the budget chose.
+            let (file, _) = try NativeAppSnapshotImage.writeFileWithinBudget(image, appName: nativeAppName,
                                                directory: directory ?? overrideDirectory ?? NativeAppSnapshotImage.defaultDirectory,
-                                               encoding: nativeSettings.encoding)
+                                               settings: nativeSettings)
             url=file.url;nativePath=file.path
         } else {
             let dir = directory ?? temporaryDirectory
@@ -220,10 +222,11 @@ enum Capture {
     }
 
     @MainActor private static func nativeBackingScale(for frame: CGRect) -> CGFloat {
-        // CGWindow.scale (0x1002663D4) compares the WindowServer frame
-        // directly with NSScreen frames and defaults to 2 when none exist.
+        // The backing scale defaults to 2 when no screen contains the window.
+        // Screens are compared in WindowServer coordinates,
+        // so a window on another display gets that display's scale.
         let screens = NSScreen.screens
-        guard let index = CaptureLayout.bestDisplayIndex(for: frame, displayFrames: screens.map(\.frame)) else { return 2 }
+        guard let index = CaptureLayout.screenIndex(for: frame, appKitScreenFrames: screens.map(\.frame)) else { return 2 }
         return screens[index].backingScaleFactor
     }
 

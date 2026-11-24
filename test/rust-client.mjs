@@ -1,4 +1,4 @@
-import { serviceTestEnvironment, serviceTestExecutable, serviceTestRustManifest } from './service-test-environment.mjs';
+import { serviceTestEnvironment, serviceTestExecutable, serviceTestRustManifest, uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -20,6 +20,8 @@ execFileSync('swiftc', ['-O', '-parse-as-library', '-module-cache-path', '/priva
 execFileSync('codesign', ['--force', '--sign', '-', app], { stdio: 'inherit' });
 const socket = path.join(temp, 'service.sock');
 const fixture = spawn(binary, [temp], { stdio: ['ignore', 'ignore', 'inherit'] });
+// The service creates only numbered collision folders, never this base folder.
+fs.mkdirSync(path.join(temp, 'screenshots'), { recursive: true });
 const service = spawn(serviceTestExecutable(root), [socket], {
   env: serviceTestEnvironment({ CODEX_HOME: temp, ACUA_SCREENSHOT_DIRECTORY: path.join(temp, 'screenshots') }),
   stdio: ['ignore', 'ignore', 'inherit'],
@@ -31,7 +33,7 @@ try {
     await new Promise(resolve => setTimeout(resolve, 20));
   }
   const cargoTarget = process.env.CARGO_TARGET_DIR || path.join(path.dirname(manifest), 'target');
-  const probe = spawn(path.join(cargoTarget, 'debug/examples/native_fixture'), [socket, temp, bundle, String(fixture.pid)], { stdio: 'inherit' });
+  const probe = spawn(path.join(cargoTarget, 'debug/examples/native_fixture'), [socket, temp, bundle, String(fixture.pid), fixtureAppTarget(app)], { stdio: 'inherit' });
   const timer = setTimeout(() => probe.kill('SIGTERM'), 90000);
   try {
     const result = await new Promise((resolve, reject) => { probe.once('error', reject); probe.once('exit', (code, signal) => resolve({ code, signal })); });

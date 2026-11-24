@@ -26,7 +26,7 @@ import Foundation
                     let status = UCKeyTranslate(layout, code, 3, modifiers, type, 0,
                         &dead, buffer.count, &length, &buffer)
                     return .init(status: status, units: Array(buffer.prefix(length)))
-                }, missing: { NSLog("Could not find key code for character: %C", $0) })
+                })
             }
         }
     }

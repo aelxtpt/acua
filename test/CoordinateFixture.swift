@@ -202,6 +202,38 @@ enum CoordinateFixture {
                 child.orderOut(nil); small.removeChildWindow(child)
                 write(["event": "child-hidden"])
             }
+            if value == "move-to-other-display" {
+                // Any display other than the primary one (the menu bar's), so
+                // its global coordinates, origin and scale differ from it.
+                let primary = NSScreen.screens.first!
+                guard let other = NSScreen.screens.dropFirst().first else {
+                    write(["event": "no-other-display"])
+                    return
+                }
+
+                let visible = other.visibleFrame
+                small.setFrameOrigin(NSPoint(x: visible.midX - small.frame.width / 2, y: visible.midY - small.frame.height / 2))
+                small.makeKeyAndOrderFront(nil)
+                // The window's backing scale follows its new screen once the
+                // move is processed, so report on the next run-loop turn.
+                DispatchQueue.main.async {
+                    let otherNumber = other.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as! NSNumber
+                    write(["event": "moved-to-other-display", "displayID": otherNumber.uint32Value,
+                           "onOtherDisplay": small.screen == other, "backingScale": small.backingScaleFactor,
+                           "primaryScale": primary.backingScaleFactor,
+                           "displayFrame": [other.frame.minX, primary.frame.maxY - other.frame.maxY, other.frame.width, other.frame.height],
+                           "redScreen": screenCenter(canvas.red), "greenScreen": screenCenter(canvas.green),
+                           "blueScreen": screenCenter(canvas.blue)])
+                }
+            }
+            if value == "window-server-frame" {
+                // WindowServer applies a move across displays after AppKit
+                // reports it; captures read this frame, not the AppKit one.
+                let info = (CGWindowListCopyWindowInfo(.optionIncludingWindow, CGWindowID(small.windowNumber)) as? [[String: Any]])?.first
+                let bounds = (info?[kCGWindowBounds as String] as? NSDictionary).flatMap { CGRect(dictionaryRepresentation: $0) }
+                write(["event": "window-server-frame",
+                       "frame": bounds.map { [$0.minX, $0.minY, $0.width, $0.height] } ?? []])
+            }
             if value == "close" { small.orderOut(nil); write(["event": "closed"]) }
             if value == "quit" { app.terminate(nil) }
         }

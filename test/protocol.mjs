@@ -66,7 +66,8 @@ try {
   // 5. Start activates the controller; no tree has been observed in this service.
   // Unknown IDs after an observation are covered by the native input fixture.
   try { await client.setValue({ app: "Safari", elementIndex: 99999, value: "x" }); check("element action requires an observed tree", false, "no error"); }
-  catch (e) { check("element action requires an observed tree", e.code === -10011, `code=${e.code} ${e.message}`); }
+  // The native service reports a missing ID as a generic server error (-10005).
+  catch (e) { check("element action requires an observed tree", e.code === -10005 && e.message.includes("99999 is an invalid element ID"), `code=${e.code} ${e.message}`); }
 
   // 6. audio start (needs Screen Recording) → expect permissions error or ok
   try { await client.startAudioRecording({ maxDurationMilliseconds: 500 }); check("startAudioRecording", true, "started"); await client.stopAudioRecording(); }

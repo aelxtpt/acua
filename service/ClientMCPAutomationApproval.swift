@@ -11,31 +11,34 @@ enum AutomationMCPApprovalTelemetry: Equatable, Sendable {
     case resolved(tool: String?, bundleIdentifier: String?, result: String, persistence: String?)
 }
 
+/// How the user is asked to approve an app that `[apps].allow` does not list.
+enum AutomationMCPApprovalChannel: Sendable {
+    /// The MCP client shows the form; it declared elicitation at initialize.
+    case elicitation(AutomationMCPApproval.Elicit)
+    /// ACUA only, for clients without elicitation: the service's own dialog.
+    /// The MCP spec forbids sending elicitation to a client that did not
+    /// declare it.
+    case serviceDialog(AutomationMCPApproval.ServiceDialog)
+}
+
 /// Policy is consulted on every invocation, including previously approved
 /// applications. Action arguments are validated only after this gate returns.
 struct AutomationMCPApproval: Sendable {
     typealias Policy = @Sendable (ComputerUseIPCAppPolicyRequest) async throws -> ComputerUseIPCAppPolicyResult
     typealias Elicit = @Sendable (CreateElicitation.Parameters.FormParameters) async throws -> CreateElicitation.Result
+    typealias ServiceDialog = @Sendable (ComputerUseIPCAppApprovalRequest) async throws -> ComputerUseIPCAppApprovalResult
 
     let store: AppApprovalStore
     let policy: Policy
-    let elicit: Elicit
+    let channel: AutomationMCPApprovalChannel
     let telemetry: @Sendable (AutomationMCPApprovalTelemetry) -> Void
 
-    init(store: AppApprovalStore, policy: @escaping Policy, elicit: @escaping Elicit,
+    init(store: AppApprovalStore, policy: @escaping Policy, channel: AutomationMCPApprovalChannel,
          telemetry: @escaping @Sendable (AutomationMCPApprovalTelemetry) -> Void) {
         self.store = store
         self.policy = policy
-        self.elicit = elicit
+        self.channel = channel
         self.telemetry = telemetry
-    }
-
-    init(store: AppApprovalStore, policy: @escaping Policy, server: Server,
-         telemetry: @escaping @Sendable (AutomationMCPApprovalTelemetry) -> Void) {
-        self.init(store: store, policy: policy, elicit: { parameters in
-            try await server.requestElicitation(message: parameters.message, mode: parameters.mode,
-                requestedSchema: parameters.requestedSchema, _meta: parameters._meta)
-        }, telemetry: telemetry)
     }
 
     static func form(_ policy: ComputerUseIPCAppPolicyResult) -> CreateElicitation.Parameters.FormParameters {
@@ -64,7 +67,26 @@ struct AutomationMCPApproval: Sendable {
         case .forbidden: throw MCPToolError.appNotAllowed(bundleIdentifier: bundle)
         case .allowed: break
         }
+
+        // ACUA only: [apps].allow applies to every client. Claude Code in
+        // print mode declares elicitation yet cancels every form, so a headless
+        // agent could never use an app if this depended on the channel.
+        // Nothing is stored, so removing the app from the list applies to the
+        // next call.
+        if policy.preApproved == true { return .init(bundleIdentifier: bundle, requestedApproval: false) }
+
         if await store.isApproved(bundle) { return .init(bundleIdentifier: bundle, requestedApproval: false) }
+        switch channel {
+        case .elicitation(let elicit):
+            return try await elicitApproval(tool, policy: policy, elicit: elicit)
+        case .serviceDialog(let dialog):
+            return try await dialogApproval(tool, app: app, bundle: bundle, dialog: dialog)
+        }
+    }
+
+    private func elicitApproval(_ tool: AutomationMCPTool, policy: ComputerUseIPCAppPolicyResult,
+                                elicit: Elicit) async throws -> AutomationMCPAuthorization {
+        let bundle = policy.target.bundleIdentifier
         telemetry(.requested(tool: tool.rawValue, bundleIdentifier: bundle))
         let result = try await elicit(Self.form(policy))
         switch result.action {
@@ -82,6 +104,40 @@ struct AutomationMCPApproval: Sendable {
             telemetry(.resolved(tool: tool.rawValue, bundleIdentifier: bundle, result: "accepted",
                 persistence: permanent ? "always" : "session"))
             return .init(bundleIdentifier: bundle, requestedApproval: true)
+        }
+    }
+
+    /// `app` is the caller's identifier (bundle ID or path), so the service
+    /// resolves the same app the policy check did.
+    private func dialogApproval(_ tool: AutomationMCPTool, app: String, bundle: String,
+                                dialog: ServiceDialog) async throws -> AutomationMCPAuthorization {
+        let result = try await dialog(.init(app: app))
+        switch result.decision {
+        case .preApproved:
+            // Nothing is stored, so removing the app from [apps].allow applies
+            // to the next call.
+            return .init(bundleIdentifier: bundle, requestedApproval: false)
+        case .allowedForSession, .allowedAlways:
+            let permanent = result.decision == .allowedAlways
+            try await approve(bundle, permanently: permanent)
+            telemetry(.resolved(tool: tool.rawValue, bundleIdentifier: bundle, result: "accepted",
+                persistence: permanent ? "always" : "session"))
+            return .init(bundleIdentifier: bundle, requestedApproval: true)
+        case .denied:
+            telemetry(.resolved(tool: tool.rawValue, bundleIdentifier: bundle, result: "declined", persistence: nil))
+            throw MCPToolError.appApprovalDeniedInDialog(bundleIdentifier: bundle)
+        case .canceled:
+            telemetry(.resolved(tool: tool.rawValue, bundleIdentifier: bundle, result: "canceled", persistence: nil))
+            throw MCPToolError.appApprovalCanceled(bundleIdentifier: bundle)
+        }
+    }
+
+    private func approve(_ bundle: String, permanently: Bool) async throws {
+        do {
+            try await store.approve(bundle, permanently: permanently)
+        } catch {
+            throw AutomationMCPErrorWithSpanTelemetry(underlyingError: error,
+                span: .init(targetID: bundle, didTriggerServerUserFlow: true))
         }
     }
 }

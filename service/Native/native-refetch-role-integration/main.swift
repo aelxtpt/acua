@@ -593,7 +593,8 @@ enum Dispatch {
     }
     @MainActor static var endAuthenticatedTurn: (String) -> Void = { preparationOwner.agentTurnEnded(threadID: $0) }
     static func applicationUsed(_ bundle: String) {
-        agentTurns.recordUse(bundle, threadID: ComputerUseTelemetryContext.snapshot().agentSessionID)
+        let turn = ComputerUseTelemetryContext.snapshot()
+        agentTurns.recordUse(bundle, threadID: turn.agentSessionID, turnID: turn.agentTurnID)
     }
     private static func sessionEnded(threadID: String, turnID: String?) {
         for bundle in agentTurns.end(threadID: threadID, turnID: turnID) { AppSessions.shared.clearStoppedByUser(bundle); nativeUsage.clearStoppedByUser(bundle) }
@@ -749,6 +750,15 @@ enum Dispatch {
         }
         guard let requestType = str(params["requestType"]) else {
             throw ServiceError(.couldNotGetRequestTypeName, "Missing requestType")
+        }
+        // Approval may wait for the user, so it runs before any activity,
+        // turn preparation or unlock, as the policy request does.
+        if requestType == DirectRequestType.appApproval.rawValue {
+            let body = try decodeXPCBody?() ?? decodedSocketBody ?? params["request"]
+            return try AcuaAppApprovalIPC.perform(str(asDict(body)?["app"]) ?? "")
+        }
+        if requestType == DirectRequestType.approvalForm.rawValue {
+            return try AcuaApprovalFormIPC.perform(try decodeXPCBody?() ?? decodedSocketBody ?? params["request"])
         }
         let preparation = RequestPreparation(requestType: requestType)
         let preflight = try ServiceRequestPreflight<Any?>.run(contract: .init(typeName: requestType), decode: {
@@ -2012,6 +2022,7 @@ func runSelfTest() -> Int32 {
         foreground.stop()
         TimelineNativeOwner.stopIfLoaded()
         EventStreamIPC.shutdownIfLoaded()
+        Dispatch.nativeUsage.deactivateAllForShutdown()
         SyntheticFocusSessions.endAll()
         AXMenuSessions.endAll()
         AXVoiceOverPreference.shared?.shutdown()

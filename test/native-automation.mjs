@@ -7,6 +7,7 @@ import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { requireNativeDesktop, startNativeDesktop } from './native-desktop-service.mjs';
+import { uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const pressErrorProbe = process.env.CUA_NATIVE_PRESS_ERROR_PROBE === '1';
@@ -20,7 +21,9 @@ fs.writeFileSync(path.join(app, 'Contents/Info.plist'), `<?xml version="1.0"?><p
 if (process.env.CUA_NATIVE_AUTOMATION_FIXTURE) fs.copyFileSync(process.env.CUA_NATIVE_AUTOMATION_FIXTURE, targetPath);
 else execFileSync('swiftc', ['-O', '-parse-as-library', '-module-cache-path', '/private/tmp/cua-swift-module-cache', path.join(root, 'test/InputFixture.swift'), '-o', targetPath], { stdio: 'inherit' });
 execFileSync('codesign', ['--force', '--sign', '-', app], { stdio: 'inherit' });
-const { socket, service } = startNativeDesktop(directory, bundle, pressErrorProbe ? 'press' : 'standard');
+// Requests name the fixture by path; see fixtureAppTarget.
+const fixtureApp = fixtureAppTarget(app);
+const { socket, service } = startNativeDesktop(directory, bundle, fixtureApp, pressErrorProbe ? 'press' : 'standard');
 const fixtures = [];
 async function waitFor(predicate, label) {
   for (let i = 0; i < 160; i++) {
@@ -40,7 +43,7 @@ async function openTarget(label) {
 }
 async function request(name, fields = {}, type) {
   const body = Buffer.from(JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'ownedFixtureNativeRequest',
-    params: { requestType: `ComputerUseIPCApp${name}Request`, request: { app: bundle, ...fields }, clientType: type } }));
+    params: { requestType: `ComputerUseIPCApp${name}Request`, request: { app: fixtureApp, ...fields }, clientType: type } }));
   const header = Buffer.alloc(4);
   header.writeUInt32LE(body.length);
   const client = net.createConnection({ path: socket });
@@ -107,10 +110,15 @@ function find(text, identifier) {
 const action = value => request('PerformAction', { action: value }, 'node_repl');
 const selected = (editor, text, context = {}) => action({ selectText: { elementID: editor, text, selection: 'text', ...context } });
 const pass = value => console.log(`PASS ${value}`);
+// Native request errors carry the service error object as JSON; transport
+// failures carry plain text.
+const payload = error => { try { return JSON.parse(error.message).message; } catch { return error.message; } };
 try {
   await waitFor(() => fs.existsSync(socket), 'service socket');
   const target = await openTarget('first');
-  const initial = await request('GetAppSnapshot', { disableDiff: true });
+  // The service enables AX diffing only for the node_repl client, fixed when
+  // the first request creates the session (ControllerRequestConfiguration).
+  const initial = await request('GetAppSnapshot', { disableDiff: true }, 'node_repl');
   const firstImage = jpeg(initial, target);
   fs.writeFileSync(path.join(directory, 'native-first.txt'), initial.appSnapshot.text);
   let editor = find(initial.appSnapshot.text, 'input-editor');
@@ -127,17 +135,20 @@ try {
     const start = events().length;
     let error;
     try {
+      // A secondary action is selected by its published
+      // description ("Press" for AXPress), not by the raw AX action name.
       await action(actionKind === 'click'
         ? { click: { at: { elementID: { _0: fault } }, clickCount: 1, mouseButton: 0 } }
-        : { performSecondaryAction: { elementID: fault, action: 'AXPress' } });
+        : { performSecondaryAction: { elementID: fault, action: 'Press' } });
     }
     catch (caught) { error = caught; }
-    await waitFor(() => events().slice(start).some(event => event.event === 'failed-press-attempt' && event.generation === generation), 'AX press attempt');
+    await waitFor(() => events().slice(start).some(event => event.event === 'failed-press-attempt' && event.generation === generation),
+      `AX press attempt for ${actionKind} ${status} ${generation}${error ? `: ${error.message}` : ''}`);
     // Observe a bounded interval after the response so a queued fallback event
     // cannot disappear merely because the fixture is terminated immediately.
     await sleep(250);
     const observed = events().slice(start);
-    outcomes.push({ actionKind, status, generation, errorCode: error?.code ?? null,
+    outcomes.push({ actionKind, status, generation, errorCode: error?.code ?? null, errorMessage: error ? payload(error) : null,
       attempts: observed.filter(event => event.event === 'failed-press-attempt' && event.generation === generation).length,
       effects: observed.filter(event => event.event === 'button-action' && event.generation === generation).length,
       mouseDowns: observed.filter(event => event.event === 'input' && event.type === 1).length });
@@ -145,9 +156,14 @@ try {
   }
   }
   fs.writeFileSync(path.join(directory, 'press-error-outcomes.json'), JSON.stringify(outcomes, null, 2));
+  // ControllerNativeElementIO.perform ignores cannotComplete/attributeUnsupported
+  // and throws other statuses as an AX decoding failure. Only that failure
+  // classifies as -10008, and the XPC route carries the raw AXError number.
+  const statusCodes = { failure: '-25200', actionUnsupported: '-25206' };
   for (const outcome of outcomes) {
     const ignored = ['cannotComplete', 'attributeUnsupported'].includes(outcome.status);
     assert.equal(outcome.errorCode, ignored ? null : -10008, JSON.stringify(outcome));
+    assert.equal(outcome.errorMessage, ignored ? null : statusCodes[outcome.status], JSON.stringify(outcome));
     assert.equal(outcome.attempts, 1);
     assert.equal(outcome.effects, outcome.generation === 9002 ? 1 : 0);
     assert.equal(outcome.mouseDowns, 0);
@@ -201,7 +217,9 @@ try {
   try {
     await action({ click: { at: { elementID: { _0: disabledItem } }, clickCount: 1, mouseButton: 0 } });
   } catch (error) {
-    assert.equal(error.code, -10008);
+    // A menu item is clicked through AXPick/AXPress. AppKit may answer with an
+    // ignored status (no error) or a failure status, which is AX decoding -10008.
+    assert.equal(error.code, -10008, error.message);
   }
   assert.ok(!events().slice(disabledCount).some(event => event.event === 'menu-action' && event.item === 3));
   pass('disabled menu item never invokes its target action');
@@ -219,15 +237,24 @@ try {
   const secondMenuBar = find(returned.appSnapshot.text, 'Owned Actions');
   await action({ click: { at: { elementID: { _0: secondMenuBar } }, clickCount: 1, mouseButton: 0 } });
   opened = await request('GetAppSnapshot', { disableDiff: true });
-  const nestedHeader = find(opened.appSnapshot.text, 'Nested actions');
-  await action({ click: { at: { elementID: { _0: nestedHeader } }, clickCount: 1, mouseButton: 0 } });
-  const nestedCapture = await request('GetAppSnapshot', { disableDiff: true });
-  fs.writeFileSync(path.join(directory, 'native-nested-menu.txt'), nestedCapture.appSnapshot.text);
-  const nestedRun = find(nestedCapture.appSnapshot.text, 'Run nested action');
+  fs.writeFileSync(path.join(directory, 'native-nested-menu.txt'), opened.appSnapshot.text);
+  // The opened menu bar item is the capture root and its complete AXMenu
+  // subtree is rendered, closed submenus included, so the nested item has an
+  // ID already. Clicking the 'Nested actions' item is not a menu open: only an
+  // AXMenuBarItem opens (ControllerNativeMenuInteraction.childMenu); any other
+  // click performs its AX action and then clears the tracked menu
+  // (ControllerClickOperation), returning the window tree.
+  const menuLines = opened.appSnapshot.text.split('\n');
+  const indent = line => line.match(/^\t*/)[0].length;
+  const headerLine = menuLines.findIndex(line => line.includes('Nested actions'));
+  const nestedLine = menuLines.findIndex(line => line.includes('Run nested action'));
+  assert.ok(headerLine >= 0 && nestedLine > headerLine && indent(menuLines[nestedLine]) > indent(menuLines[headerLine]),
+    `Nested item must render inside its submenu: ${opened.appSnapshot.text}`);
+  const nestedRun = find(opened.appSnapshot.text, 'Run nested action');
   menuCount = events().length;
   await action({ click: { at: { elementID: { _0: nestedRun } }, clickCount: 1, mouseButton: 0 } });
   await waitFor(() => events().slice(menuCount).some(event => event.event === 'menu-action' && event.item === 2), 'native nested menu action');
-  pass('native nested submenu ID invokes the intended nested action');
+  pass('native opened menu renders the closed submenu and its nested item ID invokes the intended action');
   returned = await request('GetAppSnapshot', { disableDiff: true });
   editor = find(returned.appSnapshot.text, 'input-editor');
   button = find(returned.appSnapshot.text, 'input-button');
@@ -251,7 +278,9 @@ try {
   pass('native context selection and both cursor modes preserve UTF-16 offsets');
   const before = await command('state');
   for (const text of ['alvo', 'missing selection']) {
-    await assert.rejects(selected(editor, text), error => error.code === -10008);
+    // No unique source match is ControllerTextSelectionFailure, which the
+    // native classification reports as -10005 with its case name.
+    await assert.rejects(selected(editor, text), error => error.code === -10005 && error.message.includes('sourceRangeUnavailable'));
     const after = await command('state');
     assert.equal(after.text, before.text);
     assert.deepEqual(after.selection, before.selection);
@@ -301,7 +330,10 @@ try {
   pass('native insertion diff and complete recapture retain actionable controls');
   await command('ambiguous-button', 'button-ambiguous');
   count = events().length;
-  await assert.rejects(click(stableButton), error => error.code === -10008);
+  // Refetch ambiguity is ControllerElementRefetchFailure.unavailable: -10005
+  // with the "multiple elements" description, not an accessibility error.
+  await assert.rejects(click(stableButton), error => error.code === -10005
+    && error.message.includes('multiple elements were found that match the criteria'));
   assert.equal(events().slice(count).filter(event => event.event === 'button-action').length, 0);
   pass('native recovery rejects duplicate replacements before a button action');
   assert.ok(fs.existsSync(firstImage));

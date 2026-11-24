@@ -15,6 +15,8 @@ import subprocess
 import sys
 import tempfile
 
+import bundle_signing
+
 
 SERVICE = Path(__file__).resolve().parent
 PROJECT = SERVICE.parent
@@ -256,7 +258,7 @@ class NativeBuild:
         # Explicitly disable the shared-container route in ad-hoc bundles.
         # Raw executables carry no Info.plist and have no group storage.
         info["CUAApplicationGroupIdentifier"] = group or ""
-        entitlements = {"com.apple.security.application-groups": [group]} if group else None
+        entitlements = bundle_signing.service_entitlements(group)
         configuration = dict(signing_team=team, application_group=group, info=info, entitlements=entitlements)
         key = hashlib.sha256(json.dumps(configuration, sort_keys=True).encode()).hexdigest()[:20]
         directory = self.directory / "configuration/service" / key
@@ -276,10 +278,9 @@ class NativeBuild:
         info = plistlib.loads((SERVICE / "ClientInfo.plist").read_bytes())
         info.pop("CUAApplicationGroupIdentifier", None)
         group = team + ".com.aex.computeruse" if team else None
-        entitlements = None
         if group:
             info["CUAApplicationGroupIdentifier"] = group
-            entitlements = {"com.apple.security.application-groups": [group]}
+        entitlements = bundle_signing.client_entitlements(group)
         configuration = dict(signing_team=team, application_group=group, info=info, entitlements=entitlements)
         key = hashlib.sha256(json.dumps(configuration, sort_keys=True).encode()).hexdigest()[:20]
         directory = self.directory / "configuration/client" / key
@@ -339,12 +340,13 @@ class NativeBuild:
                      (app / "Contents/SharedSupport/AexComputerUseClient.app", client, client_info, client_entitlements),
                      (app / "Contents/SharedSupport/AexLockScreenGuardian.app", guardian, SERVICE / "GuardianInfo.plist", None)]
             minimum = self.args.target.split("macosx", 1)[1]
+            version = bundle_signing.product_version()
             for bundle, payload, info_path, entitlements in reversed(roles):
                 macos = bundle / "Contents/MacOS"
                 macos.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(payload, macos / payload.name)
-                info = plistlib.loads(info_path.read_bytes())
-                info.update(CFBundleExecutable=payload.name, CFBundlePackageType="APPL", CFBundleVersion="1",
+                info = bundle_signing.versioned_info(plistlib.loads(info_path.read_bytes()), version)
+                info.update(CFBundleExecutable=payload.name, CFBundlePackageType="APPL",
                             LSUIElement=True, LSMinimumSystemVersion=minimum)
                 (bundle / "Contents/Info.plist").write_bytes(plistlib.dumps(info))
                 if bundle == app or payload == guardian:
@@ -362,7 +364,8 @@ class NativeBuild:
                 for name in names:
                     shutil.copy2(licenses[name], notices / name)
                 run([*shlex.split(self.args.codesign), "--force", "--sign", self.args.identity,
-                     "--timestamp=none", *(["--entitlements", str(entitlements)] if entitlements else []),
+                     *bundle_signing.signing_options(self.args.identity),
+                     *(["--entitlements", str(entitlements)] if entitlements else []),
                      str(bundle)], Path(temporary) / (payload.name + "-signing.log"))
             run([*shlex.split(self.args.codesign), "--verify", "--deep", "--strict", str(app)],
                 Path(temporary) / "verification.log")
@@ -430,6 +433,8 @@ def main():
     parser.add_argument("--identity", default="-")
     parser.add_argument("--print-toml-module", action="store_true",
                         help="build only the TOML module and print its directory (used by unit tests)")
+    parser.add_argument("--print-mcp-module", action="store_true",
+                        help="build only the MCP SDK modules and print their directory (used by unit tests)")
     args = parser.parse_args()
     if not re.fullmatch(r"(arm64|x86_64)-apple-macosx\d+(?:\.\d+){0,2}", args.target):
         parser.error("provide an arm64 or x86_64 macOS target")
@@ -440,6 +445,9 @@ def main():
         builder = NativeBuild(args)
         if args.print_toml_module:
             print(builder.build_toml(), flush=True)
+            return
+        if args.print_mcp_module:
+            print(builder.build_mcp(), flush=True)
             return
         result = builder.service()
         if args.bundle:

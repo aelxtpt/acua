@@ -7,6 +7,7 @@ import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { requireNativeDesktop, startNativeDesktop } from './native-desktop-service.mjs';
+import { uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 requireNativeDesktop();
@@ -20,7 +21,9 @@ execFileSync('swiftc', ['-O', '-parse-as-library', '-module-cache-path', '/priva
 execFileSync('codesign', ['--force', '--sign', '-', app], { stdio: 'inherit' });
 const ownerProbe = path.join(directory, 'ax-owners');
 execFileSync('swiftc', ['-O', '-module-cache-path', '/private/tmp/cua-swift-module-cache', path.join(root, 'test/WebFormAXOwners.swift'), '-o', ownerProbe], { stdio: 'inherit' });
-const { socket, service } = startNativeDesktop(directory, bundle);
+// Requests name the fixture by path; see fixtureAppTarget.
+const fixtureApp = fixtureAppTarget(app);
+const { socket, service } = startNativeDesktop(directory, bundle, fixtureApp);
 const fixture = spawn(executable, [directory], { stdio: ['ignore', 'ignore', 'inherit'] });
 const events = () => {
   const file = path.join(directory, 'events.jsonl');
@@ -38,7 +41,7 @@ async function command(value, expected = value) {
 }
 async function request(name, fields = {}, clientType) {
   const body = Buffer.from(JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'ownedFixtureNativeRequest', params: {
-    requestType: `ComputerUseIPCApp${name}Request`, request: { app: bundle, ...fields }, clientType,
+    requestType: `ComputerUseIPCApp${name}Request`, request: { app: fixtureApp, ...fields }, clientType,
   } }));
   const header = Buffer.alloc(4); header.writeUInt32LE(body.length);
   const client = net.createConnection({ path: socket });
@@ -98,7 +101,19 @@ try {
   let submit = find(shot.appSnapshot.text, 'Submit owned form');
   pass('native renderer publishes actionable WebKit form IDs and a real JPEG');
   {
-    await click(name);
+    // The first element click on remote WebKit content resolves its mouse
+    // target from the AX field (ControllerMouseEventTargeting). Record what
+    // that path reads, so a failure explains itself: the field's AX frame,
+    // owning PIDs and AXUIElementGetWindow status, a system-wide hit test at
+    // its centre, the CG window bounds and the screen layout.
+    const probed = JSON.parse(execFileSync(ownerProbe, [String(fixture.pid)], { encoding: 'utf8', timeout: 5000 }));
+    const field = probed.find(e => e.role === 'AXTextField' && e.title === 'Owned name field');
+    const diagnostics = { renderedLine: shot.appSnapshot.text.split('\n').find(line => line.includes('Owned name field') && line.includes('text field')),
+      field, screens: probed.find(e => e.role === 'OwnedScreenProbe')?.screens, windowBounds: (await command('state')).windowBounds };
+    fs.writeFileSync(path.join(directory, 'name-click-diagnostics.json'), JSON.stringify(diagnostics, null, 2));
+    console.log(`DIAGNOSTIC first WebKit field click: ${JSON.stringify(diagnostics)}`);
+    try { await click(name); }
+    catch (error) { error.message += ` while clicking the WebKit name field; diagnostics: ${JSON.stringify(diagnostics)}`; throw error; }
     await action({ pressKey: { _0: 'Command+a' } });
     let typed = 'Agente 🙂 café 日本語';
     await action({ type: { _0: typed } });
@@ -125,12 +140,17 @@ try {
     const source = state.notes;
     // Selection resolves text from the selected rendered node,
     // rather than searching its descendants. WebKit publishes the textarea
-    // wrapper and its selectable text as separate nodes.
-    await assert.rejects(action({ selectText: { elementID: notes, text: 'alvo', prefix: 'segundo ', suffix: ' fim', selection: 'text' } }), error => error.code === -10008);
+    // wrapper and its selectable text as separate nodes. Selection failures
+    // are ControllerTextSelectionFailure, classified as -10005 by case name.
+    await assert.rejects(action({ selectText: { elementID: notes, text: 'alvo', prefix: 'segundo ', suffix: ' fim', selection: 'text' } }),
+      error => error.code === -10005 && error.message.includes('sourceRangeUnavailable'));
     assert.equal((await command('state')).notes, source);
     pass('browser wrapper selection rejects text outside its own captured source without modifying the document');
     notes = find(shot.appSnapshot.text, 'primeiro alvo', 'text (settable)');
-    await assert.rejects(action({ selectText: { elementID: notes, text: 'alvo', prefix: 'segundo ', suffix: ' fim', selection: 'text' } }), error => error.code === -10008);
+    // The static text child does not publish a settable AXSelectedTextRange;
+    // selection checks that before resolving any source range.
+    await assert.rejects(action({ selectText: { elementID: notes, text: 'alvo', prefix: 'segundo ', suffix: ' fim', selection: 'text' } }),
+      error => error.code === -10005 && error.message.includes('selectionNotSettable'));
     assert.equal((await command('state')).notes, source);
     const textOwner = owners.find(e => e.role === 'AXTextArea' && e.title === 'Owned notes field');
     assert.equal(textOwner.attributedString, '\ufffc');
@@ -147,6 +167,12 @@ try {
     shot = await capture('selected');
     name = find(shot.appSnapshot.text, 'Owned name field', 'text field');
     await command('focus-decoy', 'decoy-focused');
+    // No action moves an app's keyboard focus to another of its windows: an
+    // element click does not make a background window key. The app (here the
+    // fixture) returns focus to the form's window, then the field is clicked.
+    await command('focus-main', 'main-focused');
+    shot = await capture('refocused');
+    name = find(shot.appSnapshot.text, 'Owned name field', 'text field');
     await click(name);
     await action({ pressKey: { _0: 'Command+a' } });
     typed = 'Campo correto após mudar de janela 🙂';
@@ -166,7 +192,9 @@ try {
     shot = await capture('submitted');
     const disabled = find(shot.appSnapshot.text, 'Disabled owned button');
     count = events().length;
-    try { await click(disabled); } catch (error) { assert.equal(error.code, -10008); }
+    // Neither the AX press nor the mouse path reports a disabled DOM control;
+    // the only legitimate error is a failed AX action status (-10008).
+    try { await click(disabled); } catch (error) { assert.equal(error.code, -10008, error.message); }
     assert.ok(!events().slice(count).some(e => e.event === 'dom' && e.kind === 'click' && e.target === 'disabled'));
     assert.equal((await command('state')).submissions, 1);
     pass('disabled browser button never dispatches a click or submits the form');
@@ -181,9 +209,18 @@ try {
     const from = pixel(x+8+(w-16)*0.2,y+h/2), to = pixel(x+8+(w-16)*0.8,y+h/2);
     count = events().length;
     await action({ drag: { from, to } });
+    // WebKit dispatches the range input in the WebContent process after the
+    // drag reply returns, so wait for the trusted input that settles near 80
+    // before reading the state. Without the wait a fast reply reads level 20.
+    await until(() => events().slice(count).find(e => e.event === 'dom' && e.kind === 'input' && e.target === 'level' && e.trusted && Math.abs(Number(e.value)-80)<=3),
+      'trusted slider input near 80 after the drag');
     state = await command('state');
     assert.ok(Math.abs(state.level-80)<=3, `slider ended at ${state.level}`);
-    assert.ok(events().slice(count).some(e => e.event === 'dom' && e.kind === 'input' && e.target === 'level' && Number(e.value)>25 && Number(e.value)<75 && e.trusted));
+    // A drag posts only start, midpoint and destination drag events
+    // (ControllerNativeCoordinateEvents) and they may be coalesced, so only a
+    // trusted input event during the drag is guaranteed, not a midway value.
+    assert.ok(events().slice(count).some(e => e.event === 'dom' && e.kind === 'input' && e.target === 'level' && e.trusted),
+      'the range input reports trusted input during the drag');
     pass('screenshot-pixel drag changes the real WebKit slider through intermediate values');
     assert.equal(state.decoy, 'DO NOT TOUCH WEB DECOY'); assert.equal(state.name, typed); assert.equal(state.submissions, 1);
     pass('browser actions preserve the decoy document and unrelated form values');

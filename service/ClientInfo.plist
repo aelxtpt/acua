@@ -18,5 +18,7 @@
 	<string>14.4</string>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Aex Computer Use Client sends requests to the Aex Computer Use service for the agent you connect.</string>
 </dict>
 </plist>

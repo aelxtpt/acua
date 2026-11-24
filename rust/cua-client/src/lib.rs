@@ -517,8 +517,15 @@ impl Client {
         self.app_snapshot_typed(app, true)
     }
 
-    pub fn agent_turn_ended(&mut self, thread_id: &str, turn_id: Option<&str>) -> Result<()> {
-        let mut request = json!({"threadID": thread_id});
+    /// Ends an agent turn. If the user stopped Computer Use during the turn, the
+    /// apps it used stay stopped until this call; the next turn can use them again.
+    ///
+    /// `session_id` and `turn_id` are the values sent as `session_id`/`turn_id`
+    /// in the request metadata ([`TurnMetadata`]). Only the session's latest turn
+    /// releases a stop; `None` ends the whole session.
+    pub fn turn_ended(&mut self, session_id: &str, turn_id: Option<&str>) -> Result<()> {
+        // The wire request names these fields threadID and turnID.
+        let mut request = json!({"threadID": session_id});
         if let Some(turn_id) = turn_id {
             request["turnID"] = json!(turn_id);
         }

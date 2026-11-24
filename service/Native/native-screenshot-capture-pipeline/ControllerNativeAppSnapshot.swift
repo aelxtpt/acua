@@ -138,7 +138,9 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
         guard root == nil && !skipScreenshot else { return .init(settings: settings, sizing: nil) }
         let frame = context.context.nativeWindow.frame
         let screens = NSScreen.screens
-        let scale = CaptureLayout.bestDisplayIndex(for: frame, displayFrames: screens.map(\.frame)).map { screens[$0].backingScaleFactor } ?? 2
+        // WindowServer frame against screens converted to the same space; see
+        // CaptureLayout.screenIndex for the matching rule.
+        let scale = CaptureLayout.screenIndex(for: frame, appKitScreenFrames: screens.map(\.frame)).map { screens[$0].backingScaleFactor } ?? 2
         owner.visibleRect = frame
         let sizing = ControllerScreenshotSizing.read(frame: frame, scale: scale, legacy: settings.legacySizing, normalizeToPoints: settings.normalizeToPoints)
         owner.scalingFactor = sizing.pointScale; owner.scaledScreenSize = sizing.size
@@ -174,16 +176,16 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
             cropToFirstWindow: !additional.isEmpty, shouldBeOpaque: true, includeWindowShadow: false))
         // The source reads the application title again after the buffer await.
         // File writing belongs to this image child, before its result is joined.
-        let written = try NativeAppSnapshotImage.writeFile(image,
+        let (written, encoding) = try NativeAppSnapshotImage.writeFileWithinBudget(image,
             appName: resources.geometry.value("AXTitle", on: application) ?? "Unknown",
-            directory: environment.directory(), encoding: plan.settings.encoding)
+            directory: environment.directory(), settings: plan.settings)
         let log = resources.context.log
         let file = ControllerTemporaryImage.adoptingNative(written.url, filePath: written.path, log: log)
         let geometry = ScreenshotGeometry(windowID: window.id, ownerPID: window.processIdentifier,
             screenFrame: window.frame, pixelWidth: image.width, pixelHeight: image.height,
             includedWindowIDs: ids, nativeLayout: plan.sizing)
         return .init(file: file, size: .init(width: image.width, height: image.height), geometry: geometry,
-            mimeType: plan.settings.encoding.type.preferredMIMEType ?? "application/octet-stream")
+            mimeType: encoding.type.preferredMIMEType ?? "application/octet-stream")
     }
     var classifierEnabled: Bool { UserDefaults.standard.object(forKey: "feature/appSnapshotClassifier") as? Bool ?? true }
     func makeTree(_ selection: Selection, diffingEnabled: Bool) throws -> Tree { .init(selection: selection, isAXTreeDiffingEnabled: diffingEnabled) }

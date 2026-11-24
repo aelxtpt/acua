@@ -1,5 +1,5 @@
 import { publishFixtureCommand } from './fixture-command.mjs';
-import { serviceTestEnvironment, serviceTestExecutable } from './service-test-environment.mjs';
+import { serviceTestEnvironment, serviceTestExecutable, uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
@@ -52,19 +52,19 @@ try {
   const child = spawn(binary, [directory, String(i * 250)], { stdio: ['ignore', 'ignore', 'pipe'] }); processes.push(child);
   child.stderr.on('data', data => process.stderr.write(data));
   await until(() => events(directory).some(event => event.event === 'ready'), 'fixture ready');
-  apps.push({ directory, bundle });
+  apps.push({ directory, bundle, target: fixtureAppTarget(appPath) });
  }
  const socketPath = path.join(temp, 'service.sock');
  service = spawn(serviceBin, [socketPath], { env: serviceTestEnvironment(), stdio: ['ignore', 'ignore', 'pipe'] }); service.stderr.on('data', data => process.stderr.write(data));
  await until(() => fs.existsSync(socketPath), 'service ready');
  nodeRepl.env = { ...process.env, ACUA_SERVICE_NATIVE_PIPE_PATH: socketPath };
- const { MacComputerUseClient } = await import('../src/targets/mac/client.js');
- for (const app of apps) { app.client = new MacComputerUseClient(); clients.push(app.client); await app.client.getAppState(app.bundle); }
+ const { MacComputerUseClient } = await import('./support/js-client/client.js');
+ for (const app of apps) { app.client = new MacComputerUseClient(); clients.push(app.client); await app.client.getAppState(app.target); }
  baseline = seed();
  await run('text and clipboard restoration', async () => {
   const app = apps[0], text = 'CUA texto 🙂 cafe\u0301'; testValues.add(text);
   await command(app, { operation: 'reset', rich: false });
-  await app.client.paste({ app: app.bundle, text, format: 'text' });
+  await app.client.paste({ app: app.target, text, format: 'text' });
   check('plain Unicode text is consumed by a real NSTextView', (await command(app, { operation: 'state' })).text === text);
   check('all clipboard items/types/binary data are restored', canonical(read()) === canonical(baseline));
  });
@@ -72,7 +72,7 @@ try {
   await run(`${format} rich text`, async () => {
    const app = apps[0]; testValues.add(text); baseline = seed();
    await command(app, { operation: 'reset', rich: true });
-   await app.client.paste({ app: app.bundle, text, format });
+   await app.client.paste({ app: app.target, text, format });
    const actual = await command(app, { operation: 'state' });
    check(`${format} pastes rendered text instead of source markup`, actual.text.trim() === 'CUA forte 🙂');
    check(`${format} preserves bold formatting`, actual.bold);
@@ -83,7 +83,7 @@ try {
   const app = apps[0], text = '# Título\n\n- primeiro\n- segundo\n\n[destino](https://example.invalid) e `código`\n\n```swift\nlet valor = 1\n```';
   testValues.add(text); baseline = seed();
   await command(app, { operation: 'reset', rich: true });
-  await app.client.paste({ app: app.bundle, text, format: 'md' });
+  await app.client.paste({ app: app.target, text, format: 'md' });
   const actual = await command(app, { operation: 'state' });
   check('Markdown headings, list items and code blocks retain their visible content', ['Título', 'primeiro', 'segundo', 'let valor = 1'].every(value => actual.text.includes(value)) && !actual.text.includes('```'));
   check('Markdown link remains a native attributed link', actual.link);
@@ -93,14 +93,14 @@ try {
  await run('HTML to plain editor fallback', async () => {
   const app = apps[0], text = '<p>café &amp; 🙂 <b>forte</b></p>'; testValues.add(text); baseline = seed();
   await command(app, { operation: 'reset', rich: false });
-  await app.client.paste({ app: app.bundle, text, format: 'html' });
+  await app.client.paste({ app: app.target, text, format: 'html' });
   check('plain editor receives decoded Unicode and HTML entities', (await command(app, { operation: 'state' })).text.trim() === 'café & 🙂 forte');
   check('plain fallback restores all original representations', canonical(read()) === canonical(baseline));
  });
  await run('late clipboard consumption', async () => {
   const app = apps[0], text = 'CUA delayed consumption'; testValues.add(text); baseline = seed();
   await command(app, { operation: 'reset', rich: false, delay: 0.45 });
-  await app.client.paste({ app: app.bundle, text, format: 'text' });
+  await app.client.paste({ app: app.target, text, format: 'text' });
   check('busy recipient reads the requested text before restoration', (await command(app, { operation: 'state' })).text === text);
   check('delayed consumption restores the full clipboard afterward', canonical(read()) === canonical(baseline));
  });
@@ -108,7 +108,7 @@ try {
   baseline = seed();
   for (const app of apps) await command(app, { operation: 'reset', rich: false, delay: 0.3 });
   const texts = ['CUA app zero 🙂', 'CUA app one é']; texts.forEach(x => testValues.add(x));
-  await Promise.all(apps.map((app, i) => app.client.paste({ app: app.bundle, text: texts[i], format: 'text' })));
+  await Promise.all(apps.map((app, i) => app.client.paste({ app: app.target, text: texts[i], format: 'text' })));
   for (let i = 0; i < apps.length; i++) check(`concurrent app ${i} consumes only its own clipboard payload`, (await command(apps[i], { operation: 'state' })).text === texts[i]);
   check('concurrent cross-app operations restore the original clipboard', canonical(read()) === canonical(baseline));
  });
@@ -118,9 +118,9 @@ try {
   await command(first, { operation: 'reset', rich: false, delay: 0.7 });
   await command(second, { operation: 'reset', rich: false });
   const before = events(first.directory).length;
-  const holder = first.client.paste({ app: first.bundle, text, format: 'text' });
+  const holder = first.client.paste({ app: first.target, text, format: 'text' });
   await until(() => events(first.directory).slice(before).some(event => event.event === 'paste-begin'), 'first app holds clipboard');
-  const rejected = await second.client.paste({ app: second.bundle, text: 'CUA must not replace clipboard', format: 'text' }, { timeoutSeconds: 0.2 }).then(() => null, error => error);
+  const rejected = await second.client.paste({ app: second.target, text: 'CUA must not replace clipboard', format: 'text' }, { timeoutSeconds: 0.2 }).then(() => null, error => error);
   check('another app can expire while waiting for the global paste lock', !!rejected);
   await holder;
   check('expired waiter does not replace the active clipboard payload', (await command(first, { operation: 'state' })).text === text);
@@ -136,7 +136,11 @@ try {
  await run('external clipboard change', async () => {
   const app = apps[0], text = 'CUA external-write paste'; testValues.add(text); baseline = seed();
   await command(app, { operation: 'reset', rich: false, replacement: 'CUA-external-clipboard-wins' });
-  await app.client.paste({ app: app.bundle, text, format: 'text' });
+  // A clipboard changed by another process during the
+  // paste is reported as ownershipLost, and that newer content stays in place.
+  const lost = await app.client.paste({ app: app.target, text, format: 'text' }).then(() => null, error => error);
+  check('a clipboard changed by another process is reported as ownershipLost',
+    lost?.code === -10005 && String(lost.message).includes('ownershipLost'));
   check('recipient can consume text before another process changes the clipboard', (await command(app, { operation: 'state' })).text === text);
   const current = read();
   check('external clipboard change is preserved instead of restoring stale data', current.items.some(item => item.some(value => value.type === 'public.utf8-plain-text' && Buffer.from(value.data, 'base64').toString() === 'CUA-external-clipboard-wins')));
@@ -145,16 +149,18 @@ try {
   const app = apps[0], text = 'CUA expiring paste'; testValues.add(text); baseline = seed();
   await command(app, { operation: 'reset', rich: false, delay: 1.2 });
   const before = events(app.directory).length;
-  const outcome = app.client.paste({ app: app.bundle, text, format: 'text' }, { timeoutSeconds: 0.4 }).then(() => null, error => error);
+  const outcome = app.client.paste({ app: app.target, text, format: 'text' }, { timeoutSeconds: 0.4 }).then(() => null, error => error);
   await until(() => events(app.directory).slice(before).some(x => x.event === 'paste-begin'), 'paste begins before deadline');
   check('paste reports deadline expiry while waiting for a busy recipient', !!(await outcome));
   await command(app, { operation: 'state' });
+  // Cancellation is observed once the recipient has read.
+  await until(() => canonical(read()) === canonical(baseline), 'expired paste restores the clipboard');
   check('expired paste releases clipboard ownership and restores saved bytes', canonical(read()) === canonical(baseline));
   await app.client.listApps(); check('connection remains usable after paste timeout', true);
  });
  await run('invalid format', async () => {
   const app = apps[0]; baseline = seed();
-  await assert.rejects(app.client.paste({ app: app.bundle, text: 'CUA invalid', format: 'bad' }), e => e.code === -32602 && e.message === 'Invalid params');
+  await assert.rejects(app.client.paste({ app: app.target, text: 'CUA invalid', format: 'bad' }), e => e.code === -32602 && e.message === 'Invalid params');
   check('invalid format leaves clipboard representations unchanged', canonical(read()) === canonical(baseline));
  });
  fs.writeFileSync(path.join(temp, 'results.json'), JSON.stringify({ passed, failures }, null, 2));

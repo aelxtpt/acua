@@ -46,10 +46,14 @@ struct MessagesMCPApproval: Sendable {
         self.onPersistenceFailure = onPersistenceFailure
     }
 
+    /// A client without elicitation gets the service's dialog (ACUA only).
     init(readStore: MessagesReadDecisionStore, sendStore: MessagesSendApprovalStore, server: Server,
+         serviceDialog: @escaping AcuaMCPElicitation.Ask,
          telemetry: @escaping @Sendable (CUAMessagesApprovalTelemetry) -> Void = { _ in }) {
         self.init(readStore: readStore, sendStore: sendStore, elicit: { message, schema in
-            try await server.requestElicitation(message: message, mode: .form, requestedSchema: schema)
+            try await AcuaMCPElicitation.request(AcuaApprovalForm(message: message, schema: schema), elicit: { form in
+                try await server.requestElicitation(message: form.message, mode: .form, requestedSchema: form.schema)
+            }, serviceDialog: serviceDialog)
         }, telemetry: telemetry)
     }
 

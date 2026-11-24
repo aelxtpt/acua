@@ -1,5 +1,5 @@
 {
-  "description": "Suite groups that run without physical input, focus changes or user-visible windows. Groups 56-65 are retired slots; physical groups are listed separately.",
+  "description": "Suite groups that run without physical input, focus changes or user-visible windows. Groups 56-65, 133, 173, 175 and 177 are retired slots. Physical groups are listed separately and run one at a time. Group 1 is in neither list: it rebuilds the package itself (make bundle), so it runs alone, with CODESIGN_IDENTITY set to keep the package signature. Multi-display groups need at least two displays and run only on request. Physical runs need CODESIGN_IDENTITY set to the identity that holds the TCC grants: groups 10 and 171 build and sign a native harness, and the event-stream groups that reuse it fail without it.",
   "groups": [
     2,
     3,
@@ -96,8 +96,10 @@
     119,
     120,
     122,
+    130,
     131,
     132,
+    136,
     138,
     139,
     140,
@@ -136,15 +138,32 @@
     178,
     179,
     180,
-    181
+    181,
+    182,
+    184,
+    186,
+    187,
+    189,
+    190,
+    192,
+    195
   ],
   "physical_groups": [
+    10,
+    21,
+    32,
+    42,
     53,
     72,
     73,
     76,
+    84,
+    91,
+    92,
+    97,
     99,
     108,
+    109,
     121,
     123,
     124,
@@ -156,6 +175,15 @@
     134,
     135,
     137,
-    160
+    160,
+    171,
+    183,
+    185,
+    188,
+    191,
+    193
+  ],
+  "multi_display_groups": [
+    194
   ]
 }

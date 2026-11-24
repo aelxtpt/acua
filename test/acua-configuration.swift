@@ -27,8 +27,13 @@ private final class TemporaryDirectory {
 enum AcuaConfigurationTests {
     private static var passed = 0
 
+    // -O strips precondition messages, so a failure names itself and exits.
     private static func check(_ name: String, _ condition: Bool) {
-        precondition(condition, name)
+        guard condition else {
+            print("FAIL \(name)")
+            exit(1)
+        }
+
         passed += 1
         print("PASS \(name)")
     }
@@ -91,6 +96,10 @@ enum AcuaConfigurationTests {
                   !defaults.features.lockedUse && !defaults.features.remoteHostedPIP)
         check("Defaults_Screenshots_UseJPEGAtEightyPercent",
                   defaults.screenshots.format == .jpeg && defaults.screenshots.jpegQuality == 0.8)
+        // Full Retina captures exceed common MCP result limits, so the
+        // default fits the image and caps its encoded size.
+        check("Defaults_Screenshots_FitResolutionWithinSevenHundredFiftyKB",
+                  defaults.screenshots.resolution == .fit && defaults.screenshots.maxImageBytes == 750_000)
 
         let complete = try directory.write("""
             [apps]
@@ -107,6 +116,8 @@ enum AcuaConfigurationTests {
             [screenshots]
             format = "png"
             jpeg_quality = 0.5
+            resolution = "native"
+            max_image_bytes = 0
             """)
         let loaded = try AcuaConfigurationLoader(fileURL: complete).load()
         check("Load_CompleteFile_ReadsApps",
@@ -154,8 +165,20 @@ enum AcuaConfigurationTests {
         let zeroQuality = try loadingError("[screenshots]\njpeg_quality = 0.0\n", in: directory)
         check("Load_JPEGQualityZero_IsRejected", settingName(of: zeroQuality) == "screenshots.jpeg_quality")
 
+        let resolution = try loadingError("[screenshots]\nresolution = \"retina\"\n", in: directory)
+        check("Load_UnknownResolution_IsRejected", settingName(of: resolution) == "screenshots.resolution")
+
+        let negativeLimit = try loadingError("[screenshots]\nmax_image_bytes = -1\n", in: directory)
+        check("Load_NegativeImageByteLimit_IsRejected", settingName(of: negativeLimit) == "screenshots.max_image_bytes")
+
+        let fractionalLimit = try loadingError("[screenshots]\nmax_image_bytes = 1.5\n", in: directory)
+        check("Load_FractionalImageByteLimit_IsRejected", fractionalLimit?.description.contains("screenshots.max_image_bytes") == true)
+
         let contradiction = try loadingError("[apps]\nallow = [\"com.apple.Notes\"]\ndeny = [\"com.apple.Notes\"]\n", in: directory)
         check("Load_SameAppAllowedAndDenied_IsRejected", contradiction?.description.contains("com.apple.Notes") == true)
+
+        let caseContradiction = try loadingError("[apps]\nallow = [\"com.apple.Notes\"]\ndeny = [\"COM.APPLE.NOTES\"]\n", in: directory)
+        check("Load_SameAppAllowedAndDeniedInDifferentCase_IsRejected", caseContradiction?.description.contains("both allow and deny") == true)
 
         let unreadable = directory.url.appendingPathComponent("directory-not-file", isDirectory: true)
         try FileManager.default.createDirectory(at: unreadable, withIntermediateDirectories: true)
@@ -206,6 +229,14 @@ enum AcuaConfigurationTests {
         let denying = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))
         check("Policy_DenyList_DeniesListedApp", !denying.allows("com.apple.Terminal"))
         check("Policy_DenyList_StillAllowsOtherApps", denying.allows("com.apple.TextEdit"))
+
+        apps.deniedBundleIdentifiers = ["com.apple.Calculator"]
+        let caseDenying = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))
+        check("Policy_DenyListDifferentCase_DeniesTheApp", !caseDenying.allows("com.apple.calculator"))
+
+        apps = AcuaAppAccessConfiguration(defaultAccess: .deny, allowedBundleIdentifiers: ["com.apple.Calculator"])
+        let caseAllowing = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))
+        check("Policy_AllowListDifferentCase_AllowsWithDefaultDeny", caseAllowing.allows("com.apple.calculator"))
 
         apps = AcuaAppAccessConfiguration(defaultAccess: .deny, allowedBundleIdentifiers: ["com.apple.TextEdit"])
         let closed = ComputerUsePolicy(configuration: AcuaConfiguration(apps: apps))

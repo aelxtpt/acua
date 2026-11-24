@@ -876,8 +876,8 @@ fn all_core_routes_and_capture_options() {
         .unwrap();
     client.start_audio_recording(500).unwrap();
     client.stop_audio_recording().unwrap();
-    client.agent_turn_ended("owned", Some("finished")).unwrap();
-    client.agent_turn_ended("owned", None).unwrap();
+    client.turn_ended("owned", Some("finished")).unwrap();
+    client.turn_ended("owned", None).unwrap();
     client.start_event_stream().unwrap();
     client.event_stream_status().unwrap();
     client

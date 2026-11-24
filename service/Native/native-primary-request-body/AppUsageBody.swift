@@ -4,6 +4,11 @@ import CoreGraphics
 enum DirectRequestType: String {
     case listApps = "ComputerUseIPCListAppsRequest"
     case appPolicy = "ComputerUseIPCAppPolicyRequest"
+    /// ACUA only: approval for MCP clients without elicitation (AcuaAppApprovalIPC).
+    case appApproval = "ComputerUseIPCAppApprovalRequest"
+    /// ACUA only: Record & Replay and Messages approval forms for MCP clients
+    /// without elicitation (AcuaApprovalFormIPC).
+    case approvalForm = "ComputerUseIPCApprovalFormRequest"
     case appStart = "ComputerUseIPCAppStartRequest"
     case appStop = "ComputerUseIPCAppStopRequest"
     case appModify = "ComputerUseIPCAppModifyRequest"

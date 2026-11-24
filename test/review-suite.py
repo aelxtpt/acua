@@ -105,6 +105,12 @@ def verify_package(distribution, run):
     if info["CFBundleIdentifier"] != "com.aex.computeruse" or info["CFBundleExecutable"] != "AexComputerUseService":
         raise SystemExit("Select a signed ACUA service package that includes its Rust crate")
     checked(["/usr/bin/codesign", "--verify", "--deep", "--strict", str(app)])
+    # The shipped bundle's hardened runtime ignores DYLD_INSERT_LIBRARIES, so the
+    # service runs from a copy re-signed to accept the isolated startup boundary.
+    # The code and certificate are unchanged; release-signature.py checks the
+    # shipped signature itself.
+    tested_app = bundle_signing.resign_copy_for_tests(app, run / "t/signed-for-tests" / bundle_name)
+    tested_service = tested_app / "Contents/MacOS/AexComputerUseService"
     build = read(distribution.parent / "native-build-result.json")
     command = build["command"]
     raw = Path(build.get("binary", command[command.index("-o") + 1]))
@@ -120,8 +126,8 @@ def verify_package(distribution, run):
         raise SystemExit("The test copy of the Rust crate differs from the selected package")
     return dict(
         revision=info["CFBundleVersion"], distribution=str(distribution), bundle=str(app),
-        manifest_sha256=sha(manifest_path), service=str(distribution / executable),
-        service_sha256=files[executable], raw_binary=str(raw),
+        manifest_sha256=sha(manifest_path), service=str(tested_service),
+        service_sha256=sha(tested_service), shipped_service_sha256=files[executable], raw_binary=str(raw),
         bundle_info=str(app / "Contents/Info.plist"), bundle_info_sha256=files[f"{bundle_name}/Contents/Info.plist"],
         target=command[command.index("-target") + 1], minimum=info["LSMinimumSystemVersion"],
         build_manifest=str(distribution.parent / "native-build-result.json"),
@@ -395,7 +401,7 @@ def main():
     env.pop("CODEX_HOME", None)
     env.pop("CARGO_TARGET_DIR", None)
     env.pop("CODEX_CLI_PATH", None)
-    env.update(CUA_REVIEW_RUN=str(run), CUA_REVIEW_LAUNCHER=str(launcher),
+    env.update(CUA_REVIEW_RUN=str(run), CUA_REVIEW_LAUNCHER=str(launcher), CUA_REVIEW_BUNDLE=plan["bundle"],
                CUA_REVIEW_RUST_MANIFEST=plan["rust_manifest"], CUA_REVIEW_BUILD_MANIFEST=plan["build_manifest"],
                CUA_REVIEW_DESKTOP_LAUNCHER=str(desktop_launcher), CUA_REVIEW_DESKTOP_BINARY=str(run / "t/desktop/AexComputerUseService"),
                CUA_REVIEW_NATIVE_AX_BINARY=str(native_ax_binary),

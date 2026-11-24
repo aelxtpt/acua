@@ -6,6 +6,8 @@ enum MCPToolError: Error, CustomStringConvertible {
     case appBlockedByPolicy(bundleIdentifier: String)
     case appNotAllowed(bundleIdentifier: String)
     case appApprovalDenied(bundleIdentifier: String)
+    /// ACUA only: denied in the service's dialog (client without elicitation).
+    case appApprovalDeniedInDialog(bundleIdentifier: String)
     case appApprovalCanceled(bundleIdentifier: String)
     case appApprovalPersistenceUnavailable(bundleIdentifier: String)
 
@@ -17,6 +19,7 @@ enum MCPToolError: Error, CustomStringConvertible {
         case .appBlockedByPolicy(let app): "Computer Use is blocked from using the app '\(app)' by your organization's policy."
         case .appNotAllowed(let app): "Computer Use is not allowed to use the app '\(app)' for safety reasons."
         case .appApprovalDenied(let app): "Computer Use approval denied via MCP elicitation for app '\(app)'."
+        case .appApprovalDeniedInDialog(let app): "Computer Use approval denied in the Aex Computer Use dialog for app '\(app)'."
         case .appApprovalCanceled(let app): "Computer Use permission request canceled for app '\(app)'."
         case .appApprovalPersistenceUnavailable(let app): "Computer Use could not persist the approval permanently for app '\(app)'."
         }

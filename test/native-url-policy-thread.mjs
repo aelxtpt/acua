@@ -7,6 +7,7 @@ import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { setTimeout as sleep } from 'node:timers/promises';
 import { requireNativeDesktop, startNativeDesktop } from './native-desktop-service.mjs';
+import { uniqueFixtureBundle, fixtureAppTarget } from './service-test-environment.mjs';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 requireNativeDesktop();
@@ -19,7 +20,9 @@ fs.writeFileSync(path.join(app, 'Contents/Info.plist'), `<?xml version="1.0"?><p
 if (process.env.CUA_NATIVE_AUTOMATION_FIXTURE) fs.copyFileSync(process.env.CUA_NATIVE_AUTOMATION_FIXTURE, targetPath);
 else execFileSync('swiftc', ['-O', '-parse-as-library', '-module-cache-path', '/private/tmp/cua-swift-module-cache', path.join(root, 'test/InputFixture.swift'), '-o', targetPath], { stdio: 'inherit' });
 execFileSync('codesign', ['--force', '--sign', '-', app], { stdio: 'inherit' });
-const { socket, service } = startNativeDesktop(directory, bundle, 'url-policy');
+// Requests name the fixture by path; see fixtureAppTarget.
+const fixtureApp = fixtureAppTarget(app);
+const { socket, service } = startNativeDesktop(directory, bundle, fixtureApp, 'url-policy');
 const fixtures = [];
 async function waitFor(predicate, label) {
   for (let i = 0; i < 160; i++) {
@@ -39,7 +42,7 @@ async function openTarget(label) {
 }
 async function request(name, fields = {}, type) {
   const body = Buffer.from(JSON.stringify({ id: 1, jsonrpc: '2.0', method: 'ownedFixtureNativeRequest',
-    params: { requestType: `ComputerUseIPCApp${name}Request`, request: { app: bundle, ...fields }, clientType: type } }));
+    params: { requestType: `ComputerUseIPCApp${name}Request`, request: { app: fixtureApp, ...fields }, clientType: type } }));
   const header = Buffer.alloc(4);
   header.writeUInt32LE(body.length);
   const client = net.createConnection({ path: socket });

@@ -85,8 +85,11 @@ enum ControllerMouseProcessKind { case application, service, unavailable }
 
     private func hostTarget(_ pid: Int32, window: Node, element: Node?) throws -> Target {
         let id: UInt32
-        if let element {
-            let directID = try backend.windowID(element)
+        // Drop the element's window-ID error and fall back to the selected
+        // AX window. AX reports no window for elements of a
+        // WebKit WebContent process (-25201), so a throwing read here made
+        // every click on a web form field fail.
+        if let element, let directID = try? backend.windowID(element) {
             if (try? backend.actualPID(element)) == pid { id = directID }
             else { id = try hostWindow(element, pid: pid) }
         } else { id = try backend.windowID(window) }

@@ -7,6 +7,6 @@ extension CUAMCPEventStream {
         .init(status: { try await ComputerUseIPCClient.sendRequest(ComputerUseIPCEventStreamStatusRequest()) },
               start: { try await ComputerUseIPCClient.sendRequest(ComputerUseIPCEventStreamStartRequest()) },
               stop: { try await ComputerUseIPCClient.sendRequest(ComputerUseIPCEventStreamStopRequest(reason: $0)) },
-              telemetry: telemetry)
+              telemetry: telemetry, serviceDialog: AcuaMCPElicitation.nativeServiceDialog)
     }
 }

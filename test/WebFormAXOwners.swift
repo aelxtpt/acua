@@ -19,6 +19,16 @@ func value(_ element: AXUIElement, _ attribute: String) -> CFTypeRef? {
     var value: CFTypeRef?
     return AXUIElementCopyAttributeValue(element, attribute as CFString, &value) == .success ? value : nil
 }
+// Global top-left AX frame, as the service's clickable-point reader sees it.
+func frame(_ element: AXUIElement) -> CGRect? {
+    guard let position = value(element, kAXPositionAttribute as String), CFGetTypeID(position) == AXValueGetTypeID(),
+          let size = value(element, kAXSizeAttribute as String), CFGetTypeID(size) == AXValueGetTypeID() else { return nil }
+    var origin = CGPoint.zero, extent = CGSize.zero
+    guard AXValueGetValue(unsafeBitCast(position, to: AXValue.self), .cgPoint, &origin),
+          AXValueGetValue(unsafeBitCast(size, to: AXValue.self), .cgSize, &extent) else { return nil }
+    return CGRect(origin: origin, size: extent)
+}
+let systemWide = AXUIElementCreateSystemWide()
 var seen: [AXUIElement] = []
 var records: [[String: Any]] = []
 func visit(_ element: AXUIElement, depth: Int) {
@@ -57,6 +67,20 @@ func visit(_ element: AXUIElement, depth: Int) {
             record["windowOnscreen"] = (window[kCGWindowIsOnscreen as String] as? NSNumber)?.boolValue
         }
     }
+    if let rect = frame(element) {
+        record["frame"] = [rect.minX, rect.minY, rect.width, rect.height]
+        if ["AXTextField", "AXTextArea", "AXButton", "AXSlider"].contains(role) {
+            // Diagnostic only: the system-wide hit test the service performs
+            // at a control's centre, and the window lookup of the element hit.
+            var hit: AXUIElement?
+            let status = AXUIElementCopyElementAtPosition(systemWide, Float(rect.midX), Float(rect.midY), &hit)
+            record["centerHitStatus"] = status.rawValue
+            if let hit {
+                record["centerHitRole"] = value(hit, kAXRoleAttribute as String) as? String ?? ""
+                if let getWindow { var id: UInt32 = 0; record["centerHitWindowStatus"] = getWindow(hit, &id).rawValue }
+            }
+        }
+    }
     if role == "AXTextArea" {
         var names: CFArray?
         AXUIElementCopyParameterizedAttributeNames(element, &names)
@@ -88,5 +112,8 @@ if let querySymbol = dlsym(image, "CPSGetKeyFocusProcess") ?? dlsym(image, "_CPS
     let queryStatus = query(&serial, &flag), processStatus = process(&serial, &focusPID)
     records.append(["role": "OwnedFocusProbe", "keyFocusPID": focusPID, "queryStatus": queryStatus, "processStatus": processStatus, "flag": flag.boolValue])
 }
+// AppKit screen frames (bottom-left origin) and scales, for coordinate diagnostics.
+records.append(["role": "OwnedScreenProbe", "screens": NSScreen.screens.map { screen in
+    ["frame": [screen.frame.minX, screen.frame.minY, screen.frame.width, screen.frame.height], "scale": screen.backingScaleFactor] }])
 let data = try JSONSerialization.data(withJSONObject: records, options: [.sortedKeys, .prettyPrinted])
 FileHandle.standardOutput.write(data)

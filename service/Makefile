@@ -114,6 +114,163 @@ acua-configuration-test:
 
 .PHONY: acua-configuration-test
 
+# App approval for MCP clients without elicitation: the service-side decision
+# (allow list, then the native dialog) with a fake dialog.
+ACUA_APP_APPROVAL_SOURCES = Configuration/AcuaConfiguration.swift Native/acua-app-approval/AcuaAppApproval.swift
+
+acua-app-approval-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-app-approval-tests $(ACUA_APP_APPROVAL_SOURCES) ../test/acua-app-approval.swift
+	/tmp/cua-acua-app-approval-tests
+
+.PHONY: acua-app-approval-test
+
+# MCP app approval in the client: channel choice from the initialize
+# capabilities and the service dialog's decisions, with fakes for the service.
+ACUA_MCP_APPROVAL_SOURCES = ClientMCPAutomationApproval.swift ClientMCPClientCapabilities.swift ClientAppApprovalStore.swift \
+	ClientMCPAutomationArguments.swift ClientMCPAutomationSpanTelemetry.swift ClientAutomationRequests.swift \
+	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
+	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
+
+acua-mcp-approval-test:
+	@MCP_DIR="$$($(NATIVE_BUILD) --print-mcp-module | tail -n 1 | awk '{print $$NF}')" && \
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-I "$$MCP_DIR" -L "$$MCP_DIR" -lMCP -lLogging -lSystemPackage \
+		-o /tmp/cua-acua-mcp-approval-tests $(ACUA_MCP_APPROVAL_SOURCES) ../test/acua-mcp-approval-channel.swift
+	/tmp/cua-acua-mcp-approval-tests
+
+.PHONY: acua-mcp-approval-test
+
+# `mcp install` and `mcp uninstall`: server entries, "mcpServers" file edits
+# and printed instructions, in a temporary directory.
+acua-mcp-install-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-mcp-install-tests ClientMCPInstall.swift ../test/acua-mcp-install.swift
+	/tmp/cua-acua-mcp-install-tests
+
+.PHONY: acua-mcp-install-test
+
+# Screenshot size budget: encodings tried and the file kept, with a fake writer.
+acua-screenshot-budget-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-screenshot-budget-tests Configuration/AcuaConfiguration.swift \
+		Native/acua-screenshot-budget/AcuaScreenshotBudget.swift ../test/acua-screenshot-budget.swift
+	/tmp/cua-acua-screenshot-budget-tests
+
+.PHONY: acua-screenshot-budget-test
+
+# What get_app_state returns over MCP: base64 image content and app-specific
+# instructions once per app per connection, with injected file reads.
+ACUA_MCP_OUTPUT_SOURCES = ClientMCPAutomationFormatting.swift ClientAutomationRequests.swift \
+	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
+	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
+
+acua-mcp-output-test:
+	@MCP_DIR="$$($(NATIVE_BUILD) --print-mcp-module | tail -n 1 | awk '{print $$NF}')" && \
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-I "$$MCP_DIR" -L "$$MCP_DIR" -lMCP -lLogging -lSystemPackage \
+		-o /tmp/cua-acua-mcp-output-tests $(ACUA_MCP_OUTPUT_SOURCES) ../test/acua-mcp-output.swift
+	/tmp/cua-acua-mcp-output-tests
+
+.PHONY: acua-mcp-output-test
+
+# Approval requests to the MCP client: none to a client without elicitation,
+# and none waited on past the cancellation of the tool call.
+ACUA_MCP_ELICITATION_SOURCES = ClientMCPElicitation.swift ClientMCPInvocationContext.swift ClientMCPTurn.swift \
+	ClientAgentProcess.swift ClientMCPEventStream.swift ComputerUseTelemetryContext.swift \
+	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
+	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
+
+acua-mcp-elicitation-test:
+	@MCP_DIR="$$($(NATIVE_BUILD) --print-mcp-module | tail -n 1 | awk '{print $$NF}')" && \
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-I "$$MCP_DIR" -L "$$MCP_DIR" -lMCP -lLogging -lSystemPackage \
+		-o /tmp/cua-acua-mcp-elicitation-tests $(ACUA_MCP_ELICITATION_SOURCES) ../test/acua-mcp-elicitation.swift
+	/tmp/cua-acua-mcp-elicitation-tests
+
+.PHONY: acua-mcp-elicitation-test
+
+# The service's approval form for MCP clients without elicitation: accepted
+# schemas, field order and the elicitation-shaped answer, without a dialog.
+acua-approval-form-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-approval-form-tests Native/acua-app-approval/AcuaApprovalForm.swift ../test/acua-approval-form.swift
+	/tmp/cua-acua-approval-form-tests
+
+.PHONY: acua-approval-form-test
+
+# The HTTP layer under MCP over streamable HTTP: request parsing, response
+# encoding and the path and token gate, without a socket.
+acua-mcp-http-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-mcp-http-tests ClientMCPHTTP.swift ../test/acua-mcp-http.swift
+	/tmp/cua-acua-mcp-http-tests
+
+.PHONY: acua-mcp-http-test
+
+# The public turn contract: session tracking in the service and turn
+# resolution in the MCP client. Pure logic, no service or MCP connection.
+ACUA_TURN_CONTRACT_SOURCES = Native/authenticated-preparation-native-owner/ServiceAgentSessionTracker.swift \
+	ComputerUseTelemetryContext.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift ClientMCPTurn.swift \
+	ClientAgentProcess.swift
+
+acua-turn-contract-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-turn-contract-tests $(ACUA_TURN_CONTRACT_SOURCES) ../test/acua-turn-contract.swift
+	/tmp/cua-acua-turn-contract-tests
+
+.PHONY: acua-turn-contract-test
+
+# The agent-process session shared by an agent's stop hook and the MCP helper
+# it started, and `turn-ended --agent-process`, with stubbed process tables.
+acua-agent-process-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-agent-process-tests ClientAgentProcess.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift \
+		../test/acua-agent-process.swift
+	/tmp/cua-acua-agent-process-tests
+
+.PHONY: acua-agent-process-test
+
+# `hooks install` and `hooks uninstall`: Claude Code settings.json, Cursor
+# hooks.json and Codex config.toml edits, in a temporary directory.
+acua-hooks-install-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-hooks-install-tests ClientMCPInstall.swift ClientHooksInstall.swift ../test/acua-hooks-install.swift
+	/tmp/cua-acua-hooks-install-tests
+
+.PHONY: acua-hooks-install-test
+
+# type_text's text-to-keystroke translation, with a fake keyboard layout.
+ACUA_KEYBOARD_TEXT_SOURCES = Native/native-keyboard-actions/ControllerKeyboardEvents.swift \
+	Native/native-keyboard-actions/ControllerKeyboardTextTranslation.swift
+
+acua-keyboard-text-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-keyboard-text-tests $(ACUA_KEYBOARD_TEXT_SOURCES) ../test/acua-keyboard-text-translation.swift
+	/tmp/cua-acua-keyboard-text-tests
+
+.PHONY: acua-keyboard-text-test
+
+# Choosing the window a mouse event is addressed to, with a fake AX backend.
+ACUA_MOUSE_TARGET_SOURCES = Native/controller-native-delivery/ControllerMouseEventTarget.swift AXParentChain.swift
+
+acua-mouse-target-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-mouse-target-tests $(ACUA_MOUSE_TARGET_SOURCES) ../test/acua-mouse-event-target.swift
+	/tmp/cua-acua-mouse-target-tests
+
+.PHONY: acua-mouse-target-test
+
+# Revealing an offscreen element through its scroll area, with a fake AX tree.
+ACUA_SCROLL_REVEAL_SOURCES = Native/controller-native-position/ControllerClickablePoint.swift ScrollToVisiblePlan.swift ClickableGeometry.swift
+
+acua-scroll-reveal-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-scroll-reveal-tests $(ACUA_SCROLL_REVEAL_SOURCES) ../test/acua-scroll-reveal.swift
+	/tmp/cua-acua-scroll-reveal-tests
+
+.PHONY: acua-scroll-reveal-test
+
 computer-use-policy-test:
 	$(SWIFTC) $(SWIFTFLAGS) -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-computer-use-policy-tests ComputerUsePolicy.swift Configuration/AcuaConfiguration.swift ../test/computer-use-policy.swift
 	/tmp/cua-computer-use-policy-tests
@@ -480,6 +637,12 @@ app-usage-catalog-test:
 intervention-test:
 	$(SWIFTC) $(SWIFTFLAGS) -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-intervention-tests Protocol.swift AppSessions.swift UserInteraction.swift ../test/intervention.swift
 	/tmp/cua-intervention-tests
+
+# Shipped signing choices: hardened runtime, timestamp, entitlements, version
+bundle-signing-test:
+	python3 ../test/bundle-signing.py
+
+.PHONY: bundle-signing-test
 
 install: bundle
 	python3 install_native.py --distribution "$(NATIVE_BUILD_DIR)/dist" --destination "$(SERVICE_DIR)"
@@ -955,6 +1118,7 @@ event-stream-telemetry-wire-test:
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-event-stream-telemetry-wire-tests EventStreamProtocol.swift ComputerUseTelemetryContext.swift ../test/event-stream-telemetry-wire.swift
 	/tmp/cua-event-stream-telemetry-wire-tests ../test/event-stream-telemetry-wire-corpus.json
 
+event-stream-ipc-native-build:
 	$(SWIFTC) $(SWIFTFLAGS) $(LEGACY_FIXTURE_FLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-event-stream-ipc-native $(filter-out main.swift,$(SOURCES)) ../test/event-stream-ipc-native.swift
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) -o /tmp/cua-event-stream-native-producer-input-fixture ../test/InputFixture.swift
 

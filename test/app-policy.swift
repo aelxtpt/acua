@@ -56,6 +56,20 @@ import Foundation
         check("forbidden terminal retains its high risk descriptor", high["decision"] as? String == "forbidden" && (high["target"] as? JSON)?["risk"] as? String == "high")
         check("high-risk targets include the risk warning", (high["target"] as? JSON)?["warningSubtitle"] as? String == ApplicationPolicyRisk.warning)
         check("configuration denial precedes the forbidden-target classification", Policy.render(target: terminal, policy: restricted)["decision"] as? String == "denied")
+        // ACUA only: the result says whether [apps].allow lists the app, so
+        // the client skips approval on every channel.
+        check("Render_DefaultPolicy_NotPreApproved", defaults["preApproved"] as? Bool == false)
+        let listing = ComputerUsePolicy(configuration: AcuaConfiguration(apps: AcuaAppAccessConfiguration(
+            allowedBundleIdentifiers: [target.bundleIdentifier.uppercased(), "com.apple.Terminal"])))
+        check("Render_AppInAppsAllow_PreApproved", Policy.render(target: target, policy: listing)["preApproved"] as? Bool == true)
+        let listedAndDenied = ComputerUsePolicy(configuration: AcuaConfiguration(apps: AcuaAppAccessConfiguration(
+            allowedBundleIdentifiers: [target.bundleIdentifier], deniedBundleIdentifiers: [target.bundleIdentifier])))
+        let deniedRender = Policy.render(target: target, policy: listedAndDenied)
+        check("Render_AppInAllowAndDeny_DeniedAndNotPreApproved",
+              deniedRender["decision"] as? String == "denied" && deniedRender["preApproved"] as? Bool == false)
+        let listedForbidden = Policy.render(target: terminal, policy: listing)
+        check("Render_ForbiddenAppInAppsAllow_NotPreApproved",
+              listedForbidden["decision"] as? String == "forbidden" && listedForbidden["preApproved"] as? Bool == false)
         print("ALL \(passed) APP POLICY TARGET CHECKS PASSED")
     }
 }

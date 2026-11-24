@@ -37,7 +37,28 @@ struct CaptureLayout {
         return best
     }
 
-    // 0x100729FE8 uses the first exact PID/frame match, filtering by
+    /// An `NSScreen` frame (AppKit: origin at the primary screen's bottom-left,
+    /// y up) in WindowServer coordinates (origin at its top-left, y down).
+    static func windowServerFrame(ofScreen appKitFrame: CGRect, primaryHeight: CGFloat) -> CGRect {
+        CGRect(x: appKitFrame.minX, y: primaryHeight - appKitFrame.maxY, width: appKitFrame.width, height: appKitFrame.height)
+    }
+
+    /// The screen showing most of a WindowServer-space window frame.
+    /// `appKitScreenFrames` is `NSScreen.screens.map(\.frame)`, primary first.
+    ///
+    /// The screen frames are converted to WindowServer space first. Comparing
+    /// the WindowServer frame directly with the AppKit screen frames fails on a
+    /// display above or below the primary: the two spaces disagree, the window
+    /// matches no screen, and the primary's scale would size a capture of
+    /// another display.
+    static func screenIndex(for windowServerWindowFrame: CGRect, appKitScreenFrames: [CGRect]) -> Int? {
+        guard let primary = appKitScreenFrames.first else { return nil }
+
+        let converted = appKitScreenFrames.map { windowServerFrame(ofScreen: $0, primaryHeight: primary.maxY) }
+        return bestDisplayIndex(for: windowServerWindowFrame, displayFrames: converted)
+    }
+
+    // Use the first exact PID/frame match, filtering by
     // concrete title only when the frame identifies multiple windows.
     static func matchNativeWindow(pid: Int32, frame: CGRect, title: String?,
                                   windows: [NativeWindow], servicePID: Int32, menuLevel: Int) -> NativeWindow? {

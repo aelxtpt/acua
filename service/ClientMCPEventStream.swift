@@ -28,6 +28,8 @@ struct CUAMCPEventStream: Sendable {
     let start: @Sendable () async throws -> ComputerUseIPCEventStreamSessionStatus
     let stop: @Sendable (ComputerUseIPCEventStreamEndReason) async throws -> ComputerUseIPCEventStreamSessionStatus
     let telemetry: @Sendable (CUAEventStreamTelemetry) -> Void
+    /// Asks the user of a client without elicitation (ACUA only).
+    let serviceDialog: AcuaMCPElicitation.Ask
 
     static let approvalMessage = "Allow the agent to record your actions on your Mac?"
     static let approvalSubtitle = "The agent will start recording your mouse clicks, text you type, and the content in windows you interact with until you press Stop (up to 30 minutes). You can cancel any time."
@@ -48,8 +50,11 @@ struct CUAMCPEventStream: Sendable {
 
     private func approveRecording(server: Server) async throws {
         telemetry(.approvalRequested)
-        let result = try await server.requestElicitation(message: Self.approvalMessage,
-            requestedSchema: .init(), _meta: Self.approvalMetadata)
+        let form = AcuaApprovalForm(message: Self.approvalMessage, detail: Self.approvalSubtitle,
+                                    schema: .init(), meta: Self.approvalMetadata)
+        let result = try await AcuaMCPElicitation.request(form, elicit: { form in
+            try await server.requestElicitation(message: form.message, requestedSchema: form.schema, _meta: form.meta)
+        }, serviceDialog: serviceDialog)
         switch result.action {
         case .accept:
             telemetry(.approvalResolved(action: "accepted"))
