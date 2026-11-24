@@ -49,10 +49,10 @@ struct AcuaMCPServerEntry: Equatable {
     let command: String
     let arguments: [String]
 
-    init(server: AcuaMCPServer, command: String) {
+    init(server: AcuaMCPServer, command: String, approvalPrompt: AcuaApprovalPrompt = .client) {
         name = server.configurationName
         self.command = command
-        arguments = server.arguments
+        arguments = server.arguments + approvalPrompt.serverArguments
     }
 
     var json: [String: Any] {
@@ -241,8 +241,9 @@ struct AcuaMCPInstaller {
     let home: URL
     let currentDirectory: URL
 
-    func install(host: AcuaMCPHost, servers: [AcuaMCPServer], write: Bool, configuration: String?) throws -> AcuaMCPInstallOutput {
-        let entries = uniqueEntries(servers)
+    func install(host: AcuaMCPHost, servers: [AcuaMCPServer], write: Bool, configuration: String?,
+                 approvalPrompt: AcuaApprovalPrompt = .client) throws -> AcuaMCPInstallOutput {
+        let entries = uniqueEntries(servers, approvalPrompt: approvalPrompt)
 
         guard write else {
             guard configuration == nil else { throw AcuaMCPInstallError.configurationWithoutWrite }
@@ -335,9 +336,11 @@ struct AcuaMCPInstaller {
 
     /// `--server` may repeat a value; each server is configured once, in the
     /// order first given.
-    private func uniqueEntries(_ servers: [AcuaMCPServer]) -> [AcuaMCPServerEntry] {
+    private func uniqueEntries(_ servers: [AcuaMCPServer], approvalPrompt: AcuaApprovalPrompt = .client) -> [AcuaMCPServerEntry] {
         var seen = Set<AcuaMCPServer>()
-        return servers.filter { seen.insert($0).inserted }.map { AcuaMCPServerEntry(server: $0, command: command) }
+        return servers.filter { seen.insert($0).inserted }.map {
+            AcuaMCPServerEntry(server: $0, command: command, approvalPrompt: approvalPrompt)
+        }
     }
 
     private func report(_ changes: [(name: String, change: AcuaMCPConfigurationChange)], file: AcuaMCPConfigurationFile) -> String {

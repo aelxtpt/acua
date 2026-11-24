@@ -658,6 +658,7 @@
     "service/ClientApprovalFormRequests.swift",
     "service/ClientMCPTurn.swift",
     "service/ClientMCPClientCapabilities.swift",
+    "service/ClientMCPApprovalPrompt.swift",
     "service/ClientMCPInstall.swift",
     "service/ClientMCPInstallCommands.swift",
     "service/ClientAgentProcess.swift",

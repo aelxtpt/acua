@@ -89,6 +89,17 @@ enum AcuaMCPApprovalChannelTests {
         recorded.record(.init(elicitation: .init()))
         check("ClientCapabilities_RecordedElicitation_SupportsElicitation", recorded.supportsElicitation)
 
+        // --approval-prompt: who shows the approval prompt.
+        check("AsksClientForApproval_ClientPromptBeforeInitialize_False", !unrecorded.asksClientForApproval)
+        check("AsksClientForApproval_ClientPromptAndDeclaredElicitation_True", recorded.asksClientForApproval)
+        let servicePrompt = CUAMCPClientCapabilities(approvalPrompt: .service)
+        servicePrompt.record(.init(elicitation: .init()))
+        check("AsksClientForApproval_ServicePromptAndDeclaredElicitation_False", !servicePrompt.asksClientForApproval)
+        check("AsksClientForApproval_ServicePromptAndDeclaredElicitation_StillRecordsSupport", servicePrompt.supportsElicitation)
+        check("ApprovalPrompt_KnownNames_Parsed",
+              AcuaApprovalPrompt(rawValue: "client") == .client && AcuaApprovalPrompt(rawValue: "service") == .service)
+        check("ApprovalPrompt_UnknownName_NotParsed", AcuaApprovalPrompt(rawValue: "dialog") == nil)
+
         // Pre-approved by [apps].allow: authorized, nothing stored.
         let preStore = AppApprovalStore(storageURL: temporaryStoreURL())
         let preDialog = DialogRecorder()

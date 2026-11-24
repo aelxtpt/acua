@@ -81,6 +81,17 @@ enum AcuaMCPInstallTests {
         let names = AcuaMCPServer.allCases.map(\.configurationName)
         check("Entry_AllServers_HaveDistinctNames", Set(names).count == names.count)
 
+        // --approval-prompt service travels to the server's own arguments; the
+        // default adds nothing, so existing entries stay unchanged.
+        let servicePrompt = AcuaMCPServerEntry(server: .computerUse, command: command, approvalPrompt: .service)
+        check("Entry_ServiceApprovalPrompt_AppendsApprovalPromptArguments",
+              servicePrompt.arguments == ["mcp", "--approval-prompt", "service"], "\(servicePrompt.arguments)")
+        let serviceCalendar = AcuaMCPServerEntry(server: .calendar, command: command, approvalPrompt: .service)
+        check("Entry_ServiceApprovalPromptForCatalog_AppendsAfterDomainMcp",
+              serviceCalendar.arguments == ["calendar", "mcp", "--approval-prompt", "service"], "\(serviceCalendar.arguments)")
+        let clientPrompt = AcuaMCPServerEntry(server: .computerUse, command: command, approvalPrompt: .client)
+        check("Entry_ClientApprovalPrompt_KeepsDefaultArguments", clientPrompt.arguments == ["mcp"], "\(clientPrompt.arguments)")
+
         let home = URL(fileURLWithPath: "/Users/someone")
         let project = URL(fileURLWithPath: "/work/project")
         check("DefaultConfiguration_Cursor_IsHomeCursorMcpJson",
@@ -236,6 +247,23 @@ enum AcuaMCPInstallTests {
         let claude = try installer.install(host: .claudeCode, servers: [.computerUse], write: false, configuration: nil)
         check("InstallPrint_ClaudeCode_PrintsQuotedMcpAddCommand",
               claude.standardOutput == "claude mcp add --scope user acua -- '\(command)' mcp\n", claude.standardOutput)
+
+        let claudeService = try installer.install(host: .claudeCode, servers: [.computerUse], write: false,
+                                                  configuration: nil, approvalPrompt: .service)
+        check("InstallPrint_ClaudeCodeServiceApprovalPrompt_PrintsFlagAfterMcp",
+              claudeService.standardOutput == "claude mcp add --scope user acua -- '\(command)' mcp --approval-prompt service\n",
+              claudeService.standardOutput)
+
+        let written = directory.appendingPathComponent("approval-prompt.json")
+        _ = try installer.install(host: .generic, servers: [.computerUse], write: true, configuration: written.path,
+                                  approvalPrompt: .service)
+        check("InstallWrite_ServiceApprovalPrompt_WritesFlagInArgs",
+              servers(written)["acua"]?["args"] as? [String] == ["mcp", "--approval-prompt", "service"])
+        let reverted = try installer.install(host: .generic, servers: [.computerUse], write: true, configuration: written.path)
+        check("InstallWrite_DefaultAfterServicePrompt_UpdatesArgsBack",
+              servers(written)["acua"]?["args"] as? [String] == ["mcp"] && reverted.standardOutput.hasPrefix("acua: updated"),
+              reverted.standardOutput)
+        try? FileManager.default.removeItem(at: written)
 
         let claudeRemoval = try installer.uninstall(host: .claudeCode, servers: [.calendar], write: false, configuration: nil)
         check("UninstallPrint_ClaudeCode_PrintsMcpRemoveCommand",

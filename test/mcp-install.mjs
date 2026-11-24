@@ -98,6 +98,19 @@ try {
   assert.equal(claude.stdout, `claude mcp add --scope user acua-calendar -- ${helperPath} calendar mcp\n`);
   console.log('PASS install --client claude-code prints the claude mcp add command');
 
+  // --approval-prompt service goes into the server's args, and the helper
+  // started with them still serves MCP.
+  const servicePrompt = run(['install', '--client', 'claude-code', '--approval-prompt', 'service']);
+  assert.equal(servicePrompt.status, 0, servicePrompt.stderr);
+  assert.equal(servicePrompt.stdout, `claude mcp add --scope user acua -- ${helperPath} mcp --approval-prompt service\n`);
+  assert.ok((await listTools({command: helperPath, args: ['mcp', '--approval-prompt', 'service']})).includes('get_app_state'));
+  console.log('PASS install --approval-prompt service adds the flag, and the helper serves MCP with it');
+
+  const unknownPrompt = run(['--approval-prompt', 'dialog']);
+  assert.notEqual(unknownPrompt.status, 0);
+  assert.match(unknownPrompt.stderr, /approval-prompt/);
+  console.log('PASS an unknown --approval-prompt value is refused before serving');
+
   // A host file with a server of its own, edited in place.
   const config = path.join(directory, 'mcp.json');
   fs.writeFileSync(config, JSON.stringify({mcpServers: {other: {command: '/bin/echo', args: []}}, keep: true}));

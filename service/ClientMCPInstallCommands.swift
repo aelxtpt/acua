@@ -41,9 +41,13 @@ struct MCPInstallCommand: ParsableCommand {
 
     @OptionGroup var options: AcuaMCPInstallOptions
 
+    /// Written into each server's args.
+    @OptionGroup var approval: AcuaMCPApprovalPromptOptions
+
     func run() throws {
         let output = try options.installer().install(host: options.client, servers: options.servers,
-                                                     write: options.write, configuration: options.config)
+                                                     write: options.write, configuration: options.config,
+                                                     approvalPrompt: approval.approvalPrompt)
         AcuaMCPInstallOptions.emit(output)
     }
 }

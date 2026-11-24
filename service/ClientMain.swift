@@ -21,6 +21,18 @@ struct AcuaMCPTransportOptions: ParsableArguments {
     }
 }
 
+/// `--approval-prompt` on every MCP server command. Its own group because
+/// `mcp install` shares it: ArgumentParser gives an option the parent and a
+/// subcommand both declare to the parent, so `install` must declare this
+/// same group to receive a value written after its name.
+struct AcuaMCPApprovalPromptOptions: ParsableArguments {
+    @Option(name: .customLong(AcuaApprovalPrompt.optionName),
+            help: "Who shows approval prompts: client (its own form when it supports elicitation, else the service dialog) or service (always the service dialog, for clients that decline forms without showing them).")
+    var approvalPrompt: AcuaApprovalPrompt = .client
+}
+
+extension AcuaApprovalPrompt: ExpressibleByArgument {}
+
 @main struct OwnedComputerUseClient: AsyncParsableCommand {
     static let configuration = CommandConfiguration(commandName: "cua", subcommands: [MCP.self, EventStream.self, ComputerHistory.self, Calendar.self, Messages.self, TurnEnded.self, HooksCommand.self])
 
@@ -30,6 +42,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
                                                         discussion: "Without a subcommand, serves MCP on stdin and stdout. Use install to configure an MCP host.",
                                                         subcommands: [MCPInstallCommand.self, MCPUninstallCommand.self])
         @OptionGroup var transport: AcuaMCPTransportOptions
+        @OptionGroup var approval: AcuaMCPApprovalPromptOptions
 
         mutating func run() async {
             signal(SIGPIPE, SIG_IGN)
@@ -39,7 +52,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
                     throw CocoaError(.fileNoSuchFile)
                 }
                 let catalog = try CUAMCPToolCatalog(domain: .automation, definitions: Data(contentsOf: definitions))
-                try await CUAMCPServer.run(catalog: catalog, endTurn: .native(), transport: transport.transport) {
+                try await CUAMCPServer.run(catalog: catalog, endTurn: .native(), transport: transport.transport, approvalPrompt: approval.approvalPrompt) {
                     let tracker = AutomationMCPTurnMetricsTracker(emit: { DiscardedTelemetry.drop($0) })
                     let backend = CUAMCPAutomation.native(store: .init(storageURL: storage.appApprovals), tracker: tracker,
                         approvalTelemetry: { DiscardedTelemetry.drop($0) }, toolTelemetry: { DiscardedTelemetry.drop($0) })
@@ -60,6 +73,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Messages client as an MCP server")
             @OptionGroup var transport: AcuaMCPTransportOptions
+            @OptionGroup var approval: AcuaMCPApprovalPromptOptions
 
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
@@ -69,7 +83,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .messages, definitions: Data(contentsOf: definitions))
                     let storage = ClientMCPMessagesStorage.native()
-                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport) {
+                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport, approvalPrompt: approval.approvalPrompt) {
                         let backend = CUAMCPMessages.native(readStore: .init(storageURL: storage.readDecisions),
                             sendStore: .init(storageURL: storage.sendApprovals))
                         return { domain, parameters, server in
@@ -90,6 +104,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Calendar client as an MCP server")
             @OptionGroup var transport: AcuaMCPTransportOptions
+            @OptionGroup var approval: AcuaMCPApprovalPromptOptions
 
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
@@ -98,7 +113,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
                         throw CocoaError(.fileNoSuchFile)
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .calendar, definitions: Data(contentsOf: definitions))
-                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport) {
+                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport, approvalPrompt: approval.approvalPrompt) {
                         let backend = CUAMCPCalendar.native()
                         return { domain, parameters, _ in
                             precondition(domain == .calendar)
@@ -118,6 +133,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Computer History client as an MCP server")
             @OptionGroup var transport: AcuaMCPTransportOptions
+            @OptionGroup var approval: AcuaMCPApprovalPromptOptions
 
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
@@ -126,7 +142,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
                         throw CocoaError(.fileNoSuchFile)
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .history, definitions: Data(contentsOf: definitions))
-                    try await CUAMCPServer.run(catalog: catalog, dispatchUnknownTools: true, transport: transport.transport) {
+                    try await CUAMCPServer.run(catalog: catalog, dispatchUnknownTools: true, transport: transport.transport, approvalPrompt: approval.approvalPrompt) {
                         let backend = CUAMCPHistory.native(telemetry: { DiscardedTelemetry.drop($0) })
                         return { domain, parameters, _ in
                             precondition(domain == .history)
@@ -147,6 +163,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
         struct MCP: AsyncParsableCommand {
             static let configuration = CommandConfiguration(commandName: "mcp", abstract: "Runs the Record & Replay client as an MCP server")
             @OptionGroup var transport: AcuaMCPTransportOptions
+            @OptionGroup var approval: AcuaMCPApprovalPromptOptions
 
             mutating func run() async {
                 signal(SIGPIPE, SIG_IGN)
@@ -155,7 +172,7 @@ struct AcuaMCPTransportOptions: ParsableArguments {
                         throw CocoaError(.fileNoSuchFile)
                     }
                     let catalog = try CUAMCPToolCatalog(domain: .eventStream, definitions: Data(contentsOf: definitions))
-                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport) {
+                    try await CUAMCPServer.run(catalog: catalog, transport: transport.transport, approvalPrompt: approval.approvalPrompt) {
                         let backend = CUAMCPEventStream.native(telemetry: { DiscardedTelemetry.drop($0) })
                         return { domain, parameters, server in
                             precondition(domain == .eventStream)

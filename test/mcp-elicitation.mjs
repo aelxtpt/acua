@@ -11,7 +11,9 @@
 //     the answer, posted back, completes the tool call;
 //   - a client without elicitation is never sent one: event_stream_start
 //     opens the service's own dialog instead, which closes when the client
-//     exits, and recording never starts.
+//     exits, and recording never starts;
+//   - with --approval-prompt service, a client that declares elicitation
+//     gets the service dialog too, and no elicitation.
 // It runs with the physical groups because the launched service is outside
 // the suite's isolation.
 import assert from 'node:assert/strict';
@@ -177,6 +179,24 @@ try {
   const status = JSON.parse(resultText(await checker.callTool('event_stream_status', {})));
   assert.equal(status.isRecording, false, 'recording never started');
   console.log('PASS the service dialog closes when its client exits, and recording does not start');
+
+  // --approval-prompt service: a client that declares elicitation (as the
+  // Claude app does, then declines every form unseen) still gets the service
+  // dialog, and is never sent an elicitation.
+  const dialogOnly = connect([...SERVERS['computer-use'], '--approval-prompt', 'service']);
+  await dialogOnly.initialize({elicitation: {}});
+  let dialogOnlyElicited = false;
+  dialogOnly.onRequest = request => {
+    dialogOnlyElicited = dialogOnlyElicited || request.method === 'elicitation/create';
+    return {action: 'decline'};
+  };
+  const appCall = dialogOnly.start('tools/call', {name: 'get_app_state', arguments: {app: APP}});
+  await waitUntil('the service dialog never opened for --approval-prompt service', () => windowsOf(service) > 0, 30);
+  assert.equal(dialogOnlyElicited, false, 'no elicitation is sent with --approval-prompt service');
+  assert.equal(dialogOnly.messages.some(message => message.id === appCall), false, 'the call waits for the dialog');
+  dialogOnly.close();
+  await waitUntil('the dialog stayed open after its client exited', () => windowsOf(service) === 0, 10);
+  console.log('PASS --approval-prompt service shows the service dialog to a client with elicitation');
 } finally {
   for (const client of clients)
     client.close();

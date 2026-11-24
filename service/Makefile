@@ -127,7 +127,7 @@ acua-app-approval-test:
 
 # MCP app approval in the client: channel choice from the initialize
 # capabilities and the service dialog's decisions, with fakes for the service.
-ACUA_MCP_APPROVAL_SOURCES = ClientMCPAutomationApproval.swift ClientMCPClientCapabilities.swift ClientAppApprovalStore.swift \
+ACUA_MCP_APPROVAL_SOURCES = ClientMCPAutomationApproval.swift ClientMCPClientCapabilities.swift ClientMCPApprovalPrompt.swift ClientAppApprovalStore.swift \
 	ClientMCPAutomationArguments.swift ClientMCPAutomationSpanTelemetry.swift ClientAutomationRequests.swift \
 	Native/native-client-nonempty-responses/ClientApplicationRequests.swift \
 	Native/native-client-nonempty-responses/ClientIPCRequest.swift Native/native-client-nonempty-responses/AgentTurnEnded.swift
@@ -145,7 +145,7 @@ acua-mcp-approval-test:
 # and printed instructions, in a temporary directory.
 acua-mcp-install-test:
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
-		-o /tmp/cua-acua-mcp-install-tests ClientMCPInstall.swift ../test/acua-mcp-install.swift
+		-o /tmp/cua-acua-mcp-install-tests ClientMCPInstall.swift ClientMCPApprovalPrompt.swift ../test/acua-mcp-install.swift
 	/tmp/cua-acua-mcp-install-tests
 
 .PHONY: acua-mcp-install-test
@@ -235,7 +235,7 @@ acua-agent-process-test:
 # hooks.json and Codex config.toml edits, in a temporary directory.
 acua-hooks-install-test:
 	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
-		-o /tmp/cua-acua-hooks-install-tests ClientMCPInstall.swift ClientHooksInstall.swift ../test/acua-hooks-install.swift
+		-o /tmp/cua-acua-hooks-install-tests ClientMCPInstall.swift ClientMCPApprovalPrompt.swift ClientHooksInstall.swift ../test/acua-hooks-install.swift
 	/tmp/cua-acua-hooks-install-tests
 
 .PHONY: acua-hooks-install-test
