@@ -166,10 +166,12 @@ private enum NativeAppSnapshotCheckFailure: Error { case capture }
         }
         let instructions = ControllerNativeAppSnapshotRequestEnvironment.native.instructions(.init(pid: getpid(), bundleIdentifier: "com.apple.Music", appPath: nil))
         // A packaged app keeps resources in Contents/Resources; a bare build keeps them beside the executable.
+        // ACUA ships no app instruction files, so without a user-added AppleMusic.md
+        // the response carries no instructions; with one it carries it verbatim.
         let packagedMusic = Bundle.main.url(forResource: "AppleMusic", withExtension: "md", subdirectory: "AppInstructions")
         let bareBuildMusic = Bundle.main.executableURL!.deletingLastPathComponent().appendingPathComponent("Resources/AppInstructions/AppleMusic.md")
-        let expectedMusic = try String(contentsOf: packagedMusic ?? bareBuildMusic, encoding: .utf8)
-        check("native response instructions load exact packaged app resource", instructions == expectedMusic && !expectedMusic.isEmpty)
+        let expectedMusic = (try? String(contentsOf: packagedMusic ?? bareBuildMusic, encoding: .utf8)).flatMap { $0.isEmpty ? nil : $0 }
+        check("native response instructions match the packaged app resource, or none without one", instructions == expectedMusic)
         let passed = checks.allSatisfy { $0["passed"] as? Bool == true }
         try JSONSerialization.data(withJSONObject: ["passed": passed, "checks": checks,
             "native_manager_queue_request_formatter_and_socket_schema_executed": true,
