@@ -6,6 +6,9 @@ import ScreenCaptureKit
 
 enum Capture {
     static let jpegQuality: CGFloat = 0.85
+    // Temporary screenshots are named "<prefix><UUID>.jpg"; removal checks the
+    // whole shape so it can only delete files this service wrote.
+    static let temporaryImagePrefix = "app-snapshot-"
     private static var overrideDirectory: URL? {
         guard let path = ProcessInfo.processInfo.environment["ACUA_SCREENSHOT_DIRECTORY"], !path.isEmpty else { return nil }
         return URL(fileURLWithPath: path, isDirectory: true)
@@ -21,7 +24,8 @@ enum Capture {
         if NativeAppSnapshotImage.removeIfOwned(url) { return }
         let name = url.deletingPathExtension().lastPathComponent
         guard url.deletingLastPathComponent() == temporaryDirectory.standardizedFileURL,
-              url.pathExtension == "jpg", name.hasPrefix("app-snapshot-"), UUID(uuidString: String(name.dropFirst(8))) != nil else { return }
+              url.pathExtension == "jpg", name.hasPrefix(temporaryImagePrefix),
+              UUID(uuidString: String(name.dropFirst(temporaryImagePrefix.count))) != nil else { return }
         try? FileManager.default.removeItem(at: url)
     }
 
@@ -201,7 +205,7 @@ enum Capture {
         } else {
             let dir = directory ?? temporaryDirectory
             try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
-            url = dir.appendingPathComponent("app-snapshot-\(UUID().uuidString).jpg")
+            url = dir.appendingPathComponent("\(temporaryImagePrefix)\(UUID().uuidString).jpg")
             let rep = NSBitmapImageRep(cgImage: image)
             guard let data = rep.representation(using: .jpeg, properties: [.compressionFactor: jpegQuality]) else {
                 throw ServiceError(.unknownError, "Failed to encode screenshot")

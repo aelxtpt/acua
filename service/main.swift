@@ -948,8 +948,16 @@ func runSelfTest() -> Int32 {
         let socket = Dispatch.appSnapshotResult(snapshot, native: false)
         let action = Dispatch.actionResponse(app: app, text: snapshot.text, screenshotPath: nil, native: true)
         let packaged = native["appSpecificInstructions"] as? String
-        expect("native and socket state responses load shipped instructions even without a screenshot",
-               packaged?.utf8.count == 1260 && socket["appSpecificInstructions"] as? String == packaged &&
+        // ACUA ships no app instruction files: without a user-added AppleMusic.md
+        // the state response carries none; with one it carries it verbatim.
+        // A packaged app keeps resources in Contents/Resources; a bare build keeps them beside the executable.
+        let packagedMusic = Bundle.main.url(forResource: "AppleMusic", withExtension: "md", subdirectory: "AppInstructions")
+        let bareBuildMusic = Bundle.main.executableURL!.deletingLastPathComponent()
+            .appendingPathComponent("Resources/AppInstructions/AppleMusic.md")
+        let expectedMusic = (try? String(contentsOf: packagedMusic ?? bareBuildMusic, encoding: .utf8))
+            .flatMap { $0.isEmpty ? nil : $0 }
+        expect("native and socket state responses carry the installed app instructions even without a screenshot",
+               packaged == expectedMusic && socket["appSpecificInstructions"] as? String == packaged &&
                    asDict(native["appSnapshot"])?["text"] as? String == "AXWindow")
         expect("post-action response omits app-specific instructions", action["appSpecificInstructions"] == nil)
     } catch {
