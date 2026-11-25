@@ -194,6 +194,7 @@ final class ControllerSyntheticFocus<Application: Sendable, Window: Sendable, Ev
     /// Preserve foreground and stacking without borrowing the
     /// legacy global restoration lock, process-key guards or AX correction loop.
     func safelyEnforceActiveState(for window: Window?) async throws {
+        let environment = self.environment
         guard let previous = environment.frontmost(), environment.pid(previous) != pid else {
             try enforceActiveState(for: window)
             await environment.waitUntilTargetBelievesFrontmost(pid, 0.25)
@@ -204,7 +205,6 @@ final class ControllerSyntheticFocus<Application: Sendable, Window: Sendable, Ev
         let focusedID = focused.flatMap { try? environment.windowID($0) }
         let restore = RestoreState(environment.uptime())
         let previousTap = environment.makeTap(.init(location: .process(previousPID), types: [13, 19, 20], tail: false, listenOnly: false))
-        let environment = self.environment
         let targetPID = pid
         let subtype: @Sendable (Event) -> Int16? = { event in
             environment.subtypeField.flatMap { Int16(exactly: environment.integer(event, $0)) }

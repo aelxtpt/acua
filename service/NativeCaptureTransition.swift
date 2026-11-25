@@ -226,7 +226,7 @@ final class NativeCaptureTransition {
         try RequestRuntime.wait(0.033)
         let pending = PendingResult<CGImage> { _ in }
         let task = Task {
-            pending.complete(await Result {
+            func capture() async throws -> CGImage {
                 let content = try await SCShareableContent.excludingDesktopWindows(true, onScreenWindowsOnly: true)
                 guard let window = content.windows.first(where: { $0.windowID == frame.windowID && $0.owningApplication?.processID == getpid() }) else {
                     throw ServiceError(.unknownError, "Capture overlay disappeared")
@@ -239,7 +239,8 @@ final class NativeCaptureTransition {
                 config.showsCursor = false; config.shouldBeOpaque = false; config.ignoreShadowsSingleWindow = true
                 config.captureResolution = .nominal
                 return try await SCScreenshotManager.captureImage(contentFilter: SCContentFilter(desktopIndependentWindow: window), configuration: config)
-            })
+            }
+            do { pending.complete(.success(try await capture())) } catch { pending.complete(.failure(error)) }
         }
         let image: CGImage?
         do {

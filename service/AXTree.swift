@@ -175,7 +175,7 @@ final class AXIndex {
             }
             if let native = observed.nativeTree {
                 return try NativeAutomationTree.onMain {
-                    guard let owner = state(bundle).nativeOwner else {
+                    guard let owner = self.state(bundle).nativeOwner else {
                         throw ServiceError(.noActiveSession, "Native capture owner is unavailable")
                     }
                     return try owner.resolve(id, in: native, app: app, ignoreValueChange: ignoreValueChange).element

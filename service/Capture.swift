@@ -109,10 +109,10 @@ enum Capture {
         try Permissions.requireScreenRecording()
         let pending = PendingResult<Captured> { value in discard(value.path) }
         let task = Task {
-            pending.complete(await Result {
+            do { pending.complete(.success(
                 try await captureAsync(pid: pid, directory: directory, matching: reference,
-                                       additionalWindowIDs: additionalWindowIDs, nativeAppName: nativeAppName, nativePlan: nativePlan)
-            })
+                                       additionalWindowIDs: additionalWindowIDs, nativeAppName: nativeAppName, nativePlan: nativePlan)))
+            } catch { pending.complete(.failure(error)) }
         }
         do { try RequestRuntime.wait(for: pending.signal, maximumSeconds: 30) }
         catch { pending.abandon(); task.cancel(); throw error }

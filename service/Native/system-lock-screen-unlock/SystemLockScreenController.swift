@@ -76,13 +76,13 @@ enum LockScreenLoginResolution: UInt8, Sendable { case approved = 0, revoked = 1
         // Cancellation schedules revocation on the same actor.
         let submission: Submission = await withTaskCancellationHandler {
             guard await ax.submitReturn() else { attempt.revoke(); return .failed }
-            let remaining = remaining(until: verificationDeadline)
+            let remaining = self.remaining(until: verificationDeadline)
             return .resolved(await attempt.waitForResolution(timeout: remaining))
         } onCancel: {
             Task { @MainActor in attempt.revoke() }
         }
         guard case .resolved(.approved) = submission else { return false }
-        let remaining = remaining(until: verificationDeadline)
+        let remaining = self.remaining(until: verificationDeadline)
         if remaining > .zero { try await environment.sleep(remaining) }
         return !environment.isLocked()
     }

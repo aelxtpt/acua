@@ -101,5 +101,5 @@ private enum ExternalGuardianOperationTask {
         }){environment.report(.invalidProxy,pid:nil,error:nil)}
     }
     // Destruction is actor-isolated and only releases stored fields.
-    isolated deinit {}
+    @_optimize(none) isolated deinit {}
 }

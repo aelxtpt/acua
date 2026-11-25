@@ -108,11 +108,11 @@ final class ControllerFocusNativeTap: ControllerFocusTap, @unchecked Sendable {
     private func receive(_ type: CGEventType, _ event: CGEvent) -> CGEvent? {
         if type.rawValue == UInt32.max { return event } // disabled by user input
         if type.rawValue == UInt32.max - 1 {
-            let port = lock.withLock { port }
+            let port = lock.withLock { self.port }
             if let port { CGEvent.tapEnable(tap: port, enable: true) }
             return event
         }
-        let handler = lock.withLock { handler }
+        let handler = lock.withLock { self.handler }
         guard let handler else { return event }
         return handler(type.rawValue, .init(event: event))?.event
     }
