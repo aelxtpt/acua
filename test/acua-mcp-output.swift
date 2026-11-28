@@ -3,8 +3,9 @@ import MCP
 
 // Unit tests for what get_app_state returns to an MCP client: the screenshot
 // as base64 image content with its MIME type, and app-specific instructions
-// once per app for the life of the MCP connection. File reads are injected;
-// no service is involved.
+// once per app for the life of the MCP connection; and the warning added when
+// a window's accessibility tree has no content. File reads are injected; no
+// service is involved.
 
 @main
 enum AcuaMCPOutputTests {
@@ -92,6 +93,61 @@ enum AcuaMCPOutputTests {
         let later = await AutomationMCPFormatting.state(result(bundle: "com.apple.TextEdit", instructions: "Late."),
                                                         deliveryState: quiet, read: read)
         check("State_AppFirstSeenWithoutInstructions_LaterInstructionsOmitted", !text(later).contains("Late."))
+
+        // What a GPUI app returned while it was not drawing frames: the
+        // window and its standard buttons, and nothing the app shows.
+        let emptyTree = [
+            "0 standard window Example, Secondary Actions: Raise",
+            "\t1 close button",
+            "\t2 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window",
+            "\t3 minimize button",
+            "4 menu bar",
+            "\t5 Example",
+        ].joined(separator: "\n")
+        let fullTree = [
+            "0 standard window Example, Secondary Actions: Raise",
+            "\t1 container",
+            "\t\t2 button Refresh",
+            "\t\t3 button Board",
+            "\t4 close button",
+            "\t5 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window",
+            "\t6 minimize button",
+            "7 menu bar",
+            "\t8 Example",
+        ].joined(separator: "\n")
+        func snapshot(_ tree: String) -> ComputerUseIPCAppSnapshotResult {
+            ComputerUseIPCAppSnapshotResult(app: .init(pid: 42, bundleIdentifier: "com.example.gpui", appPath: nil),
+                appSnapshot: .init(text: tree, screenshot: nil), appSpecificInstructions: nil)
+        }
+        func action(_ tree: String?) -> ComputerUseIPCActionResult {
+            ComputerUseIPCActionResult(app: .init(pid: 42, bundleIdentifier: "com.example.gpui", appPath: nil),
+                appSnapshot: tree.map { .init(text: $0, screenshot: nil) })
+        }
+
+        check("EmptyWindow_OnlyStandardButtons_IsDetected", AutomationMCPFormatting.windowHasNoContent(emptyTree))
+        check("EmptyWindow_WindowWithoutChildren_IsDetected",
+              AutomationMCPFormatting.windowHasNoContent("0 standard window Untitled\n1 menu bar\n\t2 File"))
+        check("EmptyWindow_WindowWithContent_IsNotDetected", !AutomationMCPFormatting.windowHasNoContent(fullTree))
+        check("EmptyWindow_MenuBarOnly_IsNotDetected", !AutomationMCPFormatting.windowHasNoContent("0 menu bar\n\t1 Finder"))
+        check("EmptyWindow_TextWithoutElements_IsNotDetected", !AutomationMCPFormatting.windowHasNoContent("tree"))
+
+        let emptyState = text(AutomationMCPFormatting.state(snapshot(emptyTree), includeInstructions: false))
+        check("State_EmptyWindow_WarnsAfterTheTree",
+              emptyState.contains("</app_state>\nWarning: this window's accessibility tree has no content elements"), emptyState)
+        check("State_EmptyWindow_KeepsTheTree", emptyState.contains(emptyTree))
+        let fullState = text(AutomationMCPFormatting.state(snapshot(fullTree), includeInstructions: false))
+        check("State_WindowWithContent_HasNoWarning", !fullState.contains("Warning:"), fullState)
+
+        // A click, drag or key press on such a window used to come back as a
+        // plain success with the same empty tree.
+        let emptyAction = text(AutomationMCPFormatting.action(action(emptyTree)))
+        check("Action_EmptyWindow_SaysTheEffectCannotBeConfirmed",
+              emptyAction.contains("Warning: the action was sent, but its effect cannot be confirmed"), emptyAction)
+        check("Action_EmptyWindow_WarnsAgainstRepeating", emptyAction.contains("Do not repeat the action"), emptyAction)
+        let fullAction = text(AutomationMCPFormatting.action(action(fullTree)))
+        check("Action_WindowWithContent_IsUnchanged", fullAction == "App=com.example.gpui (pid 42)\n" + fullTree, fullAction)
+        let noSnapshot = text(AutomationMCPFormatting.action(action(nil)))
+        check("Action_WithoutSnapshot_IsUnchanged", !noSnapshot.contains("Warning:"), noSnapshot)
 
         print("\(passed) MCP output tests passed")
     }

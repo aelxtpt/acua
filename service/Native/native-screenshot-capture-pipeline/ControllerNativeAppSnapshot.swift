@@ -133,6 +133,10 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
     func focusedContext() throws -> Context {
         try ControllerNativeAppSnapshotContext.focused(application: owner.app, pid: owner.pid, resources: resources)
     }
+    func isTransientContextFailure(_ error: any Error) -> Bool {
+        (error as? EventStreamCaptureContextError) == .windowUnavailable
+    }
+    func waitBeforeContextRetry() async throws { try await Task.sleep(for: .milliseconds(200)) }
     func plan(_ context: Context, root: Window?, skipScreenshot: Bool) throws -> Plan {
         let settings = NativeAppSnapshotImage.Settings.current()
         guard root == nil && !skipScreenshot else { return .init(settings: settings, sizing: nil) }

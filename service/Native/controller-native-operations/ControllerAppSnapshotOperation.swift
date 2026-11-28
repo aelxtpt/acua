@@ -31,6 +31,20 @@ import Foundation
     func publishWindow(_ selection: Selection)
     func notifyDidUpdate()
     func imageSize(_ image: Image) -> CGSize
+    /// A context failure that clears by itself, such as a window that
+    /// accessibility already reports while the WindowServer cannot match it yet.
+    func isTransientContextFailure(_ error: any Error) -> Bool
+    func waitBeforeContextRetry() async throws
+}
+
+extension ControllerAppSnapshotBackend {
+    func isTransientContextFailure(_ error: any Error) -> Bool { false }
+    func waitBeforeContextRetry() async throws {}
+}
+
+enum ControllerAppSnapshotContextRetry {
+    /// Tries in all, the first one included.
+    static let attempts = 5
 }
 
 @MainActor struct ControllerAppSnapshotOperation<Backend: ControllerAppSnapshotBackend> {
@@ -45,7 +59,7 @@ import Foundation
     /// The async-let scope cancels and joins children before an error escapes.
     func capture(cache: Backend.Cache?, disableAXDiffing: Bool, skipScreenshot: Bool) async throws -> Result {
         if backend.isTerminated { throw backend.terminatedError() }
-        let context = try backend.focusedContext()
+        let context = try await focusedContext()
         let root = backend.focusedMenuBarItem
         if backend.stageManagerEnabled { try await backend.prepareStageManager(context) }
         let plan = try backend.plan(context, root: root, skipScreenshot: skipScreenshot)
@@ -73,5 +87,23 @@ import Foundation
         backend.publishWindow(selection)
         backend.notifyDidUpdate()
         return .init(attachment: attachment, imageSize: image.map(backend.imageSize), axTree: tree)
+    }
+
+    /// A window that is opening, animating or changing size can fail to match
+    /// a WindowServer window for a moment. The next read finds it, so the
+    /// capture waits instead of failing the tool call. Other failures, and a
+    /// transient one that outlasts the tries, are thrown unchanged.
+    private func focusedContext() async throws -> Backend.Context {
+        var attempt = 1
+        while true {
+            do { return try backend.focusedContext() }
+            catch {
+                guard attempt < ControllerAppSnapshotContextRetry.attempts,
+                      backend.isTransientContextFailure(error) else { throw error }
+                attempt += 1
+                try await backend.waitBeforeContextRetry()
+                if backend.isTerminated { throw backend.terminatedError() }
+            }
+        }
     }
 }

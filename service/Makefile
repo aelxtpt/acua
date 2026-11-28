@@ -261,6 +261,17 @@ acua-mouse-target-test:
 
 .PHONY: acua-mouse-target-test
 
+# The app snapshot when the app's window cannot be matched to a WindowServer
+# window for a moment, with a fake backend.
+ACUA_APP_SNAPSHOT_RETRY_SOURCES = Native/controller-native-operations/ControllerAppSnapshotOperation.swift
+
+acua-app-snapshot-retry-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-app-snapshot-retry-tests $(ACUA_APP_SNAPSHOT_RETRY_SOURCES) ../test/acua-app-snapshot-retry.swift
+	/tmp/cua-acua-app-snapshot-retry-tests
+
+.PHONY: acua-app-snapshot-retry-test
+
 # Revealing an offscreen element through its scroll area, with a fake AX tree.
 ACUA_SCROLL_REVEAL_SOURCES = Native/controller-native-position/ControllerClickablePoint.swift ScrollToVisiblePlan.swift ClickableGeometry.swift
 
