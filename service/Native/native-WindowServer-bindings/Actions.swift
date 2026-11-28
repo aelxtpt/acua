@@ -310,6 +310,11 @@ enum Actions {
         }
         let element = target.element
         if options.canUseNativeAXPress, try AXMenuSessions.select(element, bundle: bundle) { return .applicationDefault }
+        // The reveal ran while the cursor was prepared. A control still
+        // outside its window cannot be pressed where the app would see it.
+        if try AXClickableTarget.isOutsideWindow(element) {
+            throw ServiceError(.unknownError, ClickableGeometry.offscreenClickMessage)
+        }
         let forceMouse = ComputerUseFeaturePreferences.alwaysSimulateClick
         let actions = try AX.onElement(element) { AX.actionNames(element) }
         let action = [kAXPickAction as String, kAXPressAction as String].first(where: actions.contains)
@@ -323,7 +328,7 @@ enum Actions {
             return .tenthSecond
         }
         guard let point = try AXClickableTarget.nativePoint(element, bundle: bundle) else {
-            throw ServiceError(.unknownError, "cannotClickOffscreenElement")
+            throw ServiceError(.unknownError, "cannotClickOffscreenElement: " + ClickableGeometry.offscreenClickMessage)
         }
         // Resolve native event routing only when mouse delivery is required.
         // AX actions do not require a valid pointer destination or display.
@@ -680,8 +685,7 @@ enum Actions {
                 validate: { try NativeInteractionTargetPolicy.requireAllowed(element: $0.element) },
                 checkpoint: RequestRuntime.check,
                 prepareFocus: { _ = try SyntheticFocusSessions.prepare(app: AppResolver.require(bundle)) })
-            // Capture the extent before the second clickablePoint
-            // lookup. A missing point keeps the controller's preceding cursor.
+            // Capture the extent before the second clickablePoint lookup.
             let frame: CGRect? = try AX.onElement(target.element) {
                 if let frame = AX.rectangle(target.element, "AXFrame") { return frame }
                 guard let origin = AX.point(target.element, kAXPositionAttribute as String),
@@ -690,13 +694,18 @@ enum Actions {
             }
             if let frame { size = frame.size }
             else { size = try nativePointerState(bundle).layout.visibleSize }
-            if let point = try AXClickableTarget.nativePoint(target.element, bundle: bundle) {
-                let layout = try nativePointerState(bundle).layout
-                let scale = layout.pointScale > 0 ? layout.pointScale : 1
-                let scaled = CGPoint(x: (point.x - layout.windowOrigin.x) / scale,
-                                     y: (point.y - layout.windowOrigin.y) / scale)
-                try nativeMoveMouse(to: scaled, bundle: bundle)
+            // A scroll goes to whatever is under the pointer. An element whose
+            // center is hidden is scrolled at the center of its visible part;
+            // with nothing of it visible, the scroll would land elsewhere.
+            guard let point = try AXClickableTarget.nativePoint(target.element, bundle: bundle)
+                    ?? AXClickableTarget.visiblePartCenter(target.element) else {
+                throw ServiceError(.unknownError, ClickableGeometry.offscreenScrollMessage)
             }
+            let layout = try nativePointerState(bundle).layout
+            let scale = layout.pointScale > 0 ? layout.pointScale : 1
+            let scaled = CGPoint(x: (point.x - layout.windowOrigin.x) / scale,
+                                 y: (point.y - layout.windowOrigin.y) / scale)
+            try nativeMoveMouse(to: scaled, bundle: bundle)
         }
         let delta = try NativeScroll.delta(direction: direction, pages: pages, size: size)
         try nativeSendScroll(deltaX: delta.x, deltaY: delta.y, bundle: bundle)

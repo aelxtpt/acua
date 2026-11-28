@@ -29,6 +29,11 @@ import CoreGraphics
     func clickablePoint(_ element: ControllerNativeResolvedElement) async throws -> CGPoint? {
         try await ControllerNativePositionBackend(controller: controller).clickablePoint(element).point
     }
+    func visiblePartCenter(_ element: ControllerNativeResolvedElement) async throws -> CGPoint? {
+        let key = ControllerNativeAppSnapshotContext.contextual(element.node.element).element
+        guard controller.resources.io.lookup(key) == nil else { return nil }
+        return try AXClickableTarget.visiblePartCenter(key.element)
+    }
     func scroll(deltaX: Int, deltaY: Int) async throws { try await controller.scroll(deltaX: deltaX, deltaY: deltaY) }
     func capture() async throws -> ControllerNativeAppController.AppSnapshot {
         try await controller.updateAppSnapshot(treeCache: nil, disableAXDiffing: false, skipScreenshot: false)

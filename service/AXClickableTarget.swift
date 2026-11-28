@@ -171,6 +171,31 @@ enum AXClickableTarget {
         }
     }
 
+    /// The center of the part of the element that its clipping ancestors leave
+    /// visible, for a scroll at an element whose own center is hidden.
+    static func visiblePartCenter(_ element: AXUIElement) throws -> CGPoint? {
+        try AX.onElement(element) {
+            guard let elementFrame = frame(element) else { return nil }
+            var clips: [CGRect] = []
+            for ancestor in try ancestors(element) {
+                let role = AX.string(ancestor, kAXRoleAttribute as String) ?? ""
+                guard ClickableGeometry.clips(role: role, actions: AX.actionNames(ancestor)) else { continue }
+                guard let clip = frame(ancestor) else { return nil }
+                clips.append(clip)
+            }
+            return ClickableGeometry.visiblePartCenter(frame: elementFrame, clips: clips)
+        }
+    }
+
+    /// Whether the element's center lies outside its window, after any reveal.
+    static func isOutsideWindow(_ element: AXUIElement) throws -> Bool {
+        try AX.onElement(element) {
+            guard let window = try AX.window(of: element), !CFEqual(window, element), let windowFrame = frame(window),
+                  let elementFrame = frame(element) else { return false }
+            return ClickableGeometry.centerOutside(elementFrame, window: windowFrame)
+        }
+    }
+
     static func secondaryPosition(_ element: AXUIElement, bundle: String) throws -> SecondaryCursorPreparation.Position {
         do {
             return try SecondaryCursorPreparation.position(specialPoint: {

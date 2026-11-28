@@ -33,6 +33,12 @@ enum ControllerLowerClickFailure: Error, Equatable {
     func heldEvents(_ key: ControllerHeldClickKey) async throws -> ControllerHeldEventPair<Event>?
     func post(_ event: Event, pid: Int32)
     func deliverMouse(_ events: [Event], pid: Int32, hold: Duration?) async throws
+    /// Throws when the element, after any reveal, is outside its window, so
+    /// neither a press nor a mouse click would reach it.
+    func requireInsideWindow() throws
+}
+extension ControllerLowerClickBackend {
+    func requireInsideWindow() throws {}
 }
 
 /// Preserve reads before validation and distinct AX/mouse
@@ -40,6 +46,9 @@ enum ControllerLowerClickFailure: Error, Equatable {
 @MainActor struct ControllerLowerClick<Backend: ControllerLowerClickBackend> {
     let backend: Backend
     func click(_ options: ControllerLowerClickOptions) async throws {
+        // Some apps (GPUI apps, for example) do not scroll a control into view
+        // and turn a press into a mouse click at its frame, wherever it is.
+        try backend.requireInsideWindow()
         let actions = backend.actions()
         let action = actions.contains("AXPick") ? "AXPick" : (actions.contains("AXPress") ? "AXPress" : nil)
         let firstWeb = backend.webShaped()

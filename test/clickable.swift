@@ -28,6 +28,26 @@ import CoreGraphics
             check("\(role) is a clipping boundary", ClickableGeometry.clips(role: role, actions: []) && ClickableGeometry.boundary(role: role))
         }
         check("scroll area is not an ancestry boundary", !ClickableGeometry.boundary(role: "AXScrollArea"))
+
+        // Seen in a GPUI app: a list scrolled inside the window, with no
+        // scroll area in the tree. A row below the fold keeps a frame below
+        // the window; a row scrolled up keeps one over the title bar.
+        let below = CGRect(x: 20, y: 150, width: 80, height: 20), titleBar = CGRect(x: 20, y: 2, width: 80, height: 20)
+        check("control below the window has its center outside", ClickableGeometry.centerOutside(below, window: window))
+        check("control inside the window has its center inside", !ClickableGeometry.centerOutside(button, window: window))
+        check("control scrolled over the title bar cannot be told from geometry", !ClickableGeometry.centerOutside(titleBar, window: window))
+        check("control straddling the bottom edge counts by its center",
+              ClickableGeometry.centerOutside(CGRect(x: 20, y: 110, width: 80, height: 30), window: window)
+              && !ClickableGeometry.centerOutside(CGRect(x: 20, y: 100, width: 80, height: 30), window: window))
+        check("control without a usable frame is not refused", !ClickableGeometry.centerOutside(.zero, window: window))
+
+        // Scrolling a long document whose center is below the viewport goes
+        // to the middle of its visible part.
+        let document = CGRect(x: 0, y: 40, width: 200, height: 1000), viewport = CGRect(x: 0, y: 40, width: 200, height: 80)
+        check("visible part of a tall document gives the scroll point",
+              ClickableGeometry.visiblePartCenter(frame: document, clips: [window, viewport]) == CGPoint(x: 100, y: 80))
+        check("nothing visible gives no scroll point", ClickableGeometry.visiblePartCenter(frame: below, clips: [window]) == nil)
+        check("an invalid clip gives no scroll point", ClickableGeometry.visiblePartCenter(frame: button, clips: [.infinite]) == nil)
         func scroll(_ targetMin: CGFloat, _ targetMax: CGFloat, _ visibleMin: CGFloat = 0, _ visibleMax: CGFloat = 100,
                     _ contentMin: CGFloat = 0, _ contentMax: CGFloat = 500, _ value: CGFloat? = 0) -> CGFloat? {
             ClickableGeometry.scrollValue(targetMin: targetMin, targetMax: targetMax, visibleMin: visibleMin,

@@ -82,7 +82,7 @@ SUITES = (
                                       ChainedReport("inherited-cursor-result.json", 23))),
     NativeCheckSuite("--native-app-snapshot-request-checks", 23, (OwnedDirectory(),),
                      chained_reports=(ChainedReport("native-binding-result.json", 31),)),
-    NativeCheckSuite("--native-action-request-checks", 63),
+    NativeCheckSuite("--native-action-request-checks", 65),
     NativeCheckSuite("--native-coordinator-error-checks", 30),
     NativeCheckSuite("--native-screenshot-file-checks", 15,
                      chained_reports=(ChainedReport("core-result.json", 43),

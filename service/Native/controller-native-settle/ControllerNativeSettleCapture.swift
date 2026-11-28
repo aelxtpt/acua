@@ -28,7 +28,8 @@ enum ControllerNativeSettleCapabilityFailure: Error { case missingRichBridge }
     func transaction(_ window: Node) -> EventStreamNativeTreeTransaction {
         var table: EventStreamHierarchyCapture.Table = [:], requested: Set<String> = []
         if EventStreamTreeTransactions.prefetchEnabled {
-            let attributes = EventStreamSnapshotAttributes.common.union(["AXSelectedRows", "AXSelectedCells", "AXSelectedChildren", "AXDOMClassList", "AXElementBusy", "AXLoaded"])
+            // AXFrame marks nodes outside the window without a read per node.
+            let attributes = EventStreamSnapshotAttributes.common.union(["AXSelectedRows", "AXSelectedCells", "AXSelectedChildren", "AXDOMClassList", "AXElementBusy", "AXLoaded", "AXFrame"])
             if let keys = EventStreamHierarchySPI.keys, EventStreamHierarchySPI.available {
                 table = EventStreamHierarchyCapture(keys: keys, copy: EventStreamHierarchySPI.copy)
                     .capture(window.element.element, traversal: ["AXChildren"], attributes: Array(attributes), maximumArrayCount: 100)

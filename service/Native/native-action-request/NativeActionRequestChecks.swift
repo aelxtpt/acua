@@ -64,6 +64,8 @@ private actor ActionCaptureGate {
     func scroll(deltaX: Int,deltaY: Int) async throws { trace.append("scroll");deltas.append((deltaX,deltaY)) }
     func capture() async throws -> Int { trace.append("capture"); return 9 }
     func markNeedsSettle() { trace.append("mark");settle = true }
+    var visiblePart: CGPoint?
+    func visiblePartCenter(_ element: Int) async throws -> CGPoint? { trace.append("visible");return visiblePart }
 }
 
 @MainActor enum NativeActionRequestChecks {
@@ -145,6 +147,19 @@ private actor ActionCaptureGate {
             let p = PageFixture();p.point = nil;p.elementFrame = nil
             _ = try await ControllerPageScroll(backend:p).perform(at:.elementID("9"),direction:.right,pages:1,returnAppSnapshot:true)
             check("missing element point skips movement and retains pre-await visible-size fallback", p.positions.isEmpty && p.deltas.count == 1 && p.deltas[0] == (600,0) && p.trace.last == "capture")
+        }
+        do {
+            // An element scrolled out of a list the app does not expose as a
+            // scroll area: a frame, and nothing of it visible.
+            let p = PageFixture();p.point = nil;var refused = false
+            do { _ = try await ControllerPageScroll(backend:p).perform(at:.elementID("9"),direction:.down,pages:1,returnAppSnapshot:true) }
+            catch let error as ServiceError { refused = error.message == ClickableGeometry.offscreenScrollMessage }
+            check("element with a frame and nothing visible refuses the scroll instead of scrolling elsewhere", refused && p.positions.isEmpty && p.deltas.isEmpty)
+        }
+        do {
+            let p = PageFixture();p.point = nil;p.visiblePart = CGPoint(x: 28,y: 38)
+            _ = try await ControllerPageScroll(backend:p).perform(at:.elementID("9"),direction:.down,pages:1,returnAppSnapshot:false)
+            check("element with a hidden center scrolls at the center of its visible part", p.positions == [.init(x:23,y:32)] && p.deltas.count == 1 && p.trace.contains("visible"))
         }
         for pages in [0.0,-1,Double.nan] {
             let p = PageFixture();var failed = false

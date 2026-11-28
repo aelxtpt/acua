@@ -26,6 +26,34 @@ enum ClickableGeometry {
     }
     static func boundary(role: String) -> Bool { ["AXWindow", "AXSheet", "AXMenu", "AXPopover"].contains(role) }
 
+    /// Whether a control's center lies outside its window. Some apps (GPUI
+    /// apps, for example) expose no scroll areas and do not handle
+    /// AXScrollToVisible, so a control scrolled out of a list keeps a frame
+    /// outside the window, and pressing it presses nothing or something else.
+    static func centerOutside(_ frame: CGRect, window: CGRect) -> Bool {
+        guard valid(frame), valid(window) else { return false }
+        return !window.contains(CGPoint(x: frame.midX, y: frame.midY))
+    }
+    /// The center of what the clipping frames leave of a frame, or nil when
+    /// nothing of it is left.
+    static func visiblePartCenter(frame: CGRect, clips: [CGRect]) -> CGPoint? {
+        guard valid(frame) else { return nil }
+        var visible = frame
+        for clip in clips {
+            guard valid(clip) else { return nil }
+            visible = visible.intersection(clip)
+        }
+        guard valid(visible) else { return nil }
+        return CGPoint(x: visible.midX, y: visible.midY)
+    }
+
+    static let offscreenClickMessage = "The element is outside the visible part of its window (scrolled out of view), and "
+        + "the app offers no way to scroll it into view, so a click would land somewhere else or nowhere. Scroll its list "
+        + "first, with `scroll` at an element of that list that is visible or at a coordinate inside the list, then call "
+        + "`get_app_state` again."
+    static let offscreenScrollMessage = "The element is outside the visible part of its window, so a scroll at it would "
+        + "land somewhere else. Scroll at an element of the same list that is visible, or at a coordinate inside the list."
+
     static func isChessSquareTitle(_ title: String?) -> Bool {
         guard let title, let file = title.dropLast().last, let rank = title.last else { return false }
         return "abcdefgh".contains(file) && "12345678".contains(rank)

@@ -1,4 +1,5 @@
 import Foundation
+import ApplicationServices
 
 @MainActor final class NodeBackend:EventStreamNodeBackend {
     typealias Element=Int
@@ -136,6 +137,24 @@ import Foundation
         b.reset("AXButton");b.captured["AXRoleDescription"]="button" as NSString;b.captured["AXTitle"]="Go" as NSString;b.names=["AXPress","AXDelete"]
         node=builder.construct(0);let presentation=node.presentation(trimURL:{$0.absoluteString})
         check("constructed node reaches transformed presentation",presentation.accessibilityDescription(role:.init(nativeRole:node.role,roleDescription:node.roleDescription),state:node.presentationState,contextKind:0,hasDescriptiveAttributes:true)=="button Go, Secondary Actions: Delete")
+        // Seen in a GPUI app: a list scrolled inside the window, with no
+        // scroll area in the tree. Rows below the fold keep frames below the
+        // window, and nothing in the tree said they could not be seen.
+        func axFrame(_ rect:CGRect) -> AnyObject {var value=rect;return AXValueCreate(.cgRect,&value)!}
+        let window=CGRect(x:0,y:0,width:400,height:300),inWindow=EventStreamNodeContext(kind:0,windowFrame:window)
+        b.reset("AXButton");b.captured["AXFrame"]=axFrame(CGRect(x:20,y:400,width:80,height:20))
+        node=builder.construct(0,context:inWindow)
+        check("node wholly below its window is offscreen",node.isOffscreen && node.presentationState.description(role:.init(nativeRole:"AXButton",roleDescription:nil),contextKind:0)=="(offscreen)")
+        b.captured["AXFrame"]=axFrame(CGRect(x:20,y:290,width:80,height:20))
+        check("node straddling the window edge is not offscreen",!builder.construct(0,context:inWindow).isOffscreen)
+        b.captured["AXFrame"]=axFrame(CGRect(x:20,y:400,width:80,height:20))
+        check("node without a window frame is not marked",!builder.construct(0,context:event).isOffscreen)
+        b.reset("AXMenuBarItem");b.captured["AXFrame"]=axFrame(CGRect(x:20,y:-30,width:80,height:20))
+        check("menu bar outside the window is not marked",!builder.construct(0,context:inWindow).isOffscreen)
+        b.reset("AXButton");b.captured["AXFrame"]="not a frame" as NSString
+        check("invalid frame value is ignored",!builder.construct(0,context:inWindow).isOffscreen)
+        b.reset("AXButton")
+        check("node without a prefetched frame is not read again",!builder.construct(0,context:inWindow).isOffscreen && !b.reads.contains("AXFrame"))
         print("EVENT STREAM TRANSFORMED NODES: \(checks) checks passed")
     }
 }

@@ -14,6 +14,11 @@ import CoreGraphics
     func scroll(deltaX: Int, deltaY: Int) async throws
     func capture() async throws -> AppSnapshot
     func markNeedsSettle()
+    /// The center of the element's visible part, when its own center is hidden.
+    func visiblePartCenter(_ element: Element) async throws -> CGPoint?
+}
+extension ControllerPageScrollBackend {
+    func visiblePartCenter(_ element: Element) async throws -> CGPoint? { nil }
 }
 
 /// No explicit UI settling or clearing on the capture branch.
@@ -31,8 +36,18 @@ import CoreGraphics
             guard let id = Int(raw) else { throw ControllerActionDispatchFailure.invalidElementID }
             let element = try await backend.prepare(id)
             //Capture dimensions before the awaited clickable-point lookup.
-            size = backend.frame(element)?.size ?? backend.visibleSize
-            if let point = try await backend.clickablePoint(element) {
+            let frame = backend.frame(element)
+            size = frame?.size ?? backend.visibleSize
+            // A scroll goes to whatever is under the pointer. An element whose
+            // center is hidden is scrolled at the center of its visible part.
+            // With a frame and nothing of it visible, the scroll would land
+            // elsewhere; without a frame, the pointer stays where it was.
+            var target = try await backend.clickablePoint(element)
+            if target == nil { target = try await backend.visiblePartCenter(element) }
+            if target == nil, frame != nil {
+                throw ServiceError(.unknownError, ClickableGeometry.offscreenScrollMessage)
+            }
+            if let point = target {
                 let candidate = backend.scalingFactor
                 let scale = candidate > 0 ? candidate : 1
                 let origin = backend.visibleOrigin

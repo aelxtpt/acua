@@ -36,7 +36,8 @@ enum EventStreamTreeTransactions {
     func capture(_ root:AXUIElement,additionalAttributes:[String]=[],maximumChildCount:Int=100) -> EventStreamNativeTreeTransaction {
         var table:EventStreamHierarchyCapture.Table = [:],requested:Set<String> = []
         if EventStreamTreeTransactions.prefetchEnabled {
-            var attributes=EventStreamSnapshotAttributes.common.union(["AXSelectedRows","AXSelectedCells","AXSelectedChildren"])
+            // AXFrame marks nodes outside the window without a read per node.
+            var attributes=EventStreamSnapshotAttributes.common.union(["AXSelectedRows","AXSelectedCells","AXSelectedChildren","AXFrame"])
             attributes.formUnion(additionalAttributes)
             if supported(root).contains("AXDOMClassList"),!attributes.contains("AXDOMClassList"),
                bundle(root)=="com.kishanbagaria.jack" {attributes.insert("AXDOMClassList")}

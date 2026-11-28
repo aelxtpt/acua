@@ -1,4 +1,15 @@
 import Foundation
+import ApplicationServices
+
+/// A node wholly outside its window cannot be seen, whatever the app reports.
+enum EventStreamOffscreen {
+    static func whollyOutside(_ frame:CGRect,window:CGRect) -> Bool {
+        func valid(_ rect:CGRect) -> Bool {
+            [rect.minX,rect.minY,rect.width,rect.height].allSatisfy(\.isFinite) && rect.width>0 && rect.height>0
+        }
+        return valid(frame) && valid(window) && !frame.intersects(window)
+    }
+}
 
 struct EventStreamNodeContext {
     var kind:UInt8=0
@@ -63,6 +74,9 @@ struct EventStreamTransformedNode<Element> {
     var isDisclosing=false
     var isDisclosable=false
     var isValueSettable=false
+    /// The node lies wholly outside its window: scrolled out of a list that
+    /// the app does not expose as a scroll area, for example.
+    var isOffscreen=false
     var attributedString:NSAttributedString?
     var transformedString:EventStreamTransformedString?
 
@@ -70,7 +84,7 @@ struct EventStreamTransformedNode<Element> {
         .init(isSelectable:isSelectable,isSelected:isSelected,isEnabled:isEnabled,
               isDisclosable:isDisclosable,isDisclosing:isDisclosing,
               valueTypeDescription:valueTypeName,isValueSettable:isValueSettable,
-              isSentByMe:domClassList?.contains("is-sender") ?? false)
+              isSentByMe:domClassList?.contains("is-sender") ?? false,isOffscreen:isOffscreen)
     }
     // URL shortening and row/column annotations are supplied by the complete
     // tree/presentation pipeline, not guessed by the native node constructor.
@@ -94,6 +108,13 @@ struct EventStreamTransformedNode<Element> {
 @MainActor struct EventStreamNodeConstruction<Backend:EventStreamNodeBackend> {
     let backend:Backend
     private static var selectableRoles:Set<String> {["AXCell","AXRadioButton","AXRow","AXTabGroup"]}
+    private static func rectangle(_ raw:AnyObject?) -> CGRect? {
+        guard let raw,CFGetTypeID(raw)==AXValueGetTypeID() else {return nil}
+        let value=unsafeDowncast(raw,to:AXValue.self)
+        var rect=CGRect.zero
+        guard AXValueGetType(value) == .cgRect,AXValueGetValue(value,.cgRect,&rect) else {return nil}
+        return rect
+    }
     private static var focusableRoles:Set<String> {[
         "AXButton","AXCell","AXCheckBox","AXColorWell","AXComboBox","AXDateField","AXDateTimeArea",
         "AXDisclosureTriangle","AXDockItem","AXIncrementor","AXLink","AXMenuBarItem","AXMenuButton",
@@ -135,6 +156,12 @@ struct EventStreamTransformedNode<Element> {
         node.isFocused=(attributes["AXFocused"] as? Bool) ?? false
         node.isEnabled=(attributes["AXEnabled"] as? Bool) ?? true
         node.isDisclosing=(attributes["AXDisclosing"] as? Bool) ?? false
+        // Only the prefetched frame is used; no extra read per node. Menus
+        // and the menu bar live outside the window and are not marked.
+        if let window=context.windowFrame,!node.role.hasPrefix("AXMenu"),
+           let frame=Self.rectangle(attributes["AXFrame"]) {
+            node.isOffscreen=EventStreamOffscreen.whollyOutside(frame,window:window)
+        }
         if context.kind==1 {
             let flags=context.isCatalyst ? traits():0
             let selectedRelation=flags & 0x10100008 != 0 || !snapshot.supported.isDisjoint(with:["AXSelectedRows","AXSelectedCells","AXSelectedChildren"])

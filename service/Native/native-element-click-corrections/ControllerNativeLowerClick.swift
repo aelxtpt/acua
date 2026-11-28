@@ -19,6 +19,12 @@ import Foundation
     func clickablePoint() async throws -> CGPoint? {
         try await ControllerClickablePoint(backend: ControllerNativeClickablePoint(geometry: resources.geometry)).point(element, scrollToVisible: false).point
     }
+    func requireInsideWindow() throws {
+        guard resources.io.lookup(element.element) == nil else { return }
+        if try AXClickableTarget.isOutsideWindow(element.element.element) {
+            throw ServiceError(.unknownError, ClickableGeometry.offscreenClickMessage)
+        }
+    }
     func webHit() async -> Bool {
         do {
             guard let point = try await clickablePoint(), let hit = try hitTest(captured.application, point: point) else { return false }

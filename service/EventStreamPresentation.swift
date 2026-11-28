@@ -58,6 +58,7 @@ struct EventStreamPresentationState {
     var valueTypeDescription: String?
     var isValueSettable = false
     var isSentByMe = false
+    var isOffscreen = false
 
     // Group and static text do not advertise disabled state.
     func description(role: EventStreamPresentationRole, contextKind: UInt8) -> String {
@@ -70,6 +71,7 @@ struct EventStreamPresentationState {
             values.append(valueTypeDescription == "string" ? "settable" : "settable, " + valueTypeDescription)
         }
         if isSentByMe { values.append("sent by me") }
+        if isOffscreen { values.append("offscreen") }
         return values.isEmpty ? "" : "(" + values.joined(separator: ", ") + ")"
     }
 }
