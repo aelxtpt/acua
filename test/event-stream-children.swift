@@ -121,6 +121,54 @@ import CoreGraphics
         check("left edge continues expanding right", Policy.expand(0..<1,maximum:5,count:6) == 0..<5)
         check("right edge continues expanding left", Policy.expand(5..<6,maximum:5,count:6) == 1..<6)
         check("zero or negative expansion keeps initial run", Policy.expand(2..<3,maximum:0,count:10) == 2..<3 && Policy.expand(2..<3,maximum:-1,count:10) == 2..<3)
+        check("merge joins overlapping and touching ranges", Policy.merge([5..<9,0..<3,3..<4,8..<12,20..<21]) == [0..<4,5..<12,20..<21])
+
+        // The prefetch stops a child list at its array limit and may not say
+        // how long the list is. Seen on an app whose window holds one long
+        // list: the tree ended after the first 100 children with no note.
+        var lives = 0
+        let cut = EventStreamChildCoverage.verify(.init(count:100,availableRanges:nil)) { lives += 1;return 150 }
+        check("list as long as the limit is checked and marked as cut", cut == .init(count:150,availableRanges:[0..<100]) && lives == 1)
+        check("list whose live count matches stays complete",
+              EventStreamChildCoverage.verify(.init(count:100,availableRanges:nil)) { 100 } == .init(count:100,availableRanges:nil))
+        check("short list is not counted again",
+              EventStreamChildCoverage.verify(.init(count:3,availableRanges:nil)) { lives += 1;return 150 } == .init(count:3,availableRanges:nil) && lives == 1)
+        check("list already known to be cut keeps its coverage",
+              EventStreamChildCoverage.verify(.init(count:150,availableRanges:[0..<100])) { 400 } == .init(count:150,availableRanges:[0..<100]))
+        check("failed live count keeps the prefetched coverage",
+              EventStreamChildCoverage.verify(.init(count:100,availableRanges:nil)) { nil } == .init(count:100,availableRanges:nil))
+        // Seen live: the cut list came with no prefetch record, only a
+        // cached array of 100.
+        check("cached array without a prefetch record is checked and marked as cut",
+              EventStreamChildCoverage.checked(prefetched:nil,cachedCount:100) { 153 } == .init(count:153,availableRanges:[0..<100]))
+        check("complete cached array without a prefetch record reports no coverage",
+              EventStreamChildCoverage.checked(prefetched:nil,cachedCount:100) { 100 } == nil)
+        check("nothing cached reports no coverage", EventStreamChildCoverage.checked(prefetched:nil,cachedCount:nil) { 153 } == nil)
+        check("prefetch record is kept when the list is complete",
+              EventStreamChildCoverage.checked(prefetched:.init(count:30,availableRanges:nil),cachedCount:30) { 30 } == .init(count:30,availableRanges:nil))
+
+        // A long list on the left and a dialog drawn after it, in one parent.
+        let long = Array(0..<150), away = CGRect(x:200,y:200,width:4,height:4)
+        b.counts=["AXChildren":150];b.arrays["AXChildren"]=long;b.cached.removeAll();b.supported=[]
+        b.parentFrame = .init(x:0,y:0,width:100,height:100)
+        b.frames=Dictionary(uniqueKeysWithValues:long.map { ($0,away) })
+        for i in [0,1,2,3,4,140,141] { b.frames[i] = .init(x:10,y:10+i % 50,width:4,height:4) }
+        let dialog=collect()
+        check("visible dialog after a long list is kept with the widened list",
+              dialog?.elements == Array(0..<100)+[140,141] && dialog?.subset == .init(count:150,availableRanges:[0..<100,140..<142]))
+        let single=reader.byPosition(maximum:100,includeAllRanges:false,clippingFrame:nil)
+        check("position read without other runs keeps only the widened run", single?.subset == .init(count:150,availableRanges:[0..<100]))
+
+        b.frames=Dictionary(uniqueKeysWithValues:long.map { ($0,away) })
+        b.partial["AXChildren"] = .init(elements:Array(0..<100),subset:.init(count:150,availableRanges:[0..<100]))
+        let offscreen=collect()
+        check("long list with nothing on screen lists its prefetched start as a subset",
+              offscreen?.elements == Array(0..<100) && offscreen?.subset == .init(count:150,availableRanges:[0..<100]))
+        b.counts=["AXChildren":600]
+        b.partial["AXChildren"] = .init(elements:Array(0..<100),subset:.init(count:600,availableRanges:[0..<100]))
+        check("list too long to place lists its prefetched start as a subset", collect()?.subset == .init(count:600,availableRanges:[0..<100]))
+        b.partial["AXChildren"] = .init(elements:Array(0..<100),subset:nil)
+        check("a prefix not known to be cut is not offered for a list too long to place", collect() == nil)
         print("EVENT STREAM CHILD COLLECTION: \(checks) checks passed")
     }
 }

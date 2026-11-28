@@ -121,21 +121,36 @@ enum ControllerNativeSettleCapabilityFailure: Error { case missingRichBridge }
         typealias Element = EventStreamAXNode
         let capture: ControllerNativeSettleCapture, node: Element
         init(capture: ControllerNativeSettleCapture, node: Element) { self.capture = capture; self.node = node }
+        private var coverages: [String: EventStreamArraySubset?] = [:]
+        /// The cached list's coverage, checked against a live count when the
+        /// prefetch may have cut the list.
+        private func coverage(_ name: String) -> EventStreamArraySubset? {
+            if let known = coverages[name] { return known }
+            let prefetched = node.cachedPartialValue(name)?.array.map {
+                EventStreamArraySubset(count: $0.count, availableRanges: $0.availableRanges)
+            }
+            let checked = EventStreamChildCoverage.checked(prefetched: prefetched,
+                cachedCount: (node.cachedAttribute(name) as? [AnyObject])?.count) {
+                capture.resources.io.count(name, on: .init(element: node.element))
+            }
+            coverages[name] = .some(checked)
+            return checked
+        }
         func count(_ name: String) -> Int? {
             guard node.mayReadAttribute(name) else { return nil }
-            if let coverage = node.cachedPartialValue(name)?.array { return coverage.count }
+            if let coverage = coverage(name) { return coverage.count }
             if let cached = node.cachedAttribute(name) { return (cached as? [AnyObject])?.count ?? 0 }
             return capture.resources.io.count(name, on: .init(element: node.element))
         }
         func supportedAttributes() -> Set<String> { node.supportedAttributeNames() }
         func partialArray(_ name: String) -> EventStreamChildArray<Element>? {
             guard let elements = decode(node.attribute(name)) else { return nil }
-            let coverage = node.cachedPartialValue(name)?.array
-            return .init(elements: elements, subset: coverage.map { .init(count: $0.count, availableRanges: $0.availableRanges) })
+            return .init(elements: elements, subset: coverage(name))
         }
         func cachedArray(_ name: String) -> [Element]? { decode(node.cachedAttribute(name)) }
         func array(_ name: String) -> [Element]? {
-            if let value = node.cachedAttribute(name) { return decode(value) }
+            // A prefetched list known to be cut is read again in full.
+            if let value = node.cachedAttribute(name), coverage(name)?.availableRanges == nil { return decode(value) }
             guard node.mayReadAttribute(name) else { return nil }
             return decode(try? capture.context.context.environment.read(.init(element: node.element), name)?.raw)
         }

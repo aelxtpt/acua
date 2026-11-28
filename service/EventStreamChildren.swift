@@ -11,6 +11,32 @@ struct EventStreamChildArray<Element> {
     let subset: EventStreamArraySubset?
 }
 
+/// The accessibility prefetch stops each child list at its array limit, and
+/// does not always report how long the list really is. A prefetched list at
+/// least `checkedFrom` long is checked against a live count, so that a cut
+/// list is known to be cut and its first elements are marked as a subset.
+enum EventStreamChildCoverage {
+    /// The smallest array limit the prefetch is given.
+    static let checkedFrom = 20
+
+    static func verify(_ cached: EventStreamArraySubset, liveCount: () -> Int?) -> EventStreamArraySubset {
+        guard cached.availableRanges == nil, cached.count >= checkedFrom,
+              let total = liveCount(), total > cached.count else { return cached }
+        return .init(count: total, availableRanges: [0..<cached.count])
+    }
+
+    /// The coverage of a parent's child list as the snapshot holds it: the
+    /// prefetch's own record when there is one, otherwise a cached array,
+    /// which is reported only when it turns out to be cut.
+    static func checked(prefetched: EventStreamArraySubset?, cachedCount: Int?,
+                        liveCount: () -> Int?) -> EventStreamArraySubset? {
+        if let prefetched { return verify(prefetched, liveCount: liveCount) }
+        guard let cachedCount else { return nil }
+        let checked = verify(.init(count: cachedCount, availableRanges: nil), liveCount: liveCount)
+        return checked.availableRanges == nil ? nil : checked
+    }
+}
+
 // Child selection. A provider must distinguish cached arrays, complete
 // reads, partial arrays and uncached child AXFrame.
 @MainActor protocol EventStreamChildrenBackend {
@@ -47,8 +73,17 @@ struct EventStreamChildArray<Element> {
             // the position fallback.
             return byVisibleAttribute(attribute, maximum: 0)
         }
-        guard count <= 499 else { return nil }
-        return byPosition(maximum: 100, includeAllRanges: false, clippingFrame: nil)
+        // Without a visible run, or with too many children to place, the
+        // prefetched first children are still listed, marked as a subset.
+        guard count <= 499 else { return knownPrefix() }
+        return byPosition(maximum: 100, includeAllRanges: false, keepingOtherRanges: true, clippingFrame: nil)
+            ?? knownPrefix()
+    }
+
+    /// The prefetched start of a list that is known to be longer.
+    private func knownPrefix() -> EventStreamChildArray<Backend.Element>? {
+        guard let prefix = backend.partialArray("AXChildren"), prefix.subset?.availableRanges != nil else { return nil }
+        return prefix
     }
 
     func byVisibleAttribute(_ attribute: String, maximum: Int) -> EventStreamChildArray<Backend.Element>? {
@@ -88,7 +123,12 @@ struct EventStreamChildArray<Element> {
         index[backend.hash(element)]?.contains { backend.equal($0, element) } ?? false
     }
 
-    func byPosition(maximum: Int, includeAllRanges: Bool, clippingFrame: CGRect?) -> EventStreamChildArray<Backend.Element>? {
+    /// Children by where they are on screen. The largest visible run is
+    /// widened to `maximum` children. With `keepingOtherRanges`, the other
+    /// visible runs are kept as well, so that an element drawn on screen
+    /// (a dialog after a long list, say) is not left out of the tree.
+    func byPosition(maximum: Int, includeAllRanges: Bool, keepingOtherRanges: Bool = false,
+                    clippingFrame: CGRect?) -> EventStreamChildArray<Backend.Element>? {
         guard let source = backend.array("AXChildren") else { return nil }
         var frame = backend.frame() ?? .zero
         if let clippingFrame { frame = frame.intersection(clippingFrame) }
@@ -98,7 +138,20 @@ struct EventStreamChildArray<Element> {
         guard !ranges.isEmpty else { return nil }
         if includeAllRanges { return Self.select(source, ranges: ranges) }
         guard let range = Self.largestRange(ranges) else { return nil }
-        return Self.select(source, ranges: [Self.expand(range, maximum: maximum, count: source.count)])
+        let widened = Self.expand(range, maximum: maximum, count: source.count)
+        guard keepingOtherRanges else { return Self.select(source, ranges: [widened]) }
+        return Self.select(source, ranges: Self.merge(ranges + [widened]))
+    }
+
+    /// Sorted ranges, with overlapping and touching ones joined.
+    static func merge(_ ranges: [Range<Int>]) -> [Range<Int>] {
+        var result: [Range<Int>] = []
+        for range in ranges.sorted(by: { $0.lowerBound < $1.lowerBound }) {
+            if let last = result.last, range.lowerBound <= last.upperBound {
+                result[result.count - 1] = last.lowerBound..<max(last.upperBound, range.upperBound)
+            } else { result.append(range) }
+        }
+        return result
     }
 
     static func ranges(_ included: [Bool]) -> [Range<Int>] {
