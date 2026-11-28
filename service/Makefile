@@ -272,6 +272,17 @@ acua-app-snapshot-retry-test:
 
 .PHONY: acua-app-snapshot-retry-test
 
+# Telling a screenshot that was not redrawn from one that was, with synthetic
+# pixel buffers.
+ACUA_SCREENSHOT_STALENESS_SOURCES = Native/native-screenshot-capture-pipeline/ControllerScreenshotStaleness.swift
+
+acua-screenshot-staleness-test:
+	$(SWIFTC) $(SWIFTFLAGS) -parse-as-library -module-cache-path $(SWIFT_MODULE_CACHE) $(DEPLOYMENT_FLAGS) \
+		-o /tmp/cua-acua-screenshot-staleness-tests $(ACUA_SCREENSHOT_STALENESS_SOURCES) ../test/acua-screenshot-staleness.swift
+	/tmp/cua-acua-screenshot-staleness-tests
+
+.PHONY: acua-screenshot-staleness-test
+
 # Revealing an offscreen element through its scroll area, with a fake AX tree.
 ACUA_SCROLL_REVEAL_SOURCES = Native/controller-native-position/ControllerClickablePoint.swift ScrollToVisiblePlan.swift ClickableGeometry.swift
 

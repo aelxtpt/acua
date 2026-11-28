@@ -60,6 +60,8 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
     let size: CGSize
     let geometry: ScreenshotGeometry
     let mimeType: String
+    /// Set by the capture, for comparing this picture with the next one.
+    var fingerprint: ControllerScreenshotFingerprint?
     init(file: ControllerTemporaryImage, size: CGSize, geometry: ScreenshotGeometry, mimeType: String) {
         self.file = file; self.size = size; self.geometry = geometry; self.mimeType = mimeType
     }
@@ -121,6 +123,8 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
     let owner: Owner
     let resources: ControllerNativeResources
     private let snapshots = EventStreamNativeSnapshots()
+    /// Compares each screenshot with the last one that agreed with its tree.
+    private var screenshotStaleness = ControllerScreenshotStalenessTracker()
     init(owner: Owner, resources: ControllerNativeResources) { self.owner = owner; self.resources = resources }
     var isTerminated: Bool { owner.runningApplication.application.isTerminated }
     func terminatedError() -> any Error { ComputerUseControllerIdentityError.runningApplicationNotFound(owner.bundleIdentifier) }
@@ -188,14 +192,31 @@ struct ControllerNativeScreenshotImageEnvironment: Sendable {
         let geometry = ScreenshotGeometry(windowID: window.id, ownerPID: window.processIdentifier,
             screenFrame: window.frame, pixelWidth: image.width, pixelHeight: image.height,
             includedWindowIDs: ids, nativeLayout: plan.sizing)
-        return .init(file: file, size: .init(width: image.width, height: image.height), geometry: geometry,
+        let result = Image(file: file, size: .init(width: image.width, height: image.height), geometry: geometry,
             mimeType: encoding.type.preferredMIMEType ?? "application/octet-stream")
+        // The picture sent to the agent can hold the Agent cursor, which moves
+        // between snapshots. Fingerprint the window alone, at one pixel per
+        // point to keep it cheap. Without it the comparison is skipped.
+        if let alone = try? await environment.captureBuffer(.init(
+            appName: resources.geometry.value("AXTitle", on: application) ?? "Unknown", imageSize: window.frame.size,
+            includedWindowIDs: [window.id], cropToFirstWindow: false, shouldBeOpaque: true, includeWindowShadow: false)) {
+            result.fingerprint = ControllerScreenshotFingerprint(alone)
+        }
+        return result
     }
     var classifierEnabled: Bool { UserDefaults.standard.object(forKey: "feature/appSnapshotClassifier") as? Bool ?? true }
     func makeTree(_ selection: Selection, diffingEnabled: Bool) throws -> Tree { .init(selection: selection, isAXTreeDiffingEnabled: diffingEnabled) }
     func makeAttachment(_ selection: Selection, image: Image?, classifierEnabled: Bool) throws -> Attachment {
         let revision = selection.value.windowRevision
-        return .init(text: revision.eventStreamDescription(.difference(from: .previous), lineOptions: [], ignoreDifferenceLineBudget: false),
+        var text = revision.eventStreamDescription(.difference(from: .previous), lineOptions: [], ignoreDifferenceLineBudget: false)
+        if let fingerprint = image?.fingerprint {
+            // A window that is not being drawn keeps returning its last
+            // picture while its tree moves on. Say so instead of sending it as current.
+            let evidence = ControllerScreenshotEvidence(fingerprint: fingerprint,
+                tree: revision.renderTree.lines(options: []).joined(separator: "\n"))
+            if screenshotStaleness.isStale(evidence) { text += "\n" + ControllerScreenshotStaleness.warning }
+        }
+        return .init(text: text,
             screenshot: image?.file, mimeType: image?.mimeType,
             screenshotNeededForContext: image != nil && !classifierEnabled && selection.value.screenshotNeededForContext,
             accessibilityInspectorPayload: revision.renderTreeInspectorPayload())

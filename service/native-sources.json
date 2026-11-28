@@ -415,6 +415,7 @@
     "service/Native/controller-native-operations/ControllerAppSnapshotOperation.swift",
     "service/Native/controller-native-operations/ControllerScreenshotSizing.swift",
     "service/Native/native-screenshot-capture-pipeline/ControllerNativeAppSnapshot.swift",
+    "service/Native/native-screenshot-capture-pipeline/ControllerScreenshotStaleness.swift",
     "service/Native/controller-native-refetch/ControllerElementRefetch.swift",
     "service/Native/controller-native-refetch/ControllerInteractionPreparation.swift",
     "service/Native/controller-native-refetch/ControllerNativeElementRefetch.swift",
