@@ -3,8 +3,9 @@ import MCP
 
 // Unit tests for what get_app_state returns to an MCP client: the screenshot
 // as base64 image content with its MIME type, and app-specific instructions
-// once per app for the life of the MCP connection; and the warning added when
-// a window's accessibility tree has no content. File reads are injected; no
+// once per app for the life of the MCP connection; the warning added when a
+// window's accessibility tree has no content; and the one added when an action
+// returns the same tree as before it. File reads are injected; no
 // service is involved.
 
 @main
@@ -148,6 +149,39 @@ enum AcuaMCPOutputTests {
         check("Action_WindowWithContent_IsUnchanged", fullAction == "App=com.example.gpui (pid 42)\n" + fullTree, fullAction)
         let noSnapshot = text(AutomationMCPFormatting.action(action(nil)))
         check("Action_WithoutSnapshot_IsUnchanged", !noSnapshot.contains("Warning:"), noSnapshot)
+
+        // Seen live: a window hidden behind another app's window stopped
+        // updating, and a click and three type_text calls each came back with
+        // the tree from before them, with no warning.
+        let unchangedText = text(AutomationMCPFormatting.action(action(fullTree), previousTree: fullTree))
+        check("Action_SameTreeAsBefore_Warns",
+              unchangedText.hasSuffix("\n" + AutomationMCPFormatting.unchangedAfterActionWarning), unchangedText)
+        check("Action_SameTreeAsBefore_KeepsTheTree", unchangedText.contains(fullTree))
+        check("Action_TreeChanged_IsUnchanged",
+              text(AutomationMCPFormatting.action(action(fullTree), previousTree: emptyTree + "\n")) == "App=com.example.gpui (pid 42)\n" + fullTree)
+        check("Action_NoChangeDifference_Warns",
+              text(AutomationMCPFormatting.action(action("no_change"))).contains(AutomationMCPFormatting.unchangedAfterActionWarning))
+        check("Action_NoEarlierTree_HasNoWarning", !text(AutomationMCPFormatting.action(action(fullTree))).contains("Warning:"))
+        let emptyAndUnchanged = text(AutomationMCPFormatting.action(action(emptyTree), previousTree: emptyTree))
+        check("Action_EmptyAndUnchanged_OnlyTheEmptyWindowWarning",
+              emptyAndUnchanged.contains("effect cannot be confirmed") && !emptyAndUnchanged.contains("is the same as before"),
+              emptyAndUnchanged)
+
+        // One history per MCP connection, as the server creates it.
+        let trees = AppTreeHistory()
+        _ = await AutomationMCPFormatting.state(snapshot(fullTree), deliveryState: .init(), trees: trees, read: read)
+        let afterState = text(await AutomationMCPFormatting.action(action(fullTree), trees: trees, read: read))
+        check("History_ActionAfterStateWithSameTree_Warns", afterState.contains("is the same as before"), afterState)
+        let changed = text(await AutomationMCPFormatting.action(action(emptyTree.replacingOccurrences(of: "Example", with: "Other")),
+                                                                trees: trees, read: read))
+        check("History_ActionWithNewTree_HasNoUnchangedWarning", !changed.contains("is the same as before"), changed)
+        _ = await AutomationMCPFormatting.action(action(nil), trees: trees, read: read)
+        let afterForget = text(await AutomationMCPFormatting.action(action(fullTree), trees: trees, read: read))
+        check("History_ActionWithoutTree_ForgetsTheTree", !afterForget.contains("is the same as before"), afterForget)
+        let otherAppAction = ComputerUseIPCActionResult(app: .init(pid: 43, bundleIdentifier: "com.example.other", appPath: nil),
+            appSnapshot: .init(text: fullTree, screenshot: nil))
+        check("History_OtherApp_HasItsOwnTree",
+              !text(await AutomationMCPFormatting.action(otherAppAction, trees: trees, read: read)).contains("is the same as before"))
 
         print("\(passed) MCP output tests passed")
     }

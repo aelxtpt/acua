@@ -18,6 +18,7 @@ struct CUAMCPAutomation: Sendable {
     let tracker: any AutomationMCPTurnMetricsTracking
     let approvalTelemetry: @Sendable (AutomationMCPApprovalTelemetry) -> Void
     let toolTelemetry: @Sendable (AutomationMCPToolCalledTelemetry) -> Void
+    var trees = AppTreeHistory()
     var bundle: Bundle = .main
     var now: @Sendable () -> Date = Date.init
     var read: @Sendable (URL) throws -> Data = { try Data(contentsOf: $0) }
@@ -73,9 +74,10 @@ struct CUAMCPAutomation: Sendable {
                 result = try await AutomationMCPFormatting.apps(listApps())
             case .getAppState(let app):
                 let state = try await getAppState(.init(app: app))
-                result = await AutomationMCPFormatting.state(state, deliveryState: deliveryState, bundle: bundle, read: read)
+                result = await AutomationMCPFormatting.state(state, deliveryState: deliveryState, trees: trees,
+                    bundle: bundle, read: read)
             case .performAction(let request):
-                result = try await AutomationMCPFormatting.action(performAction(request), read: read)
+                result = await AutomationMCPFormatting.action(try await performAction(request), trees: trees, read: read)
             }
             await tracker.recordSuccessfulGetAppState(call, endedAt: now())
             return AutomationMCPSpanTelemetry.attaching(span, to: result)

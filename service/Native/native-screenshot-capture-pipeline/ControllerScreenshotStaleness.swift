@@ -63,7 +63,8 @@ struct ControllerScreenshotEvidence: Sendable {
 enum ControllerScreenshotStaleness {
     static let warning = "Warning: the accessibility tree changed but the screenshot still shows the earlier picture, so "
         + "it can be out of date. Apps that stop drawing while their window is hidden behind other windows (GPUI apps, "
-        + "for example) do this. Rely on the tree, or ask the user to bring the app's window to the front."
+        + "for example) do this. Rely on the tree, call `perform_secondary_action` with `Raise` on the window, or ask the "
+        + "user to bring the app's window to the front."
 }
 
 /// Follows one window from snapshot to snapshot. The reference is the last
